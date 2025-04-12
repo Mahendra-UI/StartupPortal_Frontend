@@ -1,0 +1,3857 @@
+[       {
+          "school_id": 1,
+          "atl_uid_code": 2760806,
+          "udise_code": 28222800515,
+          "school_name": "Andhra Pradesh Model School, Putluru",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Anantapur"
+      },
+      {
+          "school_id": 2,
+          "atl_uid_code": 132314217,
+          "udise_code": 28224201013,
+          "school_name": "AP Model School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Anantapur"
+      },
+      {
+          "school_id": 3,
+          "atl_uid_code": 574614473,
+          "udise_code": 28223600320,
+          "school_name": "AP Model School and Junior College",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Anantapur"
+      },
+      {
+          "school_id": 4,
+          "atl_uid_code": 278814373,
+          "udise_code": 28223200124,
+          "school_name": "AP Model School Rapthadu",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Anantapur"
+      },
+      {
+          "school_id": 5,
+          "atl_uid_code": 2995459,
+          "udise_code": 28222500704,
+          "school_name": "AP Social Welfare Residential School Junior College For Girls Kurugunta",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Anantapur"
+      },
+      {
+          "school_id": 6,
+          "atl_uid_code": 13701194,
+          "udise_code": 28220601919,
+          "school_name": "AVR EM High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Anantapur"
+      },
+      {
+          "school_id": 7,
+          "atl_uid_code": 15712075,
+          "udise_code": 28221890982,
+          "school_name": "AVR EM High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Anantapur"
+      },
+      {
+          "school_id": 8,
+          "atl_uid_code": 56051196,
+          "udise_code": 28222301035,
+          "school_name": "AVR EM High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Anantapur"
+      },
+      {
+          "school_id": 9,
+          "atl_uid_code": "385c1160",
+          "udise_code": 28221591153,
+          "school_name": "AVR EM High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Anantapur"
+      },
+      {
+          "school_id": 10,
+          "atl_uid_code": 102112978,
+          "udise_code": 28220902023,
+          "school_name": "Good Shepherd English Medium School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Anantapur"
+      },
+      {
+          "school_id": 11,
+          "atl_uid_code": 243715046,
+          "udise_code": 28220590484,
+          "school_name": "K C Narayana E M School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Anantapur"
+      },
+      {
+          "school_id": 12,
+          "atl_uid_code": 296217671,
+          "udise_code": 28224601116,
+          "school_name": "Vignan Em School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Anantapur"
+      },
+      {
+          "school_id": 13,
+          "atl_uid_code": 143715085,
+          "udise_code": 28221890948,
+          "school_name": "Z.p.girls.high .school",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Anantapur"
+      },
+      {
+          "school_id": 14,
+          "atl_uid_code": 318315208,
+          "udise_code": 28223000910,
+          "school_name": "Zilla Parishad High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Anantapur"
+      },
+      {
+          "school_id": 15,
+          "atl_uid_code": 16219683,
+          "udise_code": 28220600303,
+          "school_name": "ZPHS Fort",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Anantapur"
+      },
+      {
+          "school_id": 16,
+          "atl_uid_code": 160814818,
+          "udise_code": 28230200823,
+          "school_name": "A P Model School, Thamballpalli",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Chittoor"
+      },
+      {
+          "school_id": 17,
+          "atl_uid_code": 12414249,
+          "udise_code": 28230902108,
+          "school_name": "A P Residential School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Chittoor"
+      },
+      {
+          "school_id": 18,
+          "atl_uid_code": 29843901,
+          "udise_code": 28230801549,
+          "school_name": "A P Residential School For Girls",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Chittoor"
+      },
+      {
+          "school_id": 19,
+          "atl_uid_code": 65621167,
+          "udise_code": 28236690433,
+          "school_name": "Adarsh Em High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Chittoor"
+      },
+      {
+          "school_id": 20,
+          "atl_uid_code": 2503464,
+          "udise_code": 28235100604,
+          "school_name": "AP Social Welfare Residential School For Boys Puthalapattu",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Chittoor"
+      },
+      {
+          "school_id": 21,
+          "atl_uid_code": 1712458,
+          "udise_code": 28231201902,
+          "school_name": "AP Tribal Welfare Residential School For Boys Renigunta",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Chittoor"
+      },
+      {
+          "school_id": 22,
+          "atl_uid_code": 27501021,
+          "udise_code": 28233101159,
+          "school_name": "Avr E M High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Chittoor"
+      },
+      {
+          "school_id": 23,
+          "atl_uid_code": 1705491,
+          "udise_code": 28231802003,
+          "school_name": "Mjpapbcwr School Boys Sathyavedu",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Chittoor"
+      },
+      {
+          "school_id": 24,
+          "atl_uid_code": 191814618,
+          "udise_code": 28234590677,
+          "school_name": "Sgn ZP Girls High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Chittoor"
+      },
+      {
+          "school_id": 25,
+          "atl_uid_code": 61981151,
+          "udise_code": 28231404806,
+          "school_name": "Shanthinikethan Em High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Chittoor"
+      },
+      {
+          "school_id": 26,
+          "atl_uid_code": 13714191,
+          "udise_code": 28232802401,
+          "school_name": "Sree Vidyanikethan International School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Chittoor"
+      },
+      {
+          "school_id": 27,
+          "atl_uid_code": 108913451,
+          "udise_code": 28236404801,
+          "school_name": "Sri Sri Paramahansa Yogananda Vidyalaya",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Chittoor"
+      },
+      {
+          "school_id": 28,
+          "atl_uid_code": 287816691,
+          "udise_code": 28235491826,
+          "school_name": "Vignana Deepthi English Medium High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Chittoor"
+      },
+      {
+          "school_id": 29,
+          "atl_uid_code": 117016696,
+          "udise_code": 28235492011,
+          "school_name": "Vignana Deepthi English Medium School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Chittoor"
+      },
+      {
+          "school_id": 30,
+          "atl_uid_code": 157318464,
+          "udise_code": 28233500114,
+          "school_name": "Zilla Parishad High School C T Samudram",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Chittoor"
+      },
+      {
+          "school_id": 31,
+          "atl_uid_code": 178615418,
+          "udise_code": 28235901506,
+          "school_name": "ZPHS Keelapatla",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Chittoor"
+      },
+      {
+          "school_id": 32,
+          "atl_uid_code": 160417407,
+          "udise_code": 28231701308,
+          "school_name": "ZPHS Varadaiahpalem",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Chittoor"
+      },
+      {
+          "school_id": 33,
+          "atl_uid_code": 970314178,
+          "udise_code": 28201690651,
+          "school_name": "Balaji High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Cuddapah"
+      },
+      {
+          "school_id": 34,
+          "atl_uid_code": 152614664,
+          "udise_code": 28203191481,
+          "school_name": "Balavikas Em High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Cuddapah"
+      },
+      {
+          "school_id": 35,
+          "atl_uid_code": 137016576,
+          "udise_code": 28203400728,
+          "school_name": "Chaitanya High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Cuddapah"
+      },
+      {
+          "school_id": 36,
+          "atl_uid_code": 558010975,
+          "udise_code": 28203191534,
+          "school_name": "Nirmala English Medium High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Cuddapah"
+      },
+      {
+          "school_id": 37,
+          "atl_uid_code": 320617367,
+          "udise_code": 28203191522,
+          "school_name": "Pushpagiri Residential Public School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Cuddapah"
+      },
+      {
+          "school_id": 38,
+          "atl_uid_code": 161419635,
+          "udise_code": 28201100616,
+          "school_name": "Sai Chaitanya English and Telugu Medium High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Cuddapah"
+      },
+      {
+          "school_id": 39,
+          "atl_uid_code": 618514665,
+          "udise_code": 28202100706,
+          "school_name": "Seventh Day Adventist High School Duggannagaripalli",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Cuddapah"
+      },
+      {
+          "school_id": 40,
+          "atl_uid_code": 408517748,
+          "udise_code": 28201600366,
+          "school_name": "St Marys English Medium High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Cuddapah"
+      },
+      {
+          "school_id": 41,
+          "atl_uid_code": 226417752,
+          "udise_code": 28201001223,
+          "school_name": "Vijaya High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Cuddapah"
+      },
+      {
+          "school_id": 42,
+          "atl_uid_code": 212214225,
+          "udise_code": 28203190120,
+          "school_name": "Vikas Em High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Cuddapah"
+      },
+      {
+          "school_id": 43,
+          "atl_uid_code": 1662168,
+          "udise_code": 28140602309,
+          "school_name": "A P Model School, Hamsavaram",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 44,
+          "atl_uid_code": 11408551,
+          "udise_code": 28143095672,
+          "school_name": "Aksharasri Vidyaniketan High School Em",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 45,
+          "atl_uid_code": 79051776,
+          "udise_code": 28142990336,
+          "school_name": "Andhra Pradesh Balayogi Gurukulam School/jr.college Dowlaiswaram E.g.dist.",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 46,
+          "atl_uid_code": 2158603,
+          "udise_code": 28141700317,
+          "school_name": "Andhra Pradesh Social Welfare Balayogi Gurukulam Veeralankapalli Gokavaram Mandal",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 47,
+          "atl_uid_code": 9222605,
+          "udise_code": 28141801614,
+          "school_name": "Andhra Pradesh Social Welfare Resedential School For Girl",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 48,
+          "atl_uid_code": 91101828,
+          "udise_code": 28143700204,
+          "school_name": "Andhra Pradesh Social Welfare Residential School Junior College (girls) Chollangipeta",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 49,
+          "atl_uid_code": 2548606,
+          "udise_code": 28140208902,
+          "school_name": "Andhra Pradesh Tribal Welfare Eaklavya Model Residencial School Girls",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 50,
+          "atl_uid_code": 1538599,
+          "udise_code": 28140306106,
+          "school_name": "Andhra Pradesh Tribal Welfare Residential School Boys",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 51,
+          "atl_uid_code": 1547589,
+          "udise_code": 28140402613,
+          "school_name": "Andhra Pradesh Tribal Welfare Residential School For Girls Rajavommangi",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 52,
+          "atl_uid_code": 1947523,
+          "udise_code": 28140104905,
+          "school_name": "Andhra Pradesh Tribal Welfare Residential School Maredumilli",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 53,
+          "atl_uid_code": 21211849,
+          "udise_code": 28140402621,
+          "school_name": "Andra Pradesh Tribal Welfare Residential Jr Girls College Rajavommangi",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 54,
+          "atl_uid_code": 23641848,
+          "udise_code": 28141391117,
+          "school_name": "APtwwr Jr College Girls",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 55,
+          "atl_uid_code": 126518394,
+          "udise_code": 28143095757,
+          "school_name": "Bhashyam Em High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 56,
+          "atl_uid_code": 143418379,
+          "udise_code": 28142900718,
+          "school_name": "Bhashyam Em High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 57,
+          "atl_uid_code": 494418386,
+          "udise_code": 28143095660,
+          "school_name": "Bhashyam Em High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 58,
+          "atl_uid_code": 112219053,
+          "udise_code": 28142495569,
+          "school_name": "Bhashyam Em School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 59,
+          "atl_uid_code": 304218267,
+          "udise_code": 28142495236,
+          "school_name": "Bhashyam Em School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 60,
+          "atl_uid_code": 245318969,
+          "udise_code": 28143100505,
+          "school_name": "BSN ZPP High School Veeravaram",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 61,
+          "atl_uid_code": 172119210,
+          "udise_code": 28144201110,
+          "school_name": "Dr. B.j.z.p.p.girls High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 62,
+          "atl_uid_code": 13941790,
+          "udise_code": 28143300238,
+          "school_name": "Dr. B.r.a.c.s.w.r.jr.college Kothuru.",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 63,
+          "atl_uid_code": 149914978,
+          "udise_code": 28142800418,
+          "school_name": "Garmar Academy of Seventh Day Adventist High School Rajanagaram",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 64,
+          "atl_uid_code": 275818228,
+          "udise_code": 28141100715,
+          "school_name": "Government High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 65,
+          "atl_uid_code": 324014869,
+          "udise_code": 28145000908,
+          "school_name": "Government High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 66,
+          "atl_uid_code": 833518867,
+          "udise_code": 28141801611,
+          "school_name": "Government High School, Jaggampeta",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 67,
+          "atl_uid_code": 883418912,
+          "udise_code": 28141901606,
+          "school_name": "Government High School, Kirlampudi",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 68,
+          "atl_uid_code": 728718015,
+          "udise_code": 28143290531,
+          "school_name": "Government High School, Mandapeta",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 69,
+          "atl_uid_code": 230114440,
+          "udise_code": 28144600327,
+          "school_name": "Govt High School, Kothapeta",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 70,
+          "atl_uid_code": 145313031,
+          "udise_code": 28146403602,
+          "school_name": "GTW Ashram School Boys K N Puram",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 71,
+          "atl_uid_code": 223313122,
+          "udise_code": 28141306402,
+          "school_name": "GTW Ashram School Boys Musurumilli",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 72,
+          "atl_uid_code": 293713155,
+          "udise_code": 28146205201,
+          "school_name": "GTW Ashram School Boys Narasimhapuram",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 73,
+          "atl_uid_code": 280016577,
+          "udise_code": 28140211002,
+          "school_name": "GTW Ashram School Boys Panasalapalem",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 74,
+          "atl_uid_code": 820612997,
+          "udise_code": 28140402612,
+          "school_name": "GTW Ashram School Boys Rajavommangi",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 75,
+          "atl_uid_code": 388613145,
+          "udise_code": 28146102503,
+          "school_name": "GTW Ashram School Boys Sunnamvarigudem",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 76,
+          "atl_uid_code": 206113056,
+          "udise_code": 28146100502,
+          "school_name": "GTW Ashram School For Girls Somulagudem",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 77,
+          "atl_uid_code": 287513079,
+          "udise_code": 28141402202,
+          "school_name": "GTW Ashram School Girls Damanapalli",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 78,
+          "atl_uid_code": 250313665,
+          "udise_code": 28141202504,
+          "school_name": "GTW Ashram School Girls Gangavaram",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 79,
+          "atl_uid_code": 259413075,
+          "udise_code": 28141305602,
+          "school_name": "GTW Ashram School Girls, Irlapalli",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 80,
+          "atl_uid_code": 295413100,
+          "udise_code": 28140403702,
+          "school_name": "GTW Ashram School Girls, Singampalli",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 81,
+          "atl_uid_code": 249213009,
+          "udise_code": 28140601513,
+          "school_name": "GTW Ashram School Girls, V Kothuru",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 82,
+          "atl_uid_code": 291518605,
+          "udise_code": 28142495473,
+          "school_name": "Mahatmagandhi Municipalcorporation Highschool",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 83,
+          "atl_uid_code": 153412362,
+          "udise_code": 28142501408,
+          "school_name": "Medha High School, Kakinada",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 84,
+          "atl_uid_code": 227314042,
+          "udise_code": 28144000408,
+          "school_name": "S Ch S R Z P P High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 85,
+          "atl_uid_code": 283117602,
+          "udise_code": 28143400605,
+          "school_name": "S S B R Z P P High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 86,
+          "atl_uid_code": 249818541,
+          "udise_code": 28144000211,
+          "school_name": "S.R.Z.P.P. High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 87,
+          "atl_uid_code": 310218344,
+          "udise_code": 28141800603,
+          "school_name": "Sansm ZPPH School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 88,
+          "atl_uid_code": 161818880,
+          "udise_code": 28142101903,
+          "school_name": "Sbardtvm ZPP High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 89,
+          "atl_uid_code": 214413526,
+          "udise_code": 28144000506,
+          "school_name": "Sdm ZPP High School, Someswaram",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 90,
+          "atl_uid_code": 206312807,
+          "udise_code": 28144900204,
+          "school_name": "SmnZPP High School, Veeravallipalem",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 91,
+          "atl_uid_code": 308217424,
+          "udise_code": 28144400106,
+          "school_name": "SMVRM ZPPH School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 92,
+          "atl_uid_code": 227719435,
+          "udise_code": 28143700619,
+          "school_name": "SNV ZPP High School, Tallarevu",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 93,
+          "atl_uid_code": 850914742,
+          "udise_code": 28143201008,
+          "school_name": "SPSB ZPP High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 94,
+          "atl_uid_code": 265715872,
+          "udise_code": 28140691430,
+          "school_name": "Sri Raja Government High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 95,
+          "atl_uid_code": 105218860,
+          "udise_code": 28145300212,
+          "school_name": "SSR ZPP High School, Bheemanapalli",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 96,
+          "atl_uid_code": 167317231,
+          "udise_code": 28145100609,
+          "school_name": "Z P High School, G Vemavaram",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 97,
+          "atl_uid_code": 295512858,
+          "udise_code": 28145490150,
+          "school_name": "Z P P B H School, Suryanagar",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 98,
+          "atl_uid_code": 105714188,
+          "udise_code": 28143901006,
+          "school_name": "Z P P High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 99,
+          "atl_uid_code": 149316848,
+          "udise_code": 28142501103,
+          "school_name": "Z P P High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 100,
+          "atl_uid_code": 311117737,
+          "udise_code": 28144101305,
+          "school_name": "Z P P High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 101,
+          "atl_uid_code": 232512882,
+          "udise_code": 28145700827,
+          "school_name": "Z P P High School, Kadali",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 102,
+          "atl_uid_code": 996217842,
+          "udise_code": 28145600804,
+          "school_name": "Z P P High School, Mogalikuduru",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 103,
+          "atl_uid_code": 296713479,
+          "udise_code": 28145801016,
+          "school_name": "Z P P High School, Padamatipalem",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 104,
+          "atl_uid_code": 774913856,
+          "udise_code": 28144500205,
+          "school_name": "Z P P High School, Pamarru",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 105,
+          "atl_uid_code": 148118907,
+          "udise_code": 28145401318,
+          "school_name": "Z P P High School, Peruru",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 106,
+          "atl_uid_code": 259713224,
+          "udise_code": 28144800510,
+          "school_name": "Z P P High School, Pulletikurru",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 107,
+          "atl_uid_code": 310413270,
+          "udise_code": 28140701303,
+          "school_name": "Z P P High School, Ravikampadu",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 108,
+          "atl_uid_code": 106618688,
+          "udise_code": 28140601611,
+          "school_name": "Z P P High School, S Annavaram",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 109,
+          "atl_uid_code": 934317595,
+          "udise_code": 28144600204,
+          "school_name": "Z P P High School, Vadapalem",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 110,
+          "atl_uid_code": 162913307,
+          "udise_code": 28144701606,
+          "school_name": "Z.p.p. High School, R.yenugupalli",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 111,
+          "atl_uid_code": 361018996,
+          "udise_code": 28144400213,
+          "school_name": "Zilla Parishad Boys High School, Ravulapalem",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 112,
+          "atl_uid_code": 249817429,
+          "udise_code": 28145500212,
+          "school_name": "Zilla Parishad High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 113,
+          "atl_uid_code": 966315655,
+          "udise_code": 28143600609,
+          "school_name": "Zilla Parishad High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 114,
+          "atl_uid_code": 628719451,
+          "udise_code": 28143900402,
+          "school_name": "Zilla Parishad High School, Narasapurapupeta",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 115,
+          "atl_uid_code": 345819226,
+          "udise_code": 28142600205,
+          "school_name": "Zilla Parishad High School, Vadisaleru",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 116,
+          "atl_uid_code": 117518540,
+          "udise_code": 28140501106,
+          "school_name": "Zilla Praja Parishad High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 117,
+          "atl_uid_code": 211018730,
+          "udise_code": 28142200411,
+          "school_name": "Zilla Praja Parishad High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 118,
+          "atl_uid_code": 315114495,
+          "udise_code": 28141003203,
+          "school_name": "Zilla Praja Parishad High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 119,
+          "atl_uid_code": 192618823,
+          "udise_code": 28141801906,
+          "school_name": "Zilla Praja Parishad High School, Katravulapalli",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 120,
+          "atl_uid_code": 929818962,
+          "udise_code": 28143300707,
+          "school_name": "Zilla Praja Parishad High School, Kutukuluru",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 121,
+          "atl_uid_code": 170620017,
+          "udise_code": 28142102604,
+          "school_name": "Zilla Praza Parishad High School, Chitrada",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 122,
+          "atl_uid_code": 696518999,
+          "udise_code": 28142591222,
+          "school_name": "Zilla Prazaparishad Girls Highschool",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 123,
+          "atl_uid_code": 218518356,
+          "udise_code": 28143700309,
+          "school_name": "ZP High School, G Vemavaram",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 124,
+          "atl_uid_code": 268313666,
+          "udise_code": 28140501303,
+          "school_name": "ZP High School, Bhimavarapukota",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 125,
+          "atl_uid_code": 238015173,
+          "udise_code": 28145000726,
+          "school_name": "ZPGH School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 126,
+          "atl_uid_code": 27486979,
+          "udise_code": 28142990321,
+          "school_name": "ZPGHS, Dowleswaram",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 127,
+          "atl_uid_code": 258717990,
+          "udise_code": 28146003503,
+          "school_name": "ZPH School, Mulagapudi",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 128,
+          "atl_uid_code": 236315656,
+          "udise_code": 28145000725,
+          "school_name": "ZPH School, Mummidivaram",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 129,
+          "atl_uid_code": 370213134,
+          "udise_code": 28145701209,
+          "school_name": "ZPH School, Ponnamanda",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 130,
+          "atl_uid_code": 691217903,
+          "udise_code": 28140700107,
+          "school_name": "ZPHS, Bendapudi",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 131,
+          "atl_uid_code": 160712833,
+          "udise_code": 28145201109,
+          "school_name": "ZPHS, Kandikuppa Katrenikona Mandal",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 132,
+          "atl_uid_code": 158916012,
+          "udise_code": 28145701303,
+          "school_name": "ZPHS, Katrenipadu",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 133,
+          "atl_uid_code": 105314867,
+          "udise_code": 28145900708,
+          "school_name": "ZPHS, Kesavadasupalem",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 134,
+          "atl_uid_code": 163315597,
+          "udise_code": 28144901313,
+          "school_name": "ZPHS, Nedunuru",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 135,
+          "atl_uid_code": 112818562,
+          "udise_code": 28146001508,
+          "school_name": "ZPHS, Rowthulapudi",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 136,
+          "atl_uid_code": 147113237,
+          "udise_code": 28142900508,
+          "school_name": "ZPHS, Satellitecity",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 137,
+          "atl_uid_code": 398419186,
+          "udise_code": 28143500111,
+          "school_name": "ZPP Boys High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 138,
+          "atl_uid_code": 802017660,
+          "udise_code": 28145700412,
+          "school_name": "ZPP Boys High School, Razole",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 139,
+          "atl_uid_code": 274317942,
+          "udise_code": 28144600326,
+          "school_name": "ZPP Girls High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 140,
+          "atl_uid_code": 314119391,
+          "udise_code": 28140601701,
+          "school_name": "ZPP Girls High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 141,
+          "atl_uid_code": 197712910,
+          "udise_code": 28145701002,
+          "school_name": "ZPP High Scholl, Kunavaram",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 142,
+          "atl_uid_code": 105318837,
+          "udise_code": 28145501111,
+          "school_name": "ZPP High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 143,
+          "atl_uid_code": 118113349,
+          "udise_code": 28141500807,
+          "school_name": "ZPP High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 144,
+          "atl_uid_code": 171917766,
+          "udise_code": 28144200811,
+          "school_name": "ZPP High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 145,
+          "atl_uid_code": 214613574,
+          "udise_code": 28142000603,
+          "school_name": "ZPP High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 146,
+          "atl_uid_code": 519417912,
+          "udise_code": 28142300612,
+          "school_name": "ZPP High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 147,
+          "atl_uid_code": 530418832,
+          "udise_code": 28140602107,
+          "school_name": "ZPP High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 148,
+          "atl_uid_code": 121116008,
+          "udise_code": 28140701105,
+          "school_name": "ZPP High School, A Kothapalli",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 149,
+          "atl_uid_code": 148813342,
+          "udise_code": 28144100805,
+          "school_name": "ZPP High School, Angara",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 150,
+          "atl_uid_code": 317417743,
+          "udise_code": 28140800306,
+          "school_name": "ZPP High School, Durgada",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 151,
+          "atl_uid_code": 192320123,
+          "udise_code": 28143801012,
+          "school_name": "ZPP High School, Kajuluru",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 152,
+          "atl_uid_code": 920518525,
+          "udise_code": 28140904305,
+          "school_name": "ZPP High School, Kathipudi",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 153,
+          "atl_uid_code": 235218365,
+          "udise_code": 28143801606,
+          "school_name": "ZPP High School, Kuyyeru",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 154,
+          "atl_uid_code": 576319413,
+          "udise_code": 28142500903,
+          "school_name": "ZPP High School, Navara",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 155,
+          "atl_uid_code": 845214809,
+          "udise_code": 28145201110,
+          "school_name": "ZPP High School, Pallam",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 156,
+          "atl_uid_code": 312717666,
+          "udise_code": 28142301513,
+          "school_name": "ZPP High School, Turangi",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 157,
+          "atl_uid_code": 114219299,
+          "udise_code": 28141003104,
+          "school_name": "ZPP High School, Vommangi",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 158,
+          "atl_uid_code": 225019498,
+          "udise_code": 28143201408,
+          "school_name": "ZPP High School, Yeditha",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 159,
+          "atl_uid_code": 253918991,
+          "udise_code": 28142700508,
+          "school_name": "ZPPH School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 160,
+          "atl_uid_code": 576314205,
+          "udise_code": 28144801115,
+          "school_name": "ZPPH School, Ambajipeta",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 161,
+          "atl_uid_code": 212418163,
+          "udise_code": 28145101017,
+          "school_name": "ZPPH School, Kesanakurrupalem",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 162,
+          "atl_uid_code": 173612822,
+          "udise_code": 28145401709,
+          "school_name": "ZPPH School, Vannechintalapudi Samanasa",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 163,
+          "atl_uid_code": 846118251,
+          "udise_code": 28143800606,
+          "school_name": "ZPPHS",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 164,
+          "atl_uid_code": 266619220,
+          "udise_code": 28142391022,
+          "school_name": "ZPPHS APSPQ",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 165,
+          "atl_uid_code": 79186517,
+          "udise_code": 28142002005,
+          "school_name": "ZPPHS, Kondapalli",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 166,
+          "atl_uid_code": 269813519,
+          "udise_code": 28140701514,
+          "school_name": "ZPPHS, Kotthaperumallapurm",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 167,
+          "atl_uid_code": 173719005,
+          "udise_code": 28142200505,
+          "school_name": "ZPPHS, Mulapeta",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 168,
+          "atl_uid_code": 197819318,
+          "udise_code": 28144700906,
+          "school_name": "ZPPHS, Munganda",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 169,
+          "atl_uid_code": 139112830,
+          "udise_code": 28142800303,
+          "school_name": "ZPPHS, Narendrapuram, Rajanagaram Mandal",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 170,
+          "atl_uid_code": 363913062,
+          "udise_code": 28140402611,
+          "school_name": "ZPPHS, Rajavommangi",
+          "state_name": "Andhra Pradesh",
+          "district_name": "East Godavari"
+      },
+      {
+          "school_id": 171,
+          "atl_uid_code": 234714979,
+          "udise_code": 28170400824,
+          "school_name": "A P Model School, Dachepalli",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Guntur"
+      },
+      {
+          "school_id": 172,
+          "atl_uid_code": 7639528,
+          "udise_code": 28171300620,
+          "school_name": "Andhra Pradesh Social Welfare Residential School Boys",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Guntur"
+      },
+      {
+          "school_id": 173,
+          "atl_uid_code": 1534453,
+          "udise_code": 28174401105,
+          "school_name": "AP Social Welfare Residential",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Guntur"
+      },
+      {
+          "school_id": 174,
+          "atl_uid_code": 240018261,
+          "udise_code": 28173200869,
+          "school_name": "Bhashyam High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Guntur"
+      },
+      {
+          "school_id": 175,
+          "atl_uid_code": 83395429,
+          "udise_code": 28173600409,
+          "school_name": "BVR ZP High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Guntur"
+      },
+      {
+          "school_id": 176,
+          "atl_uid_code": 11791474,
+          "udise_code": 28174590266,
+          "school_name": "Chaitanya High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Guntur"
+      },
+      {
+          "school_id": 177,
+          "atl_uid_code": 27087458,
+          "udise_code": 28171300705,
+          "school_name": "D V K R ZP High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Guntur"
+      },
+      {
+          "school_id": 178,
+          "atl_uid_code": 68805439,
+          "udise_code": 28174301128,
+          "school_name": "Govt Boys High School, Vinukonda",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Guntur"
+      },
+      {
+          "school_id": 179,
+          "atl_uid_code": 96446805,
+          "udise_code": 28172501018,
+          "school_name": "Intel High Schoool",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Guntur"
+      },
+      {
+          "school_id": 180,
+          "atl_uid_code": 32044693,
+          "udise_code": 28172691319,
+          "school_name": "Jubilation High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Guntur"
+      },
+      {
+          "school_id": 181,
+          "atl_uid_code": 239613459,
+          "udise_code": 28173801018,
+          "school_name": "Kasturba Gandhi Balika Vidyalayam, Nadendla",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Guntur"
+      },
+      {
+          "school_id": 182,
+          "atl_uid_code": 26121425,
+          "udise_code": 28172691299,
+          "school_name": "Kennedy High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Guntur"
+      },
+      {
+          "school_id": 183,
+          "atl_uid_code": "275c5483",
+          "udise_code": 28171000608,
+          "school_name": "KVR ZPH School, Tulluru",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Guntur"
+      },
+      {
+          "school_id": 184,
+          "atl_uid_code": 243116512,
+          "udise_code": 28173291072,
+          "school_name": "Montessori EM School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Guntur"
+      },
+      {
+          "school_id": 185,
+          "atl_uid_code": 78116743,
+          "udise_code": 28173291060,
+          "school_name": "N S S M H School, Ithanagar",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Guntur"
+      },
+      {
+          "school_id": 186,
+          "atl_uid_code": 11032498,
+          "udise_code": 28172600505,
+          "school_name": "Navenna Vidya Niketan High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Guntur"
+      },
+      {
+          "school_id": 187,
+          "atl_uid_code": 11365565,
+          "udise_code": 28173291062,
+          "school_name": "NCRNM High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Guntur"
+      },
+      {
+          "school_id": 188,
+          "atl_uid_code": 20028839,
+          "udise_code": 28171590933,
+          "school_name": "RCMSSS High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Guntur"
+      },
+      {
+          "school_id": 189,
+          "atl_uid_code": 28186700,
+          "udise_code": 28173300109,
+          "school_name": "S A B R Z P H School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Guntur"
+      },
+      {
+          "school_id": 190,
+          "atl_uid_code": 24636498,
+          "udise_code": 28173200606,
+          "school_name": "S K V C M Z P H School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Guntur"
+      },
+      {
+          "school_id": 191,
+          "atl_uid_code": 13744661,
+          "udise_code": 28173291058,
+          "school_name": "S R S M Boys High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Guntur"
+      },
+      {
+          "school_id": 192,
+          "atl_uid_code": 27344602,
+          "udise_code": 28173901827,
+          "school_name": "Sindhu School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Guntur"
+      },
+      {
+          "school_id": 193,
+          "atl_uid_code": 45845054,
+          "udise_code": 28171300403,
+          "school_name": "Sree Rama High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Guntur"
+      },
+      {
+          "school_id": 194,
+          "atl_uid_code": 13261662,
+          "udise_code": 28170901010,
+          "school_name": "Sree Ramakrishna Hindu High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Guntur"
+      },
+      {
+          "school_id": 195,
+          "atl_uid_code": 1898800,
+          "udise_code": 28173000207,
+          "school_name": "Sri Rama Rural High School EM",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Guntur"
+      },
+      {
+          "school_id": 196,
+          "atl_uid_code": 16348062,
+          "udise_code": 28174590233,
+          "school_name": "Sri Sarada ZPH School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Guntur"
+      },
+      {
+          "school_id": 197,
+          "atl_uid_code": 31359998,
+          "udise_code": 28172400713,
+          "school_name": "St. Paul High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Guntur"
+      },
+      {
+          "school_id": 198,
+          "atl_uid_code": 26185272,
+          "udise_code": 28172691529,
+          "school_name": "The Central School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Guntur"
+      },
+      {
+          "school_id": 199,
+          "atl_uid_code": 27762378,
+          "udise_code": 28170901506,
+          "school_name": "Veenus High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Guntur"
+      },
+      {
+          "school_id": 200,
+          "atl_uid_code": 71585451,
+          "udise_code": 28171200916,
+          "school_name": "Vijeta High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Guntur"
+      },
+      {
+          "school_id": 201,
+          "atl_uid_code": 29618844,
+          "udise_code": 28172700221,
+          "school_name": "Viva The School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Guntur"
+      },
+      {
+          "school_id": 202,
+          "atl_uid_code": 25446385,
+          "udise_code": 28171100106,
+          "school_name": "VZPH School, Penumaka",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Guntur"
+      },
+      {
+          "school_id": 203,
+          "atl_uid_code": 97157105,
+          "udise_code": 28173400204,
+          "school_name": "Z P H School, Narakoduru",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Guntur"
+      },
+      {
+          "school_id": 204,
+          "atl_uid_code": 77175561,
+          "udise_code": 28171200601,
+          "school_name": "Z P H School, Nidamarru",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Guntur"
+      },
+      {
+          "school_id": 205,
+          "atl_uid_code": 77724472,
+          "udise_code": 28175000321,
+          "school_name": "Z P High School, Cherukupalli",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Guntur"
+      },
+      {
+          "school_id": 206,
+          "atl_uid_code": 31246996,
+          "udise_code": 28171600212,
+          "school_name": "Z P High School, Kubadpuram",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Guntur"
+      },
+      {
+          "school_id": 207,
+          "atl_uid_code": 24984537,
+          "udise_code": 28172801110,
+          "school_name": "Zilla Parishad High School Boys, Duggirala",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Guntur"
+      },
+      {
+          "school_id": 208,
+          "atl_uid_code": 95334450,
+          "udise_code": 28175000322,
+          "school_name": "Zilla Parishad High School, Gullapalli",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Guntur"
+      },
+      {
+          "school_id": 209,
+          "atl_uid_code": 16102988,
+          "udise_code": 28174890726,
+          "school_name": "Zilla Parishad High School, Nidubrolu",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Guntur"
+      },
+      {
+          "school_id": 210,
+          "atl_uid_code": 17314890,
+          "udise_code": 28173801112,
+          "school_name": "ZP High School, Ganapavaram",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Guntur"
+      },
+      {
+          "school_id": 211,
+          "atl_uid_code": 32575506,
+          "udise_code": 28173901706,
+          "school_name": "ZP High School, Kotappakonda",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Guntur"
+      },
+      {
+          "school_id": 212,
+          "atl_uid_code": 30477420,
+          "udise_code": 28170800413,
+          "school_name": "ZP High School, Krosur",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Guntur"
+      },
+      {
+          "school_id": 213,
+          "atl_uid_code": 10337477,
+          "udise_code": 28172300310,
+          "school_name": "ZP High School, Madala",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Guntur"
+      },
+      {
+          "school_id": 214,
+          "atl_uid_code": 49037436,
+          "udise_code": 28172500810,
+          "school_name": "ZP High School, Medikonduru",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Guntur"
+      },
+      {
+          "school_id": 215,
+          "atl_uid_code": 17738621,
+          "udise_code": 28174100304,
+          "school_name": "ZP High School, Muppalla",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Guntur"
+      },
+      {
+          "school_id": 216,
+          "atl_uid_code": 98585793,
+          "udise_code": 28172601009,
+          "school_name": "ZP High School, Nallapadu",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Guntur"
+      },
+      {
+          "school_id": 217,
+          "atl_uid_code": 13315517,
+          "udise_code": 28170500904,
+          "school_name": "ZP High School Pinnelli",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Guntur"
+      },
+      {
+          "school_id": 218,
+          "atl_uid_code": 13735494,
+          "udise_code": 28171300806,
+          "school_name": "ZP High School, Ravela",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Guntur"
+      },
+      {
+          "school_id": 219,
+          "atl_uid_code": 23988012,
+          "udise_code": 28172800208,
+          "school_name": "ZPH School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Guntur"
+      },
+      {
+          "school_id": 220,
+          "atl_uid_code": 31258251,
+          "udise_code": 28171002005,
+          "school_name": "ZPH School, Mandadam",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Guntur"
+      },
+      {
+          "school_id": 221,
+          "atl_uid_code": 22877366,
+          "udise_code": 28172501012,
+          "school_name": "ZPH School, Perecherla",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Guntur"
+      },
+      {
+          "school_id": 222,
+          "atl_uid_code": 64127710,
+          "udise_code": 28211300521,
+          "school_name": "ZPH School, Velgode",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Guntur"
+      },
+      {
+          "school_id": 223,
+          "atl_uid_code": 93694786,
+          "udise_code": 28171501805,
+          "school_name": "ZPHS, Komerapudi",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Guntur"
+      },
+      {
+          "school_id": 224,
+          "atl_uid_code": 88224662,
+          "udise_code": 28172200906,
+          "school_name": "ZPHS, Kunkalagunta",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Guntur"
+      },
+      {
+          "school_id": 225,
+          "atl_uid_code": 27607165,
+          "udise_code": 28170500807,
+          "school_name": "ZPHS, Machavaram",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Guntur"
+      },
+      {
+          "school_id": 226,
+          "atl_uid_code": 32536649,
+          "udise_code": 28170500410,
+          "school_name": "ZPHS, Morjampadu",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Guntur"
+      },
+      {
+          "school_id": 227,
+          "atl_uid_code": 48345060,
+          "udise_code": 28174501405,
+          "school_name": "ZPHS, Murikipudi",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Guntur"
+      },
+      {
+          "school_id": 228,
+          "atl_uid_code": 11324726,
+          "udise_code": 28174000808,
+          "school_name": "ZPHS Rompicherla",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Guntur"
+      },
+      {
+          "school_id": 229,
+          "atl_uid_code": 12835534,
+          "udise_code": 28173800107,
+          "school_name": "ZPHS, Satuluru",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Guntur"
+      },
+      {
+          "school_id": 230,
+          "atl_uid_code": 10274819,
+          "udise_code": 28172500309,
+          "school_name": "ZPHS, Siripuram",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Guntur"
+      },
+      {
+          "school_id": 231,
+          "atl_uid_code": 12165459,
+          "udise_code": 28172700406,
+          "school_name": "ZPHS, Venigandla",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Guntur"
+      },
+      {
+          "school_id": 232,
+          "atl_uid_code": 21914744,
+          "udise_code": 28174000412,
+          "school_name": "ZPHS, Vipparla Reddy Palem",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Guntur"
+      },
+      {
+          "school_id": 233,
+          "atl_uid_code": 48224867,
+          "udise_code": 28173700605,
+          "school_name": "ZPHS, Vunnava",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Guntur"
+      },
+      {
+          "school_id": 234,
+          "atl_uid_code": 24841796,
+          "udise_code": 28163901204,
+          "school_name": "Andhra Pradesh Balayogi Gurukulam Boys, Pamarru",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Krishna"
+      },
+      {
+          "school_id": 235,
+          "atl_uid_code": 2698594,
+          "udise_code": 28160500708,
+          "school_name": "Andhra Pradesh Social Welfare Residential School Jr College Girls, Muppalla",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Krishna"
+      },
+      {
+          "school_id": 236,
+          "atl_uid_code": 3255592,
+          "udise_code": 28160190223,
+          "school_name": "AP Balayogi Gurukulam/jr College, Jaggaiahpet",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Krishna"
+      },
+      {
+          "school_id": 237,
+          "atl_uid_code": 244817565,
+          "udise_code": 28161600204,
+          "school_name": "APM Zilla Parishad High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Krishna"
+      },
+      {
+          "school_id": 238,
+          "atl_uid_code": 16771133,
+          "udise_code": 28161791151,
+          "school_name": "Kurupati Chandra Sekhara Rao English Medium School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Krishna"
+      },
+      {
+          "school_id": 239,
+          "atl_uid_code": 1059531,
+          "udise_code": 28163791159,
+          "school_name": "Master E.K. Balabhanu Vidyalayam",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Krishna"
+      },
+      {
+          "school_id": 240,
+          "atl_uid_code": 128512673,
+          "udise_code": 28160801211,
+          "school_name": "Seventh Day Adventist Em High School, Krishna",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Krishna"
+      },
+      {
+          "school_id": 241,
+          "atl_uid_code": 272214112,
+          "udise_code": 28164800205,
+          "school_name": "SNN Government High School, Kaikaluru",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Krishna"
+      },
+      {
+          "school_id": 242,
+          "atl_uid_code": 178812843,
+          "udise_code": 28162102038,
+          "school_name": "Sri Mallikarjuna EM TM High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Krishna"
+      },
+      {
+          "school_id": 243,
+          "atl_uid_code": 1348232,
+          "udise_code": 28163791187,
+          "school_name": "Sri Ramakrishna E M High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Krishna"
+      },
+      {
+          "school_id": 244,
+          "atl_uid_code": 447714475,
+          "udise_code": 28161000930,
+          "school_name": "St. Marys High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Krishna"
+      },
+      {
+          "school_id": 245,
+          "atl_uid_code": 15676933,
+          "udise_code": 28172700212,
+          "school_name": "SVP ZP School, Namburu",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Krishna"
+      },
+      {
+          "school_id": 246,
+          "atl_uid_code": 203916508,
+          "udise_code": 28161790923,
+          "school_name": "The Donbosco EM School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Krishna"
+      },
+      {
+          "school_id": 247,
+          "atl_uid_code": 20086568,
+          "udise_code": 28171700506,
+          "school_name": "ZP High School, Janapadu",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Krishna"
+      },
+      {
+          "school_id": 248,
+          "atl_uid_code": 137514478,
+          "udise_code": 28215200819,
+          "school_name": "A P Model School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Kurnool"
+      },
+      {
+          "school_id": 249,
+          "atl_uid_code": 13098741,
+          "udise_code": 28212501421,
+          "school_name": "A P Model School, Alur",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Kurnool"
+      },
+      {
+          "school_id": 250,
+          "atl_uid_code": 52401162,
+          "udise_code": 28215100728,
+          "school_name": "A P R School For Boys Pattikonda English Medium",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Kurnool"
+      },
+      {
+          "school_id": 251,
+          "atl_uid_code": 2253763,
+          "udise_code": 28213600624,
+          "school_name": "AP Model School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Kurnool"
+      },
+      {
+          "school_id": 252,
+          "atl_uid_code": 225114349,
+          "udise_code": 28211400715,
+          "school_name": "AP Model School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Kurnool"
+      },
+      {
+          "school_id": 253,
+          "atl_uid_code": 969311915,
+          "udise_code": 28215100758,
+          "school_name": "AP Model School and Jr College",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Kurnool"
+      },
+      {
+          "school_id": 254,
+          "atl_uid_code": 162812896,
+          "udise_code": 28213300825,
+          "school_name": "AP Model School, Bandi Atmakur",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Kurnool"
+      },
+      {
+          "school_id": 255,
+          "atl_uid_code": 146714348,
+          "udise_code": 28213200317,
+          "school_name": "AP Model School, Gadivemula",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Kurnool"
+      },
+      {
+          "school_id": 256,
+          "atl_uid_code": 198914371,
+          "udise_code": 28213500315,
+          "school_name": "AP Model School, M Thimmapuram",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Kurnool"
+      },
+      {
+          "school_id": 257,
+          "atl_uid_code": 698515218,
+          "udise_code": 28214701025,
+          "school_name": "AP Model School, Owk",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Kurnool"
+      },
+      {
+          "school_id": 258,
+          "atl_uid_code": 200617227,
+          "udise_code": 28213100622,
+          "school_name": "AP Model School Sugalimetta, Panyam",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Kurnool"
+      },
+      {
+          "school_id": 259,
+          "atl_uid_code": 989014194,
+          "udise_code": 28211300536,
+          "school_name": "AP Model School, Velgode",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Kurnool"
+      },
+      {
+          "school_id": 260,
+          "atl_uid_code": 8318462,
+          "udise_code": 28212901017,
+          "school_name": "AP Social Welfare Residential School Girls",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Kurnool"
+      },
+      {
+          "school_id": 261,
+          "atl_uid_code": 3129457,
+          "udise_code": 28213800932,
+          "school_name": "AP Social Welfare Residential School Girls, Rprp",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Kurnool"
+      },
+      {
+          "school_id": 262,
+          "atl_uid_code": 1714484,
+          "udise_code": 28211501201,
+          "school_name": "APtw Residential School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Kurnool"
+      },
+      {
+          "school_id": 263,
+          "atl_uid_code": 3046461,
+          "udise_code": 28213800944,
+          "school_name": "APtwrs/jc.(g)-regular Allagadda Padakandla",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Kurnool"
+      },
+      {
+          "school_id": 264,
+          "atl_uid_code": 22141192,
+          "udise_code": 28215100756,
+          "school_name": "AVR EM High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Kurnool"
+      },
+      {
+          "school_id": 265,
+          "atl_uid_code": 28821189,
+          "udise_code": 28210800977,
+          "school_name": "AVR EM High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Kurnool"
+      },
+      {
+          "school_id": 266,
+          "atl_uid_code": 30192073,
+          "udise_code": 28214901703,
+          "school_name": "AVR EM High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Kurnool"
+      },
+      {
+          "school_id": 267,
+          "atl_uid_code": 71931195,
+          "udise_code": 28213800975,
+          "school_name": "AVR EM High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Kurnool"
+      },
+      {
+          "school_id": 268,
+          "atl_uid_code": 284917986,
+          "udise_code": 28210791238,
+          "school_name": "Bhashyam High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Kurnool"
+      },
+      {
+          "school_id": 269,
+          "atl_uid_code": 29799769,
+          "udise_code": 28210791176,
+          "school_name": "G H S B Camp",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Kurnool"
+      },
+      {
+          "school_id": 270,
+          "atl_uid_code": 307614366,
+          "udise_code": 28212501410,
+          "school_name": "Government High School Ii",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Kurnool"
+      },
+      {
+          "school_id": 271,
+          "atl_uid_code": 301614829,
+          "udise_code": 28211890462,
+          "school_name": "Good Shepherd English School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Kurnool"
+      },
+      {
+          "school_id": 272,
+          "atl_uid_code": 39449219,
+          "udise_code": 28210791178,
+          "school_name": "Government Girls High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Kurnool"
+      },
+      {
+          "school_id": 273,
+          "atl_uid_code": 23739428,
+          "udise_code": 28213800931,
+          "school_name": "Government High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Kurnool"
+      },
+      {
+          "school_id": 274,
+          "atl_uid_code": 12049714,
+          "udise_code": 28214301423,
+          "school_name": "Govt High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Kurnool"
+      },
+      {
+          "school_id": 275,
+          "atl_uid_code": 241115272,
+          "udise_code": 28211100130,
+          "school_name": "Govt High School, Atmakur",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Kurnool"
+      },
+      {
+          "school_id": 276,
+          "atl_uid_code": 23417653,
+          "udise_code": 28210800937,
+          "school_name": "Govt High School, Nandikotkur",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Kurnool"
+      },
+      {
+          "school_id": 277,
+          "atl_uid_code": 41159692,
+          "udise_code": 28213100609,
+          "school_name": "Govt High School, Panyam",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Kurnool"
+      },
+      {
+          "school_id": 278,
+          "atl_uid_code": 12469782,
+          "udise_code": 28210791175,
+          "school_name": "Govt Town Model School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Kurnool"
+      },
+      {
+          "school_id": 279,
+          "atl_uid_code": 223815492,
+          "udise_code": 28212390198,
+          "school_name": "GVCGG High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Kurnool"
+      },
+      {
+          "school_id": 280,
+          "atl_uid_code": 916819531,
+          "udise_code": 28213800974,
+          "school_name": "Indian E M and T M High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Kurnool"
+      },
+      {
+          "school_id": 281,
+          "atl_uid_code": 15677580,
+          "udise_code": 28210791184,
+          "school_name": "Indira Gandhi Mem Municipal H School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Kurnool"
+      },
+      {
+          "school_id": 282,
+          "atl_uid_code": 2434651,
+          "udise_code": 28211890518,
+          "school_name": "Indus EM High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Kurnool"
+      },
+      {
+          "school_id": 283,
+          "atl_uid_code": 213212888,
+          "udise_code": 28212391343,
+          "school_name": "Kiddys English Medium High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Kurnool"
+      },
+      {
+          "school_id": 284,
+          "atl_uid_code": 299916720,
+          "udise_code": 28211300531,
+          "school_name": "Little Angels English Medium High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Kurnool"
+      },
+      {
+          "school_id": 285,
+          "atl_uid_code": 52341791,
+          "udise_code": 28213100905,
+          "school_name": "Mjpapbcwr School and College For Girls, Nerawada",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Kurnool"
+      },
+      {
+          "school_id": 286,
+          "atl_uid_code": 298719440,
+          "udise_code": 28212391314,
+          "school_name": "National English Medium High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Kurnool"
+      },
+      {
+          "school_id": 287,
+          "atl_uid_code": 30419452,
+          "udise_code": 28214403124,
+          "school_name": "Nehru High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Kurnool"
+      },
+      {
+          "school_id": 288,
+          "atl_uid_code": 19929572,
+          "udise_code": 28213000408,
+          "school_name": "Panyam Cements High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Kurnool"
+      },
+      {
+          "school_id": 289,
+          "atl_uid_code": 102219597,
+          "udise_code": 28214301444,
+          "school_name": "Pragathi Public School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Kurnool"
+      },
+      {
+          "school_id": 290,
+          "atl_uid_code": 319418971,
+          "udise_code": 28210700910,
+          "school_name": "Pragna Bharati School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Kurnool"
+      },
+      {
+          "school_id": 291,
+          "atl_uid_code": 119715605,
+          "udise_code": 28211800486,
+          "school_name": "Ravindra English Medium School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Kurnool"
+      },
+      {
+          "school_id": 292,
+          "atl_uid_code": 29272808,
+          "udise_code": 28210702512,
+          "school_name": "Ravindra Vidya Nikethan EM School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Kurnool"
+      },
+      {
+          "school_id": 293,
+          "atl_uid_code": 59332650,
+          "udise_code": 28211890554,
+          "school_name": "Ridge School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Kurnool"
+      },
+      {
+          "school_id": 294,
+          "atl_uid_code": 19649125,
+          "udise_code": 28213491407,
+          "school_name": "S P G High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Kurnool"
+      },
+      {
+          "school_id": 295,
+          "atl_uid_code": 249915621,
+          "udise_code": 28211800487,
+          "school_name": "Sai Subbaiah Ravindra High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Kurnool"
+      },
+      {
+          "school_id": 296,
+          "atl_uid_code": 12799237,
+          "udise_code": 28211890461,
+          "school_name": "Sarvepalli Vidya Nilayam High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Kurnool"
+      },
+      {
+          "school_id": 297,
+          "atl_uid_code": 266417632,
+          "udise_code": 28210800983,
+          "school_name": "Scholars EM High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Kurnool"
+      },
+      {
+          "school_id": 298,
+          "atl_uid_code": 18357558,
+          "udise_code": 28213400702,
+          "school_name": "Sri Bajaji Vidyamandiram",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Kurnool"
+      },
+      {
+          "school_id": 299,
+          "atl_uid_code": 721417081,
+          "udise_code": 28212303914,
+          "school_name": "Sri Krishna Devaraya English Medium High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Kurnool"
+      },
+      {
+          "school_id": 300,
+          "atl_uid_code": 22438467,
+          "udise_code": 28210791197,
+          "school_name": "Sri Lakshmi High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Kurnool"
+      },
+      {
+          "school_id": 301,
+          "atl_uid_code": 324616823,
+          "udise_code": 28210800939,
+          "school_name": "Sri Navanandi High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Kurnool"
+      },
+      {
+          "school_id": 302,
+          "atl_uid_code": 18877504,
+          "udise_code": 28213491487,
+          "school_name": "Sri Sathinikethan Group of Schools",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Kurnool"
+      },
+      {
+          "school_id": 303,
+          "atl_uid_code": 166917691,
+          "udise_code": 28210800942,
+          "school_name": "St Marys High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Kurnool"
+      },
+      {
+          "school_id": 304,
+          "atl_uid_code": 62639330,
+          "udise_code": 28213491424,
+          "school_name": "The Nandyal Public School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Kurnool"
+      },
+      {
+          "school_id": 305,
+          "atl_uid_code": 26439360,
+          "udise_code": 28213100617,
+          "school_name": "Vijaya Nikethan Educational Society",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Kurnool"
+      },
+      {
+          "school_id": 306,
+          "atl_uid_code": 220019732,
+          "udise_code": 28213600909,
+          "school_name": "Vimala E M High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Kurnool"
+      },
+      {
+          "school_id": 307,
+          "atl_uid_code": 14379587,
+          "udise_code": 28213800956,
+          "school_name": "Viswasanthi High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Kurnool"
+      },
+      {
+          "school_id": 308,
+          "atl_uid_code": 17559728,
+          "udise_code": 28214200604,
+          "school_name": "Z P High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Kurnool"
+      },
+      {
+          "school_id": 309,
+          "atl_uid_code": 206513495,
+          "udise_code": 28210801206,
+          "school_name": "Z P High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Kurnool"
+      },
+      {
+          "school_id": 310,
+          "atl_uid_code": 959813043,
+          "udise_code": 28211001505,
+          "school_name": "Z P High School, Dudyala",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Kurnool"
+      },
+      {
+          "school_id": 311,
+          "atl_uid_code": 270812429,
+          "udise_code": 28210500405,
+          "school_name": "Z P High School, Mudumala",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Kurnool"
+      },
+      {
+          "school_id": 312,
+          "atl_uid_code": 14369749,
+          "udise_code": 28214400903,
+          "school_name": "Z P High School, Nandivargam",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Kurnool"
+      },
+      {
+          "school_id": 313,
+          "atl_uid_code": 184219762,
+          "udise_code": 28213701407,
+          "school_name": "Z P High School, Rudravaram",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Kurnool"
+      },
+      {
+          "school_id": 314,
+          "atl_uid_code": 270719694,
+          "udise_code": 28213901523,
+          "school_name": "Z P O High School Girls, Chagalamarri",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Kurnool"
+      },
+      {
+          "school_id": 315,
+          "atl_uid_code": 31199071,
+          "udise_code": 28213901517,
+          "school_name": "Zilla Parishad Boys High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Kurnool"
+      },
+      {
+          "school_id": 316,
+          "atl_uid_code": 45068378,
+          "udise_code": 28214403122,
+          "school_name": "Zilla Parishad Boys High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Kurnool"
+      },
+      {
+          "school_id": 317,
+          "atl_uid_code": 10779183,
+          "udise_code": 28211100128,
+          "school_name": "Zilla Parishad Girls High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Kurnool"
+      },
+      {
+          "school_id": 318,
+          "atl_uid_code": 61409039,
+          "udise_code": 28214301419,
+          "school_name": "Zilla Parishad Girls High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Kurnool"
+      },
+      {
+          "school_id": 319,
+          "atl_uid_code": 31198272,
+          "udise_code": 28214401203,
+          "school_name": "Zilla Parishad High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Kurnool"
+      },
+      {
+          "school_id": 320,
+          "atl_uid_code": 98267039,
+          "udise_code": 28211800103,
+          "school_name": "Zilla Parishad High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Kurnool"
+      },
+      {
+          "school_id": 321,
+          "atl_uid_code": 144315120,
+          "udise_code": 28211700803,
+          "school_name": "Zilla Parishad High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Kurnool"
+      },
+      {
+          "school_id": 322,
+          "atl_uid_code": 147814821,
+          "udise_code": 28210800807,
+          "school_name": "Zilla Parishad High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Kurnool"
+      },
+      {
+          "school_id": 323,
+          "atl_uid_code": 152914137,
+          "udise_code": 28211800304,
+          "school_name": "Zilla Parishad High School, Peddapadu",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Kurnool"
+      },
+      {
+          "school_id": 324,
+          "atl_uid_code": 190114228,
+          "udise_code": 28211890452,
+          "school_name": "Zilla Parishad High School, Shareen Nagar",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Kurnool"
+      },
+      {
+          "school_id": 325,
+          "atl_uid_code": 845912985,
+          "udise_code": 28212700206,
+          "school_name": "Zilla Parishad High School, Ternekal",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Kurnool"
+      },
+      {
+          "school_id": 326,
+          "atl_uid_code": 253613317,
+          "udise_code": 28213300810,
+          "school_name": "Zillaparishad High School, Bandiatmakur",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Kurnool"
+      },
+      {
+          "school_id": 327,
+          "atl_uid_code": 305214804,
+          "udise_code": 28210900104,
+          "school_name": "ZP High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Kurnool"
+      },
+      {
+          "school_id": 328,
+          "atl_uid_code": 241014275,
+          "udise_code": 28211900707,
+          "school_name": "ZP High School, Laddagiri",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Kurnool"
+      },
+      {
+          "school_id": 329,
+          "atl_uid_code": 846014432,
+          "udise_code": 28215300404,
+          "school_name": "ZP High School, Nemakal",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Kurnool"
+      },
+      {
+          "school_id": 330,
+          "atl_uid_code": 76917686,
+          "udise_code": 28214400608,
+          "school_name": "ZPH School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Kurnool"
+      },
+      {
+          "school_id": 331,
+          "atl_uid_code": 243713302,
+          "udise_code": 28213500809,
+          "school_name": "ZPH School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Kurnool"
+      },
+      {
+          "school_id": 332,
+          "atl_uid_code": 197514623,
+          "udise_code": 28211600407,
+          "school_name": "ZPH School, Midthur",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Kurnool"
+      },
+      {
+          "school_id": 333,
+          "atl_uid_code": 16387617,
+          "udise_code": 28211701102,
+          "school_name": "ZPH School, Orvakal",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Kurnool"
+      },
+      {
+          "school_id": 334,
+          "atl_uid_code": 196814656,
+          "udise_code": 28210500605,
+          "school_name": "ZPHS",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Kurnool"
+      },
+      {
+          "school_id": 335,
+          "atl_uid_code": 18799807,
+          "udise_code": 28212901013,
+          "school_name": "ZPHS Boys, Veldurty",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Kurnool"
+      },
+      {
+          "school_id": 336,
+          "atl_uid_code": 130616770,
+          "udise_code": 28210202411,
+          "school_name": "ZPHS Girls, Kosigi",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Kurnool"
+      },
+      {
+          "school_id": 337,
+          "atl_uid_code": 248215077,
+          "udise_code": 28210900907,
+          "school_name": "ZPHS, Pagidyala",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Kurnool"
+      },
+      {
+          "school_id": 338,
+          "atl_uid_code": 241014527,
+          "udise_code": 28211400708,
+          "school_name": "ZPHS, Pamulapadu",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Kurnool"
+      },
+      {
+          "school_id": 339,
+          "atl_uid_code": 614714363,
+          "udise_code": 28212300303,
+          "school_name": "ZPHS, Pedda Harivanam",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Kurnool"
+      },
+      {
+          "school_id": 340,
+          "atl_uid_code": 2969529,
+          "udise_code": 28192001408,
+          "school_name": "A P S W R School, Adurupalli",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Nellore"
+      },
+      {
+          "school_id": 341,
+          "atl_uid_code": 804517974,
+          "udise_code": 28192800206,
+          "school_name": "AIMS School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Nellore"
+      },
+      {
+          "school_id": 342,
+          "atl_uid_code": 22398400,
+          "udise_code": 28194402802,
+          "school_name": "AP Model School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Nellore"
+      },
+      {
+          "school_id": 343,
+          "atl_uid_code": 6565445,
+          "udise_code": 28194501324,
+          "school_name": "AP Social Welfare Resedential School and Junior College For Girls, Sullurpet",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Nellore"
+      },
+      {
+          "school_id": 344,
+          "atl_uid_code": 2344446,
+          "udise_code": 28194202507,
+          "school_name": "AP Social Welfare Residential School and Junior College For Girls",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Nellore"
+      },
+      {
+          "school_id": 345,
+          "atl_uid_code": 2559538,
+          "udise_code": 28193900308,
+          "school_name": "APTWR Junior College Boys, Chittedu",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Nellore"
+      },
+      {
+          "school_id": 346,
+          "atl_uid_code": 2910522,
+          "udise_code": 28191800240,
+          "school_name": "APTWR Residential School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Nellore"
+      },
+      {
+          "school_id": 347,
+          "atl_uid_code": 3055518,
+          "udise_code": 28193900307,
+          "school_name": "APTWR School PTG Boys, Chittedu",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Nellore"
+      },
+      {
+          "school_id": 348,
+          "atl_uid_code": 72759117,
+          "udise_code": 28193901513,
+          "school_name": "Balabharathi E.M High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Nellore"
+      },
+      {
+          "school_id": 349,
+          "atl_uid_code": 201312857,
+          "udise_code": 28193000906,
+          "school_name": "GTW Ashram School For Girls, Golagamudi",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Nellore"
+      },
+      {
+          "school_id": 350,
+          "atl_uid_code": 116819060,
+          "udise_code": 28192500989,
+          "school_name": "Himalaya English Medium High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Nellore"
+      },
+      {
+          "school_id": 351,
+          "atl_uid_code": 437511614,
+          "udise_code": 28191100306,
+          "school_name": "Jawahar Navodaya Vidyalaya, Nellore",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Nellore"
+      },
+      {
+          "school_id": 352,
+          "atl_uid_code": 12583817,
+          "udise_code": 28193800107,
+          "school_name": "Little Angels English Medium High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Nellore"
+      },
+      {
+          "school_id": 353,
+          "atl_uid_code": 23104598,
+          "udise_code": 28193000910,
+          "school_name": "Mjpapbcwr School Girls, Golagamudi",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Nellore"
+      },
+      {
+          "school_id": 354,
+          "atl_uid_code": 141013460,
+          "udise_code": 28192590745,
+          "school_name": "Sanghamitra Vidyalayam",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Nellore"
+      },
+      {
+          "school_id": 355,
+          "atl_uid_code": 66661169,
+          "udise_code": 28194501336,
+          "school_name": "Sri Satyam EM High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Nellore"
+      },
+      {
+          "school_id": 356,
+          "atl_uid_code": 181118825,
+          "udise_code": 28192590723,
+          "school_name": "St. Josephs Girls High School (TM)",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Nellore"
+      },
+      {
+          "school_id": 357,
+          "atl_uid_code": 803817930,
+          "udise_code": 28192501505,
+          "school_name": "VBR EM High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Nellore"
+      },
+      {
+          "school_id": 358,
+          "atl_uid_code": 126517509,
+          "udise_code": 28190600106,
+          "school_name": "VCBRM ZPP High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Nellore"
+      },
+      {
+          "school_id": 359,
+          "atl_uid_code": 279818798,
+          "udise_code": 28191202033,
+          "school_name": "Z P P G High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Nellore"
+      },
+      {
+          "school_id": 360,
+          "atl_uid_code": 122818973,
+          "udise_code": 28190400513,
+          "school_name": "ZPP High School, Jaladanki",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Nellore"
+      },
+      {
+          "school_id": 361,
+          "atl_uid_code": 224618563,
+          "udise_code": 28192801006,
+          "school_name": "ZPPHS, Chennapallipalem",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Nellore"
+      },
+      {
+          "school_id": 362,
+          "atl_uid_code": 257514240,
+          "udise_code": 28183100982,
+          "school_name": "A P Model School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Prakasam"
+      },
+      {
+          "school_id": 363,
+          "atl_uid_code": 7055896,
+          "udise_code": 28180300509,
+          "school_name": "Andhra Pradesh Residential School Boys",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Prakasam"
+      },
+      {
+          "school_id": 364,
+          "atl_uid_code": 2272463,
+          "udise_code": 28181301119,
+          "school_name": "Andhra Pradesh Social Welfare Residential School and Junior College For Boys",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Prakasam"
+      },
+      {
+          "school_id": 365,
+          "atl_uid_code": 24837111,
+          "udise_code": 28183601153,
+          "school_name": "Anusha High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Prakasam"
+      },
+      {
+          "school_id": 366,
+          "atl_uid_code": 146316134,
+          "udise_code": 28185300704,
+          "school_name": "AP Model School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Prakasam"
+      },
+      {
+          "school_id": 367,
+          "atl_uid_code": 6715475,
+          "udise_code": 28181900508,
+          "school_name": "AP Social Welfare Residential Jr College For Girls, Yeddanapudi",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Prakasam"
+      },
+      {
+          "school_id": 368,
+          "atl_uid_code": 221719941,
+          "udise_code": 28181601124,
+          "school_name": "Bell and Bennett High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Prakasam"
+      },
+      {
+          "school_id": 369,
+          "atl_uid_code": 20474228,
+          "udise_code": 28181301171,
+          "school_name": "BMRM Jhansi High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Prakasam"
+      },
+      {
+          "school_id": 370,
+          "atl_uid_code": 889118967,
+          "udise_code": 28184700315,
+          "school_name": "Bsm Zilla Parishad High School, Kothapatnam",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Prakasam"
+      },
+      {
+          "school_id": 371,
+          "atl_uid_code": 276814322,
+          "udise_code": 28181302108,
+          "school_name": "Fjarli Academy of Seventh Day Adventist, Prakasam",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Prakasam"
+      },
+      {
+          "school_id": 372,
+          "atl_uid_code": 210417680,
+          "udise_code": 28184500206,
+          "school_name": "K R R Zilla Parishad High School, Nidamanur",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Prakasam"
+      },
+      {
+          "school_id": 373,
+          "atl_uid_code": 171314159,
+          "udise_code": 28184202206,
+          "school_name": "Paparao High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Prakasam"
+      },
+      {
+          "school_id": 374,
+          "atl_uid_code": 217819767,
+          "udise_code": 28183501013,
+          "school_name": "Spandana High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Prakasam"
+      },
+      {
+          "school_id": 375,
+          "atl_uid_code": 151019979,
+          "udise_code": 28182801307,
+          "school_name": "Sri Nagarjuna High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Prakasam"
+      },
+      {
+          "school_id": 376,
+          "atl_uid_code": 282819230,
+          "udise_code": 28184300712,
+          "school_name": "Sskcm Zilla Parishad High School, Santhanuthalapadu",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Prakasam"
+      },
+      {
+          "school_id": 377,
+          "atl_uid_code": 1160580,
+          "udise_code": 28111401509,
+          "school_name": "Andhra Pradesh Social Welfare Residential School, Bhamini",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Srikakulam"
+      },
+      {
+          "school_id": 378,
+          "atl_uid_code": 1212574,
+          "udise_code": 28113504305,
+          "school_name": "Andhra Pradesh Social Welfare Residential School For Boys, Kanchili, Srikakulam",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Srikakulam"
+      },
+      {
+          "school_id": 379,
+          "atl_uid_code": 2281712,
+          "udise_code": 28111304709,
+          "school_name": "Andhra Pradesh Tribal Welfare Residential Junior College Boys",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Srikakulam"
+      },
+      {
+          "school_id": 380,
+          "atl_uid_code": 1135570,
+          "udise_code": 28112604607,
+          "school_name": "AP Tribal Welfare Residential School Boys, Peddamadi",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Srikakulam"
+      },
+      {
+          "school_id": 381,
+          "atl_uid_code": 2546385,
+          "udise_code": 28111304721,
+          "school_name": "APTWR School Boys",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Srikakulam"
+      },
+      {
+          "school_id": 382,
+          "atl_uid_code": 1861582,
+          "udise_code": 28111304710,
+          "school_name": "APTWR School(g), Seethampeta",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Srikakulam"
+      },
+      {
+          "school_id": 383,
+          "atl_uid_code": 316214214,
+          "udise_code": 28111303503,
+          "school_name": "GTW Ashram School Boys, Donubai",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Srikakulam"
+      },
+      {
+          "school_id": 384,
+          "atl_uid_code": 320814254,
+          "udise_code": 28111309805,
+          "school_name": "GTW Ashram School Boys, Malli",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Srikakulam"
+      },
+      {
+          "school_id": 385,
+          "atl_uid_code": 195114309,
+          "udise_code": 28112504706,
+          "school_name": "GTW Ashram School Girls, Bommika",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Srikakulam"
+      },
+      {
+          "school_id": 386,
+          "atl_uid_code": 276714270,
+          "udise_code": 28111304507,
+          "school_name": "GTW Ashram School Girls, Haddubangi",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Srikakulam"
+      },
+      {
+          "school_id": 387,
+          "atl_uid_code": 264114306,
+          "udise_code": 28111300205,
+          "school_name": "GTW Ashram School Girls, Poothikavalasa",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Srikakulam"
+      },
+      {
+          "school_id": 388,
+          "atl_uid_code": 157914286,
+          "udise_code": 28111304707,
+          "school_name": "GTW Ashram School Girls, Seethampeta",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Srikakulam"
+      },
+      {
+          "school_id": 389,
+          "atl_uid_code": 898614356,
+          "udise_code": 28111706702,
+          "school_name": "GTW Ashram School Girls, Vennelavalasa",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Srikakulam"
+      },
+      {
+          "school_id": 390,
+          "atl_uid_code": 248317319,
+          "udise_code": 28113290364,
+          "school_name": "Medha High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Srikakulam"
+      },
+      {
+          "school_id": 391,
+          "atl_uid_code": 175716649,
+          "udise_code": 28112704826,
+          "school_name": "Mjpapbcwr School Girls, Tekkali, Srikakulam",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Srikakulam"
+      },
+      {
+          "school_id": 392,
+          "atl_uid_code": 7443718,
+          "udise_code": 28113600109,
+          "school_name": "R K School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Srikakulam"
+      },
+      {
+          "school_id": 393,
+          "atl_uid_code": 730618294,
+          "udise_code": 28112103419,
+          "school_name": "Viswasanthi High School, Polaki",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Srikakulam"
+      },
+      {
+          "school_id": 394,
+          "atl_uid_code": 307813977,
+          "udise_code": 28110501703,
+          "school_name": "ZP High School, G Sigadam",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Srikakulam"
+      },
+      {
+          "school_id": 395,
+          "atl_uid_code": 229818575,
+          "udise_code": 28132991122,
+          "school_name": "Bhashyam High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Visakhapatnam"
+      },
+      {
+          "school_id": 396,
+          "atl_uid_code": 240018499,
+          "udise_code": 28132400206,
+          "school_name": "Bhashyam High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Visakhapatnam"
+      },
+      {
+          "school_id": 397,
+          "atl_uid_code": 214918180,
+          "udise_code": 28132402330,
+          "school_name": "Bhashyam High School, Naidu Thota",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Visakhapatnam"
+      },
+      {
+          "school_id": 398,
+          "atl_uid_code": 263218334,
+          "udise_code": 28132401166,
+          "school_name": "Bhashyam High School, Pendurthi",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Visakhapatnam"
+      },
+      {
+          "school_id": 399,
+          "atl_uid_code": 21762983,
+          "udise_code": 28133090384,
+          "school_name": "D A V Centenary Public School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Visakhapatnam"
+      },
+      {
+          "school_id": 400,
+          "atl_uid_code": 250010828,
+          "udise_code": 28133090385,
+          "school_name": "Delhi Public School, Visakhapatnam Steel Plant",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Visakhapatnam"
+      },
+      {
+          "school_id": 401,
+          "atl_uid_code": 875413682,
+          "udise_code": 28131309505,
+          "school_name": "GTW Asahram School Girls, Rinthada",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Visakhapatnam"
+      },
+      {
+          "school_id": 402,
+          "atl_uid_code": 275913457,
+          "udise_code": 28131210104,
+          "school_name": "GTW Ashram School Boys, Chintapalli One",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Visakhapatnam"
+      },
+      {
+          "school_id": 403,
+          "atl_uid_code": 176313659,
+          "udise_code": 28130409901,
+          "school_name": "GTW Ashram School Boys, Dumbriguda",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Visakhapatnam"
+      },
+      {
+          "school_id": 404,
+          "atl_uid_code": 198013611,
+          "udise_code": 28131112306,
+          "school_name": "GTW Ashram School Boys, G Madugula",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Visakhapatnam"
+      },
+      {
+          "school_id": 405,
+          "atl_uid_code": 343713542,
+          "udise_code": 28130307419,
+          "school_name": "GTW Ashram School Boys, Hukumpeta One",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Visakhapatnam"
+      },
+      {
+          "school_id": 406,
+          "atl_uid_code": 113713664,
+          "udise_code": 28130307405,
+          "school_name": "GTW Ashram School Boys, Hukumpeta Two",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Visakhapatnam"
+      },
+      {
+          "school_id": 407,
+          "atl_uid_code": 806013612,
+          "udise_code": 28130590508,
+          "school_name": "GTW Ashram School Boys, Kantabamsuguda",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Visakhapatnam"
+      },
+      {
+          "school_id": 408,
+          "atl_uid_code": 122813559,
+          "udise_code": 28130406804,
+          "school_name": "GTW Ashram School Boys, Kinchumanda",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Visakhapatnam"
+      },
+      {
+          "school_id": 409,
+          "atl_uid_code": 135713521,
+          "udise_code": 28130619301,
+          "school_name": "GTW Ashram School Boys, Kothavalasa",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Visakhapatnam"
+      },
+      {
+          "school_id": 410,
+          "atl_uid_code": 126613546,
+          "udise_code": 28131404004,
+          "school_name": "GTW Ashram School Boys, Koyyuru One",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Visakhapatnam"
+      },
+      {
+          "school_id": 411,
+          "atl_uid_code": 229613535,
+          "udise_code": 28130115704,
+          "school_name": "GTW Ashram School Boys, Munchingiput One",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Visakhapatnam"
+      },
+      {
+          "school_id": 412,
+          "atl_uid_code": 220813643,
+          "udise_code": 28130202714,
+          "school_name": "GTW Ashram School Boys, Pedebayalu One",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Visakhapatnam"
+      },
+      {
+          "school_id": 413,
+          "atl_uid_code": 284413706,
+          "udise_code": 28130590513,
+          "school_name": "GTW Ashram School Boys, Ravvalaguda",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Visakhapatnam"
+      },
+      {
+          "school_id": 414,
+          "atl_uid_code": 236113510,
+          "udise_code": 28130612702,
+          "school_name": "GTW Ashram School Boys, Sivalingapuram",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Visakhapatnam"
+      },
+      {
+          "school_id": 415,
+          "atl_uid_code": 293413512,
+          "udise_code": 28130607804,
+          "school_name": "GTW Ashram School Girls, Ananthagiri One",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Visakhapatnam"
+      },
+      {
+          "school_id": 416,
+          "atl_uid_code": 222513630,
+          "udise_code": 28130607803,
+          "school_name": "GTW Ashram School Girls, Ananthagiri Two",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Visakhapatnam"
+      },
+      {
+          "school_id": 417,
+          "atl_uid_code": 646213662,
+          "udise_code": 28130590511,
+          "school_name": "GTW Ashram School Girls, Arakuvalley",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Visakhapatnam"
+      },
+      {
+          "school_id": 418,
+          "atl_uid_code": 322413562,
+          "udise_code": 28131111302,
+          "school_name": "GTW Ashram School Girls, Bandaveedhi",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Visakhapatnam"
+      },
+      {
+          "school_id": 419,
+          "atl_uid_code": 228113647,
+          "udise_code": 28131210105,
+          "school_name": "GTW Ashram School Girls, Chintapalli",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Visakhapatnam"
+      },
+      {
+          "school_id": 420,
+          "atl_uid_code": 206213679,
+          "udise_code": 28130404606,
+          "school_name": "GTW Ashram School Girls, Dumbriguda",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Visakhapatnam"
+      },
+      {
+          "school_id": 421,
+          "atl_uid_code": 264013652,
+          "udise_code": 28131306703,
+          "school_name": "GTW Ashram School Girls, G K Veedhi",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Visakhapatnam"
+      },
+      {
+          "school_id": 422,
+          "atl_uid_code": 148913684,
+          "udise_code": 28131112303,
+          "school_name": "GTW Ashram School Girls, Gandhinagaram G Madugula",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Visakhapatnam"
+      },
+      {
+          "school_id": 423,
+          "atl_uid_code": 299713561,
+          "udise_code": 28130505803,
+          "school_name": "GTW Ashram School Girls, Gannela",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Visakhapatnam"
+      },
+      {
+          "school_id": 424,
+          "atl_uid_code": 157013683,
+          "udise_code": 28130307801,
+          "school_name": "GTW Ashram School Girls, Guda",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Visakhapatnam"
+      },
+      {
+          "school_id": 425,
+          "atl_uid_code": 153213650,
+          "udise_code": 28131002102,
+          "school_name": "GTW Ashram School Girls, Guttulaputtu",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Visakhapatnam"
+      },
+      {
+          "school_id": 426,
+          "atl_uid_code": 264813641,
+          "udise_code": 28130405104,
+          "school_name": "GTW Ashram School Girls, Jamuguda",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Visakhapatnam"
+      },
+      {
+          "school_id": 427,
+          "atl_uid_code": 108113640,
+          "udise_code": 28131010202,
+          "school_name": "GTW Ashram School Girls, Kandamamidi",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Visakhapatnam"
+      },
+      {
+          "school_id": 428,
+          "atl_uid_code": 223513692,
+          "udise_code": 28130511904,
+          "school_name": "GTW Ashram School Girls, Kothaballuguda",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Visakhapatnam"
+      },
+      {
+          "school_id": 429,
+          "atl_uid_code": 115613502,
+          "udise_code": 28131112309,
+          "school_name": "GTW Ashram School Girls, Kothuru",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Visakhapatnam"
+      },
+      {
+          "school_id": 430,
+          "atl_uid_code": 970513695,
+          "udise_code": 28130115701,
+          "school_name": "GTW Ashram School Girls, Munchingiput Two",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Visakhapatnam"
+      },
+      {
+          "school_id": 431,
+          "atl_uid_code": 136713674,
+          "udise_code": 28130202710,
+          "school_name": "GTW Ashram School Girls, Pedabayalu",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Visakhapatnam"
+      },
+      {
+          "school_id": 432,
+          "atl_uid_code": 293413493,
+          "udise_code": 28131404804,
+          "school_name": "GTW Ashram School Girls, Rajendrapalem",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Visakhapatnam"
+      },
+      {
+          "school_id": 433,
+          "atl_uid_code": 411113564,
+          "udise_code": 28131414405,
+          "school_name": "GTW Ashram School Girls, Ravanapalli",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Visakhapatnam"
+      },
+      {
+          "school_id": 434,
+          "atl_uid_code": 961813642,
+          "udise_code": 28130303501,
+          "school_name": "GTW Ashram School Girls, Santhari Pedagaruvu",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Visakhapatnam"
+      },
+      {
+          "school_id": 435,
+          "atl_uid_code": 296913469,
+          "udise_code": 28130900205,
+          "school_name": "GTW Ashram School Girls, Tatiparthi",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Visakhapatnam"
+      },
+      {
+          "school_id": 436,
+          "atl_uid_code": 274913707,
+          "udise_code": 28130213401,
+          "school_name": "GTW Ashram School Girls, Turakalavasala",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Visakhapatnam"
+      },
+      {
+          "school_id": 437,
+          "atl_uid_code": 416313624,
+          "udise_code": 28131208804,
+          "school_name": "GTW Ashram School Girls, Wangasara",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Visakhapatnam"
+      },
+      {
+          "school_id": 438,
+          "atl_uid_code": 262113670,
+          "udise_code": 28131407001,
+          "school_name": "GTW Ashram School Girls, Y N Pakalu",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Visakhapatnam"
+      },
+      {
+          "school_id": 439,
+          "atl_uid_code": 386013533,
+          "udise_code": 28131003501,
+          "school_name": "Gtwa School Boys, Talarisingi",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Visakhapatnam"
+      },
+      {
+          "school_id": 440,
+          "atl_uid_code": 369212337,
+          "udise_code": 28132301310,
+          "school_name": "Pratibha Vidyalayam",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Visakhapatnam"
+      },
+      {
+          "school_id": 441,
+          "atl_uid_code": 2992481,
+          "udise_code": 28122895137,
+          "school_name": "Dr Besant English Medium School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Vizianagaram"
+      },
+      {
+          "school_id": 442,
+          "atl_uid_code": 330513930,
+          "udise_code": 28120307907,
+          "school_name": "GTW Ashram School Boys, Dl Puram",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Vizianagaram"
+      },
+      {
+          "school_id": 443,
+          "atl_uid_code": 133113851,
+          "udise_code": 28120201803,
+          "school_name": "GTW Ashram School Boys, Kothaguda",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Vizianagaram"
+      },
+      {
+          "school_id": 444,
+          "atl_uid_code": 288216858,
+          "udise_code": 28120207615,
+          "school_name": "GTW Ashram School Girls, Bhadragiri",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Vizianagaram"
+      },
+      {
+          "school_id": 445,
+          "atl_uid_code": 753313874,
+          "udise_code": 28121106203,
+          "school_name": "GTW Ashram School Girls, Kothavalasa",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Vizianagaram"
+      },
+      {
+          "school_id": 446,
+          "atl_uid_code": 204813826,
+          "udise_code": 28120303603,
+          "school_name": "GTW Ashram School Girls, Lankajodu",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Vizianagaram"
+      },
+      {
+          "school_id": 447,
+          "atl_uid_code": 470913900,
+          "udise_code": 28120210804,
+          "school_name": "GTW Ashram School Girls, Regidi",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Vizianagaram"
+      },
+      {
+          "school_id": 448,
+          "atl_uid_code": 309213870,
+          "udise_code": 28120103404,
+          "school_name": "GTW Ashram School Girls, Ulipiri",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Vizianagaram"
+      },
+      {
+          "school_id": 449,
+          "atl_uid_code": 22235987,
+          "udise_code": 28122490816,
+          "school_name": "Mjpapbcwr School Junior College",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Vizianagaram"
+      },
+      {
+          "school_id": 450,
+          "atl_uid_code": 119611942,
+          "udise_code": 28122895154,
+          "school_name": "New Central School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Vizianagaram"
+      },
+      {
+          "school_id": 451,
+          "atl_uid_code": 368011809,
+          "udise_code": 28122895182,
+          "school_name": "Pallavi Vidya Mandir High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Vizianagaram"
+      },
+      {
+          "school_id": 452,
+          "atl_uid_code": 1884282,
+          "udise_code": 28122202804,
+          "school_name": "Siva Satya Sai High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Vizianagaram"
+      },
+      {
+          "school_id": 453,
+          "atl_uid_code": 190011341,
+          "udise_code": 28123200202,
+          "school_name": "Zilla Parishad High School, Golzam",
+          "state_name": "Andhra Pradesh",
+          "district_name": "Vizianagaram"
+      },
+      {
+          "school_id": 454,
+          "atl_uid_code": 11971429,
+          "udise_code": 28154501311,
+          "school_name": "Andhra Pradesh Balayogi Gurukulam For Boys School Junior College",
+          "state_name": "Andhra Pradesh",
+          "district_name": "West Godavari"
+      },
+      {
+          "school_id": 455,
+          "atl_uid_code": 4261602,
+          "udise_code": 28150101607,
+          "school_name": "Andhra Pradesh Tribal Welfare Residental School Boys, Jeelugumilli",
+          "state_name": "Andhra Pradesh",
+          "district_name": "West Godavari"
+      },
+      {
+          "school_id": 456,
+          "atl_uid_code": 2938577,
+          "udise_code": 28150205202,
+          "school_name": "Andhra Pradesh Tribal Welfare Residential School Boys, Kota Ramachandrapuram",
+          "state_name": "Andhra Pradesh",
+          "district_name": "West Godavari"
+      },
+      {
+          "school_id": 457,
+          "atl_uid_code": 2297579,
+          "udise_code": 28150203103,
+          "school_name": "Andhra Pradesh Tribal Welfare School Girls, Buttaigudem",
+          "state_name": "Andhra Pradesh",
+          "district_name": "West Godavari"
+      },
+      {
+          "school_id": 458,
+          "atl_uid_code": 191214548,
+          "udise_code": 28150400906,
+          "school_name": "ASZP High School, Annadevarapeta",
+          "state_name": "Andhra Pradesh",
+          "district_name": "West Godavari"
+      },
+      {
+          "school_id": 459,
+          "atl_uid_code": 674218068,
+          "udise_code": 28151690357,
+          "school_name": "Bhashyam EM High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "West Godavari"
+      },
+      {
+          "school_id": 460,
+          "atl_uid_code": 215512894,
+          "udise_code": 28150200308,
+          "school_name": "GTW Ashram School Boys, Antharvedigudem",
+          "state_name": "Andhra Pradesh",
+          "district_name": "West Godavari"
+      },
+      {
+          "school_id": 461,
+          "atl_uid_code": 227612656,
+          "udise_code": 28150200415,
+          "school_name": "GTW Ashram School for Boys, Doramamidi",
+          "state_name": "Andhra Pradesh",
+          "district_name": "West Godavari"
+      },
+      {
+          "school_id": 462,
+          "atl_uid_code": 198412946,
+          "udise_code": 28150202203,
+          "school_name": "GTW Ashram School Girls, Palakunta",
+          "state_name": "Andhra Pradesh",
+          "district_name": "West Godavari"
+      },
+      {
+          "school_id": 463,
+          "atl_uid_code": 691212947,
+          "udise_code": 28150200417,
+          "school_name": "GTW Ashram School Girls, Tellamvarigudem",
+          "state_name": "Andhra Pradesh",
+          "district_name": "West Godavari"
+      },
+      {
+          "school_id": 464,
+          "atl_uid_code": 627612929,
+          "udise_code": 28154300525,
+          "school_name": "Gurukul Vidyalaya, Palakol",
+          "state_name": "Andhra Pradesh",
+          "district_name": "West Godavari"
+      },
+      {
+          "school_id": 465,
+          "atl_uid_code": 221514101,
+          "udise_code": 28154300507,
+          "school_name": "Hebron Residential High School, West Godawari",
+          "state_name": "Andhra Pradesh",
+          "district_name": "West Godavari"
+      },
+      {
+          "school_id": 466,
+          "atl_uid_code": "365c3186",
+          "udise_code": 28151890807,
+          "school_name": "Narayana English Medium School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "West Godavari"
+      },
+      {
+          "school_id": 467,
+          "atl_uid_code": 21725877,
+          "udise_code": 28151690338,
+          "school_name": "PSR VN DAV High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "West Godavari"
+      },
+      {
+          "school_id": 468,
+          "atl_uid_code": 26773725,
+          "udise_code": 28153000214,
+          "school_name": "Sasi English Medium High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "West Godavari"
+      },
+      {
+          "school_id": 469,
+          "atl_uid_code": 894415183,
+          "udise_code": 28152600407,
+          "school_name": "SCBR ZPP H School Boys Ganapavaram",
+          "state_name": "Andhra Pradesh",
+          "district_name": "West Godavari"
+      },
+      {
+          "school_id": 470,
+          "atl_uid_code": 123915008,
+          "udise_code": 28150401804,
+          "school_name": "Sri Maddukuri Venu Gopala Krishna Zillaparishath High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "West Godavari"
+      },
+      {
+          "school_id": 471,
+          "atl_uid_code": 86175775,
+          "udise_code": 28151890752,
+          "school_name": "St. Anns EM High School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "West Godavari"
+      },
+      {
+          "school_id": 472,
+          "atl_uid_code": 16055813,
+          "udise_code": 28153690236,
+          "school_name": "St. Anns English Medium School",
+          "state_name": "Andhra Pradesh",
+          "district_name": "West Godavari"
+      },
+      {
+          "school_id": 473,
+          "atl_uid_code": 111913869,
+          "udise_code": 28153700406,
+          "school_name": "ZPH School, Mogallu",
+          "state_name": "Andhra Pradesh",
+          "district_name": "West Godavari"
+      },
+      {
+          "school_id": 474,
+          "atl_uid_code": 18135316,
+          "udise_code": 28150302306,
+          "school_name": "ZPHS",
+          "state_name": "Andhra Pradesh",
+          "district_name": "West Godavari"
+      },
+      {
+          "school_id": 475,
+          "atl_uid_code": 10931142,
+          "udise_code": 12120603402,
+          "school_name": "Mahabodhi Higher Secondary School",
+          "state_name": "Arunachal Pradesh",
+          "district_name": "Changlang"
+      },
+      {
+          "school_id": 476,
+          "atl_uid_code": 54751581,
+          "udise_code": 12080102601,
+          "school_name": "Green Valley School",
+          "state_name": "Arunachal Pradesh",
+          "district_name": "East Siang"
+      },
+      {
+          "school_id": 477,
+          "atl_uid_code": 298811177,
+          "udise_code": 12150103302,
+          "school_name": "Intaya Public School",
+          "state_name": "Arunachal Pradesh",
+          "district_name": "Lower Dibang Valley"
+      },
+      {
+          "school_id": 478,
+          "atl_uid_code": 896312536,
+          "udise_code": 12040313202,
+          "school_name": "Donyi Polo Vidya Bhawan",
+          "state_name": "Arunachal Pradesh",
+          "district_name": "Papum Pare"
+      },
+      {
+          "school_id": 479,
+          "atl_uid_code": 26372497,
+          "udise_code": 12020200301,
+          "school_name": "Government Higher Secondary School, Thrizino",
+          "state_name": "Arunachal Pradesh",
+          "district_name": "West Kameng"
+      },
+      {
+          "school_id": 480,
+          "atl_uid_code": 18118731,
+          "udise_code": 12020102803,
+          "school_name": "Pine Wood School",
+          "state_name": "Arunachal Pradesh",
+          "district_name": "West Kameng"
+      },
+      {
+          "school_id": 481,
+          "atl_uid_code": 29801462,
+          "udise_code": 12020102802,
+          "school_name": "Roopland Public School, Rupa",
+          "state_name": "Arunachal Pradesh",
+          "district_name": "West Kameng"
+      },
+      {
+          "school_id": 482,
+          "atl_uid_code": 12771351,
+          "udise_code": 12020300902,
+          "school_name": "Shanti Deva Vidyalaya",
+          "state_name": "Arunachal Pradesh",
+          "district_name": "West Kameng"
+      }
+    ]

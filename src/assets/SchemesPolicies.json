@@ -1,0 +1,363 @@
+[
+    {
+      "Sno": 1,
+      "OrganizationName": "INDUSTRIES & COMMERCE (PROGRAMME-I) DEPARTMENT",
+      "SchemePolicyName": "Andhra Pradesh MSME & Entrepreneur Development Policy, 4.0 (2024-29)",
+      "StateDepartment": "Industries & Commerce Department",
+      "ParsedDetails": {
+        "MSME Facilitation": [
+          "Support at all stages of the business cycle, access to information, and ease of doing business.",
+          "Incubation & Acceleration: Build infrastructure and provide mentorship, focusing on early-stage startups and rural entrepreneurs."
+        ],
+        "Unit Competitiveness": [
+          "Offer incentives for innovation, skilling, and quality upgrades."
+        ],
+        "Access to Finance": [
+          "Facilitate loans, credit guarantees, and support for distressed MSMEs."
+        ],
+        "Sustainability & Circularity": [
+          "Promote energy efficiency, renewable energy, and green technology adoption."
+        ],
+        "Import Substitution & Export Promotion": [
+          "Enhance MSME export competitiveness and encourage manufacturing of previously imported goods"
+        ],
+        "Cluster-Based Infrastructure": [
+          "Develop MSME parks with plug-and-play facilities and common resources."
+        ],
+        "Inclusive Ecosystem": [
+          "Encourage participation from women, SC/ST, BC, and differently-abled entrepreneurs."
+        ],
+        "Financial Incentives": null,
+        "Capital Subsidy": [
+          "Up to 25% of the fixed capital investment for new enterprises, with additional benefits for disadvantaged groups."
+        ],
+        "Power Cost Reimbursement": [
+          "INR 1 per unit for up to six years."
+        ],
+        "Technology Upgradation": [
+          "Support up to 20% of fixed costs for equipment upgrades."
+        ],
+        "Net SGST Reimbursement": [
+          "100% for six years."
+        ],
+        "Skill Development": [
+          "Financial assistance for skilling employees."
+        ],
+        "Water/Energy Audits": [
+          "Reimbursement of audit costs and equipment for conservation measures."
+        ],
+        "Export Incentives": [
+          "Subsidies for local procurement and quality certification."
+        ],
+        "Innovation and Global Outreach": null,
+        "Ratan Tata Innovation Hubs": [
+          "Five hubs linked to a central unit to drive MSME innovation, skilling, and exports."
+        ],
+        "E-commerce & Digital Transformation": [
+          "Support for onboarding onto digital platforms and export promotion."
+        ]
+      }
+    },  
+    {
+        "Sno": 2,
+        "OrganizationName": "Information Technology, Electronics & Communications (Promotion wing) Department",
+        "SchemePolicyName": "AP Semiconductor and Display Fab Policy (4.0)",
+        "StateDepartment": "ITE&C Department",
+        "ParsedDetails": {
+            "1. Financial Support:": [
+                "- Capital subsidies for projects under the Indian Semiconductor Mission (ISM).",
+                "- Special power subsidies for non-ISM projects at \u20b93/unit for five years.",
+                "- Tailor-made benefits for mega (\u20b91,000\u2013\u20b95,000 crores) and ultra-mega (\u20b95,000+ crores) projects."
+            ],
+            "2. Infrastructure Development:": [
+                "- Creation of industrial-quality cleanrooms, uninterrupted power supply, and free trade zones.",
+                "- Support for industrial water supply, storm drains, and employee living facilities."
+            ],
+            "3. Talent Development:": [
+                "- Establishment of an R&D hub for electronics in Visakhapatnam.",
+                "- Collaboration with universities to design industry-aligned curriculums.",
+                "- Grants for universities to align with national and state policies."
+            ],
+            "4. Ease of Doing Business:": [
+                "- Single-window clearances via the State Investment Promotion Board (SIPB) and Committee (SIPC).",
+                "- Simplified decision-making processes for investors."
+            ],
+            "5. Customized Incentives:": [
+                "- Specific benefits based on the project's gestation, technology, and contribution to the state\u2019s growth."
+            ],
+            "6. Policy Longevity:": [
+                "- Valid for five years, with provisions for amendments and extensions to ensure sustained support."
+            ]
+        }
+    },
+    {
+        "Sno": 3,
+        "OrganizationName": "Information Technology, Electronics & Communications (Promotion wing) Department",
+        "SchemePolicyName": "Andhra Pradesh Data Center Policy (4.0) 2024-29",
+        "StateDepartment": "ITE&C Department",
+        "ParsedDetails": {
+            "Infrastructure Development:": [
+                "Supports establishment of data centers with cutting-edge technology like AI and multi-cloud capabilities.",
+                "Focus on creating data embassies and parks to position Andhra Pradesh as a global data hub."
+            ],
+            "Incentives:": [
+                "100% SGST reimbursement or 10% capital subsidy on plant and machinery.",
+                "100% stamp duty exemption on first sales.",
+                "Relaxation in operational and building norms, such as parking requirements and dual grid provision."
+            ],
+            "Renewable Energy Integration:": [
+                "Encourages the use of green energy to ensure sustainable operations, reducing environmental impact."
+            ],
+            "Employment Generation:": [
+                "Aims to create new job opportunities in advanced technology and data-driven sectors."
+            ],
+            "Support for Mega Projects:": [
+                "Tailored incentives for projects with over 50 MW capacity or investments above INR 5,000 crore, such as land cost discounts and infrastructure development."
+            ]
+        }
+    },
+    {
+        "Sno": 4,
+        "OrganizationName": "Information Technology, Electronics & Communications (Promotion wing) Department",
+        "SchemePolicyName": "Andhra Pradesh Electronics Manufacturing\nPolicy (4.0) 2024-29",
+        "StateDepartment": "ITE&C Department",
+        "ParsedDetails": {
+            "Financial Incentives:": [
+                "Capital subsidy up to 30% for eligible projects based on investment size.",
+                "SGST and power cost reimbursements for 5 years.",
+                "Recruitment assistance of INR 4,000\u20136,000 per employee per month for the first six months."
+            ],
+            "Focus on Sub-Sectors:": [
+                "Includes semiconductors, IoT devices, automotive electronics, and e-waste processing."
+            ],
+            "Ease of Doing Business:": [
+                "Single-window clearance system for regulatory approvals within 21 days.",
+                "Dedicated investment facilitation cell for handholding investors."
+            ],
+            "Infrastructure and Clusters:": [
+                "Development of industrial corridors and electronics manufacturing clusters with integrated logistics and utilities.",
+                "Port-based value addition hubs and raw material fulfillment centers."
+            ],
+            "MSME and Entrepreneur Support:": [
+                "Special policies to promote MSMEs, including financial aid, technology transfer, and R&D support."
+            ],
+            "Green Energy and Sustainability:": [
+                "Emphasis on renewable energy with plans to achieve 40 GW from renewables by 2030."
+            ],
+            "Job Creation and Skills Development:": [
+                "Creation of 5 lakh jobs in the electronics sector during the policy period.",
+                "Enhanced training and skilling initiatives to meet industry demands."
+            ]
+        }
+    },
+    {
+        "Sno": 5,
+        "OrganizationName": "INDUSTRIES & COMMERCE (INFRA) DEPARTMENT",
+        "SchemePolicyName": "Andhra Pradesh Policy for establishment of Private Industrial Parks with 'Plug and Play' Industrial Infrastructure (4.0) 2024-29",
+        "StateDepartment": "Industries & Commerce Department",
+        "ParsedDetails": {
+            "Attraction of Investments:": [
+                "The policy aims to create world-class industrial parks with plug-and-play infrastructure to attract both domestic and international investments."
+            ],
+            "Job Creation:": [
+                "It focuses on generating employment by promoting industrial growth and establishing a conducive environment for business operations"
+            ],
+            "Comprehensive Infrastructure Support:": [
+                "The policy provides complete infrastructure within industrial parks, including roads, drainage, streetlights, water and power distribution, and communication networks, making it easier for businesses to set up quickly."
+            ],
+            "Land and Layout Incentives:": [
+                " Offers up to 100% exemption on land conversion charges, change of land use, layout approvals, and stamp duty to incentivize the establishment of industrial parks."
+            ],
+            "Capital Subsidies:": [
+                "Developers are eligible for capital subsidies (up to INR 5 lakhs per acre for MSME parks) released in phases based on development milestones."
+            ],
+            "Support for Sector-Specific Parks:": [
+                "Encourages the establishment of parks for sectors like biotechnology, pharmaceuticals, electric vehicles, food processing, and more, catering to evolving industrial needs."
+            ],
+            "Fast-Track Approvals:": [
+                "Streamlines the process for approvals and clearances with a dedicated Single Window facility, expediting project development and implementation."
+            ],
+            "Flexible Development Models:": [
+                "Provides multiple models for industrial park development, including private ownership, joint ventures, and partnerships with the government."
+            ],
+            "Sustainability and Social Infrastructure:": [
+                "Supports the development of green and sustainable infrastructure, such as zero liquid discharge plants, and encourages building housing and social amenities near industrial parks."
+            ],
+            "Institutional Support and Coordination:": [
+                "Facilitates coordination among various government departments to support external infrastructure development and ensure efficient policy implementation."
+            ]
+        }
+    },
+    {
+        "Sno": 6,
+        "OrganizationName": "INDUSTRIES & COMMERCE (PROGRAMME\u2013III) DEPARTMENT",
+        "SchemePolicyName": "New Andhra Pradesh Food Processing Policy\n(4.0) 2024-29",
+        "StateDepartment": "Industries & Commerce Department",
+        "ParsedDetails": {
+            "Economic Growth:": [
+                "Aims to attract new investments worth INR 30,000 crores and create 300,000 additional employment opportunities by 2029, establishing Andhra Pradesh as a premier food processing hub."
+            ],
+            "Incentives for Investment:": [
+                "Offers extensive fiscal incentives, such as capital subsidies, power tariff reimbursements, SGST reimbursements, and support for skill development and technology upgradation."
+            ],
+            "Support for MSMEs and Entrepreneurs:": [
+                "Emphasizes tailored support for micro, small, and medium enterprises, including capacity building, risk management, and infrastructure access."
+            ],
+            "Infrastructure Development:": [
+                "Plans for new food parks, nano food parks, cold storage facilities, animal feed parks, and modern abattoirs to boost infrastructure and efficiency."
+            ],
+            "Sustainability Initiatives:": [
+                "Focuses on reducing post-harvest losses, promoting waste processing, developing organic production, and encouraging environmentally sustainable practices."
+            ],
+            "Enhanced Market Access:": [
+                "Establishes export hubs and promotes the adoption of technology for quality certification, traceability, and food safety to facilitate global market penetration."
+            ],
+            "Focus on Value Addition:": [
+                "Encourages secondary and tertiary processing to improve product quality, market competitiveness, and profitability for stakeholders."
+            ]
+        }
+    },
+    {
+        "Sno": 7,
+        "OrganizationName": "INDUSTRIES & COMMERCE (P&I) DEPARTMENT",
+        "SchemePolicyName": "New Andhra Pradesh Industrial\nDevelopment Policy (4.0) 2024-29",
+        "StateDepartment": "Industries & Commerce Department",
+        "ParsedDetails": {
+            "1. Investment Incentives:": [
+                "- Capital subsidies ranging from 12% to 15% of Fixed Capital Investment (FCI) for various project sizes.",
+                "- Tailor-made benefits for mega and ultra-mega projects, addressing specific investment needs."
+            ],
+            "2. Employment Creation Support:": [
+                "- Subsidies based on the employment-to-investment ratio, rewarding projects creating significant job opportunities.",
+                "- Support for industrial housing facilities to improve workforce living conditions."
+            ],
+            "3. Ease of Doing Business:": [
+                "- Enhanced Single Desk Portal (SDP) for faster approvals and tracking across 19 departments.",
+                "- Investment facilitation cells and liaison officers to assist investors throughout the project lifecycle."
+            ],
+            "4. Cost Reductions:": [
+                "- Fixed power cost reimbursements and decarbonization subsidies.",
+                "- Rationalization of tariffs, duties, and land conversion charges.",
+                "- Support for efficient logistics infrastructure to minimize operating costs."
+            ],
+            "5. Export and Local Procurement Support:": [
+                "- Reimbursement of 1% of annual export turnover for export-oriented units.",
+                "- Net SGST reimbursement for products manufactured and sold within the state."
+            ],
+            "6. Support for MSMEs and Startups:": [
+                "- Dedicated policies for MSMEs and entrepreneurs, including financial aid, R&D incentives, and technology transfer support.",
+                "- Development of 175 MSME parks with plug-and-play infrastructure."
+            ],
+            "7. Green Initiatives:": [
+                "- Emphasis on green energy transition and circular economy principles.",
+                "- Subsidies for renewable energy and resource efficiency measures."
+            ],
+            "8. Special Packages for Early Bird Projects:": [
+                "- Enhanced subsidies of 30-40% of FCI for early project approvals and setup."
+            ],
+            "9. Infrastructure and Connectivity:": [
+                "- Development of industrial corridors and ports, enhancing trade logistics.",
+                "- Support for inland waterways and freight corridors to reduce transportation costs."
+            ],
+            "10. Global Integration and FDI Attraction:": [
+                "- Efforts to position Andhra Pradesh as a gateway to Eastern markets.",
+                "- Provisions for attracting Foreign Direct Investment (FDI) in emerging sectors."
+            ]
+        }
+    },
+    {
+        "Sno": 8,
+        "OrganizationName": "INFRASTRUCTURE AND INVESTMENT (AIRPORTS) DEPARTMENT",
+        "SchemePolicyName": "Andhra Pradesh Drone Policy\n4.0 (2024-29)",
+        "StateDepartment": "Infrastructure and Investment Department",
+        "ParsedDetails": {
+            "Financial Incentives": null,
+            "1. Fixed Capital Investment Support:" : "20% of fixed capital investment for new manufacturing, assembly units, pilot training organizations, and R&D centers (up to ₹5 crores).",
+            "2. SGST Reimbursement:" : "100% net SGST reimbursement for three years on the sale of drones manufactured and sold in the state",
+            "3. Proof of Concept (PoC) Support:" : "Up to 100% reimbursement of actual expenses (max ₹5 lakhs) for implementing PoCs adopted by government departments.",
+            "4. Incentives for Intellectual Property (IP) Protection:": [
+                "- \u20b93 lakhs reimbursement for national patents.",
+                "- \u20b96 lakhs reimbursement for international patents."
+            ],
+            "5. Testing and Certification Cost:" : "100% reimbursement up to \u20b95 lakhs.",
+            "6. Skill Training and Excellence Centers:" : "Funding of up to 50% (max \u20b920 lakhs per center) for setting up Centers of Excellence in engineering and vocational institutions.",
+            "7. Exhibition Participation:": [
+                "- Up to \u20b91.5 lakhs for national events.",
+                "- Up to \u20b93 lakhs for international events."
+            ],
+            "8. Stipends and Training:": [
+                "- \u20b92,000 per certified pilot or technician.",
+                "- \u20b95,000 per trainee for organizations offering drone operation training (up to 10 trainees per organization).",
+                "Non-Financial Incentives"
+            ],
+            "Non-Financial Incentives" : null,
+            "1. Land-Use Concessions:": [
+                "- 100% exemption on charges for land-use conversion.",
+                "- 50% reduction in lease rates for the first three years."
+            ],
+            "2. Priority in Local Procurement:" : "Minimum 50% of government acquisitions to be sourced locally.",
+            "3. Operational and Regulatory Support:": [
+                "- Dedicated portals for permissions, certifications, and collaboration.",
+                "- Chief Minister Udyami Helpline for guidance on incentives and regulatory requirements."
+            ]
+        }
+    },
+    {
+        "Sno": 9,
+        "OrganizationName": "ENERGY (POWER-II) DEPARTMENT",
+        "SchemePolicyName": "AP Integrated Clean Energy (ICE) Policy 2024",
+        "StateDepartment": "Andhra Pradesh Electricity Regulatory Commission (APERC)",
+        "ParsedDetails": {
+            "1. Investment Attraction:": [
+                "- Potential to attract \u20b910 lakh crores in investments.",
+                "- Focus on solar, wind, hybrid energy, battery storage, green hydrogen, and biofuels."
+            ],
+            "2. Employment Creation:": [
+                "- Expected to generate 7.5 lakh jobs, both directly and indirectly."
+            ],
+            "3. Energy Goals:": [
+                "- Development of 160 GW clean energy capacity.",
+                "- Target to achieve net-zero emissions by 2047."
+            ],
+            "4. Subsidies and Incentives:": [
+                "- Financial support for RE projects and manufacturing units.",
+                "- Exemptions from land conversion fees and other statutory clearances."
+            ],
+            "5. Land and Infrastructure Support:": [
+                "- Easy access to government land and grid connectivity.",
+                "- Lease options for long-term projects with streamlined processes."
+            ],
+            "6. Support for Green Hydrogen:": [
+                "- Focus on making Andhra Pradesh a hub for green hydrogen production and export."
+            ],
+            "7. Policy Framework:": [
+                "- Single-window clearance for faster approvals.",
+                "- Clear timelines and facilitation for project implementation."
+            ],
+            "8. Encouraging Innovation:": [
+                "- Support for new technologies, energy storage, and decentralized solar generation."
+            ],
+            "9. Export Potential:": [
+                "- Facilities for exporting surplus power and green hydrogen to other states and countries."
+            ],
+            "10. Sustainability:": [
+                "- Promotion of circular economy principles and environment-friendly technologies."
+            ]
+        }
+    },
+    {
+        "Sno": 10,
+        "OrganizationName": "Andhra Pradesh Tourism Development Corporation",
+        "SchemePolicyName": "AP Tourism Policy 2020-2025",
+        "StateDepartment": "DEPARTMENT OF YOUTH ADVANCEMENT, TOURISM AND CULTURE(T)",
+        "ParsedDetails": {
+            "Details" : [
+                "Reimbursement of 100% of stamp duty and transfer duty paid by the units on purchase of land for all new Tourism Units",
+                "Reimbursement of 100% of stamp duty for lease of land / shed / buildings, mortgages and hypothecations for all new Tourism Units",
+                "Reimbursement of 100% of net SGST accrued to the State for all new Tourism units for a period of (5) five years from COD or up to realization of 100% of the fixed capital investment",
+                "Electricity charges shall be reimbursed @ Rs.2.00 per Unit for a period of (5) five years from COD."
+
+            ]
+        }
+    }
+]
