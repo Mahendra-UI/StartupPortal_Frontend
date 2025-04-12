@@ -1,0 +1,471 @@
+<div id="" class="mr-auto ml-auto border px-2">
+    <div id="firstPDFPrint">
+        <div class="user-preview">
+
+            <div class="row mt-3 user-preview">
+
+                <div class="col-md-12 ml-auto mr-auto">
+
+                    <div class="row">
+
+                        <div class="col-md-6">
+                            <div class="form-group d-flex flex-md-row flex-sm-row">
+                                <div class="col-md-5 col-sm-4 col-12 col-sm-4">
+                                    <div class="previewLabelName">
+                                        Startup Name
+                                    </div>
+                                </div>
+                                <div class="col-md-1">:</div>
+                                <div class="col-md-6 col-12 col-sm-7">
+                                    <div class="previewLabelValue">
+                                        {{bindRowData?.startup_name}}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group d-flex flex-md-row flex-sm-row">
+                                <div class="col-md-5 col-12 col-sm-4">
+                                    <div class="previewLabelName">
+                                        GST Number
+                                    </div>
+                                </div>
+                                <div class="col-md-1">:</div>
+                                <div class="col-md-6 col-12 col-sm-7">
+                                    <div  class="previewLabelValue">
+                                     <span *ngIf="bindRowData?.gst_number?.length">  {{bindRowData?.gst_number}} </span> 
+                                     <span *ngIf="!bindRowData?.gst_number?.length"> - </span> 
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group d-flex flex-md-row flex-sm-row">
+                                <div class="col-md-5 col-12 col-sm-4">
+                                    <div class="previewLabelName">
+                                        Stages
+                                    </div>
+                                </div>
+                                <div class="col-md-1">:</div>
+                                <div class="col-md-6 col-12 col-sm-7">
+                                    <div class="previewLabelValue">
+                                        {{bindRowData?.stage_name}}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group d-flex flex-md-row flex-sm-row">
+                                <div class="col-md-5 col-12 col-sm-4">
+                                    <div class="previewLabelName">
+                                        Startup Type
+                                    </div>
+                                </div>
+                                <div class="col-md-1">:</div>
+                                <div class="col-md-6 col-12 col-sm-7">
+                                    <div class="previewLabelValue">
+                                        {{bindRowData?.funded}}
+                                    </div>
+                                </div>
+                            </div>
+
+                                <div class="form-group d-flex flex-md-row flex-sm-row" *ngIf="bindRowData?.funded == 'Funded'">
+                                    <div class="col-md-5 col-12 col-sm-4">
+                                        <div class="previewLabelName">
+                                            Funded Type
+                                        </div>
+                                    </div>
+                                    <div class="col-md-1">:</div>
+                                    <div class="col-md-6 col-12 col-sm-7">
+                                        <div class="previewLabelValue">
+                                            {{bindRowData?.funded_name}}
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group d-flex flex-md-row flex-sm-row">
+                                <div class="col-md-5 col-12 col-sm-4">
+                                    <div class="previewLabelName">
+                                        Brief
+                                    </div>
+                                </div>
+                                <div class="col-md-1">:</div>
+                                <div class="col-md-6 col-12 col-sm-7">
+                                    <div class="previewLabelValue">
+                                        {{bindRowData?.brief}}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group d-flex flex-md-row flex-sm-row">
+                                <div class="col-md-5 col-12 col-sm-4">
+                                    <div class="previewLabelName">
+                                        Industry
+                                    </div>
+                                </div>
+                                <div class="col-md-1">:</div>
+                                <div class="col-md-6 col-12 col-sm-7">
+                                    <div class="previewLabelValue">
+                                        {{bindRowData?.industry_name}}
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group d-flex flex-md-row flex-sm-row" *ngIf="bindRowData?.industry_others">
+                                <div class="col-md-5 col-12 col-sm-4 nowrap">
+                                    <div class="previewLabelName">
+                                        Industry Others
+                                    </div>
+                                </div>
+                                <div class="col-md-1">:</div>
+                                <div class="col-md-6 col-12 col-sm-7">
+                                    <div class="previewLabelValue">
+                                        {{bindRowData?.industry_others}}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group d-flex flex-md-row flex-sm-row">
+                                <div class="col-md-5 col-12 col-sm-4">
+                                    <div class="previewLabelName">
+                                        Industry subtype
+                                    </div>
+                                </div>
+                                <div class="col-md-1">:</div>
+                                <div class="col-md-6 col-12 col-sm-7">
+                                    <div class="previewLabelValue">
+                                        {{bindRowData?.sector_name}}
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group d-flex flex-md-row flex-sm-row" *ngIf="bindRowData?.sector_subtype_others">
+                                <div class="col-md-5 col-12 col-sm-4">
+                                    <div class="previewLabelName">
+                                        Industry Subtype Others
+                                    </div>
+                                </div>
+                                <div class="col-md-1">:</div>
+                                <div class="col-md-6 col-12 col-sm-7">
+                                    <div class="previewLabelValue">
+                                        {{bindRowData?.sector_subtype_others}}
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group d-flex flex-md-row flex-sm-row">
+                                <div class="col-md-5 col-12 col-sm-4">
+                                    <div class="previewLabelName">
+                                        Services
+                                    </div>
+                                </div>
+                                <div class="col-md-1">:</div>
+                                <div class="col-md-6 col-12 col-sm-7">
+                                    <div class="previewLabelValue">
+                                        {{bindRowData?.service_name}}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group d-flex flex-md-row flex-sm-row" *ngIf="bindRowData?.services_others">
+                                <div class="col-md-5 col-12 col-sm-4">
+                                    <div class="previewLabelName">
+                                        Services others
+                                    </div>
+                                </div>
+                                <div class="col-md-1">:</div>
+                                <div class="col-md-6 col-12 col-sm-7">
+                                    <div class="previewLabelValue">
+                                        {{bindRowData?.services_others}}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group d-flex flex-md-row flex-sm-row">
+                                <div class="col-md-5 col-12 col-sm-4">
+                                    <div class="previewLabelName">
+                                        Udyog Registration No.
+                                    </div>
+                                </div>
+                                <div class="col-md-1">:</div>
+                                <div class="col-md-6 col-12 col-sm-7">
+                                    <div class="previewLabelValue">
+                                        {{bindRowData?.udyog_aadhaar}}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group d-flex flex-md-row flex-sm-row">
+                                <div class="col-md-5 col-12 col-sm-4">
+                                    <div class="previewLabelName">
+                                        Nature of Entity
+                                    </div>
+                                </div>
+                                <div class="col-md-1">:</div>
+                                <div class="col-md-6 col-12 col-sm-7">
+                                    <div class="previewLabelValue">
+                                        {{bindRowData?.entity_name}}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group d-flex flex-md-row flex-sm-row">
+                                <div class="col-md-5 col-12 col-sm-4">
+                                    <div class="previewLabelName">
+                                        Company Incorporation Number (CIN)
+                                    </div>
+                                </div>
+                                <div class="col-md-1">:</div>
+                                <div class="col-md-6 col-12 col-sm-7">
+                                    <div class="previewLabelValue">
+                                        {{bindRowData?.cin}}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group d-flex flex-md-row flex-sm-row">
+                                <div class="col-md-5 col-12 col-sm-4">
+                                    <div class="previewLabelName">
+                                        Legal Name
+                                    </div>
+                                </div>
+                                <div class="col-md-1">:</div>
+                                <div class="col-md-6 col-12 col-sm-7">
+                                    <div class="previewLabelValue">
+                                        {{bindRowData?.legal_name}}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group d-flex flex-md-row flex-sm-row">
+                                <div class="col-md-5 col-12 col-sm-4">
+                                    <div class="previewLabelName">
+                                        You are interested in 
+                                    </div>
+                                </div>
+                                <div class="col-md-1">:</div>
+                                <div class="col-md-6 col-12 col-sm-7">
+                                    <div class="previewLabelValue">
+                                        {{bindRowData?.interest_name}}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <!--Caste Details-->
+                        <div class="col-md-12">
+                            <h4 class="print form-heading">Address Details</h4>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-group d-flex flex-md-row flex-sm-row">
+                                <div class="col-md-5 col-12 col-sm-4">
+                                    <div class="previewLabelName">
+                                        Mobile No
+                                    </div>
+                                </div>
+                                <div class="col-md-1">:</div>
+                                <div class="col-md-6 col-12 col-sm-7">
+                                    <div class="previewLabelValue">
+                                        {{bindRowData?.contact_mobile}}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group d-flex flex-md-row flex-sm-row">
+                                <div class="col-md-5 col-12 col-sm-4">
+                                    <div class="previewLabelName">
+                                        Email
+                                    </div>
+                                </div>
+                                <div class="col-md-1">:</div>
+                                <div class="col-md-6 col-12 col-sm-7">
+                                    <div class="previewLabelValue">
+                                        {{bindRowData?.contact_email}}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group d-flex flex-md-row flex-sm-row">
+                                <div class="col-md-5 col-12 col-sm-4">
+                                    <div class="previewLabelName">
+                                        Mobile App Link
+                                    </div>
+                                </div>
+                                <div class="col-md-1">:</div>
+                                <div class="col-md-6 col-12 col-sm-7">
+                                    <div class="previewLabelValue">
+                                        {{bindRowData?.contact_mobile_app_link ? bindRowData?.contact_mobile_app_link : "NA"}}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group d-flex flex-md-row flex-sm-row">
+                                <div class="col-md-5 col-12 col-sm-4">
+                                    <div class="previewLabelName">
+                                        State
+                                    </div>
+                                </div>
+                                <div class="col-md-1">:</div>
+                                <div class="col-md-6 col-12 col-sm-7">
+                                    <div class="previewLabelValue">
+                                        {{bindRowData?.state_name}}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group d-flex flex-md-row flex-sm-row">
+                                <div class="col-md-5 col-12 col-sm-4">
+                                    <div class="previewLabelName">
+                                        City
+                                    </div>
+                                </div>
+                                <div class="col-md-1">:</div>
+                                <div class="col-md-6 col-12 col-sm-7">
+                                    <div class="previewLabelValue">
+                                        {{bindRowData?.contact_city}}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group d-flex flex-md-row flex-sm-row">
+                                <div class="col-md-5 col-12 col-sm-4">
+                                    <div class="previewLabelName">
+                                        Website URL
+                                    </div>
+                                </div>
+                                <div class="col-md-1">:</div>
+                                <div class="col-md-6 col-12 col-sm-7">
+                                    <div class="previewLabelValue">
+                                        {{bindRowData?.contact_website ? bindRowData?.contact_website : "NA"}}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr />
+            <div class="row">
+                <div class="col-md-12 ml-auto mr-auto">
+                    <h4 class="print form-heading">Uploaded Documents</h4>
+                </div>
+
+                <div class="col-md-12 ml-auto mr-auto">
+                    <div>
+                        <div class="form-group d-flex flex-md-row flex-sm-row mt-2">
+                            <div class="col-md-4">Startup logo</div>
+                            <div class="col-md-1">:</div>
+                            <div class="document col-md-7">
+                                <!-- startup logo -->
+                                <!-- <button class="btn btn-outline-primary btn-sm">view
+                                </button> &nbsp;
+                                <button class="btn btn-outline-primary btn-sm">
+                                    Download</button> -->
+                                    <!-- <iframe [src]='View(bindRowData?.company_logo)' frameborder="0" style="border:0; top:0px; left:0px; bottom:0px; right:0px; width:100%; height:100%;" ></iframe> -->
+                          
+                                    <!-- <button class="btn btn-outline-primary btn-sm">
+                                        <a class="text-white btn-outline-primary btn btn-primary"
+                                         (click)="View(bindRowData?.company_logo)" target="_blank" style="cursor: pointer;">
+                                            <i class="fa fa-eye"></i> View
+                                        </a>
+                                    </button> &nbsp; -->
+                                    <button class="btn btn-outline-primary btn-sm">
+                                        <a class="text-white btn-outline-primary btn btn-primary"
+                                        (click)="downloadFile(bindRowData?.company_logo)" download target="_blank" style="cursor: pointer;">
+                                           <i class="fa fa-download"></i> Download
+                                       </a>  </button>
+                                    <!-- <a  target="_self" (click)="View(bindRowData?.company_logo)">View</a> -->
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="form-group d-flex flex-md-row flex-sm-row mt-2">
+                            <div class="col-md-4">Registration Certificate</div>
+                            <div class="col-md-1">:</div>
+                            <div class="document col-md-7">
+                                <!-- startup logo -->
+                                <!-- <button class="btn btn-outline-primary btn-sm">view
+                                </button> &nbsp;
+                                <button class="btn btn-outline-primary btn-sm">
+                                    Download</button> -->
+                                    <!-- <iframe [src]='View(bindRowData?.company_logo)' frameborder="0" style="border:0; top:0px; left:0px; bottom:0px; right:0px; width:100%; height:100%;" ></iframe> -->
+                 
+                                    <!-- <button class="btn btn-outline-primary btn-sm">
+                                        <a class="text-white btn-outline-primary btn btn-primary"
+                                         (click)="View(bindRowData?.registration_certificate)" target="_blank" style="cursor: pointer;">
+                                            <i class="fa fa-eye"></i> View
+                                        </a>
+                                    </button> &nbsp; -->
+                                    <button class="btn btn-outline-primary btn-sm">
+                                        <a class="text-white btn-outline-primary btn btn-primary"
+                                        (click)="downloadFile(bindRowData?.registration_certificate)" download target="_blank" style="cursor: pointer;">
+                                           <i class="fa fa-download"></i> Download
+                                       </a>  </button>
+                                    <!-- <a  target="_self" (click)="View(bindRowData?.registration_certificate)">View</a> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+
+    </div>
+    <hr />
+    <!-- <div class="text-center" style="margin-bottom: 10px;">
+        <button class="btn btn-info">Download as PDF</button>
+
+    </div>
+    <hr /> -->
+
+
+    <div class="row mb-3">
+        <!--  -->
+
+        <div class="col-md-12 text-center">
+            <!-- <button class="btn approve mr-1" data-target="#approved" (click)="modalDisplayApprove = true" data-toggle="modal">Approve</button>
+<button class="btn review mr-1" data-target="#reviewModal" (click)="modalDisplayReview = true; rejectComments=''" data-toggle="modal">Review</button>
+<button class="btn reject" data-target="#rejectModal" (click)="modalDisplayReject = true; rejectComments=''" data-toggle="modal">Reject</button> -->
+            <!-- <label for="modal-approve-open" class="btn btn-big approve mr-1">Approve</label>
+            <label for="modal-review-open" class="btn btn-big review mr-1">Under Observation</label>
+            <label for="modal-reject-open" class="btn btn-big reject">Reject</label> -->
+
+            <!-- approve radio button starts -->
+
+            <input type="radio" id="modal-approve-close" name="modal-approve-radio" aria-hidden="true"
+                hidden />
+            <input type="radio" id="modal-approve-open" name="modal-approve-radio" aria-hidden="true"
+                hidden />
+
+            <!-- approve radio button ends -->
+
+            <!-- review radio button starts -->
+            <input type="radio" id="modal-review-close" name="modal-review-radio" aria-hidden="true"
+                hidden />
+            <input type="radio" id="modal-review-open" name="modal-review-radio" aria-hidden="true"
+                hidden />
+
+            <!-- review radio button ends -->
+
+            <!-- reject radion button starts -->
+
+            <input type="radio" id="modal-reject-close" name="modal-reject-radio" aria-hidden="true"
+                hidden />
+            <input type="radio" id="modal-reject-open" name="modal-reject-radio" aria-hidden="true"
+                hidden />
+
+            <!-- reject radio button ends -->
+
+        </div>
+    </div>
+
+
+</div>

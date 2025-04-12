@@ -1,0 +1,822 @@
+
+<!-- #0C1C38 -->
+<!-- #283747 -->
+
+<!-- <section class="top_section py-1" style="background-image: linear-gradient(to left, #009833, #0076C8)"> -->
+    <section class="top_section py-1" style="background: #14A0C0">
+        <div class="container-fluid">
+            <div class="row align-items-center text-white">
+    
+    
+                <!-- <div class="col-2 fh5co_mediya_center"><a href="#" class="color_fff fh5co_mediya_setting"><i class="far fa-calendar-alt"></i>&nbsp;&nbsp;&nbsp;{{currentDate | date:'dd-MM-yyyy'}}
+                    </a>
+                    </div> -->
+                <div class="col-md-8">
+                    <div class="hstack gap-3 align-items-center breaking-news flex-wrap">
+                        <p>
+                            <i class="fa fa-envelope-open-o pe-1" aria-hidden="true"></i>
+                            innovationsociety[at]ap[dot]gov[dot]in
+                        </p>
+    
+                        <p class="my-2 d-md-0">
+                            <i class="fa fa-volume-control-phone pe-1" aria-hidden="true" style="transform: rotate(-45deg);"></i>
+                            +91 7396603335
+                            <!-- <i class="fa fa-home" aria-hidden="true"></i>
+                            &nbsp; Department of ITE&C, Government of Andhra Pradesh -->
+                        </p>
+                        <p>
+                            <i class="fa fa-clock-o pe-1" aria-hidden="true"></i>
+                            10:00 AM to 05:00 PM
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="web_disable">
+                    <div class="float-end hstack gap-2 access">
+                        <!-- <a (click)="addGrayScale()">
+                            Add Grayscale
+                        </a>
+                        <a (click)="removeGrayScale()">
+                            Remove Grayscale
+                        </a> -->
+                        <style>
+                            .access .dropdown-menu {
+                                animation: none;
+                                background: #fff;
+                                min-width: auto;
+                            }
+    
+                            .access .dropdown-menu li a {
+                                padding: 0.5rem;
+                                text-align: center;
+                            }
+    
+                            .access button {
+                                padding: 0;
+                            }
+    
+                            .access .dropdown-menu li {
+                                width: 35px;
+                            }
+    
+                            .access ul {
+                                position: absolute;
+                                width: 37px;
+                                background: #fff;
+                                left: 0;
+                                z-index: 99;
+                                padding: 0 !important;
+                                border: 1px solid #d8d8d8;
+                                border-top: none;
+                                /* display: none; */
+                            }
+    
+                            .access .dropdown-toggle::after {
+                                /* display: none; */
+                                color: #fff;
+                            }
+    
+                            .access .dropdown-toggle:focus-within {
+                                border: 0;
+                            }
+    
+                            .access .dropdown-toggle:active {
+                                border: 0;
+                            }
+    
+                            .mobile_access ul {
+                                /* display: -webkit-inline-box; */
+                            }
+    
+                            /* .access ul:hover {
+                                display: block;
+                            } */
+                        </style>
+                        <a routerLink="/screenreader" class="text-white screenreaderText">
+                            Screen Reader Access
+                        </a>
+                        <div class="dropdown access">
+                            <button type="button" class="btn reader_access dropdown-toggle border-0"
+                                data-bs-toggle="dropdown">
+                                <i class="fa fa-wheelchair text-white" aria-hidden="true" style="font-size: 19px;"></i>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li routerLinkActive="active"><a class="dropdown-item common high_contrast" (click)="highcontrast()"
+                                        title="High Contrast">A</a></li>
+                                <li routerLinkActive="active"><a class="dropdown-item common low_contrast" (click)="lightcontrast()"
+                                        title="Light Contrast">A</a></li>
+                                <li routerLinkActive="active"><a class="dropdown-item common" (click)="removeFilter()" title="Reset"><i
+                                            class="bi bi-arrow-clockwise"></i></a></li>
+                                <li routerLinkActive="active"><a class="dropdown-item common" (click)="grayscaleClick()" title="grayscale"><i
+                                            class="fa fa-barcode" aria-hidden="true"></i></a></li>
+                            </ul>
+                        </div>
+    
+                        <!-- <a (click)="removeFilter()">
+                            Reset
+                        </a>
+                        <a (click)="grayscaleClick()">
+                            <i class="fa fa-barcode" aria-hidden="true"></i>
+                        </a>
+                        <a (click)="highcontrast()" class="contrast high_contrast">
+                            A
+                        </a>
+                        <a (click)="lightcontrast()" class="contrast low_contrast">
+                            A
+                        </a> -->
+    
+                        <!--                     <a (click)="increaseFontSize()">
+                            A+
+                        </a>
+                        <a (click)="decreaseFontSize()">
+                            A-
+                        </a>
+                        <a (click)="removeFilter()">
+                            Reset
+                        </a> -->
+                        <!-- <a routerLink="/screenreader" class="text-white" style="line-height: 1;">
+                            <i class="fa fa-wheelchair" aria-hidden="true" style="font-size: 19px;"></i>
+                        </a> -->
+                                                                <!-- <a (click)="increaseFontSize()">
+                            A+
+                        </a>
+                        <a (click)="decreaseFontSize()">
+                            A-
+                        </a>
+                        <a (click)="removeFilter()">
+                            A
+                        </a> -->
+    
+                        <button type="button" (click)="increaseFontSize()" class="resizing">
+                            A+
+                          </button>
+                          <button type="button" (click)="resetFontSize()" class="resizing">
+                            A
+                          </button>
+                          <button type="button" (click)="decreaseFontSize()" class="resizing">
+                            A-
+                          </button>
+                        <select #langSelect (change)="langChange(langSelect.value)">
+                            <option *ngFor="let lang of translate.getLangs()" [value]="lang"
+                                [selected]="lang === translate.currentLang">{{ lang }}</option>
+                        </select>
+                        <!-- <p>
+                            <i class="fa fa-envelope-open-o" aria-hidden="true"></i>
+                            innovationsociety[at]ap[dot]gov[dot]in
+                            <i class="fa fa-phone" aria-hidden="true"></i> &nbsp;
+                            Tollfree : 1800 233 0616
+                            <span class="mx-3">
+                                <i class="fa fa-globe" aria-hidden="true"></i> &nbsp;
+                                English
+                            </span>
+                        </p> -->
+                    </div>
+                    </div>
+                <!-- </div>
+                            <div class="col-md-4"> -->
+                    <div class="mobile_disable">
+                    <div class="hstack align-items-center gap-2">
+                        <div class="dropdown access mobile_access">
+                            <button type="button" class="btn reader_access dropdown-toggle border-0"
+                                data-bs-toggle="dropdown">
+                                <i class="fa fa-wheelchair text-white" aria-hidden="true" style="font-size: 19px;"></i>
+                            </button>
+                            <ul class="dropdown-menu mt-3" style="width: fit-content;">
+                                <div class="hstack gap-2">
+                                    <li routerLinkActive="active"><a class="dropdown-item common high_contrast" (click)="highcontrast()"
+                                            title="High Contrast">A</a></li>
+                                    <li routerLinkActive="active"><a class="dropdown-item common low_contrast" (click)="lightcontrast()"
+                                            title="Light Contrast">A</a></li>
+                                    <li routerLinkActive="active"><a class="dropdown-item common" (click)="removeFilter()" title="Reset"><i
+                                                class="bi bi-arrow-clockwise"></i></a></li>
+                                    <li routerLinkActive="active"><a class="dropdown-item common" (click)="grayscaleClick()" title="grayscale"><i
+                                                class="fa fa-barcode" aria-hidden="true"></i></a></li>
+                                </div>
+                            </ul>
+                        </div>
+                        <a routerLink="/screenreader" class="text-white screenreaderText">
+                            Screen Reader Access
+                        </a>
+                        <button type="button" (click)="increaseFontSize()" class="resizing">
+                            A+
+                          </button>
+                          <button type="button" (click)="resetFontSize()" class="resizing">
+                            A
+                          </button>
+                          <button type="button" (click)="decreaseFontSize()" class="resizing">
+                            A-
+                          </button>
+                    </div>
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+    </section>
+    <section class="head_firstrow">
+        <div class="container-fluid">
+    
+            <div class="row align-items-center">
+                <div class="col-md-5">
+                    <div class="navbar-brand logo_section align-items-center gap-3">
+                        <a href="">
+                            <img src="assets/images/logos/apislogo.png" alt="image" class="img-fluid">
+                        </a>
+                        <a href="">
+                            <img src="assets/images/website_logo.png" alt="image" class="img-fluid">
+                        </a>
+                        <!-- <a href="https://www.g20.org/en/" target="_blank">
+                            <img src="assets/images/g20-logo.png" alt="image" class="img-fluid">
+                        </a>
+                        <a href="https://amritmahotsav.nic.in/" target="_blank">
+                            <img src="assets/images/azadhi.png" alt="image" class="img-fluid">
+                        </a> -->
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <div class="navbar-brand hstack gap-1 justify-content-end">
+                        <a href="">
+                            <img src="assets/images/apcmmin.png" alt="Image" class="img-fluid">
+                        </a>
+                        <div class="">
+                        <a href="" class="mx-2">
+                            <img src="assets/images/headline.png" alt="image" class="img-fluid">
+                        </a>
+                        <a href="" style="">
+                            <img src="assets/images/apitmin.png" alt="Image" class="img-fluid">
+                        </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- #193567 -->
+    <!-- #1C0C32 -->
+    
+    <!-- <section class="" style="background: #193567;position: sticky;
+    top: 0;
+    z-index: 100;"> -->
+    <!-- #193567 -->
+    <!-- <header [class.sticky]="sticky" #stickyMenu style="background-image: linear-gradient(to left, #009833, #0076C8);">
+        <nav class="navbar navbar-expand-lg p-0" style="background-image: linear-gradient(to left, #009833, #0076C8);"> -->
+    <header [class.sticky]="sticky" #stickyMenu
+        style="background-image: linear-gradient(90deg, #0da786 22.83%, #14a0c0 110.35%)">
+        <nav class="navbar navbar-expand-lg p-0"
+            style="background-image: linear-gradient(90deg, #0da786 22.83%, #14a0c0 110.35%)">
+            <div class="container-fluid py-2 py-md-0">
+    
+                <div class="row mx-md-auto align-items-center">
+                    <div class="col-md-12">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="mobile_register hstack align-items-center gap-1 d-md-none">
+                            <!-- <div class="dropdown access mobile_access">
+                                <button type="button" class="btn reader_access dropdown-toggle border-0" data-bs-toggle="dropdown">
+                                    <i class="fa fa-wheelchair text-white" aria-hidden="true" style="font-size: 19px;"></i>
+                                </button>
+                                <ul class="dropdown-menu mt-3" style="width: fit-content;">
+                                    <div class="hstack gap-2">
+                                        <li class="nav-item" routerLinkActive="active"><a class="dropdown-item common high_contrast" (click)="highcontrast()"
+                                            title="High Contrast">A</a></li>
+                                    <li routerLinkActive="active"><a class="dropdown-item common low_contrast" (click)="lightcontrast()"
+                                            title="Light Contrast">A</a></li>
+                                    <li routerLinkActive="active"><a class="dropdown-item common" (click)="removeFilter()" title="Reset"><i
+                                                class="bi bi-arrow-clockwise"></i></a></li>
+                                    <li routerLinkActive="active"><a class="dropdown-item common" (click)="grayscaleClick()" title="grayscale"><i
+                                                class="fa fa-barcode" aria-hidden="true"></i></a></li>
+                                    </div>
+                                </ul>
+                            </div> -->
+                            <!-- <a routerLink="/screenreader" class="text-white" style="line-height: 1;">
+                                <i class="fa fa-wheelchair" aria-hidden="true" style="font-size: 19px;"></i>
+                            </a> -->
+                            <button type="button" class="btn btn-default btn-sm btnHead"
+                                style="font-size:19px;border-radius:0px!important;border:0px!important;color: #fff;line-height: 4px;"
+                                #eng (click)="langChange(eng.value)" value="English">E</button> <span
+                                class="separatorMobile" style="padding-left: 6px;color: #fff;">|</span>
+                            <button type="button" class="btn btn-default btn-sm btnHead"
+                                style="font-size: 18px;border-radius:0px!important;border:0px!important;color: #fff;line-height: 4px;"
+                                #tel (click)="langChange(tel.value)" value="Telugu">తె</button>
+                            <a class="nav-link btn btn_login" role="button" [routerLink]="['/home/login']"
+                                aria-expanded="false">
+                                Register/Login
+                            </a>
+                        </div>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav mb-2 mb-lg-0">
+                                <!-- <li class="nav-item">
+                                    <a class="nav-link" aria-current="page" href="#">Home</a>
+                                </li> -->
+                                <!-- <li class="nav-item">
+                                <a class="nav-link" href="#">Link</a>
+                            </li> -->
+                            <li class="nav-item" routerLinkActive="active">
+                                <a class="nav-link dropdown-item" routerLink="/home">
+                                    <i class="bi bi-house-door-fill"></i>
+                                </a>
+                            </li>
+                                <li class="nav-item dropdown" routerLinkActive="active">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                        data-bs-auto-close="outside" id="navbarDropDown">
+                                        {{ 'Header.whoweare' | translate }}
+                                    </a>
+                                    <!-- <a [className]="isTranslationTelugu ? 'telugunavlink' : '{nav-link dropdown-toggle}'" href="#" role="button" data-bs-toggle="dropdown"
+                                    data-bs-auto-close="outside" id="navbarDropDown">
+                                        {{ 'Header.whoweare' | translate }}
+                                    </a> -->
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <li class="nav-item" routerLinkActive="active">
+                                            <a class="nav-link dropdown-item" routerLink="/nodalagency">
+                                                {{ 'Header.nodaldepartment' | translate }}
+                                            </a>
+                                        </li>
+                                        <li class="nav-item" routerLinkActive="active">
+                                            <a class="nav-link dropdown-item" routerLink="/visionandmission">
+                                                {{ 'Header.visionmission' | translate }}
+                                            </a>
+                                        </li>
+                                        <li class="nav-item" routerLinkActive="active">
+                                            <a class="nav-link" routerLink="/whyandhrapradesh">
+                                                Why Andhra Pradesh
+                                            </a>
+                                        </li>
+                            
+                                        <li class="dropstart d-none">
+                                            <a class="nav-link dropdown-toggle" href="#" role="button"
+                                                data-bs-toggle="dropdown">
+                                                submenu left
+                                            </a>
+                                            <ul class="dropdown-menu shadow">
+                                                <li class="nav-item" routerLinkActive="active">
+                                                    <a class="nav-link dropdown-item" href="#">
+                                                        level 1
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item" routerLinkActive="active">
+                                                    <a class="nav-link dropdown-item" href="#">
+                                                        level 2
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item" routerLinkActive="active">
+                                                    <a class="nav-link dropdown-item" href="#">
+                                                        level 3
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item" routerLinkActive="active">
+                                                    <a class="nav-link dropdown-item" href="#">
+                                                        level 4
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropend">
+                                            <a class="nav-link dropdown-toggle" href="#" role="button"
+                                                data-bs-toggle="dropdown" data-bs-auto-close="outside">
+                                                {{ 'Header.leadership' | translate }}
+                                            </a>
+                                            <ul class="dropdown-menu shadow">
+                                                <li class="nav-item" routerLinkActive="active">
+                                                    <a class="nav-link dropdown-item" routerLink="/executivecommittee">
+                                                        {{ 'Header.executivecommittee' | translate }}
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item" routerLinkActive="active">
+                                                    <a class="nav-link dropdown-item" routerLink="/dedicatedteam">
+                                                        {{ 'Header.dedicatedteam' | translate }}
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <!-- <li class="nav-item">
+                                    <a class="nav-link" href="https://apisinnovationchallenges.ap.gov.in/#/" target="_blank" role="button">
+                                        Challenges
+                                    </a>
+                                </li> -->
+                                <li class="nav-item dropdown d-none">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        {{ 'Header.ecosystem' | translate }}
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li class="nav-item" routerLinkActive="active">
+                                            <a class="nav-link dropdown-item" href="#">
+                                                {{ 'Header.startups' | translate }}
+                                            </a>
+                                        </li>
+                                        <li class="nav-item" routerLinkActive="active">
+                                            <a class="nav-link dropdown-item" href="#">
+                                                {{ 'Header.mentors' | translate }}
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <style>
+                                    .dropdown-item {
+                                        position: relative;
+                                    }
+                            
+                                    .dropend .dropdown-toggle::after {
+                                        position: absolute;
+                                        right: 13px;
+                                        top: 10px;
+                                    }
+                            
+                                    .dropdown-menu {
+                                        animation: drop 0.5s ease 1;
+                                        min-width: 15rem;
+                                        /* background: #162D50; */
+                                        /* padding: 0.5rem; */
+                                        padding: 0;
+                                    }
+                            
+                                    @keyframes drop {
+                                        0% {
+                                            transform: translateY(25px);
+                                        }
+                            
+                                        100% {
+                                            transform: translateY(0px);
+                                        }
+                                    }
+                                </style>
+                                <li class="nav-item dropdown" routerLinkActive="active">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                        data-bs-auto-close="outside" id="navbarDropDown">
+                                        {{ 'Header.ecosystem' | translate }}
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <li class="dropend">
+                                            <a class="nav-link dropdown-toggle" href="#" role="button"
+                                                data-bs-toggle="dropdown" data-bs-auto-close="outside">
+                                                {{ 'Header.startups' | translate }}
+                                            </a>
+                                            <ul class="dropdown-menu shadow">
+                                                <li class="nav-item" routerLinkActive="active">
+                                                    <a class="nav-link dropdown-item" routerLink="/startupdefinition">
+                                                        {{ 'Header.startupdefinition' | translate }}
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item" routerLinkActive="active">
+                                                    <a class="nav-link dropdown-item" target="_blank" href="assets/images/ecosystem/startups/Startup Policy.pdf">
+                                                        {{ 'Header.startuppolicy' | translate }}
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item" routerLinkActive="active">
+                                                    <a class="nav-link dropdown-item" routerLink="/focussectors">
+                                                          Focus Sectors
+                                                    </a>
+                                                </li>
+                                                <!-- <li class="nav-item" routerLinkActive="active">
+                                                    <a class="nav-link dropdown-item" routerLink="/startuppolicy">
+                                                        {{ 'Header.startuppolicy' | translate }}
+                                                    </a>
+                                                </li> -->
+                                                <li class="nav-item" routerLinkActive="active">
+                                                    <a class="nav-link dropdown-item" routerLink="/listofstartups">
+                                                        {{ 'Header.listofstartups' | translate }}
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropstart d-none">
+                                            <a class="nav-link dropdown-toggle" href="#" role="button"
+                                                data-bs-toggle="dropdown">
+                                                submenu left
+                                            </a>
+                                            <ul class="dropdown-menu shadow">
+                                                <li class="nav-item" routerLinkActive="active">
+                                                    <a class="nav-link dropdown-item" href="#">
+                                                        level 1
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item" routerLinkActive="active">
+                                                    <a class="nav-link dropdown-item" href="#">
+                                                        level 2
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item" routerLinkActive="active">
+                                                    <a class="nav-link dropdown-item" href="#">
+                                                        level 3
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item" routerLinkActive="active">
+                                                    <a class="nav-link dropdown-item" href="#">
+                                                        level 4
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropend">
+                                            <a class="nav-link dropdown-toggle" href="#" role="button"
+                                                data-bs-toggle="dropdown" data-bs-auto-close="outside">
+                                                {{ 'Header.mentors' | translate }}
+                                            </a>
+                                            <ul class="dropdown-menu shadow">
+                                                <li class="nav-item" routerLinkActive="active">
+                                                    <a class="nav-link dropdown-item" routerLink="/mentorshipprocess">
+                                                        {{ 'Header.mentorshipprocess' | translate }}
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item" routerLinkActive="active">
+                                                    <a class="nav-link dropdown-item" routerLink="/listofmentors">
+                                                        {{ 'Header.listofmentors' | translate }}
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropend">
+                                            <a class="nav-link dropdown-toggle" href="#" role="button"
+                                                data-bs-toggle="dropdown" data-bs-auto-close="outside">
+                                                {{ 'Header.insitutionalsupport' | translate }}
+                                            </a>
+                                            <ul class="dropdown-menu shadow">
+                                                <li class="nav-item" routerLinkActive="active">
+                                                    <a class="nav-link dropdown-item" routerLink="/socialimpactstartups">
+                                                        {{ 'Header.socialimpactstartups' | translate }}
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item" routerLinkActive="active">
+                                                    <a class="nav-link dropdown-item" routerLink="/incubation">
+                                                        {{ 'Header.incubation' | translate }}
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item" routerLinkActive="active">
+                                                    <a class="nav-link dropdown-item" routerLink="/incubationspaceavailable">
+                                                        Incubation Space Available
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item" routerLinkActive="active">
+                                                    <a class="nav-link dropdown-item" routerLink="/intellectualproperty">
+                                                        {{ 'Header.intellectualproperty' | translate }}
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item" routerLinkActive="active">
+                                                    <a class="nav-link dropdown-item" routerLink="/publicprocurement">
+                                                        {{ 'Header.publicprocurement' | translate }}
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item" routerLinkActive="active">
+                                                    <a class="nav-link dropdown-item" routerLink="/womenledstartups">
+                                                        {{ 'Header.womenledstartups' | translate }}
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item" routerLinkActive="active">
+                                                    <a class="nav-link dropdown-item"
+                                                        href="assets/images/ecosystem/institutionalsupport/partnershipsandcollaborations/VIT-AP MOU.pdf"
+                                                        target="_blank">
+                                                        {{ 'Header.partnershipandcollaborations' | translate }}
+                                                    </a>
+                                                </li>
+                            
+                            
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            
+                                <li class="nav-item dropdown" routerLinkActive="active">
+                                    <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        {{ 'Header.enablers' | translate }}
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <!-- <li class="nav-item" routerLinkActive="active">
+                                            <a class="nav-link dropdown-item"
+                                                href="https://www.ap.gov.in/#/department/organizations" target="_blank">
+                                                {{ 'Header.governemntdepartments' | translate }}
+                                            </a>
+                                        </li> -->
+                                        <li class="nav-item" routerLinkActive="active">
+                                            <a class="nav-link dropdown-item" routerLink="/incubatorandaccelarators">
+                                                {{ 'Header.incubatorsaccelarators' | translate }}
+                                            </a>
+                                        </li>
+                                        <li class="nav-item" routerLinkActive="active">
+                                            <a class="nav-link dropdown-item" routerLink="/highereducation">
+                                                {{ 'Header.highereducationalinstitutions' | translate }}
+                                            </a>
+                                        </li>
+                                        <li class="nav-item" routerLinkActive="active">
+                                            <a class="nav-link dropdown-item" routerLink="/schoolsatls">
+                                                {{ 'Header.schoolsatls' | translate }}
+                                            </a>
+                                        </li>
+                                        <!-- <li routerLinkActive="active">
+                                            <a class="nav-link dropdown-item" href="#">
+                                                {{ 'Header.capacitybuilding' | translate }}
+                                            </a>
+                                        </li> -->
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown d-none" routerLinkActive="active">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        {{ 'Header.whatsnew' | translate }}
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <!-- <li class="nav-item" routerLinkActive="active">
+                                            <a class="nav-link dropdown-item"
+                                                href="https://apisinnovationchallenges.ap.gov.in/#/" target="_blank">
+                                                {{ 'Header.openchallenges' | translate }}
+                                            </a>
+                                        </li> -->
+                                        <li class="nav-item" routerLinkActive="active">
+                                            <a class="nav-link dropdown-item"
+                                                href="assets/images/whatsnew/coe/Center of Excellence (CoE).pdf"
+                                                target="_blank">
+                                                {{ 'Header.centerofexcellence' | translate }}
+                                            </a>
+                                        </li>
+                                        <!-- <li routerLinkActive="active">
+                                            <a class="nav-link dropdown-item" href="#">
+                                                {{ 'Header.awarenessoutreach' | translate }}
+                                            </a>
+                                        </li>
+                                        <li class="nav-item" routerLinkActive="active">
+                                            <a class="nav-link dropdown-item" href="#">
+                                                {{ 'Header.aietsection8company' | translate }}
+                                            </a>
+                                        </li> -->
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown" routerLinkActive="active">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        {{ 'Header.resources' | translate }}
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <!-- <li routerLinkActive="active">
+                                            <a class="nav-link dropdown-item" href="#">
+                                                {{ 'Header.regulations' | translate }}
+                                            </a>
+                                        </li> -->
+                                        <li class="nav-item" routerLinkActive="active">
+                                            <a class="nav-link dropdown-item" routerLink="/outrechactivities">
+                                                Outreach Activities
+                                            </a>
+                                        </li>
+                                        <li class="nav-item" routerLinkActive="active">
+                                            <a class="nav-link dropdown-item" routerLink="/departmentinstitutionalsupportstartups">
+                                                Departments Providing Institutional Support to Startups
+                                            </a>
+                                        </li>
+                                        <li class="nav-item" routerLinkActive="active">
+                                            <a class="nav-link dropdown-item" routerLink="/policies">
+                                                {{ 'Header.policies' | translate }}
+                                            </a>
+                                        </li>
+                                        <li class="nav-item" routerLinkActive="active">
+                                            <a class="nav-link dropdown-item" routerLink="/gosnotifications">
+                                                {{ 'Header.gosnotifications' | translate }}
+                                            </a>
+                                        </li>
+                                        <li class="nav-item" routerLinkActive="active">
+                                            <a class="nav-link dropdown-item" routerLink="/pressreleases">
+                                                {{ 'Header.pressreleases' | translate }}
+                                            </a>
+                                        </li>
+                            
+                                        <!-- <li routerLinkActive="active">
+                                            <a class="nav-link dropdown-item" href="#">
+                                                {{ 'Header.apiseventsreports' | translate }}
+                                            </a>
+                                        </li> -->
+                                        <!-- <li routerLinkActive="active">
+                                            <a class="nav-link dropdown-item" href="#">
+                                                {{ 'Header.marketresearchreports' | translate }}
+                                            </a>
+                                        </li> -->
+                                    </ul>
+                                </li>
+                                <li class="nav-item" routerLinkActive="active">
+                                    <a class="nav-link dropdown-item"
+                                        href="https://apisinnovationchallenges.ap.gov.in/#/" target="_blank">
+                                        {{ 'Header.challenges' | translate }}
+                                    </a>
+                                </li>
+                                <li class="nav-item dropdown" routerLinkActive="active">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        {{ 'Header.media' | translate }}
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li class="nav-item" routerLinkActive="active">
+                                            <a class="nav-link dropdown-item" routerLink="/gallery">
+                                                {{ 'Header.gallery' | translate }}
+                                            </a>
+                                        </li>
+                                        <!-- <li class="nav-item" routerLinkActive="active">
+                                            <a class="nav-link dropdown-item" routerLink="/videos">
+                                                Videos
+                                            </a>
+                                        </li> -->
+
+                                        <!-- <li routerLinkActive="active">
+                                            <a class="nav-link dropdown-item" href="#">
+                                                {{ 'Header.newsletters' | translate }}
+                                            </a>
+                                        </li> -->
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown" routerLinkActive="active">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        {{ 'Header.support' | translate }}
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li class="nav-item" routerLinkActive="active">
+                                            <a class="nav-link dropdown-item" routerLink="/submitgrievance">
+                                                {{ 'Header.submitgrievance' | translate }}
+                                            </a>
+                                        </li>
+                                        <!-- <li routerLinkActive="active">
+                                            <a class="nav-link dropdown-item" href="#">
+                                                {{ 'Header.grievancemechanism' | translate }}
+                                            </a>
+                                        </li> -->
+                                        <li class="nav-item" routerLinkActive="active">
+                                            <a class="nav-link dropdown-item" routerLink="/grievancestatus">
+                                                {{ 'Header.checkstatus' | translate }}
+                                            </a>
+                                        </li>
+                                        <li class="nav-item" routerLinkActive="active">
+                                            <a class="nav-link dropdown-item" routerLink="/faqs">
+                                                FAQs
+                                            </a>
+                                        </li>
+                                        <!-- <li routerLinkActive="active">
+                                            <a class="nav-link dropdown-item" href="#">
+                                                {{ 'Header.faqs' | translate }}
+                                            </a>
+                                        </li> -->
+                                    </ul>
+                                </li>
+                                <li class="nav-item position-relative" routerLinkActive="active">
+                                    <a class="nav-link" routerLink="/careers">
+                                        Vacancies 
+                                        <!-- <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"> -->
+                                            <img src="assets/images/new.gif" alt="image" class="img-fluid">
+                                            <!-- <span class="visually-hidden">unread messages</span>
+                                          </span> -->
+                                    </a>
+                                </li>
+                                <li class="nav-item" routerLinkActive="active">
+                                    <a class="nav-link" routerLink="/contactus">
+                                        {{ 'Header.contactus' | translate }}
+                                    </a>
+                                </li>
+                                <li class="nav-item dropdown d-none">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        {{ 'Header.contactus' | translate }}
+                                    </a>
+                            
+                                    <ul class="dropdown-menu">
+                                        <li class="nav-item" routerLinkActive="active">
+                                            <a class="nav-link dropdown-item" href="#">
+                                                {{ 'Header.vishakapatnam' | translate }}
+                                            </a>
+                                        </li>
+                                        <li class="nav-item" routerLinkActive="active">
+                                            <a class="nav-link dropdown-item" href="#">
+                                                {{ 'Header.kakinada' | translate }}
+                                            </a>
+                                        </li>
+                                        <li class="nav-item" routerLinkActive="active">
+                                            <a class="nav-link dropdown-item" href="#">
+                                                {{ 'Header.tirupati' | translate }}
+                                            </a>
+                                        </li>
+                                        <li class="nav-item" routerLinkActive="active">
+                                            <a class="nav-link dropdown-item" href="#">
+                                                {{ 'Header.vijayawada' | translate }}
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item d-none d-lg-block">
+                                    <a class="nav-link btn btn_login" role="button" [routerLink]="['/home/login']"
+                                        aria-expanded="false">
+                                        Register/Login
+                                    </a>
+                                </li>
+                                <!-- <li class="nav-item">
+                                <a class="nav-link" href="#">Contact Us</a>
+                            </li> -->
+                                <!-- <li class="nav-item">
+                                <a class="nav-link disabled">Disabled</a>
+                            </li> -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>

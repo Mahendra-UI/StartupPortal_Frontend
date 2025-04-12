@@ -1,0 +1,162 @@
+.bodyBreadcrumbs {
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 140px;
+    /* height: auto; */
+    display: flex;
+    align-items: center;
+    /* padding: 20px 0px 51px; */
+    /* background-color: #0d5561; */
+}
+
+.bodyBreadcrumbs .breadcrumbsrow {
+    /* padding: 0 30px; */
+}
+
+.breadcrumbsrow img {
+    float: right;
+}
+
+.breadcrumb li {
+    padding: 0 12px 0 0;
+}
+
+.breadcrumb li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.bodyHeading h1 {
+    /* font-size: 35px; */
+    font-weight: 600;
+    line-height: 42px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #fff;
+}
+
+.breadcrumb {
+    background-color: transparent;
+}
+
+.breadcrumb a {
+    text-decoration: none;
+    color: aliceblue;
+    font-weight: 400;
+    /* transition: .5s; */
+}
+
+.breadcrumb li+li {
+    padding-left: 0;
+}
+
+.breadcrumb li+li:before {
+    content: '>';
+    color: #fff;
+    margin-right: 8px;
+}
+
+.breadcrumb li:last-child a,
+.breadcrumb a:hover {
+    color: #155384;
+    border-radius: 35px;
+    /* background-color: #82ccdd; */
+    padding: 5px 0px;
+}
+
+.breadcrumb li a:first-child {
+    color: #fff;
+}
+
+
+/* breadcrumb style ends */
+       .search{
+       position: relative;
+       box-shadow: 0 0 40px rgba(51, 51, 51, .1);
+         
+       }
+
+       .search input{
+
+        height: 60px;
+        text-indent: 25px;
+        border: 2px solid #d6d4d4;
+
+
+       }
+
+
+       .search input:focus{
+
+        box-shadow: none;
+        border: 2px solid blue;
+
+
+       }
+
+       .search .fa-search{
+
+        position: absolute;
+        top: 20px;
+        left: 16px;
+
+       }
+
+       .search button{
+
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        height: 50px;
+        width: 110px;
+        background: blue;
+
+       }
+
+       table thead {
+        background: #008E46;
+    }
+    th {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 21px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: #fff;
+    }
+    
+    td {
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: #000000;
+    }
+    .btn-close {
+        background: navy;
+        opacity: 1;
+        line-height: 1em;
+    }
+    .btn-close i {
+        color: #fff;
+    }
+    .badge {
+        font-size: 14px;
+    }
+    .form-heading {
+        color: #193567;
+        font-weight: 500;
+    }
+    hr {
+        border-color: #193567;
+    }
+    .previewLabelName, .previewLabelValue {
+        font-weight: 400;
+        font-size: 14px;
+    }

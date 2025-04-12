@@ -1,0 +1,321 @@
+<section class="py-5">
+    <form [formGroup]="mentorForm" (ngSubmit)="onSubmit()">
+        <div class="container">
+            <div class="row">
+                <div class="section-heading">
+                    <h5>Personal Details</h5>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="">Full Name<span class="mandatory">*</span></label>
+                        <input type="text" class="form-control" formControlName="fullName">
+                        <span class="text-danger"
+                            *ngIf="(mentorFormControls.fullName.touched || submitted) && mentorFormControls.fullName.errors?.required">
+                            Full Name is required
+                        </span>
+                        <span class="text-danger" *ngIf=" (mentorFormControls.fullName.touched || submitted) && mentorFormControls.fullName.errors?.pattern">
+                            Please enter alphabets only
+                          </span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="">Gender<span class="mandatory">*</span></label>
+                        <select name="" id="" class="form-control" formControlName="gender">
+                            <option value="">--Select--</option>
+                            <option value=1>Male</option>
+                            <option value=2>Female</option>
+                            <option value=3>Transgender</option>
+                        </select>
+                        <span class="text-danger"
+                            *ngIf="(mentorFormControls.stateName.touched || submitted) && mentorFormControls.stateName.errors?.required">
+                            Gender is required
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="">Mobile No. <span class="mandatory">*</span></label>
+                        <input type="text" class="form-control" formControlName="mobileNo"
+                            (keypress)="numberOnly($event)" maxlength="10" minlength="10">
+                        <div
+                            *ngIf="(mentorFormControls.mobileNo.touched || mentorFormControls.mobileNo.dirty || submitted) && mentorFormControls.mobileNo.invalid">
+                            <span class="text-danger" *ngIf="mentorFormControls.mobileNo.errors.required">
+                                Mobile Number is required
+                            </span>
+                            <span class="text-danger" *ngIf="mentorFormControls.mobileNo.errors.minlength">
+                                Mobile Number must be at least 10 characters long.
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="">Email <span class="mandatory">*</span></label>
+                        <input type="email" class="form-control" [pattern]="emailPattern" maxlength="50"
+                            formControlName="emailName">
+                        <span class="text-danger"
+                            *ngIf="(mentorFormControls.emailName.touched || submitted) && mentorFormControls.emailName.errors?.required">
+                            Email is required
+                        </span>
+                        <span class="text-danger"
+                            *ngIf="(mentorFormControls.emailName.touched || submitted) && mentorFormControls.emailName.errors?.pattern">
+                            Enter Valid Email
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="">State<span class="mandatory">*</span></label>
+                        <select name="" id="" class="form-control" formControlName="stateName">
+                            <option value="">--Select--</option>
+                            <option *ngFor="let li of stateList" [value]="li.state_id">{{li?.state_name}}</option>
+                            <!-- <option value="Andhra Pradesh">Andhra Pradesh</option>
+                            <option value="Telangana">Telangana</option>
+                            <option value="Gujarath">Gujarath</option> -->
+                        </select>
+                        <span class="text-danger"
+                            *ngIf="(mentorFormControls.stateName.touched || submitted) && mentorFormControls.stateName.errors?.required">
+                            State is required
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="">City<span class="mandatory">*</span></label>
+                        <input type="text" class="form-control" formControlName="cityName">
+                        <span class="text-danger"
+                            *ngIf="(mentorFormControls.cityName.touched || submitted) && mentorFormControls.cityName.errors?.required">
+                            City is required
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="">Organization Name<span class="mandatory">*</span></label>
+                        <input type="text" class="form-control" formControlName="mentorOrgName">
+                        <span class="text-danger"
+                            *ngIf="(mentorFormControls.mentorOrgName.touched || submitted) && mentorFormControls.mentorOrgName.errors?.required">
+                            Organization Name is required
+                        </span>
+                        <span class="text-danger" *ngIf="mentorFormControls.mentorOrgName.errors?.pattern">
+                            Alpha numerics are allowed
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="">Designation<span class="mandatory">*</span></label>
+                        <input name="" id="" class="form-control" formControlName="designationName">
+                        <span class="text-danger"
+                            *ngIf="(mentorFormControls.designationName.touched || submitted) && mentorFormControls.designationName.errors?.required">
+                            Designation is required
+                        </span>
+                        <span class="text-danger" *ngIf="mentorFormControls.designationName.errors?.pattern">
+                            Alpha numerics are allowed
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="">Stages<span class="mandatory">*</span></label>
+                        <select name="" id="" class="form-control" formControlName="stages">
+                            <option value="">--select--</option>
+                            <option *ngFor="let li of stagesList" [value]=li?.stage_id> {{li?.stage}}</option>
+                        </select>
+                        <span class="text-danger"
+                            *ngIf="(mentorFormControls.stages.touched || submitted) && mentorFormControls.stages.errors?.required">
+                            Stages required
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="form-group">
+                        <label for="">How many hours can you able to dedicate for providing mentorship per week?<span
+                                class="mandatory">*</span></label>
+                        <select name="" id="" class="form-control" formControlName="hours">
+                            <option value="">--Select--</option>
+                            <option value="1">5-7 hours</option>
+                            <option value="2">7-10 hours</option>
+                            <option value="3">Above 10 Hours</option>
+                        </select>
+                        <span class="text-danger"
+                            *ngIf="(mentorFormControls.hours.touched || submitted) && mentorFormControls.hours.errors?.required">
+                            Selection is required
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="">Industry/Sector(Max. Upto 5)<span class="mandatory">*</span></label>
+                        <ng-multiselect-dropdown
+                        [settings]="industrySettings"
+                        [placeholder]="' Select Industry/Sector '" 
+                        [data]="industSectorsList"
+                        formControlName="mentorSector"
+                        (onSelect)="onSelectSector($event)"
+                        (onSelectAll)="onSelecttSectorAll($event)" 
+                        (onDeSelect)="onDeSelectSector($event)" 
+                        (onDeSelectAll)="onDeSelecttAllSector($event)" 
+                        noDataLabel="no items found"
+                        dropdownPosition="auto" >
+                    </ng-multiselect-dropdown>
+                      
+                        <span class="text-danger"
+                            *ngIf="(mentorFormControls.mentorSector.touched || submitted) && mentorFormControls.mentorSector.errors?.required">
+                            Selection is required
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="form-group">
+                        <label for="">Specialization/Function (Max. Upto 3)<span class="mandatory">*</span></label>
+                        <ng-multiselect-dropdown
+                        [settings]="specializationSettings"
+                        [placeholder]="' Select Section '" 
+                        [data]="specliaationList"
+                        formControlName="mentorSpecilization"
+                        (onSelect)="onSelectSpecialization($event)"
+                        (onSelectAll)="onSelecttSpecializationAll($event)" 
+                        (onDeSelect)="onDeSelectSpecialization($event)" 
+                        (onDeSelectAll)="onDeSelecttSpecialization($event)" 
+                        noDataLabel="no items found"
+                        dropdownPosition="auto" >
+                    </ng-multiselect-dropdown>
+                        
+                        <span class="text-danger"
+                            *ngIf="(mentorFormControls.mentorSpecilization.touched || submitted) && mentorFormControls.mentorSpecilization.errors?.required">
+                            Selection is required
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="">LinkedIn URL<span class="mandatory">*</span></label>
+                        <input type="text" class="form-control" formControlName="linkedInUrl">
+                        <span class="text-danger"
+                            *ngIf="(mentorFormControls.linkedInUrl.touched || submitted) && mentorFormControls.linkedInUrl.errors?.required">
+                            URL is required
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="form-group">
+                        <label for="">Specialization / Function -(Industry/Function Keywords selection upto 10
+                            Combined)<span class="mandatory">*</span></label>
+                            <ng-multiselect-dropdown
+                        [settings]="functionSettings"
+                        [placeholder]="' Select Functionr '" 
+                        [data]="functionList"
+                        formControlName="inductryKeywords"
+                        (onSelect)="onSelectFunction($event)"
+                        (onSelectAll)="onSelecttFunctionAll($event)" 
+                        (onDeSelect)="onDeSelectFunction($event)" 
+                        (onDeSelectAll)="onDeSelecttFunction($event)" 
+                        noDataLabel="no items found"
+                        dropdownPosition="auto" >
+                    </ng-multiselect-dropdown>
+                        <span class="text-danger"
+                            *ngIf="(mentorFormControls.inductryKeywords.touched || submitted) && mentorFormControls.inductryKeywords.errors?.required">
+                            Selection is required
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="">Website URL<span class="mandatory">*</span></label>
+                        <input type="text" class="form-control" formControlName="personalWebsiteUrl">
+                        <span class="text-danger"
+                            *ngIf="(mentorFormControls.personalWebsiteUrl.touched || submitted) && mentorFormControls.personalWebsiteUrl.errors?.required">
+                            URL is required
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="">Short Description <span class="mandatory">*</span></label>
+                        <textarea name="" id="" class="form-control" formControlName="shortDescription"></textarea>
+                        <span class="text-danger"
+                            *ngIf="(mentorFormControls.shortDescription.touched || submitted) && mentorFormControls.shortDescription.errors?.required">
+                            Description is required
+                        </span>
+                        <span class="text-danger" *ngIf="mentorFormControls.shortDescription.errors?.pattern">
+                            Alpha numerics and . / , - are allowed
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-heading">
+                        <h5>Attachments</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for=""> Resume/CV <span class="mandatory">*</span></label>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group" *ngIf="!bindRowData?.resume_path">
+                        <input type="file"  accept=".jpg, .jpeg, .png, .pdf" class="form-control" (change)="handleResumeFileUpload($event)">
+                        <span class="text-danger"
+                            *ngIf="(mentorFormControls.resumeFile.touched || submitted) && mentorFormControls.resumeFile.errors?.required">
+                            Resume is required
+                        </span>
+                    </div>
+                    <div class="form-group" *ngIf="bindRowData?.resume_path">
+                        <img   class="img-fluid" src="{{bindRowData?.resume_path}}" width="70" height="70">
+                        <button class="btn btn-info ml-3" type="button"
+                                            (click)="editResumeLogo()">Edit</button>
+                        
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for=""> Upload Profile Picture <span class="mandatory">*</span></label>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group" *ngIf="!bindRowData?.profile_picture">
+                        <input type="file"  accept=".jpg, .jpeg, .png, .pdf" class="form-control"  (change)="handleProfilePicUpload($event)">
+                    </div>
+
+                    <div class="form-group" *ngIf="bindRowData?.profile_picture">
+                        <img   class="img-fluid" src="{{bindRowData?.profile_picture}}" width="70" height="70">
+                        <button class="btn btn-info ml-3" type="button"
+                                            (click)="editProfilePicture()">Edit</button>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="notes">
+  
+                        <ul style="list-style-type: number;">
+                          <h5>
+                            Note
+                          </h5>
+                          <li>Only Image and PDF file type is allowed.</li>
+                    <!-- <li>Image size should less than 200kb</li> -->
+                    <li>Upload size should less than 2 MB</li>
+                          <li> Image format/extension should be .png, .jpg, .jpeg, .pdf</li>
+                        </ul>
+                      </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="float-end">
+                        <button type="submit" class="btn btn-success btn-submit">Save & Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </form>
+</section>

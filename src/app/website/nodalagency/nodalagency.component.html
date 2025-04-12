@@ -1,0 +1,250 @@
+<style>
+    .bodyBreadcrumbs {
+        background-image: url('assets/images/whoweare/whowearebg.png');
+    }
+</style>
+<section class="bodyBreadcrumbs">
+
+    <div class="container">
+
+        <div class="row breadcrumbsrow align-items-center">
+            <div class="col-md-12">
+                <div class="bodyHeading text-white">
+                    <h1>Nodal Agency
+                    </h1>
+                    <ol class="breadcrumb mb-0">
+                        <li><a routerLink="/home">Home</a></li>
+                        <!-- <li><a style="color: #14e18c;">About AP</a></li> -->
+                        <li><a>Who We Are</a></li>
+
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="inner_content">
+                    <div class="innerpage_heading">
+                        <h2>
+                            About
+                        </h2>
+                        <p [className]="isTranslationTelugu ? 'aboutupara' : ''">
+                            {{ 'Nodalagency.nodalagencyparaone' | translate }}
+                        </p>
+                        <p [className]="isTranslationTelugu ? 'aboutupara' : ''">
+                            {{ 'Nodalagency.nodalagencyparatwo' | translate }}
+                        </p>
+                    </div>
+                </div>
+
+                <div class="inner_content">
+                    <div class="innerpage_heading">
+                        <h2 [className]="isTranslationTelugu ? 'sectionheadingtelugu' : ''">
+                            {{ 'Nodalagency.functionsheading' | translate }}
+                        </h2>
+                        <ul>
+                            <li [className]="isTranslationTelugu ? 'aboutupara' : ''">
+                                {{ 'Nodalagency.function1' | translate }}
+                            </li>
+                            <li [className]="isTranslationTelugu ? 'aboutupara' : ''">
+                                {{ 'Nodalagency.function2' | translate }}
+                            </li>
+                            <li [className]="isTranslationTelugu ? 'aboutupara' : ''">
+                                {{ 'Nodalagency.function3' | translate }}
+                            </li>
+                            <li [className]="isTranslationTelugu ? 'aboutupara' : ''">
+                                {{ 'Nodalagency.function4' | translate }}
+                            </li>
+                            <li [className]="isTranslationTelugu ? 'aboutupara' : ''">
+                                {{ 'Nodalagency.function5' | translate }}
+                            </li>
+                            <li [className]="isTranslationTelugu ? 'aboutupara' : ''">
+                                {{ 'Nodalagency.function6' | translate }}
+                            </li>
+                            <li [className]="isTranslationTelugu ? 'aboutupara' : ''">
+                                {{ 'Nodalagency.function7' | translate }}
+                            </li>
+                            <li [className]="isTranslationTelugu ? 'aboutupara' : ''">
+                                {{ 'Nodalagency.function8' | translate }}
+                            </li>
+                            <li [className]="isTranslationTelugu ? 'aboutupara' : ''">
+                                {{ 'Nodalagency.function9' | translate }}
+                            </li>
+                            <li [className]="isTranslationTelugu ? 'aboutupara' : ''">
+                                {{ 'Nodalagency.function10' | translate }}
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="inner_content">
+                    <div class="innerpage_heading">
+                        <h2 [className]="isTranslationTelugu ? 'sectionheadingtelugu' : ''">
+                            {{ 'Nodalagency.nodaldepartment' | translate }}
+                        </h2>
+                        <p [className]="isTranslationTelugu ? 'aboutupara' : ''">
+                            {{ 'Nodalagency.nodaldepartmentpara' | translate }}
+                        </p>
+                    </div>
+                </div>
+                <div class="inner_content">
+                    <div class="innerpage_heading">
+                        <h2 [className]="isTranslationTelugu ? 'sectionheadingtelugu' : ''">
+                            {{ 'Nodalagency.formorecontact' | translate }}
+                        </h2>
+                        <div class="row justify-content-start align-items-start hstack gap-3 py-4">
+                            <div class="col-md-3">
+                                <div class="image">
+                                    <img src="assets/images/whoweare/leadership/dedicatedteam/newpsit.png"
+                                        alt="image" class="img-fluid" style="width: 70%;">
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="image_content">
+                                    <!-- <h3 [className]="isTranslationTelugu ? 'secretarytelugu' : ''" style="margin-bottom: 0;line-height: 22px;">
+                                        {{ 'Nodalagency.newsecrataryname' | translate }}
+                                    </h3> -->
+                                    <h3 [className]="isTranslationTelugu ? 'secretarytelugu' : 'm-0'" class="m-0" style="line-height: 22px;">
+                                        <!-- Sri Kona Sasidhar, IAS -->
+                                        {{ 'Nodalagency.newsecrataryname' | translate }}
+                                    </h3>
+                                    <p [className]="isTranslationTelugu ? 'aboutupara' : ''">
+                                        <!-- Secretary, IT E &C Department -->
+                                        {{ 'Nodalagency.secratarydesignation' | translate }}
+                                    </p>
+                                </div>
+                                <div class="image_content">
+                                    <p [className]="isTranslationTelugu ? 'aboutupara' : ''">
+                                        {{ 'Nodalagency.nodaldepartmentpara' | translate }}
+                                    </p>
+                                    <address [className]="isTranslationTelugu ? 'aboutupara' : 'm-0'">
+                                        {{ 'Nodalagency.addresscontact' | translate }}
+                                    </address><span [className]="isTranslationTelugu ? 'aboutupara' : ''">                                        
+                                        {{ 'Nodalagency.districtphonenumber' | translate }}
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="inner_content">
+                    <div class="innerpage_heading">
+                        <!-- <h2>
+                            State Nodal Officer
+                        </h2> -->
+                        <h2 [className]="isTranslationTelugu ? 'sectionheadingtelugu' : ''">
+                            {{ 'Nodalagency.statenodalofficer' | translate }}
+                        </h2>
+                        <p [className]="isTranslationTelugu ? 'aboutupara' : ''">
+                            {{ 'Nodalagency.statenodalofficercontent' | translate }}
+                        </p>
+                        <!-- <p>
+                            The <strong>Chief Executive Officer (CEO)</strong> of APIS has been deployed as the
+                            <strong>State Nodal Officer</strong> for overseeing the
+                            implementation of the Innovation and Startup Policy.
+                        </p> -->
+                    </div>
+                </div>
+                <div class="inner_content d-none">
+                    <div class="innerpage_heading">
+                        <h2>
+                            Contact Information
+                        </h2>
+                        <p>
+                            The <strong>Chief Executive Officer (CEO)</strong> of APIS has been deployed as the
+                            <strong>State Nodal Officer</strong> for overseeing the
+                            implementation of the Innovation and Startup Policy.
+                        </p>
+                    </div>
+                </div>
+                <div class="inner_content">
+                    <div class="innerpage_heading">
+                        <h2 [className]="isTranslationTelugu ? 'sectionheadingtelugu' : ''">
+                            {{ 'Nodalagency.formorecontact' | translate }}
+                        </h2>
+                        <figure class="figure hstack gap-2 d-none">
+                            <img src="assets/images/nodealofficer.png" alt="image" class="img-">
+                            <!-- <img src="..." class="figure-img img-fluid rounded" alt="..."> -->
+                            <figcaption class="figure-caption text-start">
+                                <p>
+                                    Sri Anil Kumar Tentu
+                                    Chief Executive Officer (CEO), AP Innovation Society (APIS)
+                                    Startup Incubation Hub, Hill-3, IT SEZ, Madhurawada, Visakhapatnam – 530048
+                                </p>
+                            </figcaption>
+                        </figure>
+
+                        <div class="justify-content-start align-items-start hstack gap-3 py-3">
+                            <div class="">
+                                <div class="image">
+                                    <!-- <img src="assets/images/nodealofficer.png" alt="image" class="img-"> -->
+                                    <img src="assets/images/whoweare/leadership/dedicatedteam/apisceo.png"
+                                        alt="img" class="img-fluid">
+                                </div>
+                            </div>
+                            <!-- </div>
+                            <div class="col-md-7"> -->
+                            <div class="image_content">
+                                <!-- <h3>
+                                    Sri Anil Kumar Tentu
+                                </h3> -->
+                                <h3 [className]="isTranslationTelugu ? 'sectionheadingtelugu' : ''">
+                                    {{ 'Nodalagency.newceo' | translate }}
+                                </h3>
+
+                                <p [className]="isTranslationTelugu ? 'aboutupara' : ''">
+                                    {{ 'Nodalagency.ceodesignation' | translate }}
+                                </p>
+                                <!-- <p class="m-0">
+                                    Chief Executive Officer (CEO), AP Innovation Society (APIS)
+
+                                </p> -->
+                                <!-- <p> -->
+                                <p [className]="isTranslationTelugu ? 'aboutupara' : ''">
+                                    {{ 'Nodalagency.startupaddress' | translate }} – 530048
+                                </p>
+                                <div class="hstack gap-4">
+                                    <div>
+                                        <h4 [className]="isTranslationTelugu ? 'smallhead' : ''">
+                                            {{ 'Nodalagency.helpdekheading' | translate }}
+                                        </h4>
+                                        <!-- <h4>
+                                            Startup Andhra Pradesh Help Desk Number
+                                        </h4> -->
+                                        <p [className]="isTranslationTelugu ? 'aboutupara' : ''">
+                                            {{ 'Nodalagency.helpdeskcontent' | translate }} 
+                                        </p>
+
+                                        <!-- <p>
+                                            Startups for any assistance & Support can contact our Help Desk Number +91
+                                            7396603335
+                                        </p> -->
+                                    </div>
+                                    <div>
+                                        <h4 [className]="isTranslationTelugu ? 'smallhead' : ''">
+                                            {{ 'Nodalagency.timingheading' | translate }}
+                                        </h4>
+                                        <p [className]="isTranslationTelugu ? 'aboutupara' : ''">
+                                            {{ 'Nodalagency.timingcontent' | translate }} 
+                                        </p>
+                                       
+                                    </div>
+                                </div>
+                                <h4 [className]="isTranslationTelugu ? 'smallhead' : ''">
+                                    {{ 'Nodalagency.emailheading' | translate }}
+                                </h4>
+                                <p>
+                                    innovationsociety[at]ap[dot]gov[dot]in
+                                </p>
+                            </div>
+                            <!-- </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

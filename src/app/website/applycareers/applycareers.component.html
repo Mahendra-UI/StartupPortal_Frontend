@@ -1,0 +1,333 @@
+<style>
+    .bodyBreadcrumbs {
+    background-image: url('assets/images/contactus/contactusbg.png');
+}
+</style>
+<section class="bodyBreadcrumbs">
+
+    <div class="container">
+
+        <div class="row breadcrumbsrow align-items-center">
+            <div class="col-md-12">
+                <div class="bodyHeading text-white">
+                    <h1>Apply Careers
+                    </h1>
+                    <ol class="breadcrumb mb-0">
+                        <li><a routerLink="/home">Home</a></li>
+                        <!-- <li><a style="color: #14e18c;">About AP</a></li> -->
+                        <li><a>Apply Careers</a></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5">
+    <div class="container" [formGroup]="careersForm">
+        <div class="row">
+            <div class="col-md-12 py-2">
+                <div class="text-end">
+                    <a class="btn btn-sm btn-primary" routerLink="/careers">Back to Careers</a>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label for="">Full Name (As per SSC) <span class="mandatory">*</span></label>
+                    <input type="text" class="form-control" formControlName="fullName">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label for="">Father Name (As per SSC) <span class="mandatory">*</span></label>
+                    <input type="text" class="form-control" formControlName="fatherName">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label for="">Mobile Number <span class="mandatory">*</span></label>
+                    <input type="text" class="form-control" formControlName="mobileNumber">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label for="">Email ID <span class="mandatory">*</span></label>
+                    <input type="text" class="form-control" formControlName="emailId">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label for="">Applying for Role <span class="mandatory">*</span></label>
+                    <select class="form-select" formControlName="applyPost">
+                        <option value="" selected disabled>--Select--</option>
+                        <option value="Software Engineer 1">Software Engineer 1</option>
+                        <option value="Software Engineer 2">Software Engineer 2</option>
+                        <option value="Software Engineer 3">Software Engineer 3</option>
+                      </select>                      
+                </div>
+            </div>
+        </div>
+        <div class="row align-items-center py-3">
+            <div class="col-md-6">
+                <h4 class="text_heading_color">
+                    Educational Qualifications
+                </h4>
+            </div>
+            <div class="col-md-6">
+                <div class="text-end">
+                    <a class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#educationModal"> + Add New Qualification</a>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <table class="table table-responsive table-bordered w-100">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Qualification</th>
+                            <th>School/College/Institute</th>
+                            <th>Board/University</th>
+                            <th>Year of Pass</th>
+                            <th>Percentage/CGPA</th>
+                            <th>Uploaded Certiticate</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let education of educationList; let i = index">
+                            <td>{{ i + 1 }}</td>
+                            <td>{{ education.qualification }}</td>
+                            <td>{{ education.institute }}</td>
+                            <td>{{ education.board }}</td>
+                            <td>{{ education.yearOfPassing }}</td>
+                            <td>{{ education.totalAggregate }}</td>                            
+                            <td>{{ education.certificateFile }}</td>
+                            <td>
+                                <a class="btn btn-sm btn-success"><i class="bi bi-eye"></i></a>
+                            </td>
+                            <td>
+                                <div class="hstack gap-2">
+                                    <a class="btn btn-sm btn-success"><i class="bi bi-pencil"></i></a>
+                                    <a class="btn btn-sm btn-danger"><i class="bi bi-trash"></i></a>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="row align-items-center py-2">
+            <div class="col-md-6">
+                <h4 class="text_heading_color">
+                    Work Experience
+                </h4>
+            </div>
+            <div class="col-md-6">
+                <div class="text-end">
+                    <a class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#workModal"> + Add New Experience</a>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <table class="table table-responsive table-bordered w-100">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Organization</th>
+                            <th>Designation</th>
+                            <th>From</th>
+                            <th>To</th>
+                            <th>Roles & Responsibilities</th>
+                            <!-- <th>Experience Certiticate</th> -->
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let work of workExperienceList; let i = index">
+                            <td>{{ i + 1 }}</td>
+                            <td>{{ work.companyName }}</td>
+                            <td>{{ work.designation }}</td>
+                            <td>{{ work.from }}</td>
+                            <td>{{ work.to }}</td>
+                            <td>
+                              <ul>
+                                <li>{{ work.rolesAndResponsibilities }}</li>
+                              </ul>
+                            </td>                            
+                            <!-- <td>{{ work.experienceCertificate }}</td> -->
+                            <td>
+                                <a class="btn btn-sm btn-success"><i class="bi bi-eye"></i></a>
+                            </td>
+                            <td>
+                                <div class="hstack gap-2">
+                                    <a class="btn btn-sm btn-success"><i class="bi bi-pencil"></i></a>
+                                    <a class="btn btn-sm btn-danger"><i class="bi bi-trash"></i></a>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label for="">Remarks</label>
+                    <textarea class="form-control" formControlName="remarks"></textarea>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label for="">Upload Resume <span class="mandatory">*</span></label>
+                    <input type="file" class="form-control" formControlName="resume" (change)="onFileChangeResume($event)">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label for="">NIRF Ranking of University <span class="mandatory">*</span></label>
+                    <input type="text" class="form-control" formControlName="nirfranking">
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="text-end">
+                    <button class="btn btn-md btn-success" (click)="onSubmit()">Submit Application</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Education Modal -->
+<div class="modal fade" id="educationModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="educationModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="educationModalLabel">Education Details</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="container" [formGroup]="educationForm">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label for="" class="form-label">Qualification</label>
+                            <input type="text" class="form-control" formControlName="qualification">
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label for="" class="form-label">School/College/Institute</label>
+                            <input type="text" class="form-control" formControlName="schoolcollegeinstitute">
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label for="" class="form-label">Board/University</label>
+                            <input type="text" class="form-control" formControlName="boarduniversity">
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label for="" class="form-label">Year of Pass</label>
+                            <input type="text" class="form-control" formControlName="yearofpass">
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label for="" class="form-label">Percentage/CGPA</label>
+                            <input type="text" class="form-control" formControlName="percentagecgpa">
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label for="" class="form-label">Upload Certificate</label>
+                            <input type="file" class="form-control" formControlName="uploadcertificate" (change)="onFileChangeCertificate($event)">
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <button class="btn btn-success btn-sm" (click)="onEducationSubmit()">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Work modal -->
+
+
+  <!-- Education Modal -->
+<div class="modal fade" id="workModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="workModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="workModalLabel">Work Experience Details</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="container" [formGroup]="workExperienceForm">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label for="" class="form-label">Organization</label>
+                            <input type="text" class="form-control" formControlName="organizationName">
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label for="" class="form-label">Designation</label>
+                            <input type="text" class="form-control" formControlName="designationName">
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label for="" class="form-label">From</label>
+                            <input type="text" class="form-control" formControlName="from">
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label for="" class="form-label">To</label>
+                            <input type="text" class="form-control" formControlName="to">
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label for="" class="form-label">Roles & Responsibilities</label>
+                            <input type="text" class="form-control" formControlName="rolesresponsibilities">
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group">
+                          <label for="" class="form-label">Experience Certificate</label>
+                          <input
+                            type="file"
+                            class="form-control"
+                            formControlName="experienceCertificate"
+                            (change)="onFileChangeExperienceCertificate($event)"
+                          />
+                        </div>
+                      </div>                      
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <button class="btn btn-sm btn-success" (click)="onWorkExperienceSubmit()">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>

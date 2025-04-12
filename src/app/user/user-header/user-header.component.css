@@ -1,0 +1,15 @@
+.bg_custom {
+    background-color: #030035;
+}
+
+.header-menu{
+    width: 54%;
+}
+.profileDD .dropdown button .profilePic {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+}
+.dropdown-toggle::after {
+    color: #fff;
+}

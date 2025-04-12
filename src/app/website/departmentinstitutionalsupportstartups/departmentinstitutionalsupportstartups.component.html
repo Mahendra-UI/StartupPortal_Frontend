@@ -1,0 +1,388 @@
+<style>
+    .bodyBreadcrumbs {
+        background-image: url('assets/images/gallery/contactusbg.png');
+    }
+</style>
+<section class="bodyBreadcrumbs">
+
+    <div class="container">
+
+        <div class="row breadcrumbsrow align-items-center">
+            <div class="col-md-12">
+                <div class="bodyHeading text-white">
+                    <h1>Departments Providing Institutional Support to Startups
+                    </h1>
+                    <ol class="breadcrumb mb-0">
+                        <li><a routerLink="/home">Home</a></li>
+                        <li><a>Resources</a></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="py-5">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="inner_content">
+                    <div class="row">
+                        <div class="col-md-6"></div>
+                        <div class="col-md-6">
+                            <div class="hstack gap-2 justify-content-end pb-2">
+                                <h6 class="mb-0">Total Records: <span class="badge bg-success">{{ totalItems }}</span></h6>
+                                <div>
+                                    <input type="text" class="form-control" placeholder="Search any data..." [(ngModel)]="searchQuery" (input)="onSearch()" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table table-bordered w-100">
+                            <thead>
+                              <tr>
+                                <th>#</th>
+                                <th>Organization Name</th>
+                                <th>Scheme/Policy Name</th>
+                                <th>State Department</th>
+                                <th>Details of Scheme/Policy</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let row of filteredData | paginate: { itemsPerPage: itemsPerPage, currentPage: currentPage }; let i = index">
+                                    <td>{{ i + 1 + (currentPage - 1) * itemsPerPage }}</td>
+                                    <td>{{ row.OrganizationName }}</td>
+                                    <td>{{ row.SchemePolicyName }}</td>
+                                    <td>{{ row.StateDepartment }}</td>
+                                    <td>
+                                      <ul class="list-unstyled">
+                                        <li *ngFor="let key of objectKeys(row.ParsedDetails)">
+                                          <strong>{{ key }}</strong>
+                                          <ul class="ms-3">
+                                            <li *ngFor="let point of row.ParsedDetails[key]">
+                                              {{ point }}
+                                            </li>
+                                          </ul>
+                                        </li>
+                                      </ul>
+                                    </td>
+                                  </tr>
+                            </tbody>
+                          </table>
+                          <pagination-controls
+    (pageChange)="onPageChange($event)"
+    [totalItems]="totalItems"
+    [itemsPerPage]="itemsPerPage"
+    class="d-flex justify-content-center">
+  </pagination-controls>
+                        <table class="table table-bordered w-100 d-none">
+                            <thead>
+                                <tr>
+                                    <th>S.No</th>
+                                    <th>Organization Name</th>
+                                    <th>Name of Scheme/Policy</th>
+                                    <th>Name of the State Department</th>
+                                    <th>Details of Scheme/ Policy</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Industries & Commerce (Infra) Department</td>
+                                    <td>AP Logistics Policy 2022-27</td>
+                                    <td>DEPARTMENT OF INDUSTRIES & COMMERCE (INFRA)</td>
+                                    <td>
+                                        <div class="table_content">
+                                            <ul class="ps-3">
+                                                <li>
+                                                    100% Stamp Duty Reimbursement on Land Registration
+                                                </li>
+                                                <li>
+                                                    Reimbusement of 75% of the amount spent on Patent Registartion
+                                                    limited to Rs.5 Lakh for domestic and Rs.10 Lakh for Inernational
+                                                    Patent
+                                                </li>
+                                                <li>
+                                                    All other incentivies as per Andhra Pradesh Industrial Development
+                                                    Policy 2023-27
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>New & Renewable Energy Development Corporation of Andhra Pradesh (NREDCAP)</td>
+                                    <td>AP RE Export Policy 2020-2025</td>
+                                    <td>DEPARTMENT OF ENERGY (POWER.II)</td>
+                                    <td>
+                                        <div class="table_content">
+                                            <ul class="ps-3">
+                                                <li>
+                                                    For all the government and private lands transferred to
+                                                    the Land Aggregating Agency, land use conversion from
+                                                    “Agriculture” use to “Non-Agriculture” use shall be accorded
+                                                    by Government prior to land transfer. All lands leased from
+                                                    the Land Aggregating Agency can be used for Non-
+                                                    Agriculture purpose subject to remitting land use
+                                                    conversion fee by the Nodal Agency in the Government
+                                                    treasury by collecting from the respective Developers. No
+                                                    further change of land use permit shall be required for the
+                                                    lands transferred by Land Aggregating Agency to the Park
+                                                    Developer or the Project Developer.
+                                                </li>
+                                                <li>
+                                                    Projects will be exempted from obtaining any
+                                                    NOC/Consent for establishment under pollution control
+                                                    laws from AP Pollution Control Board.
+                                                </li>
+                                                <li>
+                                                    Exemption from payment of Electricity Duty for a
+                                                    period of 10 years from date of commencement of
+                                                    manufacturing activities.
+                                                </li>
+                                                <li>
+                                                    Extending of incentives as per the prevailing
+                                                    Industrial Promotion Policies of the Government of
+                                                    A.P.
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Andhra Pradesh Economic Development Board (APEDB)</td>
+                                    <td>AP Electric Mobility Policy 2018-2023</td>
+                                    <td>DEPARTMENT OF INDUSTRIES AND COMMERCE (P&I)</td>
+                                    <td>
+                                        <div class="table_content">
+                                            <ul class="ps-3">
+                                                <li>
+                                                    Stipend of INR 10,000 per employee per year to a maximum of first
+                                                    50 employees for a single company
+                                                </li>
+                                                <li>
+                                                    100% net SGST accrued to the State will be reimbursed for a
+                                                    period
+                                                    of five (5) years for Startups
+                                                </li>
+                                                <li>
+                                                    Water Supply will be made at 50% of the price of existing
+                                                    industrial
+                                                    supply tariff for the initial three (3) years
+                                                </li>
+                                                <li>
+                                                    10% of Fixed Capital Investment (FCI) up to a maximum of INR 10
+                                                    Crores for first two units
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>Industries & Commerce (Infra) Department</td>
+                                    <td>Andhra Pradesh Industrial Development Policy 2020-23</td>
+                                    <td>DEPARTMENT OF INDUSTRIES & COMMERCE (INFRA)</td>
+                                    <td>
+                                        <div class="table_content">
+                                            <ul class="ps-3">
+                                                <li>
+                                                    Reimbursement of 100% stamp duty and Transfer duty paid by the
+                                                    industry
+                                                    on purchase of land meant for Industrial use.
+                                                </li>
+                                                <li>
+                                                    Reimbursement of 100% stamp duty for lease of
+                                                    land/shed/buildings,
+                                                    mortgages and hypothecations
+                                                </li>
+                                                <li>
+                                                    GoAP is committed to supplying uninterrupted 24x7 quality power
+                                                    to all
+                                                    industries operating in the state
+                                                </li>
+                                                <li>
+                                                    Fixed power cost reimbursement @ ₹1.00 per unit for a period of five
+                                                    years
+                                                    from the date of commencement of commercial Production
+                                                </li>
+                                                <li>
+                                                    Reimbursement of 100% of net SGST accrued to state for a period of 5
+                                                    years from the date of commencement of commercial production or up
+                                                    to
+                                                    realization of 100% fixed capital investment, whichever is earlier
+                                                </li>
+                                                <li>
+                                                    6. 15% Investment Subsidy on Fixed Capital Investment limited upto
+                                                    ₹20
+                                                    lakh, whichever is lower. The subsidy will be released only after 3
+                                                    years
+                                                    of continuous operation with atleast 80% efficiency in all
+                                                    parameters i.e
+                                                    employment, production etc.
+                                                </li>
+                                                <li>
+                                                    Interest subsidy of 3% on the term loan taken for fixed capital
+                                                    investment by
+                                                    new Micro and Small enterprises for 5 years from the date of
+                                                    commencement of commercial production
+                                                </li>
+                                                <li>
+                                                    Reimbursement of 25% land conversion charges for Industrial use
+                                                    limited to ₹10
+                                                    lakh
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>Industries & Commerce (Infra) Department</td>
+                                    <td>AP YSR Jagananna Badugu Vikasam Policy 2020-23</td>
+                                    <td>DEPARTMENT OF INDUSTRIES AND COMMERCE (P&I)</td>
+                                    <td>
+                                        <div class="table_content">
+                                            <ul class="ps-3">
+                                                <li>
+                                                    Interest subsidy up to 9% over and above 3% for 5 years from the
+                                                    date of
+                                                    commencement of commercial production
+                                                </li>
+                                                <li>
+                                                    Reimbursement of 100% net SGST for a period of upto 5 years
+                                                </li>
+                                                <li>
+                                                    100% of the cost incurred for Quality Certification /Patent
+                                                    registration limited to
+                                                    Rs.3.0 Lakh
+                                                </li>
+                                                <li>
+                                                    25% of Machinery cost as Seed Capital Assistance for first
+                                                    generation
+                                                    entrepreneur for establishing Micro units
+                                                </li>
+                                                <li>
+                                                    Conduct Capacity building and Skill development training programs
+                                                    under
+                                                    which APSSDC
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>Andhra Pradesh Tourism Development Corporation</td>
+                                    <td>AP Tourism Policy 2020-2025</td>
+                                    <td>DEPARTMENT OF YOUTH ADVANCEMENT, TOURISM AND CULTURE(T)</td>
+                                    <td>
+                                        <div class="table_content">
+                                            <ul class="ps-3">
+                                                <li>
+                                                    Reimbursement of 100% of stamp duty and transfer duty paid by the
+                                                    units on purchase of
+                                                    land for all new Tourism Units
+                                                </li>
+                                                <li>
+                                                    Reimbursement of 100% of stamp duty for lease of land / shed /
+                                                    buildings, mortgages and
+                                                    hypothecations for all new Tourism Units
+                                                </li>
+                                                <li>
+                                                    Reimbursement of 100% of net SGST accrued to the State for all new
+                                                    Tourism units for a period of
+                                                    (5) five years from COD or up to realization of 100% of the fixed
+                                                    capital investment
+                                                </li>
+                                                <li>
+                                                    Electricity charges shall be reimbursed @ Rs.2.00 per Unit for a
+                                                    period
+                                                    of (5) five years from COD.
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td>AP Food Processing Soceity</td>
+                                    <td>AP Food Processing Policy 2020-2025</td>
+                                    <td>DEPARTMENT OF INDUSTRIES & COMMERCE (Programme-I)</td>
+                                    <td>
+                                        <div class="table_content">
+                                            <ul class="ps-3">
+                                                <li>
+                                                    Partipation in international tradefairs 30% Subsidy in ground rent
+                                                </li>
+                                                <li>
+                                                    Corpus fund of 10 Cr for promotion of exports
+                                                </li>
+                                                <li>
+                                                    Awards & Recognition for Exporters
+                                                </li>
+                                                <li>
+                                                    10% Subidy on Certification Programs
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td>Andhra Pradesh Industrial Infrastructure Corporation Ltd. (APIIC)</td>
+                                    <td>AP Bulk Drug Parks Policy 2020-2023</td>
+                                    <td>DEPARTMENT OF INDUSTRIES AND COMMERCE (INFRA)</td>
+                                    <td>
+                                        <div class="table_content">
+                                            <ul class="ps-3">
+                                                <li>
+                                                    Reimbursement of 100% of net SGST accrued to the state for a period
+                                                    of
+                                                    10 years from the date of commencement of commercial production or
+                                                    up
+                                                    to the realization of 125% fixed capital investment, whichever is
+                                                    earlier
+                                                </li>
+                                                <li>
+                                                    Reimbursement of 100% stamp duty and transfer duty paid by the
+                                                    industry
+                                                    on purchase of land meant for industrial use.
+                                                </li>
+                                                <li>
+                                                    Reimbursement of 50% of registration charges of various countries
+                                                    for
+                                                    product approval (Such as USA-FDA, EDQM-EU, PMDA-Japan, MHRA-UK,
+                                                    IMB- Ireland, TGA- Australia, Health Canada- Canada etc.) limited to
+                                                    ₹25
+                                                    Lakhs.
+                                                </li>
+                                                <li>
+                                                    GoAP will support 10% of the cost of establishing of Technology and
+                                                    Research Institutes in the state in coordination with leading
+                                                    Institutions /
+                                                    Research Organizations and Educational Institutions as well as
+                                                    industry
+                                                    limited to Rs.5.0 Crore, with appropriate financial, infrastructure
+                                                    and other
+                                                    support mechanisms duly dovetailing with relevant schemes of GoI.
+                                                </li>
+                                                <li>
+                                                    All other incentives applicable as per A.P. Industrial Development
+                                                    Policy
+                                                    2020-23.
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

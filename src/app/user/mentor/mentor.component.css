@@ -1,0 +1,49 @@
+.mandatory {
+    color: red;
+}
+
+.form-group {
+    margin-bottom: 0.75rem;
+}
+
+.terms_conditions p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.section-heading h5 {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 42px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+.btn-submit {
+    width: 180px;
+    max-width: 180px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+    letter-spacing: 0em;
+    text-align: center;    
+}
+.notes h5 {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #FE3500;
+}
+
+.notes ul li {
+    color: #82868C;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: left;
+}

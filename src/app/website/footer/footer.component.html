@@ -1,0 +1,258 @@
+<section class="pt-5 pb-3" style="background-color: #25163A;">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-3">
+                <div class="footer_logo">
+                    <img src="assets/images/website_whitelogo.svg" alt="Logo" class="img-fluid pb-3">
+                    <p [className]="isTranslationTelugu ? 'addresstelugu' : ''">
+                            {{ 'footer.address' | translate }}                        
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="footer_ul">
+                    <h4 [className]="isTranslationTelugu ? 'footerhead' : ''">
+                        {{ 'footer.importantlinks' | translate }}
+                    </h4>
+                    <div class="double-line-bottom-theme-colored-2"></div>
+                    <ul>
+                        <li> <i class="bi bi-chevron-double-right"></i>
+                            <!-- <a href="assets/images/whatsnew/coe/Center of Excellence (CoE).pdf" target="_blank">
+                                Center of Excellence
+                            </a> -->
+                            <!-- <a [className]="isTranslationTelugu ? 'footerlinks' : ''" href="assets/images/whatsnew/coe/Center of Excellence (CoE).pdf" target="_blank">
+                                {{ 'footer.centerofexcellence' | translate }}
+                            </a> -->
+                            <a routerLink="/outrechactivities">
+                                Outreach Activities
+                            </a>
+                        </li>
+                        <li> <i class="bi bi-chevron-double-right"></i>
+                            <a [className]="isTranslationTelugu ? 'footerlinks' : ''" routerLink="/nodalagency">
+                                {{ 'footer.nodalagency' | translate }}
+                            </a>
+                        </li>
+                        <li> <i class="bi bi-chevron-double-right"></i>
+                            <a [className]="isTranslationTelugu ? 'footerlinks' : ''" routerLink="/gallery">
+                                {{ 'footer.gallery' | translate }}
+                            </a>
+                        </li>
+                        <!-- <li>
+                            <a href="">
+                                Our Programs
+                            </a>
+                        </li> -->
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="footer_ul">
+                    <h4 [className]="isTranslationTelugu ? 'footerhead' : ''">
+                        {{ 'footer.usefullinks' | translate }}
+                    </h4>
+                    <div class="double-line-bottom-theme-colored-2"></div>
+                    <ul>
+                        <li> <i class="bi bi-chevron-double-right"></i>
+                            <a [className]="isTranslationTelugu ? 'footerlinks' : ''" href="https://apisinnovationchallenges.ap.gov.in/#/" target="_blank">
+                                {{ 'footer.innovationchallenges' | translate }}
+                            </a>
+                        </li>
+                        <li> <i class="bi bi-chevron-double-right"></i>
+                            <a [className]="isTranslationTelugu ? 'footerlinks' : ''" href="https://www.ap.gov.in/" target="_blank">
+                                {{ 'footer.apstateportal' | translate }}
+                            </a>
+                        </li>
+                        <li> <i class="bi bi-chevron-double-right"></i>
+                            <a [className]="isTranslationTelugu ? 'footerlinks' : ''" href="https://www.startupindia.gov.in/" target="_blank">
+                                {{ 'footer.startupindia' | translate }}
+                            </a>
+                        </li>
+                        <li> <i class="bi bi-chevron-double-right"></i>
+                            <a [className]="isTranslationTelugu ? 'footerlinks' : ''" target="_blank" href="assets/images/ecosystem/startups/Startup Policy.pdf">
+                                {{ 'footer.startuppolicy' | translate }}
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="footer_social">
+                    <h4>Let's Connect</h4>
+                    <div class="double-line-bottom-theme-colored-2"></div>
+                    <div class="hstack social align-items-center">
+                        <img src="assets/images/cal_icon.png" alt="image">
+                        <!-- <i class="fa fa-envelope pt-2"></i> -->
+                        <div class="map_data ms-2">
+                            <p class="m-0">+91 - 7396603335
+                            </p>
+                            <p class="m-0">
+                                (10:00 AM - 6:00 PM)
+                            </p>
+                            <!-- <h4 style="visibility: hidden;">e-Mail</h4> -->
+                            <!-- <p>ceo-apmsmedc[at]ap[dot]gov[dot]in</p> -->
+                        </div>
+                    </div>
+                    <ul>
+                        <li>
+                            <a href="https://m.facebook.com/StartupAPIS/" target="_blank">
+                                <!-- <i class="bi bi-facebook"></i> -->
+                                <i class="fa fa-facebook" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/myapisofficial/" target="_blank">
+                                <!-- <i class="bi bi-instagram"></i> -->
+                                <i class="fa fa-instagram" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://in.linkedin.com/company/andhra-pradesh-innovation-society" target="_blank">
+                                <!-- <i class="bi bi-linkedin"></i> -->
+                                <i class="fa fa-linkedin" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/Startup_APIS" target="_blank">
+                                <!-- <i class="bi bi-twitter"></i> -->
+                                <i class="fa fa-twitter" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr style="background-color: #fff;color: #fff;">
+        <div class="row bottom_footer align-items-center">
+            <div class="col-md-6">
+                <div class="copy_right">
+                    <!-- <p class="m-0">Copyrights © 2023 All Rights Reserved by Andhra Pradesh Innovation Society</p> -->
+                    <p [className]="isTranslationTelugu ? 'copyrighttelugu' : 'm-0'">
+                        {{ 'footer.copyright' | translate }}                        
+                </p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="terms">
+                    <a routerLink="/termsandconditions">Terms & Conditions</a>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="designed float-end">
+                    <p [className]="isTranslationTelugu ? 'copyrighttelugu' : ''">
+                        {{ 'footer.designby' | translate }}                         
+                        <a href="https://e-pragati.in/" target="_blank"><img src="assets/images/epa_logo.png" alt="image" class="img-fluid" style="width: 15%;margin: auto;"></a> 
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<!-- <div class="progress-wrap">
+    <svg class="progress-circle" width="100%" height="100%" viewBox="0 0 200 200">
+      <path class="progress-circle-path" fill="none" stroke="#007bff" stroke-width="3" d="M100,10
+              a90,90 0 0,1 0,180
+              a90,90 0 0,1 0,-180" />
+    </svg>
+  </div> -->
+
+  <style>
+    .progress-wrap {
+      position: fixed;
+      right: 10px;
+      bottom: 50px;
+      height: 46px;
+      width: 46px;
+      cursor: pointer;
+      display: block;
+      border-radius: 50px;
+      box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.2);
+      z-index: 10000;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(15px);
+      -webkit-transition: all 200ms linear;
+      transition: all 200ms linear;
+    }
+    
+    .progress-wrap.active-progress {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+    
+    .progress-wrap::after {
+      position: absolute;
+      font-family: 'FontAwesome';
+      font-weight: 900;
+      content: '\f062';
+      text-align: center;
+      line-height: 46px;
+      font-size: 18px;
+      color: #1f2029;
+      left: 0;
+      top: 0;
+      height: 46px;
+      width: 46px;
+      cursor: pointer;
+      display: block;
+      z-index: 1;
+      -webkit-transition: all 200ms linear;
+      transition: all 200ms linear;
+    }
+    
+    .lightScrollIcon::after {
+      color: #ecedf3 !important;
+    }
+    
+    .progress-wrap:hover::after {
+      opacity: 0;
+    }
+    
+    .progress-wrap::before {
+      position: absolute;
+      font-family: 'FontAwesome';
+      font-weight: 900;
+      content: '\f062';
+      text-align: center;
+      line-height: 46px;
+      font-size: 18px;
+      opacity: 1;
+      background-image: linear-gradient(298deg, #da2c4d, #f8ab37);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      left: 0;
+      top: 0;
+      height: 46px;
+      width: 46px;
+      cursor: pointer;
+      display: block;
+      z-index: 2;
+      -webkit-transition: all 200ms linear;
+      transition: all 200ms linear;
+    }
+    
+    .progress-wrap:hover::before {
+      opacity: 1;
+    }
+    
+    .progress-wrap svg path {
+      fill: none;
+    }
+    
+    .progress-wrap svg.progress-circle path {
+      /* stroke: #1f2029; */
+        stroke: #004982;
+      stroke-width: 15;
+      box-sizing: border-box;
+      -webkit-transition: all 200ms linear;
+      transition: all 200ms linear;
+    }
+    </style>
+
+<button class="gototop" *ngIf="isShow" (click)="gotoTop()" style="border: none;background: #00AD8C;"><i class="fa fa-chevron-up" style="color: #fff"></i></button>
+

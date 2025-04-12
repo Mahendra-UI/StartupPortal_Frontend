@@ -1,0 +1,835 @@
+<style>
+    .bodyBreadcrumbs {
+    background-image: url('assets/images/ecosystem/ecosystembg.png');
+}
+</style>
+<section class="bodyBreadcrumbs">
+
+    <div class="container">
+
+        <div class="row breadcrumbsrow align-items-center">
+            <div class="col-md-12">
+                <div class="bodyHeading text-white">
+                    <h1>List of Mentors
+                    </h1>
+                    <ol class="breadcrumb mb-0">
+                        <li><a routerLink="/home">Home</a></li>
+                        <!-- <li><a style="color: #14e18c;">About AP</a></li> -->
+                        <li><a>Who We Are</a></li>
+                        <li><a>Leadership</a></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="py-3 listofmentor_section">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8"></div>
+            <div class="col-md-4">
+                <div class="text-end countsHeading">
+                    <h4 class="heading fw-bold"><strong>No.of Mentors:</strong> <span class="badge text-bg-success fs-6">{{ totalMentorsCount }}</span></h4>
+                </div>
+                <div class="search-bar mb-3">
+                    <label for="" class="form-label fw-bold">Search Mentors :</label>
+                    <input type="text" placeholder="Enter Mentor Name..." (input)="onSearchChange($event.target.value)" class="form-control"/>
+                  </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- <div *ngFor="let profile of paginatedMentors" class="col-md-3 mb-4"> -->
+            <div *ngFor="let profile of filteredMentors | paginate: { itemsPerPage: itemsPerPage, currentPage: currentPage }" class="col-md-3 mb-4">
+
+              <div class="full_profile">
+                <img [src]="profile.image" alt="profile image" class="img-fluid" />
+                <div class="profile_content">
+                  <h3>{{ profile.name }}</h3>
+                  <h4 *ngIf="profile.title">{{ profile.title }}</h4>
+                  <div class="social hstack gap-3">
+                    <a *ngIf="profile.phone" [href]="'tel:' + profile.phone">
+                      <i class="bi bi-telephone-outbound"></i>
+                    </a>
+                    <a *ngIf="profile.linkedin" [href]="profile.linkedin" target="_blank">
+                      <i class="bi bi-linkedin"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Pagination Controls -->
+<!-- <div class="pagination-controls mt-3">
+    <button (click)="previousPage()" [disabled]="currentPage === 1">Previous</button>
+    <button (click)="nextPage()" [disabled]="currentPage * itemsPerPage >= filteredMentors.length">Next</button>
+  </div> -->
+  <div class="d-flex justify-content-end" id="mentorsPagination">
+
+    <pagination-controls (pageChange)="onPageChange($event)"
+    [totalItems]="totalMentorsCount"
+    [itemsPerPage]="itemsPerPage"
+    directionLinks="true"
+    autoHide="false">
+</pagination-controls>
+
+
+    <!-- maxSize="5" -->
+    <!-- <pagination-controls (pageChange)="currentPage = $event" 
+                         [totalItems]="totalMentorsCount"
+                         [itemsPerPage]="itemsPerPage"
+                         directionLinks="true"
+                         autoHide="false">
+    </pagination-controls> -->
+</div>
+
+    </div>
+
+
+    <div class="container d-none">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="full_profile">
+                    <img src="assets/images/ecosystem/mentors/list/1.png" alt="image" class="img-fluid">
+                    <div class="profile_content">
+                        
+                        <h3>
+                            Dr. Suresh
+                        </h3>
+                        <h4>
+                            STPI head Visakhapatnam
+                        </h4>
+                        <div class="social hstack gap-3">
+                            <a href="tel:9989055535">                                
+                                <i class="bi bi-telephone-outbound"></i>
+                            </a>
+                            <a href="https://in.linkedin.com/in/suresh-batha-803a7414" target="_blank">                                
+                                <i class="bi bi-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="full_profile">
+                    <img src="assets/images/ecosystem/mentors/list/2.png" alt="image" class="img-fluid">
+                    <div class="profile_content">
+                        
+                        <h3>
+                            Dr Bijay Kumar Sahu
+                        </h3>
+                        <h4>
+                            HoD, NRDC
+                        </h4>
+                        <div class="social hstack gap-3">
+                            <a href="tel:9810104163">                                
+                                <i class="bi bi-telephone-outbound"></i>
+                            </a>
+                            <a href="https://in.linkedin.com/in/dr-bijay-kumar-sahu-phd-07ba9423" target="_blank">                                
+                                <i class="bi bi-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="full_profile">
+                    <img src="assets/images/ecosystem/mentors/list/3.png" alt="image" class="img-fluid">
+                    <div class="profile_content">
+                        
+                        <h3>
+                            Kalyan Mangalapalli
+                        </h3>
+                        <h4>
+                            Leading Emerging Tech ecosystem, NASSCOM
+                        </h4>
+                        <div class="social hstack gap-3">
+                            <a href="tel:9581593813">                                
+                                <i class="bi bi-telephone-outbound"></i>
+                            </a>
+                            <a href="https://in.linkedin.com/in/kml08" target="_blank">                                
+                                <i class="bi bi-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="full_profile">
+                    <img src="assets/images/ecosystem/mentors/list/4.png" alt="image" class="img-fluid">
+                    <div class="profile_content">
+                        
+                        <h3>
+                            Shri. Sridhar Kosaraju
+                        </h3>
+                        <h4>
+                            President (ITAPP)
+                        </h4>
+                        <div class="social hstack gap-3">
+                            <a href="tel:9849993366">                                
+                                <i class="bi bi-telephone-outbound"></i>
+                            </a>
+                            <a href="https://in.linkedin.com/in/sreedharkosaraju" target="_blank">                                
+                                <i class="bi bi-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="full_profile">
+                    <img src="assets/images/ecosystem/mentors/list/5.png" alt="image" class="img-fluid">
+                    <div class="profile_content">
+                        
+                        <h3>
+                            Rajaneesh Vasanta
+                        </h3>
+                        <h4>
+                            CEO, Antar IoT (startup)
+                        </h4>
+                        <div class="social hstack gap-3">
+                            <a href="tel:9966402361">                                
+                                <i class="bi bi-telephone-outbound"></i>
+                            </a>
+                            <a href="https://in.linkedin.com/in/rajaneeshv" target="_blank">                                
+                                <i class="bi bi-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="full_profile">
+                    <img src="assets/images/ecosystem/mentors/list/6.png" alt="image" class="img-fluid">
+                    <div class="profile_content">
+                        
+                        <h3>
+                            Prasad Babu
+                        </h3>
+                        <h4>
+                            CEO, GCRS (Startup)
+                        </h4>
+                        <div class="social hstack gap-3">
+                            <a href="tel:9810708901">                                
+                                <i class="bi bi-telephone-outbound"></i>
+                            </a>
+                            <a href="https://in.linkedin.com/in/prasad-babu-627a3924" target="_blank">                                
+                                <i class="bi bi-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="full_profile">
+                    <img src="assets/images/ecosystem/mentors/list/7.png" alt="image" class="img-fluid">
+                    <div class="profile_content">
+                        
+                        <h3>
+                            Harsha Vardhan
+                        </h3>
+                        <h4>
+                            CEO, BotClub (Startup)
+                        </h4>
+                        <div class="social hstack gap-3">
+                            <a href="tel:7358078099">                                
+                                <i class="bi bi-telephone-outbound"></i>
+                            </a>
+                            <a href="https://in.linkedin.com/in/harsha-vardhan-k?trk=public_profile_browsemap_mini-profile_title" target="_blank">                                
+                                <i class="bi bi-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="full_profile">
+                    <img src="assets/images/ecosystem/mentors/list/8.png" alt="image" class="img-fluid">
+                    <div class="profile_content">
+                        
+                        <h3>
+                            Ali Asgar, CTO
+                        </h3>
+                        <h4>
+                            SaifSeas (startup)
+                        </h4>
+                        <div class="social hstack gap-3">
+                            <a href="tel:9393075192">                                
+                                <i class="bi bi-telephone-outbound"></i>
+                            </a>
+                            <a href="https://in.linkedin.com/in/aliasgar-saiftrade" target="_blank">                                
+                                <i class="bi bi-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="full_profile">
+                    <img src="assets/images/ecosystem/mentors/list/9.png" alt="image" class="img-fluid">
+                    <div class="profile_content">
+                        
+                        <h3>
+                            Sriram Nallam
+                        </h3>
+                        <h4>
+                            Chairman Seanergy Digital (startup)
+                        </h4>
+                        <div class="social hstack gap-3">
+                            <a href="tel:9866309540">                                
+                                <i class="bi bi-telephone-outbound"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/sriramnallam" target="_blank">                                
+                                <i class="bi bi-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="full_profile">
+                    <img src="assets/images/ecosystem/mentors/list/10.png" alt="image" class="img-fluid">
+                    <div class="profile_content">
+                        
+                        <h3>
+                            Shri. Murali Krishna, CEO
+                        </h3>
+                        <h4>
+                            Fluent Grid (startup)
+                        </h4>
+                        <div class="social hstack gap-3">
+                            <!-- <a href="#">                                
+                                <i class="bi bi-telephone-outbound"></i>
+                            </a> -->
+                            <a href="https://in.linkedin.com/in/murali-krishna-gannamani-1681b82" target="_blank">                                
+                                <i class="bi bi-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="full_profile">
+                    <img src="assets/images/ecosystem/mentors/list/11.png" alt="image" class="img-fluid">
+                    <div class="profile_content">
+                        
+                        <h3>
+                            Shri Aravind Kumar,  
+                        </h3>
+                        <h4>
+                            Director General (STPI)
+                        </h4>
+                        <div class="social hstack gap-3">
+                            <!-- <a href="#">                                
+                                <i class="bi bi-telephone-outbound"></i>
+                            </a> -->
+                            <a href="https://in.linkedin.com/in/arvind-kumar-9a300917" target="_blank">                                
+                                <i class="bi bi-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="full_profile">
+                    <img src="assets/images/ecosystem/mentors/list/12.png" alt="image" class="img-fluid">
+                    <div class="profile_content">
+                        
+                        <h3>
+                            Ravi Eswarapu
+                        </h3>
+                        <h4>
+                            CEO, A-Hub
+                        </h4>
+                        <div class="social hstack gap-3">
+                            <a href="tel:9949832000">                                
+                                <i class="bi bi-telephone-outbound"></i>
+                            </a>
+                            <a href="https://in.linkedin.com/in/eswarapu" target="_blank">                                
+                                <i class="bi bi-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="full_profile">
+                    <img src="assets/images/ecosystem/mentors/list/13.png" alt="image" class="img-fluid">
+                    <div class="profile_content">
+                        
+                        <h3>
+                            Dr. S. Ravi Shankar
+                        </h3>
+                        <h4>
+                            Gayatri, IIC
+                        </h4>
+                        <div class="social hstack gap-3">
+                            <a href="tel:9866340848">                                
+                                <i class="bi bi-telephone-outbound"></i>
+                            </a>
+                            <a href="https://in.linkedin.com/in/ravisaripalle" target="_blank">                                
+                                <i class="bi bi-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="full_profile">
+                    <img src="assets/images/ecosystem/mentors/list/14.png" alt="image" class="img-fluid">
+                    <div class="profile_content">
+                        
+                        <h3>
+                            Chandra Shaker saripaka
+                        </h3>
+                        <h4>
+                            Data Scientist, Shopee
+                        </h4>
+                        <div class="social hstack gap-3">
+                            <a href="tel:6589505706">                                
+                                <i class="bi bi-telephone-outbound"></i>
+                            </a>
+                            <a href="https://sg.linkedin.com/in/chandrasekharsaripaka" target="_blank">                                
+                                <i class="bi bi-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="full_profile">
+                    <img src="assets/images/ecosystem/mentors/list/15.png" alt="image" class="img-fluid">
+                    <div class="profile_content">
+                        
+                        <h3>
+                            Maheswara Rao Chenchala
+                        </h3>
+                        <h4>
+                            CTO, Healthcare
+                        </h4>
+                        <div class="social hstack gap-3">
+                            <a href="tel:7569695342">                                
+                                <i class="bi bi-telephone-outbound"></i>
+                            </a>
+                            <a href="https://in.linkedin.com/in/maheswara-rao-chaduvula-857630100" target="_blank">                                
+                                <i class="bi bi-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="full_profile">
+                    <img src="assets/images/ecosystem/mentors/list/16.png" alt="image" class="img-fluid">
+                    <div class="profile_content">
+                        
+                        <h3>
+                            Rajeev YSR
+                        </h3>
+                        <!-- <h4 style="visibility: hidden;">
+                            Chairman, APSCHE
+                        </h4> -->
+                        <div class="social hstack gap-3">
+                            <a href="tel:9886949000">                                
+                                <i class="bi bi-telephone-outbound"></i>
+                            </a>
+                            <a href="https://in.linkedin.com/in/rajeevysr" target="_blank">                                
+                                <i class="bi bi-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="full_profile">
+                    <img src="assets/images/ecosystem/mentors/list/17.png" alt="image" class="img-fluid">
+                    <div class="profile_content">
+                        
+                        <h3>
+                            Amit Chauhan
+                        </h3>
+                        <h4>
+                            Director VIT, Incubation
+                        </h4>
+                        <div class="social hstack gap-3">
+                            <a href="tel:9390638524">                                
+                                <i class="bi bi-telephone-outbound"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/ameet-chavan-b81a342/" target="_blank">                                
+                                <i class="bi bi-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="full_profile">
+                    <img src="assets/images/ecosystem/mentors/list/18.png" alt="image" class="img-fluid">
+                    <div class="profile_content">
+                        
+                        <h3>
+                            Satish Kumar
+                        </h3>
+                        <h4>
+                            CEO, Rosys
+                        </h4>
+                        <div class="social hstack gap-3">
+                            <a href="tel:9908159207">                                
+                                <i class="bi bi-telephone-outbound"></i>
+                            </a>
+                            <!-- <a href="https://www.linkedin.com/in/ameet-chavan-b81a342/" target="_blank">                                
+                                <i class="bi bi-linkedin"></i>
+                            </a> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="full_profile">
+                    <img src="assets/images/ecosystem/mentors/list/19.png" alt="image" class="img-fluid">
+                    <div class="profile_content">
+                        
+                        <h3>
+                            Gudipudi Krishna Sharma
+                        </h3>
+                        <h4>
+                            Startup India, Manager
+                        </h4>
+                        <div class="social hstack gap-3">
+                            <a href="tel:9205057937">                                
+                                <i class="bi bi-telephone-outbound"></i>
+                            </a>
+                            <a href="https://in.linkedin.com/in/krishnagudipudi" target="_blank">                                
+                                <i class="bi bi-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="full_profile">
+                    <img src="assets/images/ecosystem/mentors/list/20.png" alt="image" class="img-fluid">
+                    <div class="profile_content">
+                        
+                        <h3>
+                            Dr Bhavya Manjeera Nitish
+                        </h3>
+                        <h4>
+                            Engineer
+                        </h4>
+                        <div class="social hstack gap-3">
+                            <!-- <a href="tel:9205057937">                                
+                                <i class="bi bi-telephone-outbound"></i>
+                            </a> -->
+                            <a href="https://www.linkedin.com/in/dr-bhavya-manjeera-nitish-a68061232/" target="_blank">                                
+                                <i class="bi bi-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="full_profile">
+                    <img src="assets/images/ecosystem/mentors/list/21.png" alt="image" class="img-fluid">
+                    <div class="profile_content">
+                        
+                        <h3>
+                            Dr. V S S Kiran
+                        </h3>
+                        <h4>
+                            Entrepreneur
+                        </h4>
+                        <div class="social hstack gap-3">
+                            <a href="tel:7382169329">                                
+                                <i class="bi bi-telephone-outbound"></i>
+                            </a>
+                            <a href="https://in.linkedin.com/in/vsskiran" target="_blank">                                
+                                <i class="bi bi-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="full_profile">
+                    <img src="assets/images/ecosystem/mentors/list/22.png" alt="image" class="img-fluid">
+                    <div class="profile_content">
+                        
+                        <h3>
+                            Anil Gollamandala
+                        </h3>
+                        <h4>
+                            Director
+                        </h4>
+                        <!-- <div class="social hstack gap-3">
+                            <a href="tel:7382169329">                                
+                                <i class="bi bi-telephone-outbound"></i>
+                            </a>
+                            <a href="https://in.linkedin.com/in/vsskiran" target="_blank">                                
+                                <i class="bi bi-linkedin"></i>
+                            </a>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="full_profile">
+                    <img src="assets/images/ecosystem/mentors/list/23.png" alt="image" class="img-fluid">
+                    <div class="profile_content">
+                        
+                        <h3>
+                            Pooja Vidyashankar
+                        </h3>
+                        <h4>
+                            Head - Strategic Planning, NASSCOM
+                        </h4>
+                        <div class="social hstack gap-3">
+                            <!-- <a href="tel:7382169329">                                
+                                <i class="bi bi-telephone-outbound"></i>
+                            </a> -->
+                            <a href="https://in.linkedin.com/in/pooja-vidyashankar" target="_blank">                                
+                                <i class="bi bi-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="full_profile">
+                    <img src="assets/images/ecosystem/mentors/list/24.png" alt="image" class="img-fluid">
+                    <div class="profile_content">
+                        
+                        <h3>
+                            OMPRAKASH BITLA
+                        </h3>
+                        <h4>
+                            Projects and Operations lead, NASSCOM CoE IoT & AI
+                        </h4>
+                        <div class="social hstack gap-3">
+                            <!-- <a href="tel:7382169329">                                
+                                <i class="bi bi-telephone-outbound"></i>
+                            </a> -->
+                            <a href="https://www.linkedin.com/in/omprakash-bitla-pmec%E2%84%A2-lsswb%E2%84%A2-cpcm%E2%84%A2-30b70a40/" target="_blank">                                
+                                <i class="bi bi-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="full_profile">
+                    <img src="assets/images/ecosystem/mentors/list/25.png" alt="image" class="img-fluid">
+                    <div class="profile_content">
+                        
+                        <h3>
+                            V M Mouli
+                        </h3>
+                        <h4>
+                            CII
+                        </h4>
+                        <div class="social hstack gap-3">
+                            <!-- <a href="tel:7382169329">                                
+                                <i class="bi bi-telephone-outbound"></i>
+                            </a> -->
+                            <a href="https://in.linkedin.com/in/v-mouli-25955412" target="_blank">                                
+                                <i class="bi bi-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="full_profile">
+                    <img src="assets/images/ecosystem/mentors/list/26.png" alt="image" class="img-fluid">
+                    <div class="profile_content">
+                        
+                        <h3>
+                            D S R SUJANA
+                        </h3>
+                        <h4>
+                            Supply U – DIRECTOR
+                        </h4>
+                        <div class="social hstack gap-3">
+                            <a href="tel:8590899999">                                
+                                <i class="bi bi-telephone-outbound"></i>
+                            </a>
+                            <!-- <a href="https://in.linkedin.com/in/v-mouli-25955412" target="_blank">                                
+                                <i class="bi bi-linkedin"></i>
+                            </a> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="full_profile">
+                    <img src="assets/images/ecosystem/mentors/list/27.png" alt="image" class="img-fluid">
+                    <div class="profile_content">
+                        
+                        <h3>
+                            Ramesh Naidu
+                        </h3>
+                        <h4>
+                            STPI
+                        </h4>
+                        <div class="social hstack gap-3">
+                            <a href="tel:8590899999">                                
+                                <i class="bi bi-telephone-outbound"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/ramesh-naidu-p-2055556" target="_blank">                                
+                                <i class="bi bi-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="full_profile">
+                    <img src="assets/images/ecosystem/mentors/list/28.png" alt="image" class="img-fluid">
+                    <div class="profile_content">
+                        
+                        <h3>
+                            Teja Kopall
+                        </h3>
+                        <!-- <h4>
+                            9618108333
+                        </h4> -->
+                        <div class="social hstack gap-3">
+                            <a href="tel:9618108333">                                
+                                <i class="bi bi-telephone-outbound"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/teja-kopalle-07766a191" target="_blank">                                
+                                <i class="bi bi-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="full_profile">
+                    <img src="assets/images/ecosystem/mentors/list/29.png" alt="image" class="img-fluid">
+                    <div class="profile_content">
+                        
+                        <h3>
+                            Chandu
+                        </h3>
+                        <h4>
+                            CII
+                        </h4>
+                        <!-- <div class="social hstack gap-3">
+                            <a href="tel:9618108333">                                
+                                <i class="bi bi-telephone-outbound"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/teja-kopalle-07766a191" target="_blank">                                
+                                <i class="bi bi-linkedin"></i>
+                            </a>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="full_profile">
+                    <img src="assets/images/ecosystem/mentors/list/30.png" alt="image" class="img-fluid">
+                    <div class="profile_content">
+                        
+                        <h3>
+                            Manoj Ponnada
+                        </h3>
+                        <h4>
+                            Joint Director Startup Eco System
+                        </h4>
+                        <div class="social hstack gap-3">
+                            <a href="tel:9494566363">                                
+                                <i class="bi bi-telephone-outbound"></i>
+                            </a>
+                            <a href="https://in.linkedin.com/in/manoj-ponnada-837673218?trk=people-guest_people_search-card" target="_blank">                                
+                                <i class="bi bi-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 d-none">
+                <div class="full_profile">
+                    <img src="assets/images/ecosystem/mentors/list/31.png" alt="image" class="img-fluid">
+                    <div class="profile_content">
+                        
+                        <h3>
+                            Lavanya Chimata
+                        </h3>
+                        <h4>
+                            Joint Director (Administration & Infrastructure)
+                        </h4>
+                        <div class="social hstack gap-3">
+                            <a href="tel:8977117117">                                
+                                <i class="bi bi-telephone-outbound"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/lpriya/" target="_blank">                                
+                                <i class="bi bi-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="full_profile">
+                    <img src="assets/images/ecosystem/mentors/list/32.png" alt="image" class="img-fluid">
+                    <div class="profile_content">
+                        
+                        <h3>
+                            Singamala Sreedhar
+                        </h3>
+                        <h4>
+                            Joint Director-Hackathons & Challenges at AP Innovation
+                        </h4>
+                        <div class="social hstack gap-3">
+                            <a href="tel:9052108526">                                
+                                <i class="bi bi-telephone-outbound"></i>
+                            </a>
+                            <a href="https://in.linkedin.com/in/singamala-sreedhar-b99bba10" target="_blank">                                
+                                <i class="bi bi-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="full_profile">
+                    <img src="assets/images/whoweare/leadership/dedicatedteam/venkatachalam_dir_communications.png" alt="image" class="img-fluid">
+                    <div class="profile_content">
+                        
+                        <h3>
+                            Sri D. Venkatachalam
+                        </h3>
+                        <h4>
+                            CEO, APIS
+                        </h4>
+                        <!-- <div class="social hstack gap-3">
+                            <a href="tel:9494699610">                                
+                                <i class="bi bi-telephone-outbound"></i>
+                            </a>
+                            <a href="https://in.linkedin.com/in/anil-kumar-tentu-78516b3" target="_blank">                                
+                                <i class="bi bi-linkedin"></i>
+                            </a>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

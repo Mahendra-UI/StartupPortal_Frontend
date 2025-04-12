@@ -1,0 +1,167 @@
+<section class="p-3">
+    <div class="container">
+        <div class="row align-items-center py-3">
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label for="" class="form-label">Search</label>
+                    <select name="" id="" class="form-select">
+                        <option value="" selected disabled>--Select--</option>
+                        <option value="Software Engineer 1">Software Engineer 1</option>
+                        <option value="Software Engineer 2">Software Engineer 2</option>
+                        <option value="Software Engineer 3">Software Engineer 3</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <button class="btn btn-success btn-sm">Submit</button>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <button class="btn btn-success btn-sm">Excel Download</button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="table-responsive">
+                    <table class="table table-bordered w-100">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Full Name</th>
+                                <th>Mobile Number</th>
+                                <th>Email ID</th>
+                                <th>Applying For</th>
+                                <th>Submitted on</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Mahendra</td>
+                                <td>87656765456</td>
+                                <td>mahendra@gmail.com</td>
+                                <td>Software Engineer 1</td>
+                                <td>09-04-2025</td>
+                                <td>Pending</td>
+                                <td>
+                                    <div class="hstack gap-2">
+                                        <a class="btn btn-sm btn-success"><i class="bi bi-eye"></i></a>
+                                        <button class="btn btn-primary btn-sm"
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#actionModal">
+                                        Take Action
+                                      </button>
+                                        <a class="btn btn-info btn-sm" data-bs-toggle="modal" data-bs-target="#historyModal">
+                                            <i class="bi bi-clock-history"></i>
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ✅ Promotion History Modal -->
+<div class="modal fade common_modal_popup" id="historyModal" tabindex="-1" aria-labelledby="historyModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="historyModalLabel">History</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                    <i class="bi bi-x"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="table-responsive">
+                            <table class="table table-bordered w-100 common_table">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Action</th>
+                                        <th>Performed By</th>
+                                        <th>Comments</th>
+                                        <th>Submitted on</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Submitted</td>
+                                        <td>Mahendra</td>
+                                        <td>N/A</td>
+                                        <td>09-04-2025</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Approved</td>
+                                        <td>Website Admin</td>
+                                        <td>Approved by the WebsiteAdmin</td>
+                                        <td>09-04-2025</td>
+                                    </tr>
+                                </tbody>                    
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+  <!-- Bootstrap 5 Modal for Approving/Rejecting Requests -->
+  <div class="modal fade common_modal_popup" data-bs-backdrop="static" data-bs-keyboard="false" id="actionModal" tabindex="-1" aria-labelledby="actionModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="actionModalLabel">Approve/Reject Application</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+          <i class="bi bi-x"></i>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form [formGroup]="actionForm" (ngSubmit)="submitAction()">
+            <div class="mb-3">
+              <label class="form-label">Select Action</label>
+              <select class="form-control" formControlName="status">
+                <option value="" selected disabled>-- Select Action --</option>
+                <option value="Approved">Approve</option>
+                <option value="Rejected">Reject</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Remarks</label>
+              <textarea class="form-control" rows="3" formControlName="remarks" placeholder="Enter remarks"></textarea>
+            </div>
+            <!-- <button type="submit" class="btn btn-primary w-100" [disabled]="isLoading || actionForm.invalid">
+              <span *ngIf="!isLoading">Submit</span>
+              <span *ngIf="isLoading">
+                <i class="fa fa-spinner fa-spin"></i> Processing...
+              </span>
+            </button> -->
+
+            <button type="submit" class="btn btn-primary w-100">
+                Submit
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  

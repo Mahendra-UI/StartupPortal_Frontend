@@ -1,0 +1,117 @@
+.video-carousel-gis {
+    width: 100%;
+    height: 550px;
+    margin: 0;
+    padding: 0;
+    background-color: #8EC5FC;
+    background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+    position: relative;
+    z-index: 3;
+}
+#carousel {
+    position: relative;
+    height: 450px;
+    top: 50%;
+    transform: translateY(-50%);
+    overflow: hidden;
+}
+#carousel div.next {
+    z-index: 5;
+    left: 70%;
+    transform: translateY(25%) translateX(-50%);
+    opacity: 0.4;
+}
+#carousel div {
+    position: absolute;
+    transition: transform 400ms, left 400ms, opacity 400ms, z-index 0s;
+    opacity: 1;
+    /* filter: grayscale(100%); */
+}
+#carousel div.prev {
+    z-index: 5;
+    left: 30%;
+    transform: translateY(25%) translateX(-50%);
+    opacity: 0.4;
+}
+#carousel div.next video {
+    width: 400px;
+}
+/* #carousel div.next img {
+    width: 400px;
+} */
+#carousel div.selected-gis {
+    z-index: 10;
+    left: 50%;
+    transform: translateY(12%) translateX(-50%);
+    filter: grayscale(0);
+}
+#carousel div video {
+    width: 500px;
+    transition: width 400ms;
+    -webkit-user-drag: none;
+    box-shadow: rgb(38 57 77) 0px 20px 30px -10px;
+    border-radius: 10px;
+}
+#carousel div a {
+    display: none;
+}
+#carousel div h3 {
+    display: none;
+}
+
+.button-82-pushable {
+    position: relative;
+    border: none;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    outline-offset: 4px;
+    transition: filter 250ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+.button-82-shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background: hsl(0deg 0% 0% / 0.25);
+    will-change: transform;
+    transform: translateY(2px);
+    transition: transform 600ms cubic-bezier(.3, .7, .4, 1);
+}
+.button-82-edge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+}
+.button-82-front {
+    display: block;
+    position: relative;
+    padding: 12px 27px;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    color: white;
+    background: #d3124a;
+    will-change: transform;
+    transform: translateY(-4px);
+    transition: transform 600ms cubic-bezier(.3, .7, .4, 1);
+}
+.button-82-pushable {
+    position: relative;
+    border: none;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    outline-offset: 4px;
+    transition: filter 250ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}

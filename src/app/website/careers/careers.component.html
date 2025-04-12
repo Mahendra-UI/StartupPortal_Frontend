@@ -1,0 +1,124 @@
+<style>
+    .bodyBreadcrumbs {
+    background-image: url('assets/images/contactus/contactusbg.png');
+}
+</style>
+<section class="bodyBreadcrumbs">
+
+    <div class="container">
+
+        <div class="row breadcrumbsrow align-items-center">
+            <div class="col-md-12">
+                <div class="bodyHeading text-white">
+                    <h1>Vacancies
+                    </h1>
+                    <ol class="breadcrumb mb-0">
+                        <li><a routerLink="/home">Home</a></li>
+                        <!-- <li><a style="color: #14e18c;">About AP</a></li> -->
+                        <li><a>Vacancies</a></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="text-center box-shadow">
+                    <h4>
+                        <!-- Notitcations will be starts from <span class="text-success">{{ currentDate | date: 'dd-MM-yyyy' }}</span> to <span class="text-success">{{ endDate | date: 'dd-MM-yyyy' }}</span> -->
+                        Vacancies will be Available from <span class="text-success">13-04-2025</span>
+                    </h4>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="table-responsive">
+                    <div class="text-end py-2">
+                        <a class="btn btn-success btn-sm" routerLink="/applycareers">Apply for Job </a>
+                    </div>
+
+                    <table class="table table-bordered w-100">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Position</th>
+                                <th>Vacancies</th>
+                                <th>Location</th>
+                                <th>Experience</th>
+                                <th>Notitcation</th>
+                                <th>Last Date</th>
+                                <th>Status</th>
+                                <!-- <th>Action</th> -->
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr *ngFor="let post of postsList; let i = index">
+                              <td>{{ i + 1 }}</td>
+                              <td>{{ post.PositionName }}</td>
+                              <td>{{ post.VacanciesCount }}</td>
+                              <td>{{ post.Location }}</td>
+                              <td>{{ post.Experience }}</td>
+                              <td>
+                                <a class="btn btn-sm btn-success" title="{{ post.Notification }}"><i class="bi bi-eye"></i></a>
+                              </td>
+                              <td>{{ post.LastDateOfSubmission | date: 'dd-MM-yyyy' }}</td>
+                              <td>{{ post.IsActive ? 'Active' : 'Inactive' }}</td>
+                              <!-- <td>
+                                <div class="hstack gap-2">
+                                  <a class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#addPostModal"><i class="bi bi-pencil"></i></a>
+                                  <a class="btn btn-sm btn-success"><i class="bi bi-eye"></i></a>
+                                  <a class="btn btn-sm btn-primary"
+                                  (click)="onEditPost(post.PositionId)"
+                                  data-bs-toggle="modal"
+                                  data-bs-target="#addPostModal">
+                                  <i class="bi bi-pencil"></i>
+                               </a>                               
+                                </div>
+                              </td> -->
+                            </tr>
+                          </tbody>                          
+                    </table>
+
+                    <table class="table table-bordered w-100 d-none">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Position</th>
+                                <th>No. of Vacancies</th>
+                                <th>Location</th>
+                                <th>Experience</th>
+                                <th>Notification</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let career of careersList">
+                                <td>{{ career.career_id }}</td>
+                                <td>{{ career.position }}</td>
+                                <td>{{ career.no_of_vacancies }}</td>
+                                <td>{{ career.location }}</td>
+                                <td>{{ career.experience }}</td>
+                                <td>
+                                    <a class="btn btn-sm btn-primary"><i class="bi bi-eye"></i></a>
+                                </td>
+                                <td>
+                                    {{ career.status }}
+                                </td>
+                                <td>
+                                    <a class="btn btn-sm btn-success" (click)="ViewDetails(career.career_id)"><i class="bi bi-eye"></i></a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

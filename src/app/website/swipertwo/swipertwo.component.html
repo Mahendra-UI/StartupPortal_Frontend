@@ -1,0 +1,174 @@
+<section>
+  <swiper [config]="config" #usefulSwiper>
+
+    <div class="swiper-wrapper">
+
+      <div class="swiper-slide">
+        <!-- <img src="assets/images/banners/14.jpg" alt="image" (click)="incubationSpace()" class="img-fluid w-100" style="cursor: pointer;"> -->
+        <img src="assets/images/banners/16.png" alt="image" (click)="incubationSpace()" class="img-fluid w-100" style="cursor: pointer;">
+      </div>
+
+      <div class="swiper-slide">
+        <img src="assets/images/banners/15.jpg" alt="image" (click)="meityClick()" class="img-fluid w-100" style="cursor: pointer; height: 525px;">
+      </div>
+
+      <div class="swiper-slide">
+        <img src="assets/images/banners/12.jpg" alt="image" (click)="swarnandraVision()" class="img-fluid w-100" style="cursor: pointer;">
+      </div>
+      <!-- <div class="swiper-slide">
+        <img src="assets/images/banners/13.png" alt="image" (click)="diitalTechnology()" class="img-fluid w-100" style="cursor: pointer;">
+      </div> -->
+
+      <!-- <div class="swiper-slide">
+        <img src="assets/images/banners/9.jpg" alt="image" (click)="amaravathiDoneSummit()" class="img-fluid w-100 d-none d-lg-block d-md-block" style="cursor: pointer;">
+        <img src="assets/images/banners/mobile/9.jpg" alt="image" (click)="amaravathiDoneSummit()" class="img-fluid w-100 d-md-none" style="cursor: pointer;">
+      </div>
+
+      <div class="swiper-slide">
+        <img src="assets/images/banners/8.jpg" alt="image" class="img-fluid w-100" (click)="goToUrl()" style="cursor: pointer;">
+        <img src="assets/images/banners/mobile/8.png" alt="image" class="img-fluid w-100 d-md-none" (click)="goToUrl()" style="cursor: pointer;">
+      </div> -->
+
+      <div class="swiper-slide">
+        <img src="assets/images/banners/1.png" alt="image" class="img-fluid w-100 d-none d-lg-block d-md-block">
+        <img src="assets/images/banners/mobile/1.png" alt="image" class="img-fluid w-100 d-md-none">
+        <!-- <img src="assets/images/mobile_ecosystembg.jpg" alt="image" class="img-fluid w-100 d-xs-block"> -->
+        <!-- data-aos="fade-right" data-aos-duration="1500" data-aos-easing="linear" -->
+        <div class="first_banner">
+          <p [className]="isTranslationTelugu ? 'bannercontenttelugu' : ''">
+            {{ 'Homebanner.firstbannercontent' | translate }}
+          </p>
+          <!-- <p>
+            Entrepreneurs, It’s time to unlock and Build your <span>Startup's Identity</span> In Andhra Pradesh
+          </p> -->
+          <a routerLink="/register" class="btn btn_bannerone_register">Register Now</a>
+          <!-- <div>
+            Promotional Video           <span class="myplay" data-bs-toggle="modal" data-bs-target="#videoModal">
+              <i class="bi bi-play-circle"></i>
+            </span>
+          </div> -->
+          <!-- <a id="play-video" class="video-play-button" data-bs-toggle="modal" data-bs-target="#videoModal">
+            <span></span>
+          </a> -->
+          <div class="details_action hstack gap-2 flex-wrap mt-4">
+            <a routerLink="/startupdefinition" class="btn common_btn btn_startup">Startup</a>
+            <a routerLink="/mentorshipprocess" class="btn common_btn btn_mentor">Mentor</a>
+            <a routerLink="/incubation" class="btn common_btn btn_incubator">Incubator</a>
+          </div>
+          <!-- <div class="video-box position-relative hstack gap-2 pt-4 align-items-center">
+            <span>Promotional Video</span> 
+               <div class="play-btn"  data-bs-toggle="modal" data-bs-target="#videoModal" style="cursor: pointer;">
+                 <i class="fa fa-play"></i>
+               </div>
+           </div> -->
+ 
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <img src="assets/images/banners/2.png" alt="image" class="img-fluid w-100 d-none d-lg-block d-md-block">
+        <img src="assets/images/banners/mobile/2.png" alt="image" class="img-fluid w-100 d-md-none">
+        <!-- data-aos="fade-right" data-aos-duration="1500" data-aos-easing="linear" -->
+        <div class="first_banner">
+          <p [className]="isTranslationTelugu ? 'bannercontenttelugu' : ''">
+            {{ 'Homebanner.secondbannercontent' | translate }}
+          </p>
+          <p [className]="isTranslationTelugu ? 'bannercaptiontelugu' : '' ">
+            {{ 'Homebanner.secondbannercaption' | translate }}
+          </p>
+          <a routerLink="/register" class="btn btn_bannerone_register">Register Now</a>
+          <div class="details_action hstack gap-2 flex-wrap mt-4">
+            <a routerLink="/startupdefinition" class="btn common_btn btn_startup">Startup</a>
+            <a routerLink="/mentorshipprocess" class="btn common_btn btn_mentor">Mentor</a>
+            <a routerLink="/incubation" class="btn common_btn btn_incubator">Incubator</a>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <img src="assets/images/banners/3.png" alt="image" class="img-fluid w-100 d-none d-lg-block d-md-block">
+        <img src="assets/images/banners/mobile/3.png" alt="image" class="img-fluid w-100 d-md-none">
+        <!-- data-aos="fade-right" data-aos-duration="1500" data-aos-easing="linear" -->
+        <div class="first_banner">
+          <p [className]="isTranslationTelugu ? 'bannercontenttelugu' : ''">
+            {{ 'Homebanner.thirdbannercontent' | translate }}
+          </p>
+          <p [className]="isTranslationTelugu ? 'bannercaptiontelugu' : '' ">
+            {{ 'Homebanner.thirdbannercaption' | translate }}
+          </p>
+          <a routerLink="/register" class="btn btn_bannerone_register">Register Now</a>
+          <div class="details_action hstack gap-2 flex-wrap mt-4">
+            <a routerLink="/startupdefinition" class="btn common_btn btn_startup">Startup</a>
+            <a routerLink="/mentorshipprocess" class="btn common_btn btn_mentor">Mentor</a>
+            <a routerLink="/incubation" class="btn common_btn btn_incubator">Incubator</a>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <img src="assets/images/banners/4.png" alt="image" class="img-fluid w-100 d-none d-lg-block d-md-block">
+        <img src="assets/images/banners/mobile/4.png" alt="image" class="img-fluid w-100 d-md-none">
+        <!-- data-aos="fade-right" data-aos-duration="1500" data-aos-easing="linear" -->
+        <div class="first_banner">
+          <p [className]="isTranslationTelugu ? 'bannercontenttelugu' : ''">
+            {{ 'Homebanner.fourthbannercontent' | translate }}
+          </p>
+          <p [className]="isTranslationTelugu ? 'bannercaptiontelugu' : '' ">
+            {{ 'Homebanner.fourthbannercaption' | translate }}
+          </p>
+
+          <!-- <p>
+            Embracing Innovations in Government (G2C & G2B) through Open Innovation
+            Challenges & Hackathons
+          </p>
+          <p>
+            Innovators & Startups explore to propose your solutions
+          </p> -->
+          <a routerLink="/register" class="btn btn_bannerone_register">Register Now</a>
+          <div class="details_action hstack gap-2 flex-wrap mt-4">
+            <a routerLink="/startupdefinition" class="btn common_btn btn_startup">Startup</a>
+            <a routerLink="/mentorshipprocess" class="btn common_btn btn_mentor">Mentor</a>
+            <a routerLink="/incubation" class="btn common_btn btn_incubator">Incubator</a>
+            <!-- <a href="https://apisinnovationchallenges.ap.gov.in" class="btn apichallenges_btn common_btn btn_startup">Innocatio Challenges</a> -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+
+    <!-- Add Arrows -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+
+  </swiper>
+
+
+</section>
+
+      <!-- !-- Modal -->
+      <div class="modal fade" id="videoModal" data-bs-keyboard="false" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+            <div class="modal-header border-0 text-white" style="background: #008E46;">
+              <h1 class="modal-title fs-5" id="videoModalLabel">Promotional Video</h1>
+              <button type="button" class="btn-close text-white bg-white" data-bs-dismiss="modal" aria-label="Close">
+                <!-- <i class="fa fa-times" aria-hidden="true"></i> -->
+            </button>
+            </div>
+            <div class="modal-body">
+              <video playsinline="playsinline" id="mdVideoModalId" class="mdVideoModal" style="width: 100%;outline: none!important;" fullscreen loop="loop" controls>
+                <source src="assets/images/APIS Promotion.mp4" type="video/mp4">
+              </video>
+              <!-- <video width="auto" height="auto" controls>
+                <source src="assets/images/APIS Promotion.mp4" type="video/mp4">
+                <source src="movie.ogg" type="video/ogg">
+              Your browser does not support the video tag.
+              </video> -->
+              <!-- <iframe src="assets/images/APIS Promotion.mp4" frameborder="0"></iframe> -->
+            </div>
+            <!-- <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Understood</button>
+            </div> -->
+          </div>
+        </div>
+      </div>

@@ -1,0 +1,106 @@
+<style>
+    .bodyBreadcrumbs {
+    background-image: url('assets/images/ecosystem/ecosystembg.png');
+}
+</style>
+<section class="bodyBreadcrumbs">
+    <div class="container">
+        <div class="row breadcrumbsrow align-items-center">
+            <div class="col-md-12">
+                <div class="bodyHeading text-white">
+                    <h1>Incubation Space Available</h1>
+                    <ol class="breadcrumb mb-0">
+                        <li><a routerLink="/home">Home</a></li>
+                        <!-- <li><a style="color: #14e18c;">About AP</a></li> -->
+                        <li><a>Ecosystem</a></li>
+                        <li><a>Institutional Support</a></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="py-5" style="background: aliceblue;">
+    <div class="container-fluid">
+        <!-- <h2>Incubation Centers</h2> -->
+      
+        <!-- Search Input -->
+        <div class="row mb-3">
+            <div class="hstack gap-2 justify-content-end pb-2">
+                <h6 class="mb-0">Total Records: <span class="badge bg-success">{{ totalItems }}</span></h6>
+                <div>
+                    <input type="text" class="form-control" placeholder="Search..." [(ngModel)]="searchTerm" (input)="filterTable()" />
+                </div>
+            </div>
+          <div class="col-md-4 offset-md-8 d-none">
+            <input
+              type="text"
+              class="form-control"
+              [(ngModel)]="searchTerm"
+              (input)="filterTable()"
+              placeholder="Search"
+            />
+          </div>
+      
+        <!-- Total Counts -->
+        <!-- <div class="mb-2">
+          <p>Total Records: {{ totalItems }}</p>
+        </div> -->
+      
+        <!-- Table -->
+        <div class="col-md-12">
+            <div class="table-responsive">
+                <table class="table table-bordered w-100">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Incubator Name</th>
+                    <th>Location</th>
+                    <th>Total Space Allocated</th>
+                    <th>Occupied Space</th>
+                    <th>Vacant Space</th>
+                    <th>Director/CEO/SPOC Name</th>
+                    <th>Email</th>
+                    <th>Contact Number</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let incubator of filteredIncubators | paginate: { itemsPerPage: itemsPerPage, currentPage: currentPage }, let i = index;">
+                    <!-- <td>{{ i+1 }}</td> -->
+                    <td>{{ i + 1 + (currentPage - 1) * itemsPerPage }}</td>
+                    <!-- <td>{{ incubator.incubation_id }}</td> -->
+                    <td>{{ incubator.incubator_name }}</td>
+                    <td>{{ incubator.location }}</td>
+                    <td>{{ incubator.total_space_allocated }}</td>
+                    <td>{{ incubator.occupied_space }}</td>
+                    <td>{{ incubator.vacant_space }}</td>
+                    <td>{{ incubator.director_name }}</td>
+                    <td>
+                        {{ incubator.email }}
+                      <!-- <a [href]="'mailto:' + incubator.email">{{ incubator.email }}</a> -->
+                    </td>
+                    <td>
+                        {{ incubator.contact_number }}
+                      <!-- <a [href]="'tel:' + incubator.contact_number">{{ incubator.contact_number }}</a> -->
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+                      <!-- Pagination -->
+        <pagination-controls
+        (pageChange)="currentPage = $event"
+        [totalItems]="totalItems"
+        [itemsPerPage]="itemsPerPage"
+        [maxSize]="5"
+        previousLabel="Previous"
+        nextLabel="Next"
+      >
+      </pagination-controls>
+              <div *ngIf="filteredIncubators.length === 0" class="text-center text-danger">
+                No records found.
+              </div>
+            </div>
+        </div>
+        </div>
+    </div>    
+</section>

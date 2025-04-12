@@ -1,0 +1,263 @@
+li.active {
+  color: #fff;
+  position: relative;
+  background: #162D50;
+  transition: .5s ease-out;
+}
+li:hover {
+  transition: .5s ease-out;
+  background: #162D50;
+  background-position: left;
+}
+.head_firstrow {
+  padding: 0.7rem 0;
+}
+.mobile_register {
+  position: absolute;
+  right: 2%;
+  top: 18%;
+}
+
+.navbar-toggler {
+  background: #fff;
+  font-size: 20px;
+  padding: 0.2rem 0.4rem;
+}
+
+
+select {
+  background: transparent;
+  border: none;
+  color: #fff;
+}
+
+.logo_section {
+  display: flex;
+  /* justify-content: center; */
+}
+
+.logo_section a:nth-child(1) img {
+  /* max-width: 60%; */
+  margin: auto;
+}
+
+.logo_section a:nth-child(2) img {
+  /* max-width: 80%; */
+  margin: auto;
+}
+
+.nav-bg {
+  background: #fff
+    /* background-image: linear-gradient(to left, #009833, #0076C8); */
+}
+
+.logos a:nth-child(1) img {
+  width: 80%;
+}
+
+.logos a:nth-child(2) img {
+  width: 90%;
+}
+
+/* .hstack img:nth-child(3) {
+    width: 80%;
+}
+.hstack img:nth-child(4) {
+    width: 80%;
+} */
+@media screen and (max-width: 500px) {
+  .nav-item {
+    padding: 0;
+    /* justify-content: center; */
+  }
+
+  .separatorMobile {
+    padding-left: 0px !important;
+    padding-top: 0;
+  }
+
+  .btnHead {
+    border-radius: 0px !important;
+    border: 0px !important;
+    color: #fff;
+  }
+
+  .btnHeadSeparator {
+    padding-left: 10px;
+    color: #fff;
+  }
+
+  .navbar-nav li a {
+    padding: 0;
+  }
+}
+
+@media (min-width : 992px) {
+  .offcanvas {
+    visibility: visible;
+    position: relative;
+    background: none;
+    border: none;
+    justify-content: end;
+    color: red;
+  }
+}
+
+@media (max-width : 992px) {
+  .offcanvas {
+    width: 250px !important;
+    height: 100%;
+  }
+
+  .mobile_profiles img:nth-child(1) {
+    width: 36%;
+  }
+
+  .mobile_profiles img:nth-child(2) {
+    width: 40%;
+  }
+
+  .navbar-nav li a {
+    /* color: navy; */
+  }
+
+  .offcanvas-start-lg {
+    top: 0;
+    left: 0;
+    border-right: 1px solid rgba(0, 0, 0, .2);
+    transform: translateX(-100%);
+  }
+}
+
+.navbar-nav li a {
+  /* color: white !important; */
+}
+
+
+.sticky {
+  position: fixed;
+  top: 0;
+  /* overflow: hidden; */
+  z-index: 10;
+  width: 100%;
+  transition: all 0.5s ease-in-out !important;
+
+  /* transition: top 0.2s ease-in-out; */
+
+  /* transform: translateY(-20px); */
+  /* margin-top: -20px; */
+  /* transition: all 0.4s ease-in-out; */
+  /* transition: all 1s ease 0s; */
+}
+
+header {
+  transition: all 0.5s ease-in-out !important;
+}
+
+.top_section p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: left;
+
+  margin: 0;
+}
+
+option {
+  background: #162D50;
+}
+
+select:focus-visible {
+  outline: 0;
+}
+
+.nav-link {
+  color: #fff;
+  /* font-size: 16px; */
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0em;
+}
+.dropdown-menu .nav-link {
+  color: #3b3636;
+  transition: all 0.5s ease-in;
+  background: linear-gradient(to left, #fff 50%, #162D50 50%) right;
+  background-size: 200%;
+  transition: .5s ease-out;
+}
+.dropdown-menu .nav-item {
+  padding: 0;
+}
+.dropdown-menu .nav-link:hover {
+  color: #fff;
+  background-position: left;
+  /* transition: all 0.5s ease-in;
+  background-color: #162D50; */
+}
+.resizing {
+  border: 0;
+  background: none;
+  color: #fff;
+}
+
+.nav-item {
+  padding: 4px;
+  /* justify-content: center; */
+}
+
+.btn_login {
+  background: linear-gradient(180deg, #F36F21 0%, #F04E23 100%);
+  border-radius: 3px;
+  padding: 7px;
+}
+
+/* .contrast {
+  font-size: 20px;
+  padding: 0.4rem;
+  text-decoration: none;
+  line-height: 10px;
+}
+.high_contrast {
+  background: #fff;
+}
+.low_contrast {
+  background: #000;
+  color: #fff;
+} */
+.reader_access {
+  background: none;
+}
+
+.screenreaderText {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #fff;
+  text-decoration: none;
+}
+
+.reader_access i {
+  color: #F04E23;
+}
+
+.low_contrast {
+  background: #000;
+  color: #fff;
+}
+.common {
+  cursor: pointer;
+}
+.mobile_disable {
+  display: none;
+}
+@media screen and (max-width: 500px) {
+  .web_disable {
+    display: none;
+  }
+  .mobile_disable {
+    display: block;
+  }
+}

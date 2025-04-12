@@ -1,0 +1,78 @@
+
+<style>
+    .offer_box img {
+    background-image: url('assets/images/offering/offer_circle.png');
+    /* background-color: #fff; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 10px;
+    /* width: 30px; */
+    /* height: 30px; */
+    color: #0894C6;
+    width: 50px;
+    height: 50px;
+}
+
+</style>
+
+<!-- <section class="py-5 text-white" style="background: #193567;"> -->
+<!-- <section class="py-5" style="background-image: url('assets/images/reasons/new/reasonsbg_pattern.png');background-repeat: no-repeat;background-position: top right;"> -->
+    <section class="startsups_section py-5" style="background-image: linear-gradient(96.18deg, rgba(21, 83, 132, 0.91) 4.69%, #009980 100%);position: relative;
+    z-index: 0;
+    overflow: hidden;">
+        <!-- background-image: url('assets/images/earth_glow.png'); -->
+        <div style="background-image: url('assets/images/reasons/new/sample_pattern.png');
+        background-repeat: no-repeat;
+        background-color: rgba(21, 83, 132, 0.91);
+        background-size: auto;background-position: top right;position:absolute;opacity: 0.2;top: 0;bottom: 0;right: 0;left: 0;z-index: -1;"></div>
+    <div class="container">
+        <div class="innerpage_heading">
+            <h2 [className]="isTranslationTelugu ? 'sectionheadingtelugu' : ''">
+                    {{ 'Offering.offeringheading' | translate }}
+            </h2>
+        </div>
+        <div class="row align-items-center py-3">
+            <div class="col">
+                <div class="offer_box">
+                    <img src="assets/images/offering/one.svg" alt="image">
+                        <h5 [className]="isTranslationTelugu ? 'offeringcontent' : ''">
+                            {{ 'Offering.statement1' | translate }}
+                    </h5>
+                </div>
+            </div>
+            <div class="col">
+                <div class="offer_box">
+                    <img src="assets/images/offering/two.svg" alt="image">
+                    <h5 [className]="isTranslationTelugu ? 'offeringcontent' : ''">
+                        {{ 'Offering.statement2' | translate }}
+                </h5>
+                </div>
+            </div>
+            <div class="col">
+                <div class="offer_box">
+                    <img src="assets/images/offering/two.svg" alt="image">
+                    <h5 [className]="isTranslationTelugu ? 'offeringcontent' : ''">
+                        {{ 'Offering.statement3' | translate }}
+                </h5>
+                </div>
+            </div>
+            <div class="col">
+                <div class="offer_box">
+                    <img src="assets/images/offering/four.svg" alt="image">
+                    <h5 [className]="isTranslationTelugu ? 'offeringcontent' : ''">
+                        {{ 'Offering.statement4' | translate }}
+                </h5>
+                </div>
+            </div>
+            <div class="col">
+                <div class="offer_box">
+                    <img src="assets/images/offering/five.svg" alt="image">
+                    <h5 [className]="isTranslationTelugu ? 'offeringcontent' : ''">
+                        {{ 'Offering.statement5' | translate }}
+                </h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

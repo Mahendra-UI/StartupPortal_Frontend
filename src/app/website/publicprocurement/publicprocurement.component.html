@@ -1,0 +1,59 @@
+<style>
+    .bodyBreadcrumbs {
+    background-image: url('assets/images/ecosystem/ecosystembg.png');
+}
+</style>
+<section class="bodyBreadcrumbs">
+
+    <div class="container">
+
+        <div class="row breadcrumbsrow align-items-center">
+            <div class="col-md-12">
+                <div class="bodyHeading text-white">
+                    <h1>Public Procurement
+                    </h1>
+                    <ol class="breadcrumb mb-0">
+                        <li><a routerLink="/home">Home</a></li>
+                        <li><a>Ecosystem</a></li>
+                        <li><a>Institutional Support</a></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="inner_content">
+                    <div class="innerpage_heading">
+                        <p [className]="isTranslationTelugu ? 'aboutupara' : ''">
+                            {{ 'Publicprocurement.publicprocurementparaone' | translate }}
+                        </p>
+                        <p [className]="isTranslationTelugu ? 'aboutupara' : ''">
+                            {{ 'Publicprocurement.publicprocurementparatwo' | translate }}
+                        </p>
+                        <ul>
+                            <li [className]="isTranslationTelugu ? 'aboutupara' : ''">
+                                {{ 'Publicprocurement.exemption1' | translate }}
+                            </li>
+                            <li [className]="isTranslationTelugu ? 'aboutupara' : ''">
+                                {{ 'Publicprocurement.exemption2' | translate }}
+                            </li>
+                            <li [className]="isTranslationTelugu ? 'aboutupara' : ''">
+                                {{ 'Publicprocurement.exemption3' | translate }}
+                            </li>
+                            <li [className]="isTranslationTelugu ? 'aboutupara' : ''">
+                                {{ 'Publicprocurement.exemption4' | translate }}
+                            </li>
+                        </ul>
+                        <!-- <h2 [className]="isTranslationTelugu ? 'sectionheadingtelugu' : ''">
+                            {{ 'Publicprocurement.gosheading' | translate }}
+                        </h2> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

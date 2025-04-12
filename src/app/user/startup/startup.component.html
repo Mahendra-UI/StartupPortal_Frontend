@@ -1,0 +1,448 @@
+<section class="py-5">
+    <form [formGroup]="startupForm" (ngSubmit)="onSubmit()">
+        <div class="container">
+            <div class="row">
+                <div class="section-heading">
+                    <h5>Startup Details</h5>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="">Startup Name<span class="mandatory">*</span></label>
+                        <input type="text" class="form-control" formControlName="startupName">
+                        <span class="text-danger"
+                            *ngIf="(startupFormControls.startupName.touched || submitted) && startupFormControls.startupName.errors?.required">
+                            Startup Name is required
+                        </span>
+                        <span class="text-danger" *ngIf="startupFormControls.startupName.errors?.pattern">
+                            Alpha numerics and . / , - are allowed
+                        </span>
+
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="">GST Number<span class="mandatory">*</span></label>
+                        <input type="text" class="form-control" formControlName="gstnumber" maxlength="15"
+                            minlength="15">
+                        <div
+                            *ngIf="(startupFormControls.gstnumber.touched || startupFormControls.gstnumber.dirty || submitted) && startupFormControls.gstnumber.invalid">
+                            <span class="text-danger" *ngIf="startupFormControls.gstnumber.errors.required">
+                                GST is required
+                            </span>
+                            <span class="text-danger" *ngIf="startupFormControls.gstnumber.errors.pattern">
+                                Allowed only Alpha Numerics
+                            </span>
+                            <span class="text-danger" *ngIf="startupFormControls.gstnumber.errors.minlength">
+                                GST Number must be at least 15 characters long.
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="">Startup Type</label>
+                        <select name="" id="" class="form-control form-select" formControlName="startupType"
+                            (change)="onChangeStartUpType($event.target.value)">
+                            <option value="">--Select--</option>
+                            <option value="1">Funded</option>
+                            <option value="2">Bootstrapped</option>
+                        </select>
+                        <span class="text-danger"
+                            *ngIf="(startupFormControls.startupType.touched || submitted) && startupFormControls.startupType.errors?.required">
+                            Type is required
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-4" *ngIf="startupForm.get('startupType').value == '1'">
+                    <div class="form-group">
+                        <label for="">Funded Type<span class="mandatory">*</span></label>
+                        <select name="" id="" class="form-control" formControlName="fundedType">
+                            <option value="">--Select--</option>
+                            <option value="1">
+                                < 10 Lakhs</option>
+                            <option value="2">
+                                < 20 Lakhs</option>
+                            <option value="3">Above 20 Lakhs</option>
+                        </select>
+                        <span class="text-danger"
+                            *ngIf="(startupFormControls.fundedType.touched || submitted) && startupFormControls.fundedType.errors?.required">
+                            Funded Type is required
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="">Stages<span class="mandatory">*</span></label>
+                        <ng-multiselect-dropdown [settings]="stagesDropdownSettings" [placeholder]="' Select Stage '"
+                            [data]="stagesList" formControlName="stages" noDataLabel="no items found"
+                            dropdownPosition="auto" (onSelect)="onSelectStage($event)"
+                            (onSelectAll)="onSelecttStageAll($event)" (onDeSelect)="onDeSelecttStage($event)"
+                            (onDeSelectAll)="onDeSelecttStageAll($event)">
+                        </ng-multiselect-dropdown>
+                        <span class="text-danger"
+                            *ngIf="(startupFormControls.stages.touched || submitted) && startupFormControls.stages.errors?.required">
+                            Stage is required
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="">Industry<span class="mandatory">*</span></label>
+                        <select name="" id="" class="form-control" formControlName="industryType"
+                            (change)="onChangeIndustyType($event.target.value)">
+                            <option value="">--Select--</option>
+                            <option *ngFor="let li of indsutryList" value={{li?.industry_id}}> {{li?.industry_name}}
+                            </option>
+                            <!-- <option value="Analytics">Analytics</option>
+                            <option value="Others">Others</option> -->
+                        </select>
+                        <span class="text-danger"
+                            *ngIf="(startupFormControls.industryType.touched || submitted) && startupFormControls.industryType.errors?.required">
+                            Industry is required
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-4" *ngIf="startupForm.get('industryType').value == '53'">
+                    <div class="form-group">
+                        <label for="">Industry Others<span class="mandatory">*</span></label>
+                        <input type="text" class="form-control" formControlName="industryOthers">
+                        <span class="text-danger"
+                            *ngIf="(startupFormControls.industryOthers.touched || submitted) && startupFormControls.industryOthers.errors?.required">
+                            Others is required
+                        </span>
+                        <span class="text-danger" *ngIf="startupFormControls.industryOthers.errors?.pattern">
+                            Alpha numerics and . / , - are allowed
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="">Industry Subtype<span class="mandatory">*</span></label>
+                        <select name="" id="" class="form-control" formControlName="industrySubType"
+                            (change)="onChangeIndstrySubtype($event.target.value)">
+                            <option value="">--Select--</option>
+                            <option *ngFor="let li of sectorsList" value={{li?.sector_id}}> {{li?.sector_name}}</option>
+                        </select>
+                        <span class="text-danger"
+                            *ngIf="(startupFormControls.industrySubType.touched || submitted) && startupFormControls.industrySubType.errors?.required">
+                            Selection is required
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-4" *ngIf="sectorObj?.sector_name == 'OTHERS'">
+                    <div class="form-group">
+                        <label for="">Industry Subtype Others<span class="mandatory">*</span></label>
+                        <input type="text" class="form-control" formControlName="industrySubTypeOthers">
+                        <span class="text-danger"
+                            *ngIf="(startupFormControls.industrySubTypeOthers.touched || submitted) && startupFormControls.industrySubTypeOthers.errors?.required">
+                            Others is required
+                        </span>
+                        <span class="text-danger" *ngIf="startupFormControls.industrySubTypeOthers.errors?.pattern">
+                            Alpha numerics and . / , - are allowed
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="">Services<span class="mandatory">*</span></label>
+                        <select class="form-control" formControlName="serviceType"
+                            (change)="onChangeServiceType($event.target?.value)">
+                            <option value="">--Select--</option>
+                            <option *ngFor="let li of serviceList" value={{li?.id}}> {{li?.service_name}}</option>
+                        </select>
+                        <span class="text-danger"
+                            *ngIf="(startupFormControls.serviceType.touched || submitted) && startupFormControls.serviceType.errors?.required">
+                            Service is required
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-4" *ngIf="startupForm.get('serviceType').value == '15'">
+                    <div class="form-group">
+                        <label for="">Services Others<span class="mandatory">*</span></label>
+                        <input type="text" class="form-control" formControlName="servicesOthers">
+                        <span class="text-danger"
+                            *ngIf="(startupFormControls.servicesOthers.touched || submitted) && startupFormControls.servicesOthers.errors?.required">
+                            Others is required
+                        </span>
+                        <span class="text-danger" *ngIf="startupFormControls.servicesOthers.errors?.pattern">
+                            Alpha numerics and . / , - are allowed
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="">Udyog Registration No.</label>
+                        <input type="text" class="form-control" formControlName="udyogAdhaar">
+                        <span class="text-danger" *ngIf="startupFormControls.udyogAdhaar.errors?.pattern">
+                            Alpha numerics and - is allowed
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="">Nature of Entity<span class="mandatory">*</span></label>
+                        <select name="" id="" class="form-control" formControlName="natureType">
+                            <option value="">--Select--</option>
+                            <option *ngFor="let li of natureList" value={{li?.id}}> {{li?.entity_name}}</option>
+                        </select>
+                        <span class="text-danger"
+                            *ngIf="(startupFormControls.natureType.touched || submitted) && startupFormControls.natureType.errors?.required">
+                            Nature Type is required
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="">Company Incorporation Number (CIN)<span class="mandatory">*</span></label>
+                        <input type="text" class="form-control" formControlName="cinNumber" minlength="21"
+                            maxlength="21">
+                        <div
+                            *ngIf="(startupFormControls.cinNumber.touched || startupFormControls.cinNumber.dirty || submitted) && startupFormControls.cinNumber.invalid">
+                            <span class="text-danger" *ngIf="startupFormControls.cinNumber.errors.required">
+                                CIN is required
+                            </span>
+                            <span class="text-danger" *ngIf="startupFormControls.cinNumber.errors.pattern">
+                                Only Alpha numerics are allowed
+                            </span>
+                            <span class="text-danger" *ngIf="startupFormControls.cinNumber.errors.minlength">
+                                CIN must be at least 21 characters long.
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="">Legal Name</label>
+                        <input class="form-control" formControlName="cinLegalName" type="text"
+                            value="Automatic Reflection Company name after validation of CIN"
+                            aria-label="readonly input example" />
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="">You are interested in<span class="mandatory">*</span></label>
+                        <ng-multiselect-dropdown [settings]="incubatrSeettings" [placeholder]="' Select Interest '"
+                            [data]="incubeterList" formControlName="interestedIn"
+                            (onSelect)="onSelectinterestedIn($event)" (onSelectAll)="onSelecttinterestedInAll($event)"
+                            (onDeSelect)="onDeSelectinterestedIn($event)"
+                            (onDeSelectAll)="onDeSelecttinterestedIn($event)" noDataLabel="no items found"
+                            dropdownPosition="auto">
+                        </ng-multiselect-dropdown>
+                        <span class="text-danger"
+                            *ngIf="(startupFormControls.interestedIn.touched || submitted) && startupFormControls.interestedIn.errors?.required">
+                            you are interested in required
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="">Brief <span class="mandatory">*</span></label>
+                        <textarea name="" id="" class="form-control" formControlName="brief"></textarea>
+                        <span class="text-danger"
+                            *ngIf="(startupFormControls.brief.touched || submitted) && startupFormControls.brief.errors?.required">
+                            Brief is required
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-heading">
+                        <h5>
+                            Address Details
+                        </h5>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="">Mobile No. <span class="mandatory">*</span></label>
+                        <input type="text" class="form-control" formControlName="mobileNo"
+                            (keypress)="numberOnly($event)" maxlength="10" minlength="10">
+                        <div
+                            *ngIf="(startupFormControls.mobileNo.touched || startupFormControls.mobileNo.dirty || submitted) && startupFormControls.mobileNo.invalid">
+                            <span class="text-danger" *ngIf="startupFormControls.mobileNo.errors.required">
+                                Mobile Number is required
+                            </span>
+                            <span class="text-danger" *ngIf="startupFormControls.mobileNo.errors.minlength">
+                                Mobile Number must be at least 10 characters long.
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="">Email <span class="mandatory">*</span></label>
+                        <input type="email" class="form-control" [pattern]="emailPattern" maxlength="50"
+                            formControlName="emailName">
+                        <span class="text-danger"
+                            *ngIf="(startupFormControls.emailName.touched || submitted) && startupFormControls.emailName.errors?.required">
+                            Email is required
+                        </span>
+                        <span class="text-danger"
+                            *ngIf="(startupFormControls.emailName.touched || submitted) && startupFormControls.emailName.errors?.pattern">
+                            Enter Valid Email
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="">State<span class="mandatory">*</span></label>
+                        <select name="" id="" class="form-control" formControlName="stateName">
+                            <option value="">--Select--</option>
+                            <option *ngFor="let li of stateList" [value]="li.state_id">{{li?.state_name}}</option>
+
+                        </select>
+                        <span class="text-danger"
+                            *ngIf="(startupFormControls.stateName.touched || submitted) && startupFormControls.stateName.errors?.required">
+                            State is required
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="">City<span class="mandatory">*</span></label>
+                        <input type="text" class="form-control" formControlName="cityName">
+                        <span class="text-danger"
+                            *ngIf="(startupFormControls.cityName.touched || submitted) && startupFormControls.cityName.errors?.required">
+                            City is required
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="">Website URL</label>
+                        <input type="text" class="form-control" formControlName="websiteUrl">
+                        <span class="text-danger"
+                            *ngIf="(startupFormControls.websiteUrl.touched || submitted) && startupFormControls.websiteUrl.errors?.required">
+                            URL is required
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="">Mobile App Link</label>
+                        <input type="text" class="form-control" formControlName="mobileAppLink">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-heading">
+                        <h5>Attachments</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="" style="font-size: 18px;"> Entity/Startup Logo <span
+                                class="mandatory">*</span></label>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group" *ngIf="!bindRowData?.company_logo">
+                        <input type="file" accept=".jpg, .jpeg, .png, .pdf" class="form-control"
+                            (change)="handleFileInput($event)">
+                        <span class="text-danger"
+                            *ngIf="(startupFormControls.entityLogo.touched || submitted) && startupFormControls.entityLogo.errors?.required">
+                            Entity Logo is required
+                        </span>
+                    </div>
+                    <div class="form-group" *ngIf="bindRowData?.company_logo">
+                        <img class="img-fluid" src="{{bindRowData?.company_logo}}" width="70" height="70">
+                        <button class="btn btn-info ml-3" type="button" (click)="editCompanyLogo()">Edit</button>
+
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="" style="font-size: 18px;"> Incorporation/Registrtion Certificate <span
+                                class="mandatory">*</span></label>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group" *ngIf="!bindRowData?.registration_certificate">
+                        <input type="file" accept=".jpg, .jpeg, .png, .pdf" class="form-control"
+                            (change)="handleCertificateFileInput($event)">
+                        <span class="text-danger"
+                            *ngIf="(startupFormControls.incorporationCertificate.touched || submitted) && startupFormControls.incorporationCertificate.errors?.required">
+                            Incorporation Certificate is required
+                        </span>
+                    </div>
+                    <div class="form-group" *ngIf="bindRowData?.registration_certificate">
+                        <img *ngIf="bindRowData?.registration_certificate" class="img-fluid"
+                            src="{{bindRowData?.registration_certificate}}" width="70" height="70">
+                        <button class="btn btn-info ml-3" type="button" (click)="editRegisterCerificate()">Edit</button>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="notes">
+
+                        <ul style="list-style-type: number;">
+                            <h5>
+                                Note
+                            </h5>
+                            <li>Only Image and PDF file type is allowed.</li>
+                            <!-- <li>Image size should less than 200kb</li> -->
+                            <li>Upload size should less than 2 MB</li>
+                            <li> Image format/extension should be .png, .jpg, .jpeg, .pdf</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-heading terms_conditions">
+                        <h5>
+                            Terms & Conditions
+                        </h5>
+                        <p>
+                            This official website of the "Andhra Pradesh Innovation Society" has been created to provide
+                            information to the general public. The documents and information displayed in this website
+                            are for reference purposes only and does not purport to be a legal document.
+                        </p>
+                        <p>
+                            DPIIT does not warrant the accuracy or completeness of the information, text, graphics,
+                            links or other items contained within the APIS web portal. As a result of updates and
+                            corrections, the web contents are subject to change regularly.
+                        </p>
+                        <p>
+                            The information posted on this website could include hypertext links or pointers to
+                            information created and maintained by non-Government/private organisations. DPIIT is
+                            providing these links and pointers solely for your information and convenience. When you
+                            select a link to an outside website, you are leaving the 'Guidelines for Indian Government
+                            Websites' site and are subject to the privacy and security policies of the owners/sponsors
+                            of the outside website.
+                        </p>
+                        <p>
+                            These terms and conditions shall be governed by and construed in accordance with the Indian
+                            Laws. Any dispute arising under these terms and conditions shall be subject to the
+                            jurisdiction of the courts of India.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <input type="checkbox" formControlName="termsConditions"> I Agree to Terms & Conditions
+                    <span class="text-danger"
+                        *ngIf="(startupFormControls.termsConditions.touched || submitted) && startupFormControls.termsConditions.errors?.required">
+                        Checkbox is required
+                    </span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="float-end">
+                        <button type="submit" class="btn btn-success btn-submit">Save & Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </form>
+</section>

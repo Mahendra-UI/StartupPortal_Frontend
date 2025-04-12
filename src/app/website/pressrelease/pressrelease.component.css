@@ -1,0 +1,111 @@
+.bodyBreadcrumbs {
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 140px;
+    /* height: auto; */
+    display: flex;
+    align-items: center;
+    /* padding: 20px 0px 51px; */
+    /* background-color: #0d5561; */
+}
+
+.bodyBreadcrumbs .breadcrumbsrow {
+    /* padding: 0 30px; */
+}
+
+.breadcrumbsrow img {
+    float: right;
+}
+
+.breadcrumb li {
+    padding: 0 12px 0 0;
+}
+
+.breadcrumb li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.bodyHeading h1 {
+    /* font-size: 35px; */
+    font-weight: 600;
+    line-height: 42px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #fff;
+}
+
+.breadcrumb {
+    background-color: transparent;
+}
+
+.breadcrumb a {
+    text-decoration: none;
+    color: aliceblue;
+    font-weight: 400;
+    /* transition: .5s; */
+}
+
+.breadcrumb li+li {
+    padding-left: 0;
+}
+
+.breadcrumb li+li:before {
+    content: '>';
+    color: #fff;
+    margin-right: 8px;
+}
+
+.breadcrumb li:last-child a,
+.breadcrumb a:hover {
+    color: #155384;
+    border-radius: 35px;
+    /* background-color: #82ccdd; */
+    padding: 5px 0px;
+}
+
+.breadcrumb li a:first-child {
+    color: #fff;
+}
+
+
+/* breadcrumb style ends */
+
+i {
+    color: #DF2C2B;
+    font-size: 26px;
+}
+tbody tr td:last-child {
+    text-align: center;
+}
+
+th {
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 40px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #fff;
+}
+thead {
+    background: #008E46;
+}
+
+td {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #3F3F3F;
+}
+.new_full {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+}

@@ -1,0 +1,525 @@
+<section class="py-5">
+    <form [formGroup]="incubatorForm" (ngSubmit)="onSubmit()">
+        <div class="container">
+            <div class="row">
+                <div class="section-heading">
+                    <h5>Incubator Basic Details</h5>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="">Incubator Name<span class="mandatory">*</span></label>
+                        <input type="text" class="form-control" formControlName="incubatorName">
+                        <span class="text-danger"
+                            *ngIf="(incubatorFormControls.incubatorName.touched || submitted) && incubatorFormControls.incubatorName.errors?.required">
+                            Field is required
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="">Date of Establishment<span class="mandatory">*</span></label>
+                        <input type="date" [max]="todayDate" [max]="date" (keydown)="dateManualEntryRestrict($event)"
+                            class="form-control" formControlName="dateOfEstablishment">
+                        <span class="text-danger"
+                            *ngIf="(incubatorFormControls.dateOfEstablishment.touched || submitted) && incubatorFormControls.dateOfEstablishment.errors?.required">
+                            Field is required
+                        </span>
+
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="">Stages<span class="mandatory">*</span></label>
+                        <select name="" id="" class="form-control" formControlName="stages">
+                            <option value="">--Select--</option>
+                            <option *ngFor="let li of stagesList" value={{li?.stage_id}}> {{li?.stage}}</option>
+                            <!-- <option value="1">Ideation</option>
+                            <option value="2">Validation</option>
+                            <option value="3">Earlytraction</option>
+                            <option value="4">Scaling</option> -->
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="">Programme Duration<span class="mandatory">*</span></label>
+                        <select name="" id="" class="form-control" formControlName="programmeDuration">
+                            <option value="">--Select--</option>
+                            <option value="1">Upto 6 Months</option>
+                            <option value="2">6 to 12 Months</option>
+                            <option value="3">12 Months Above</option>
+                        </select>
+                        <span class="text-danger"
+                            *ngIf="(incubatorFormControls.programmeDuration.touched || submitted) && incubatorFormControls.programmeDuration.errors?.required">
+                            Selection is required
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="">Graduated Incubatees<span class="mandatory">*</span></label>
+                        <select class="form-control" formControlName="graduatedIncubatees" (change)="onChangeGradutedIncubat($event.target.value)">
+                            <option value="">--Select--</option>
+                            <option value="1">Yes</option>
+                            <option value="2">No</option>
+                        </select>
+                        <span class="text-danger"
+                            *ngIf="(incubatorFormControls.graduatedIncubatees.touched || submitted) && incubatorFormControls.graduatedIncubatees.errors?.required">
+                            Field is required
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-4" *ngIf="incubatorForm.get('graduatedIncubatees').value == '1'">
+                    <div class="form-group">
+                        <label for="">Graduated Incubatees Count <span class="mandatory">*</span></label>
+                        <input type="text" class="form-control" formControlName="gIncubateesCount"
+                            (keypress)="numberOnly($event)">
+                        <!-- <div
+                            *ngIf="(incubatorFormControls.gIncubateesCount.touched || incubatorFormControls.gIncubateesCount.dirty || submitted) && incubatorFormControls.mobileNo.invalid">
+                            <span class="text-danger" *ngIf="incubatorFormControls.gIncubateesCount.errors.required">
+                                Count is required
+                            </span>
+                        </div> -->
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="">Industry<span class="mandatory">*</span></label>
+                        <select name="" id="" class="form-control" formControlName="industryType" (change)="onChangeIndustyType($event.target.value)">
+                            <option value="">--Select--</option>
+                            <option *ngFor="let li of industryList" value={{li?.industry_id}}> {{li?.industry_name}}</option>
+                        </select>
+                        <span class="text-danger"
+                            *ngIf="(incubatorFormControls.industryType.touched || submitted) && incubatorFormControls.industryType.errors?.required">
+                            Industry is required
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-4" *ngIf="industryObject?.industry_name == 'Others'">
+                    <div class="form-group">
+                        <label for="">Industry Others<span class="mandatory">*</span></label>
+                        <input type="text" class="form-control" formControlName="industryOthers">
+                        <span class="text-danger"
+                            *ngIf="(incubatorFormControls.industryOthers.touched || submitted) && incubatorFormControls.industryOthers.errors?.required">
+                            Others is required
+                        </span>
+                        
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="">Industry Subtype<span class="mandatory">*</span></label>
+                        <select name="" id="" class="form-control" formControlName="industrySubType" (change)="onChangeIndstrySubtype($event.target.value)">
+                            <option value="">--Select--</option>
+                            <option *ngFor="let li of sectorsList" [value]="li?.sector_id"> {{li?.sector_name}}</option>
+                           </select>
+                        <span class="text-danger"
+                            *ngIf="(incubatorFormControls.industrySubType.touched || submitted) && incubatorFormControls.industrySubType.errors?.required">
+                            Selection is required
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-4" *ngIf="sectorObj?.sector_name == 'OTHERS'">
+                    <div class="form-group">
+                        <label for="">Industry Subtype Others<span class="mandatory">*</span></label>
+                        <input type="text" class="form-control" formControlName="industrySubTypeOthers">
+                        <span class="text-danger"
+                            *ngIf="(incubatorFormControls.industrySubTypeOthers.touched || submitted) && incubatorFormControls.industrySubTypeOthers.errors?.required">
+                            Others is required
+                        </span>
+                        <span class="text-danger" *ngIf="incubatorFormControls.industrySubTypeOthers.errors?.pattern">
+                            Alpha numerics and . / , - are allowed
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="">Interests<span class="mandatory">*</span></label>
+                        <select name="" id="" class="form-control" formControlName="interests">
+                            <option value="">--Select--</option>
+                            <option *ngFor="let li of intrestList" [value]="li.id">{{li?.service_name}}</option>
+                            
+                        </select>
+                        <span class="text-danger"
+                            *ngIf="(incubatorFormControls.interests.touched || submitted) && incubatorFormControls.interests.errors?.required">
+                            Field is required
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="">DIPP Empanelment Number<span class="mandatory">*</span></label>
+                        <input type="text" class="form-control" formControlName="empanelmentNumber">
+                        <span class="text-danger"
+                            *ngIf="(incubatorFormControls.empanelmentNumber.touched || submitted) && incubatorFormControls.empanelmentNumber.errors?.required">
+                            Field is required
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="">Current Incubatees<span class="mandatory">*</span></label>
+                        <textarea name="" id="" class="form-control" formControlName="currentIncubatees"></textarea>
+                        <span class="text-danger"
+                            *ngIf="(incubatorFormControls.currentIncubatees.touched || submitted) && incubatorFormControls.currentIncubatees.errors?.required">
+                            Field is required
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="">Brief <span class="mandatory">*</span></label>
+                        <textarea name="" id="" class="form-control" formControlName="brief"></textarea>
+                        <span class="text-danger"
+                            *ngIf="(incubatorFormControls.brief.touched || submitted) && incubatorFormControls.brief.errors?.required">
+                            Brief is required
+                        </span>
+                        <!-- <span class="text-danger" *ngIf="incubatorFormControls.brief.errors?.pattern">
+                            Alpha numerics and . / , - are allowed
+                        </span> -->
+                    </div>
+                </div>
+
+
+
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-heading">
+                        <h5>
+                            Contact Info
+                        </h5>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="">Mobile No. <span class="mandatory">*</span></label>
+                        <input type="text" class="form-control" formControlName="mobileNo"
+                            (keypress)="numberOnly($event)" maxlength="10" minlength="10">
+                        <div
+                            *ngIf="(incubatorFormControls.mobileNo.touched || incubatorFormControls.mobileNo.dirty || submitted) && incubatorFormControls.mobileNo.invalid">
+                            <span class="text-danger" *ngIf="incubatorFormControls.mobileNo.errors.required">
+                                Mobile Number is required
+                            </span>
+                            <span class="text-danger" *ngIf="incubatorFormControls.mobileNo.errors.minlength">
+                                Mobile Number must be at least 10 characters long.
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="">Email <span class="mandatory">*</span></label>
+                        <input type="email" class="form-control" [pattern]="emailPattern" maxlength="50"
+                            formControlName="emailName">
+                        <span class="text-danger"
+                            *ngIf="(incubatorFormControls.emailName.touched || submitted) && incubatorFormControls.emailName.errors?.required">
+                            Email is required
+                        </span>
+                        <span class="text-danger"
+                            *ngIf="(incubatorFormControls.emailName.touched || submitted) && incubatorFormControls.emailName.errors?.pattern">
+                            Enter Valid Email
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="">State<span class="mandatory">*</span></label>
+                        <select name="" id="" class="form-control" formControlName="stateName">
+                            <option value="">--Select--</option>
+                            <option *ngFor="let li of stateList" [value]="li.state_id">{{li?.state_name}}</option>
+                        </select>
+                        <span class="text-danger"
+                            *ngIf="(incubatorFormControls.stateName.touched || submitted) && incubatorFormControls.stateName.errors?.required">
+                            State is required
+                        </span>
+                    </div>
+                </div>
+                <!-- <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="">City<span class="mandatory">*</span></label>
+                        <input type="text" class="form-control" formControlName="cityName">
+                        <span class="text-danger"
+                            *ngIf="(incubatorFormControls.cityName.touched || submitted) && incubatorFormControls.cityName.errors?.required">
+                            City is required
+                        </span>
+                    </div>
+                </div> -->
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="">Application Link</label>
+                        <input type="text" class="form-control" formControlName="applicationLink">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group"></div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="">Incubation Center Location Map <span class="mandatory">*</span></label>
+                        <textarea name="" id="" class="form-control" formControlName="incubationLocationMap"></textarea>
+                        <span class="text-danger"
+                            *ngIf="(incubatorFormControls.incubationLocationMap.touched || submitted) && incubatorFormControls.incubationLocationMap.errors?.required">
+                            Incubation Center Location Map is required
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="">Incubation Center Location Address <span class="mandatory">*</span></label>
+                        <textarea name="" id="" class="form-control"
+                            formControlName="incubationLocationAddress"></textarea>
+                        <span class="text-danger"
+                            *ngIf="(incubatorFormControls.incubationLocationAddress.touched || submitted) && incubatorFormControls.incubationLocationAddress.errors?.required">
+                            Incubation Center Location Address is required
+                        </span>
+                       </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-heading">
+                        <h5>
+                            Point of Contact
+                        </h5>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="">Name<span class="mandatory">*</span></label>
+                        <input type="text" class="form-control" formControlName="poiName">
+                        <span class="text-danger"
+                            *ngIf="(incubatorFormControls.poiName.touched || submitted) && incubatorFormControls.poiName.errors?.required">
+                            Name is required
+                        </span>
+                        <span class="text-danger" *ngIf="incubatorFormControls.poiName.errors?.pattern">
+                            Alpha numerics are allowed
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="">Email <span class="mandatory">*</span></label>
+                        <input type="email" class="form-control" [pattern]="emailPattern" maxlength="50"
+                            formControlName="poiEmailName">
+                        <span class="text-danger"
+                            *ngIf="(incubatorFormControls.poiEmailName.touched || submitted) && incubatorFormControls.poiEmailName.errors?.required">
+                            Email is required
+                        </span>
+                        <span class="text-danger"
+                            *ngIf="(incubatorFormControls.poiEmailName.touched || submitted) && incubatorFormControls.poiEmailName.errors?.pattern">
+                            Enter Valid Email
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="">Role<span class="mandatory">*</span></label>
+                        <input type="text" class="form-control" formControlName="roleName">
+                        <span class="text-danger"
+                            *ngIf="(incubatorFormControls.roleName.touched || submitted) && incubatorFormControls.roleName.errors?.required">
+                            Role is required
+                        </span>
+                        <span class="text-danger" *ngIf="incubatorFormControls.roleName.errors?.pattern">
+                            Alpha numerics are allowed
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="">Mobile No. <span class="mandatory">*</span></label>
+                        <input type="text" class="form-control" formControlName="poiMobileNo"
+                            (keypress)="numberOnly($event)" maxlength="10" minlength="10">
+                        <div
+                            *ngIf="(incubatorFormControls.poiMobileNo.touched || incubatorFormControls.poiMobileNo.dirty || submitted) && incubatorFormControls.poiMobileNo.invalid">
+                            <span class="text-danger" *ngIf="incubatorFormControls.poiMobileNo.errors.required">
+                                Mobile Number is required
+                            </span>
+                            <span class="text-danger" *ngIf="incubatorFormControls.poiMobileNo.errors.minlength">
+                                Mobile Number must be at least 10 characters long.
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="">Land Line<span class="mandatory">*</span></label>
+                        <input type="text" class="form-control" formControlName="poiLandLineNo"
+                        (keypress)="numberOnly($event)" formControlName="poiLandLineNo">
+                        <div *ngIf="(incubatorFormControls.poiLandLineNo.touched || incubatorFormControls.poiLandLineNo.dirty || submitted) && incubatorFormControls.poiLandLineNo.invalid">
+                            <span class="text-danger" *ngIf="incubatorFormControls.poiLandLineNo.errors.required">
+                                Landline is required
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="form-group">
+                        <label for="">Success Stories<span class="mandatory">*</span></label> <br>
+                        <input type="radio" formControlName="isSuccStories" value="1" (change)="onChangeSucce('1')"> Yes 
+                        &nbsp; &nbsp; <input type="radio" formControlName="isSuccStories" value="2"  (change)="onChangeSucce('2')"> No
+                    </div>
+                </div>
+                <div class="col-md-4"></div>
+                <ng-container *ngIf="incubatorForm.get('isSuccStories').value == '1'" >
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="">Startup Name<span class="mandatory">*</span></label>
+                        <input type="text" class="form-control" formControlName="startupName">
+                        <span class="text-danger"
+                            *ngIf="(incubatorFormControls.startupName.touched || submitted) && incubatorFormControls.startupName.errors?.required">
+                            Startup Name is required
+                        </span>
+                         <span class="text-danger" *ngIf="incubatorFormControls.startupName.errors?.pattern">
+                            Alpha numerics and . / , - are allowed
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="">Website/Mobile App Link<span class="mandatory">*</span></label>
+                        <input type="text" class="form-control" formControlName="startupAppLink">
+                        <span class="text-danger"
+                            *ngIf="(incubatorFormControls.startupAppLink.touched || submitted) && incubatorFormControls.startupAppLink.errors?.required">
+                            Link is required
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="">Entered the Incubator In<span class="mandatory">*</span></label>
+                        <input type="text" class="form-control" formControlName="incubatorIn">
+                        <span class="text-danger"
+                            *ngIf="(incubatorFormControls.incubatorIn.touched || submitted) && incubatorFormControls.incubatorIn.errors?.required">
+                            Entered the Incubator In is required
+                        </span>
+                        <span class="text-danger" *ngIf="incubatorFormControls.incubatorIn.errors?.pattern">
+                            Alpha numerics are allowed
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="">Startup India Hub Profile Link<span class="mandatory">*</span></label>
+                        <input type="text" class="form-control" formControlName="startupIndiaProfileLink">
+                        <span class="text-danger"
+                            *ngIf="(incubatorFormControls.startupIndiaProfileLink.touched || submitted) && incubatorFormControls.startupIndiaProfileLink.errors?.required">
+                            Field is required
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="">Brief/Tagline<span class="mandatory">*</span></label>
+                        <input type="text" class="form-control" formControlName="briefTagline">
+                        <span class="text-danger"
+                            *ngIf="(incubatorFormControls.briefTagline.touched || submitted) && incubatorFormControls.briefTagline.errors?.required">
+                            Link is required
+                        </span>
+                    </div>
+                </div>
+            </ng-container>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-heading">
+                        <h5>Attachments</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for=""> Entity/Company Logo <span class="mandatory">*</span></label>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <input type="file"  accept=".jpg, .jpeg, .png, .pdf" class="form-control" (change)="handleEntityLogoUpload($event)">
+                        <span class="text-danger"
+                            *ngIf="(incubatorFormControls.entityLogo.touched || submitted) && incubatorFormControls.entityLogo.errors?.required">
+                            Entity Logo is required
+                        </span>
+                    </div>
+                </div>
+
+                <ng-container *ngIf="incubatorForm.get('isSuccStories').value == '1'"> 
+                <div class="col-md-6" >
+                    <div class="form-group">
+                        <label for="">Startup Logo <span class="mandatory">*</span></label>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <input type="file"  accept=".jpg, .jpeg, .png, .pdf" class="form-control" (change)="handlestartupLogoUpload($event)">
+                        <span class="text-danger"
+                            *ngIf="(incubatorFormControls.startupLogo.touched || submitted) && incubatorFormControls.startupLogo.errors?.required">
+                            Startup Logo is required
+                        </span>
+                    </div>
+                </div>
+                </ng-container>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="notes">
+    
+                        <ul style="list-style-type: number;">
+                          <h5>
+                            Note
+                          </h5>
+                          <li>Only Image and PDF file type is allowed.</li>
+                    <!-- <li>Image size should less than 200kb</li> -->
+                    <li>Upload size should less than 2 MB</li>
+                          <li> Image format/extension should be .png, .jpg, .jpeg, .pdf</li>
+                        </ul>
+                      </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-heading terms_conditions">
+                        <h5>
+                            Terms & Conditions
+                        </h5>
+                        <p>
+                            This official website of the "Andhra Pradesh Innovation Society"  has been created to provide information to the general public. The documents and information displayed in this website are for reference purposes only and does not purport to be a legal document.
+                        </p>
+                        <p>
+                            DPIIT does not warrant the accuracy or completeness of the information, text, graphics, links or other items contained within the APIS web portal. As a result of updates and corrections, the web contents are subject to change regularly.
+                        </p>
+                        <p>
+                            The information posted on this website could include hypertext links or pointers to information created and maintained by non-Government/private organisations. DPIIT is providing these links and pointers solely for your information and convenience. When you select a link to an outside website, you are leaving the 'Guidelines for Indian Government Websites' site and are subject to the privacy and security policies of the owners/sponsors of the outside website.                            
+                        </p>
+                        <p>
+                            These terms and conditions shall be governed by and construed in accordance with the Indian
+                            Laws. Any dispute arising under these terms and conditions shall be subject to the
+                            jurisdiction of the courts of India.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <input type="checkbox" formControlName="termsConditions"> I Agree to Terms & Conditions
+                    <span class="text-danger"
+                        *ngIf="(incubatorFormControls.termsConditions.touched || submitted) && incubatorFormControls.termsConditions.errors?.required">
+                        Checkbox is required
+                    </span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="float-end">
+                        <button type="submit" class="btn btn-success login_btn">Save & Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </form>
+</section>

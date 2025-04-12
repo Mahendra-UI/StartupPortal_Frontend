@@ -1,0 +1,33 @@
+table thead {
+    background-color: #F0F0F0;
+}
+
+tbody>tr:nth-child(even) {
+    background-color: #F0F0F0 !important;
+}
+.btn_connect {
+    background-color: #00ABC5;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+th {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 27px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #000000;
+}
+
+td {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #000000;
+}

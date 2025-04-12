@@ -1,0 +1,357 @@
+<style>
+    .bodyBreadcrumbs {
+    background-image: url('assets/images/gallery/contactusbg.png');
+}
+</style>
+<section class="bodyBreadcrumbs">
+
+    <div class="container">
+
+        <div class="row breadcrumbsrow align-items-center">
+            <div class="col-md-12">
+                <div class="bodyHeading text-white">
+                    <h1>Policies
+                    </h1>
+                    <ol class="breadcrumb mb-0">
+                        <li><a routerLink="/home">Home</a></li>
+                        <li><a>Resources</a></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6"></div>
+            <div class="col-md-6">
+                <div class="hstack gap-2 justify-content-end pb-2">
+                    <h6 class="mb-0">Total Records: <span class="badge bg-success">{{ filteredPolicies.length }}</span></h6>
+                    <div>
+                        <input type="text" class="form-control" placeholder="Search..." [(ngModel)]="searchTerm" (input)="onSearch()" />
+                    </div>
+                </div>
+                </div>
+            <div class="col-md-12">
+                <div class="table-responsive">
+                    <table class="table table-bordered w-100">
+                        <thead>
+                          <tr>
+                            <th>S.No</th>
+                            <th>Description</th>
+                            <th>Download</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr *ngFor="let policy of filteredPolicies | paginate: { itemsPerPage: itemsPerPage, currentPage: currentPage }; let i = index">
+                            <td>{{ i + 1 + (currentPage - 1) * itemsPerPage }}</td>
+                            <td>{{ policy.description }}</td>
+                            <td>
+                              <a [href]="policy.downloadLink" target="_blank">
+                                <i class="bi bi-file-earmark-arrow-down"></i>
+                              </a>
+                            </td>
+                          </tr>
+                          <tr *ngIf="filteredPolicies.length === 0">
+                            <td colspan="3" class="text-center">No matching policies found.</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <div class="d-flex justify-content-center align-items-center">
+                        <pagination-controls (pageChange)="currentPage = $event"></pagination-controls>
+                    </div>
+
+                    <table class="table table-bordered w-100 d-none">
+                        <thead>
+                            <tr>
+                                <th>S.No</th>
+                                <th>Description</th>
+                                <th>Download</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>ITE&C Department – Promotion Wing – Andhra Pradesh Electronics Manufacturing Policy (4.0) 2024-29</td>
+                                <td>
+                                    <a href="assets/images/ecosystem/startups/Andhra Pradesh Electronics Manufacturing policy (4.0) 2024-29.pdf" target="_blank">
+                                        <i class="bi bi-file-earmark-arrow-down"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>ITE&C Department – Promotion Wing – Andhra Pradesh Data Center Policy (4.0)
+                                    2024-29</td>
+                                <td>
+                                    <a href="assets/images/resources/policies/2024/AP Data Center Policy 2024-29_GO MS No 6_dated 14 11 20224.pdf" target="_blank"><i class="bi bi-file-earmark-arrow-down"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Industries & Commerce Department – New Andhra Pradesh Food Processing Policy (4.0) 2024-29.</td>
+                                <td>
+                                    <a href="assets/images/resources/policies/2024/AP Food Processing Policy (4.0) 2024-29.pdf" target="_blank"><i class="bi bi-file-earmark-arrow-down"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Industries & Commerce Department – New Andhra Pradesh Industrial
+                                    Development Policy (4.0) 2024-29</td>
+                                <td>
+                                    <a href="assets/images/resources/policies/2024/AP Industrial Development Policy (4.0) 2024-29.pdf" target="_blank"><i class="bi bi-file-earmark-arrow-down"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Industries & Commerce Department – Andhra Pradesh Logistics Policy 2022-27</td>
+                                <td>
+                                    <a href="assets/images/resources/policies/2024/AP Logistics Policy 2022-27.pdf" target="_blank"><i class="bi bi-file-earmark-arrow-down"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>Industries & Commerce Department – Andhra Pradesh MSME & Entrepreneur
+                                    Development Policy, 4.0 (2024-29) / One Entrepreneur, One Family by 2030</td>
+                                <td>
+                                    <a href="assets/images/resources/policies/2024/AP MSME & EDP (4.0) - 2024-29.pdf" target="_blank"><i class="bi bi-file-earmark-arrow-down"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>Industries & Commerce Department - Andhra Pradesh Policy for establishment of Private
+                                    Industrial Parks with 'Plug and Play' Industrial Infrastructure (4.0) 2024-29</td>
+                                <td>
+                                    <a href="assets/images/resources/policies/2024/AP Private Industrial  Parks Policy (4.0)- 2024-29.pdf" target="_blank"><i class="bi bi-file-earmark-arrow-down"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>Industries & Commerce Department – “Andhra Pradesh Retail Parks Policy"
+                                    2021-26</td>
+                                <td>
+                                    <a href="assets/images/resources/policies/2024/AP Retail Park Policy 2021-2026.pdf" target="_blank"><i class="bi bi-file-earmark-arrow-down"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td>Andhra Pradesh Tourism Policy 2020-2025</td>
+                                <td>
+                                    <a href="assets/images/resources/policies/2024/AP Tourism Policy 2020-2025.pdf" target="_blank"><i class="bi bi-file-earmark-arrow-down"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td>Andhra Pradesh Integrated Clean Energy Policy 2020-2025</td>
+                                <td>
+                                    <a href="assets/images/resources/policies/2024/AP-Integrated Clean Energy Policy 4.0.pdf" target="_blank"><i class="bi bi-file-earmark-arrow-down"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>11</td>
+                                <td>ITE&C Department - Promotion Wing - Andhra Pradesh Semiconductor and Display Fab Policy (4.0) 2024-29.</td>
+                                <td>
+                                    <a href="assets/images/resources/policies/2024/GOMS No 7 dt 14 11 2024 _AP Semiconductor and Display Fab Policy 4 0 2024_ 29.pdf" target="_blank"><i class="bi bi-file-earmark-arrow-down"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>12</td>
+                                <td>Swarna Andhra@2047</td>
+                                <td>
+                                    <a href="assets/images/resources/policies/2024/Swarna Andhra@2047_Whole-of-Government and Digital Governance.pdf" target="_blank"><i class="bi bi-file-earmark-arrow-down"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>13</td>
+                                <td>Infrastructure and Investment Department - Andhra Pradesh Drone Policy
+                                    4.0 (2024-29)</td>
+                                <td>
+                                    <a href="assets/images/resources/policies/2024/AP Drone Policy 2024.pdf" target="_blank"><i class="bi bi-file-earmark-arrow-down"></i></a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="py-5 d-none">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="table-responsive">
+                    <table class="table table-bordered w-100">
+                        <thead>
+                            <tr>
+                                <th>S.No</th>
+                                <th>Description</th>
+                                <th>Download</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Andhra Pradesh Startup Policy 2021-2024</td>
+                                <td>
+                                    <a href="assets/images/ecosystem/startups/Startup%20Policy.pdf" target="_blank">
+                                        <i class="bi bi-file-earmark-arrow-down"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Industries & Commerce Department – “Andhra Pradesh Industrial Development Policy
+                                    2020-23 – Orders – Issued</td>
+                                <td>
+                                    <a href="assets/images/resources/policies/AP Industrial Development Policy 2020-2023.pdf" target="_blank"><i class="bi bi-file-earmark-arrow-down"></i></a>
+                                </td>
+                            </tr>
+                            <tr class="d-none">
+                                <td>3</td>
+                                <td>Compendium of Schemes for 
+                                    MSMEs: Government of Andhra 
+                                    Pradesh and Government of India</td>
+                                <td>
+                                    <a href="assets/images/resources/policies/Compendium_of_MSME_Schemes.pdf" target="_blank"><i class="bi bi-file-earmark-arrow-down"></i></a>
+                                </td>
+                            </tr>
+                            <!-- <tr>
+                                <td>4</td>
+                                <td>Industries & Commerce Department – “Andhra Pradesh Industrial Development Policy 
+                                    2020-23 – Orders – Issued</td>
+                                <td>
+                                    <a href="assets/images/resources/policies/IDP.pdf" target="_blank"><i class="bi bi-file-earmark-arrow-down"></i></a>
+                                </td>
+                            </tr> -->
+                            <!-- <tr>
+                                <td>5</td>
+                                <td>Jagananna Y.S.R Badugu Vikasam - Special Industrial Policy for SC and ST Enterpreneurs 2020 - 2023 </td>
+                                <td>
+                                    <a href="assets/images/resources/policies/Jagaanna_YSR_Badugu_Vikasam.pdf" target="_blank"><i class="bi bi-file-earmark-arrow-down"></i></a>
+                                </td>
+                            </tr> -->
+                            <tr class="d-none">
+                                <td>4</td>
+                                <td>Industries & Commerce Department – "YSR Jagananna Badugu Vikasam", a Special
+                                    Industrial Incentives Package under IDP 2020-23 for SC and ST Entrepreneurs –
+                                    Orders - Issued</td>
+                                <td>
+                                    <a href="assets/images/resources/policies/AP YSR Jagananna Badugu Vikasam Policy 2020-23.pdf" target="_blank"><i class="bi bi-file-earmark-arrow-down"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Setting up of Bulk Drug Park in Andhra Pradesh under the Scheme for promotion
+                                    of Bulk Drug Parks (BDPs), Department of Pharmaceuticals, GoI - Approval of
+                                    Special Package of incentives for the units set-up in the Bulk Drug Park – Orders
+                                    – Issued</td>
+                                <td>
+                                    <a href="assets/images/resources/policies/AP Bulk Drug Parks Policy 2020-2023.pdf" target="_blank"><i class="bi bi-file-earmark-arrow-down"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Industries & Commerce Department – “Electric Mobility Policy 2018-23” – Orders -
+                                    Issued</td>
+                                <td>
+                                    <a href="assets/images/resources/policies/AP Electric Mobility Policy 2018-2023.pdf" target="_blank"><i class="bi bi-file-earmark-arrow-down"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>ITE&C Department - IT Promotion– Andhra Pradesh Electronics Policy 2021-24 – Orders –
+                                    Issued</td>
+                                <td>
+                                    <a href="assets/images/resources/policies/AP Electronics Policy 2021-2024.pdf" target="_blank"><i class="bi bi-file-earmark-arrow-down"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>Industries & Commerce Department - Andhra Pradesh Export Promotion (APEX) Policy 2022-27- Orders - Issued</td>
+                                <td>
+                                    <a href="assets/images/resources/policies/AP Food Processing Policy 2020-2025.pdf" target="_blank"><i class="bi bi-file-earmark-arrow-down"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>ITE&C Department - IT Promotion– Andhra Pradesh Information Technology (IT) 2021-2024
+                                    Policy – Orders – Issued</td>
+                                <td>
+                                    <a href="assets/images/resources/policies/AP Information Technology Policy 2021-2024.pdf" target="_blank"><i class="bi bi-file-earmark-arrow-down"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>Industries & Commerce Department - Andhra Pradesh Logistics Policy 2022-2027 - Orders - Issued</td>
+                                <td>
+                                    <a href="assets/images/resources/policies/AP Logistics Policy 2022-27.pdf" target="_blank"><i class="bi bi-file-earmark-arrow-down"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td>Industries & Commerce Department – Policy for Establishment of Micro, Small and
+                                    Medium Enterprises (MSME) Parks M- Parks in Each Assembly Constituency – M-Parks
+                                    Policy 2018-23 - Orders – Issued</td>
+                                <td>
+                                    <a href="assets/images/resources/policies/AP M Parks Policy 2018-2023.pdf" target="_blank"><i class="bi bi-file-earmark-arrow-down"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td>Energy Department –Formulation Andhra Pradesh Pumped Storage Power
+                                    Promotion Policy - 2022-Orders –Issued</td>
+                                <td>
+                                    <a href="assets/images/resources/policies/AP Pumped Storage Power Policy 2022.pdf" target="_blank"><i class="bi bi-file-earmark-arrow-down"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>11</td>
+                                <td>ENERGY DEPARTMENT- Andhra Pradesh Renewable Energy Export Policy,
+                                    2020 – Orders – Issued</td>
+                                <td>
+                                    <a href="assets/images/resources/policies/AP RE Export Policy 2020-2025.pdf" target="_blank"><i class="bi bi-file-earmark-arrow-down"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>12</td>
+                                <td>Industries & Commerce Department – “Andhra Pradesh Retail Parks Policy
+                                    2021-26”–Orders-Issued</td>
+                                <td>
+                                    <a href="assets/images/resources/policies/AP Retail Park Policy 2021-2026.pdf" target="_blank"><i class="bi bi-file-earmark-arrow-down"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>13</td>
+                                <td>Municipal Administration and Urban Development Department - National Urban Sanitation Policy - State Level Sanitation Committee Constituted - A.P. State Sanitation Strategy - Permission accorded - Orders - Issued</td>
+                                <td>
+                                    <a href="assets/images/resources/policies/AP State Sanitation Policy 2020.pdf" target="_blank"><i class="bi bi-file-earmark-arrow-down"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>14</td>
+                                <td>“Andhra Pradesh Tourism Policy 2020-2025” -Orders-Issued</td>
+                                <td>
+                                    <a href="assets/images/resources/policies/AP Tourism Policy 2020-2025.pdf" target="_blank"><i class="bi bi-file-earmark-arrow-down"></i></a>
+                                </td>
+                            </tr>
+                            <tr class="d-none">
+                                <td>17</td>
+                                <td>Industrial Cluster – “YSR Jagananna Mega Industrial Hub” at Kopparthy, YSR
+                                    Kadapa District - Special package of Incentives for the units coming up in the Hub -
+                                    Orders - Issued</td>
+                                <td>
+                                    <a href="assets/images/resources/policies/AP YSR Jagananna Mega Industrial Hub Policy 2020-2023.pdf" target="_blank"><i class="bi bi-file-earmark-arrow-down"></i></a>
+                                </td>
+                            </tr>                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

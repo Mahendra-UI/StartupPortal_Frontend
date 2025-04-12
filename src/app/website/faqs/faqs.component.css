@@ -1,0 +1,128 @@
+.bodyBreadcrumbs {
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 140px;
+    /* height: auto; */
+    display: flex;
+    align-items: center;
+    /* padding: 20px 0px 51px; */
+    /* background-color: #0d5561; */
+}
+
+.bodyBreadcrumbs .breadcrumbsrow {
+    /* padding: 0 30px; */
+}
+
+.breadcrumbsrow img {
+    float: right;
+}
+
+.breadcrumb li {
+    padding: 0 12px 0 0;
+}
+
+.breadcrumb li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.bodyHeading h1 {
+    /* font-size: 35px; */
+    font-weight: 600;
+    line-height: 42px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #fff;
+}
+
+.breadcrumb {
+    background-color: transparent;
+}
+
+.breadcrumb a {
+    text-decoration: none;
+    color: aliceblue;
+    font-weight: 400;
+    /* transition: .5s; */
+}
+
+.breadcrumb li+li {
+    padding-left: 0;
+}
+
+.breadcrumb li+li:before {
+    content: '>';
+    color: #fff;
+    margin-right: 8px;
+}
+
+.breadcrumb li:last-child a,
+.breadcrumb a:hover {
+    color: #155384;
+    border-radius: 35px;
+    /* background-color: #82ccdd; */
+    padding: 5px 0px;
+}
+
+.breadcrumb li a:first-child {
+    color: #fff;
+}
+
+
+/* breadcrumb style ends */
+
+.accordion-item {
+    border: 0;
+    margin-bottom: 1rem;
+}
+.accordion-header {
+    border-radius: 4px;
+}
+.accordion-button {
+    color: #222;
+    font-weight: 800;
+}
+.accordion-button {
+    box-shadow: none;
+    /* background: #fff; */
+}
+.accordion-body {
+    background-color: #F9FBFF;
+}
+.accordion-body p {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 34px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #4A4A4A;
+}
+.accordion-body ul li {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 34px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #4A4A4A;
+}
+.accordion-body ul li::marker {
+    font-size: 20px;
+}
+.accordion-body .special ul {
+    list-style-type: upper-alpha;
+}
+.accordion-body ul li::marker {
+    color: #64CC9C;
+}
+.accordion-body .special .innerUl {
+    list-style-type: disc;
+}
+.accordion-body .special .innerUl li::marker {
+    color: #4FA1C1;
+    font-size: 20px;
+}

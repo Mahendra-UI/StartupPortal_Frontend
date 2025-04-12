@@ -1,0 +1,87 @@
+.first_banner {
+    position: absolute;
+    top: 15%;
+    left: 10%;
+    color: #fff;
+    max-width: 42%;
+    text-align: left;
+}
+.carousel-control {
+    position: absolute;
+    top: 50%; /* pushes the icon in the middle of the height */
+    z-index: 5;
+    display: inline-block;
+    }
+.first_banner p {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 45px;
+    letter-spacing: 0em;
+    text-align: left;
+    /* padding: 16px; */
+    /* background-image: linear-gradient(270deg, rgba(131, 0, 233, 0.74) 0%, #b53cabab 100%); */
+}
+.btn_bannerone_register {
+    /* background-color: #F87900; */
+    /* border: #F87900; */
+    /* background-color: #438E47;
+    border: #438E47; */
+    background-image: linear-gradient(2.85deg, #4B98C6 22.83%, #4B98C6 110.35%);
+    /* background-image: linear-gradient(270deg, rgba(131, 0, 233, 0.74) 0%, #b53cabab 100%); */
+    border-radius: 4px;
+    width: 172px;
+    max-width: 250px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #fff;
+}
+
+.disabled_swiper_button {
+    opacity: 0;
+    cursor: auto;
+    pointer-events: none;
+}
+
+.details_action a {
+    border-radius: 4px;
+    width: 200px;
+    max-width: 250px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+/* .details_action .apichallenges_btn {
+    max-width: 450px !important;
+    width: 00px !important;
+}     */
+.details_action a:nth-child(1) {
+    background: -webkit-linear-gradient(2.85deg, #F87900 22.83%, #FE4F45 110.35%);
+    color: #fff;
+    /* -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;  */
+}
+
+.details_action a:nth-child(2) {
+    background: -webkit-linear-gradient(2.85deg, #F87900 22.83%, #FE4F45 110.35%);
+    color: #fff;
+    /* -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+}
+
+.details_action a:nth-child(3) {
+    background: -webkit-linear-gradient(2.85deg, #F87900 22.83%, #FE4F45 110.35%);
+    color: #fff;
+    /* -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+}
+.details_action a:nth-child(4) {
+    background: -webkit-linear-gradient(2.85deg, #F87900 22.83%, #FE4F45 110.35%);
+    color: #fff;
+    /* -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+}

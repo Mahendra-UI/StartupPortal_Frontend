@@ -1,0 +1,54 @@
+.viewbutton {
+    font-size: 14px;
+    font-weight: 500;
+    padding: 0.3rem;
+    line-height: 0;
+    border-radius: 4px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #fff;
+    background-color: #193567;
+    border-color: #193567;
+}
+table thead {
+    background: #008E46;
+}
+th {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #fff;
+}
+
+td {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #000000;
+}
+.btn-close {
+    background: navy;
+    opacity: 1;
+    line-height: 1em;
+}
+.btn-close i {
+    color: #fff;
+}
+.badge {
+    font-size: 14px;
+}
+.form-heading {
+    color: #193567;
+    font-weight: 500;
+}
+hr {
+    border-color: #193567;
+}
+.previewLabelName, .previewLabelValue {
+    font-weight: 400;
+    font-size: 14px;
+}

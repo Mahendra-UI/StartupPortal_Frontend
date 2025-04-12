@@ -1,0 +1,249 @@
+<style>
+    .bodyBreadcrumbs {
+        background-image: url('assets/images/gallery/contactusbg.png');
+    }
+</style>
+<section class="bodyBreadcrumbs">
+
+    <div class="container">
+
+        <div class="row breadcrumbsrow align-items-center">
+            <div class="col-md-12">
+                <div class="bodyHeading text-white">
+                    <h1>Outreach Details
+                    </h1>
+                    <ol class="breadcrumb mb-0">
+                        <li><a routerLink="/home">Home</a></li>
+                        <li><a>Resources</a></li>
+                        <li><a>Outreach</a></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="pt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="float-end">
+                    <a routerLink="/outrechactivities" class="btn btn-info btn-sm">ALL Events</a>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="event_title">
+                    <h3 style="color: #0076C8;
+            font-weight: bold;">{{activitiesArray.Title}}</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="card">
+            <div class="card-body">
+                <div class="row align-items-center">
+                    <div class="col-md-3">
+                        <div class="keydata">
+                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                            <!-- <i class="bi bi-calendar"></i> -->
+                            <div class="data">
+                                <h6>
+                                    {{activitiesArray.Date}}
+                                </h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="keydata">
+                            <!-- <i class="fa fa-clock-o" aria-hidden="true"></i> -->
+                            <i class="bi bi-clock"></i>
+                            <div class="data">
+                                <h6>
+                                    {{activitiesArray.Time}}
+                                </h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="keydata">
+                            <i class="bi bi-geo-alt"></i>
+                            <div class="data">
+                                <h6>
+                                    {{activitiesArray.Venue}}
+                                </h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="py-2">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+
+                <div class="otherfeatures">
+                    <h4 *ngIf="activitiesArray.Eventtype != null" style="color: #0076C8;
+                    font-weight: bold;">
+                        Event Type :
+                        <span>
+                            {{activitiesArray.Eventtype}}
+                        </span>
+                    </h4>
+                    <h4 *ngIf="activitiesArray.speakers != null" style="color: #0076C8;
+                    font-weight: bold;">
+                        Speakers :
+                        <span>
+                            {{activitiesArray.speakers}}
+                        </span>
+                    </h4>
+                    <h4 *ngIf="activitiesArray.topics != null" style="color: #0076C8;
+                    font-weight: bold;">
+                        Topics :
+                        <span>
+                            {{activitiesArray.topics}}
+                        </span>
+                    </h4>
+                    <p>{{activitiesArray.coveredstatement}}</p>
+
+                    <ul>
+                        <li *ngFor="let item of activitiesArray.coveredlist, let i = index">{{item[i]}}</li>
+                    </ul>
+                    <h4 *ngIf="activitiesArray.virtualrealitylist != null" style="color: #0076C8;
+                    font-weight: bold;">
+                        Virtual Reality :
+                    </h4>
+                    <ul>
+                        <li *ngFor="let item of activitiesArray.virtualrealitylist, let i = index">{{item[i]}}</li>
+                    </ul>
+                    <h4 *ngIf="activitiesArray.augumentedrealistylist != null" style="color: #0076C8;
+                    font-weight: bold;">
+                        Augmented Reality :
+                    </h4>
+                    <ul>
+                        <li *ngFor="let item of activitiesArray.augumentedrealistylist, let i = index">{{item[i]}}</li>
+                    </ul>
+                    <h4 *ngIf="activitiesArray.metaverselist != null" style="color: #0076C8;
+                    font-weight: bold;">
+                        Metaverse :
+                    </h4>
+                    <ul>
+                        <li *ngFor="let item of activitiesArray.metaverselist, let i = index">{{item[i]}}</li>
+                    </ul>
+
+                    <h4 *ngIf="activitiesArray.vision != null" style="color: #0076C8;
+                    font-weight: bold;">
+                        Vision :
+                        <span>
+                            {{activitiesArray.vision}}
+                        </span>
+                    </h4>
+                    <h4 *ngIf="activitiesArray.mission != null" style="color: #0076C8;
+                    font-weight: bold;">
+                        Mission :
+                        <span>
+                            {{activitiesArray.mission}}
+                        </span>
+                    </h4>
+                    <h4 *ngIf="activitiesArray.Totalstudentparticipated != null" style="color: #0076C8;
+                    font-weight: bold;">
+                        Total Students participated :
+                        <span>
+                            {{activitiesArray.Totalstudentparticipated}}
+                        </span>
+                    </h4>
+                    <h4 *ngIf="activitiesArray.Eodbmsme != null" style="color: #0076C8;
+                    font-weight: bold;">
+                        Ease of Doing Business for MSMEs
+                    </h4>
+                    <ul>
+                        <li *ngFor="let item of activitiesArray.Eodbmsme, let i = index">{{item[i]}}</li>
+                    </ul>
+
+                    <h4 *ngIf="activitiesArray.abouttheorg != null" style="color: #0076C8;
+                    font-weight: bold;">About the Organization</h4>
+                    <p>{{activitiesArray.abouttheorg}}</p>
+
+
+                    <h4 *ngIf="activitiesArray.aboutthechallenge != null" style="color: #0076C8;
+                    font-weight: bold;">About the Challenge</h4>
+                    <p *ngFor="let item of activitiesArray.aboutthechallenge, let i = index">{{item[i]}}</p>
+
+                    <h4 *ngIf="activitiesArray.whocanapply != null" style="color: #0076C8;
+                    font-weight: bold;">Who Can Apply</h4>
+                    <p>{{activitiesArray.whocanapplystatment1}}</p>
+                    <ul>
+                        <li *ngFor="let item of activitiesArray.Whocanapplylist, let i = index">{{item[i]}}</li>
+                    </ul>
+                    <p>{{activitiesArray.whocanapplystatment2}}</p>
+                    <ul>
+                        <li *ngFor="let item of activitiesArray.whocanapplydeliverableslist, let i = index">{{item[i]}}
+                        </li>
+                    </ul>
+                    <h4 *ngIf="activitiesArray.meetdetails != null" style="color: #0076C8;
+                    font-weight: bold;">Meet Details</h4>
+                    <p *ngFor="let item of activitiesArray.meetdetails, let i = index">{{item[i]}}</p>
+                    <p>
+                        {{activitiesArray.majorattractionstatment}}
+                    </p>
+
+                    <ul>
+                        <li *ngFor="let item of activitiesArray.majorattractionlist, let i = index">{{item[i]}}</li>
+                    </ul>
+
+                    <p>
+                        {{activitiesArray.encouragestatment}}
+                    </p>
+
+                    <ul>
+                        <li *ngFor="let item of activitiesArray.encouragelist, let i = index">{{item[i]}}</li>
+                    </ul>
+                    <h4 *ngIf="activitiesArray.showcase != null" style="color: #0076C8;
+                    font-weight: bold;">Poster Showcase during IAC 2022 (Only for IIT Jammu Students)</h4>
+
+                    <p *ngFor="let item of activitiesArray.showcase, let i = index">{{item[i]}}</p>
+
+                    <p>{{activitiesArray.smartshippingstatement}}</p>
+
+                    <p *ngFor="let item of activitiesArray.smartshippingcontent, let i = index">{{item[i]}}</p>
+
+                    <h4 *ngIf="activitiesArray.Outcomes != null" style="color: #0076C8;
+                    font-weight: bold;">Outcomes</h4>
+                    <ul>
+                        <li *ngFor="let item of activitiesArray.Outcomes, let i = index">{{item[i]}}</li>
+                    </ul>
+                    <h4 *ngIf="activitiesArray.Objective != null" style="color: #0076C8;
+            font-weight: bold;">Objective</h4>
+                    <ul>
+                        <li *ngFor="let item of activitiesArray.Objective, let i = index">{{item[i]}}</li>
+                    </ul>
+                    <h4 *ngIf="activitiesArray.Benefits != null" style="color: #0076C8;
+                    font-weight: bold;">Benefits</h4>
+                    <ul>
+                        <li *ngFor="let item of activitiesArray.Benefits, let i = index">{{item[i]}}</li>
+                    </ul>
+                    <h4 *ngIf="activitiesArray.Participants != null" style="color: #0076C8;
+                    font-weight: bold;">Participants</h4>
+                    <ul>
+                        <li *ngFor="let item of activitiesArray.Participants, let i = index">{{item[i]}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="pt-2 pb-5 Photographs">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h4 *ngIf="activitiesArray.Photographs != null" style="color: #0076C8;
+                font-weight: bold;">Photographs</h4>
+            </div>
+            <div class="col-md-3" *ngFor="let item of activitiesArray.Photographs">
+                <img [src]='item.url' alt="image" class="img-fluid" />
+            </div>
+        </div>
+    </div>
+</section>

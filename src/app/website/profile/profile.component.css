@@ -1,0 +1,29 @@
+.users {
+    position: relative;
+    z-index: 6;
+}
+.figure {
+    position: relative;
+}
+@media (min-width: 992px) {
+    .w-33 {
+        width: 33%;
+    }
+}
+svg.wave, svg.wave1, svg:not(.footer-svg) {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    z-index: 2;
+}
+.first {
+    top: -95px!important;
+    transform: rotate(-45deg) translateY(65px);
+    color: #14ae76;
+}
+.second {
+    bottom: -100px!important;
+    transform: rotate(135deg) translateY(70px);
+    color: #1c8fa2;
+    top: inherit!important;
+}

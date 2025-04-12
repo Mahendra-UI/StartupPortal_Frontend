@@ -1,0 +1,298 @@
+<section class="p-3">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="table-responsive">
+                    <div class="text-end pb-2">
+                        <a class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#addPostModal"> + Add New Post</a>
+                    </div>
+                    <table class="table table-bordered w-100">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Position</th>
+                                <th>Vacancies</th>
+                                <th>Location</th>
+                                <th>Experience</th>
+                                <th>Notitcation</th>
+                                <th>Last Date</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr *ngFor="let post of postsList; let i = index">
+                              <td>{{ i + 1 }}</td>
+                              <td>{{ post.PositionName }}</td>
+                              <td>{{ post.VacanciesCount }}</td>
+                              <td>{{ post.Location }}</td>
+                              <td>{{ post.Experience }}</td>
+                              <td>
+                                <a class="btn btn-sm btn-success" title="{{ post.Notification }}"><i class="bi bi-eye"></i></a>
+                              </td>
+                              <td>{{ post.LastDateOfSubmission | date: 'dd-MM-yyyy' }}</td>
+                              <td>{{ post.IsActive ? 'Active' : 'Inactive' }}</td>
+                              <td>
+                                <div class="hstack gap-2">
+                                  <!-- <a class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#addPostModal"><i class="bi bi-pencil"></i></a> -->
+                                  <a class="btn btn-sm btn-success"
+                                  (click)="onViewPost(post.PositionId)"
+                                  data-bs-toggle="modal"
+                                  data-bs-target="#viewPostModal">
+                                  <i class="bi bi-eye"></i>
+                               </a>                               
+                                  <a class="btn btn-sm btn-primary"
+                                  (click)="onEditPost(post.PositionId)"
+                                  data-bs-toggle="modal"
+                                  data-bs-target="#addPostModal">
+                                  <i class="bi bi-pencil"></i>
+                               </a>                               
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>                          
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Add Post Modal -->
+<div class="modal fade" id="addPostModal" tabindex="-1" aria-labelledby="addPostModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="addPostModalLabel">Add New Post</h1>
+          <button type="button" class="btn-close" (click)="resetForm()" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="container" [formGroup]="postForm">
+                <div class="row">
+              
+                  <!-- Position -->
+                  <div class="col-md-3">
+                    <div class="form-group">
+                      <label class="form-label">Position</label>
+                      <select class="form-select" formControlName="positionName">
+                        <option value="" disabled selected>--Select--</option>
+                        <option value="Software Engineer 1">Software Engineer 1</option>
+                        <option value="Software Engineer 2">Software Engineer 2</option>
+                        <option value="Software Engineer 3">Software Engineer 3</option>
+                      </select>
+                      <div class="text-danger mt-1" *ngIf="postForm.get('positionName')?.touched && postForm.get('positionName')?.invalid">
+                        Position is required.
+                      </div>
+                    </div>
+                  </div>
+              
+                  <!-- No. of Vacancies -->
+                  <div class="col-md-3">
+                    <div class="form-group">
+                      <label class="form-label">No. of Vacancies</label>
+                      <input type="text" class="form-control" formControlName="vacanciesCount" (keypress)="preventNonNumericInput($event)" placeholder="No. of Vacancies" />
+                      <div class="text-danger mt-1" *ngIf="postForm.get('vacanciesCount')?.touched && postForm.get('vacanciesCount')?.invalid">
+                        <div *ngIf="postForm.get('vacanciesCount')?.errors?.['required']">Vacancies count is required.</div>
+                        <div *ngIf="postForm.get('vacanciesCount')?.errors?.['pattern']">Please enter numbers only.</div>
+                      </div>
+                    </div>
+                  </div>
+              
+                  <!-- Location -->
+                  <div class="col-md-3">
+                    <div class="form-group">
+                      <label class="form-label">Location</label>
+                      <input type="text" class="form-control" formControlName="location" placeholder="Location" />
+                      <div class="text-danger mt-1" *ngIf="postForm.get('location')?.touched && postForm.get('location')?.invalid">
+                        Location is required.
+                      </div>
+                    </div>
+                  </div>
+              
+                  <!-- Experience -->
+                  <div class="col-md-3">
+                    <div class="form-group">
+                      <label class="form-label">Experience</label>
+                      <input type="text" class="form-control" formControlName="experience" placeholder="Experience" />
+                      <div class="text-danger mt-1" *ngIf="postForm.get('experience')?.touched && postForm.get('experience')?.invalid">
+                        Experience is required.
+                      </div>
+                    </div>
+                  </div>
+              
+                  <!-- Notification -->
+                  <div class="col-md-3">
+                    <div class="form-group">
+                      <label class="form-label">Notification</label>
+                      <!-- <input type="file" class="form-control" (change)="onFileChange($event)" /> -->
+                      <input type="text" class="form-control" formControlName="notification" placeholder="Enter Notification File Name or URL" />
+                      <div class="text-danger mt-1" *ngIf="postForm.get('notification')?.touched && postForm.get('notification')?.invalid">
+                        Notification is required.
+                      </div>
+                    </div>
+                  </div>
+              
+                  <!-- Last Date -->
+                  <div class="col-md-3">
+                    <div class="form-group">
+                      <label class="form-label">Last Date</label>
+                      <input type="date" class="form-control" formControlName="lastDateOfSubmission" (keydown)="dateManualEntryRestrict($event)" />
+                      <!-- <div class="text-danger mt-1" *ngIf="postForm.get('lastDateOfSubmission')?.touched && postForm.get('lastDateOfSubmission')?.invalid">
+                        Last date is required.
+                      </div> -->
+                      <div class="text-danger mt-1" *ngIf="postForm.get('lastDateOfSubmission')?.touched && postForm.get('lastDateOfSubmission')?.invalid">
+                        <div *ngIf="postForm.get('lastDateOfSubmission')?.errors?.['required']">
+                          Last date is required.
+                        </div>
+                        <div *ngIf="postForm.get('lastDateOfSubmission')?.errors?.['pastDate']">
+                          Date must be today or in the future.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              
+                  <!-- Status -->
+                  <div class="col-md-3">
+                    <div class="form-group">
+                      <label class="form-label">Status</label>
+                      <select class="form-select" formControlName="status">
+                        <option value="" disabled selected>--Select--</option>
+                        <option value="Active">Active</option>
+                        <option value="Inactive">Inactive</option>
+                      </select>
+                      <div class="text-danger mt-1" *ngIf="postForm.get('status')?.touched && postForm.get('status')?.invalid">
+                        Status is required.
+                      </div>
+                    </div>
+                  </div>
+              
+                  <!-- Submit Button -->
+                  <div class="col-md-12 text-end mt-3">
+                    <button type="button" class="btn btn-primary" [disabled]="postForm.invalid" (click)="onSubmit()">Submit</button>
+                  </div>
+              
+                </div>
+              </div>              
+        </div>
+
+        <div class="modal-body d-none">
+            <div class="container" [formGroup]="postForm">
+                <div class="row">
+                  <div class="col-md-3">
+                    <div class="form-group">
+                        <label class="form-label">Position</label>
+                        <select class="form-select" formControlName="positionName">
+                          <option value="" disabled selected>--Select--</option>
+                          <option value="Software Engineer 1">Software Engineer 1</option>
+                          <option value="Software Engineer 2">Software Engineer 2</option>
+                          <option value="Software Engineer 3">Software Engineer 3</option>
+                        </select>
+                        <div class="text-danger mt-1" *ngIf="postForm.get('positionName')?.touched && postForm.get('positionName')?.invalid">
+                          Position is required.
+                        </div>
+                      </div>                      
+                  </div>
+              
+                  <div class="col-md-3">
+                    <div class="form-group">
+                        <label class="form-label">No. of Vacancies</label>
+                        <input type="text" class="form-control" formControlName="vacanciesCount" (keypress)="preventNonNumericInput($event)" placeholder="No. of Vacancies" />
+                        <div class="text-danger mt-1" *ngIf="postForm.get('vacanciesCount')?.touched && postForm.get('vacanciesCount')?.invalid">
+                          <div *ngIf="postForm.get('vacanciesCount')?.errors?.['required']">
+                            Vacancies count is required.
+                          </div>
+                          <div *ngIf="postForm.get('vacanciesCount')?.errors?.['pattern']">
+                            Please enter numbers only.
+                          </div>
+                        </div>
+                      </div>                      
+                  </div>
+              
+                  <div class="col-md-3">
+                    <div class="form-group">
+                      <label class="form-label">Location</label>
+                      <input type="text" class="form-control" formControlName="location" placeholder="Location" />
+                    </div>
+                  </div>
+              
+                  <div class="col-md-3">
+                    <div class="form-group">
+                      <label class="form-label">Experience</label>
+                      <input type="text" class="form-control" formControlName="experience" placeholder="Experience" />
+                    </div>
+                  </div>
+              
+                  <div class="col-md-3">
+                    <div class="form-group">
+                      <label class="form-label">Notification</label>
+                      <input type="text" class="form-control" formControlName="notification" placeholder="Enter Notification File Name or URL" />
+                    </div>
+                  </div>
+              
+                  <div class="col-md-3">
+                    <div class="form-group">
+                      <label class="form-label">Last Date</label>
+                      <input type="date" class="form-control" formControlName="lastDateOfSubmission" />
+                    </div>
+                  </div>
+              
+                  <div class="col-md-3">
+                    <div class="form-group">
+                      <label class="form-label">Status</label>
+                      <select class="form-select" formControlName="status">
+                        <option value="" disabled selected>--Select--</option>
+                        <option value="Active">Active</option>
+                        <option value="Inactive">Inactive</option>
+                      </select>
+                    </div>
+                  </div>
+              
+                  <div class="col-md-12 text-end mt-3">
+                    <button type="button" class="btn btn-primary" [disabled]="isLoading" (click)="onSubmit()">Submit</button>
+                  </div>
+                </div>
+            </div>              
+        </div>
+      </div>
+    </div>
+</div>
+
+
+<!-- View Post Modal -->
+
+
+<div class="modal fade" id="viewPostModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="viewPostModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="viewPostModalLabel">View Post Details</h1>
+          <button type="button" class="btn-close" (click)="resetForm()" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="container" *ngIf="selectedPostDetails">
+            <div class="row g-3">
+              <div class="col-md-4"><strong>Position:</strong> {{ selectedPostDetails.PositionName }}</div>
+              <div class="col-md-4"><strong>Vacancies:</strong> {{ selectedPostDetails.VacanciesCount }}</div>
+              <div class="col-md-4"><strong>Location:</strong> {{ selectedPostDetails.Location }}</div>
+        
+              <div class="col-md-4"><strong>Experience:</strong> {{ selectedPostDetails.Experience }}</div>
+              <!-- <div class="col-md-4">
+                <strong>Notification:</strong>
+                <a [href]="'assets/notifications/' + selectedPostDetails.Notification" target="_blank">
+                  {{ selectedPostDetails.Notification }}
+                </a>
+              </div> -->
+              
+              <div class="col-md-4"><strong>Notification:</strong> {{ selectedPostDetails.Notification }}</div>
+              <div class="col-md-4">
+                <strong>Last Date:</strong> {{ selectedPostDetails.LastDateOfSubmission | date: 'dd-MM-yyyy' }}
+              </div>
+              <div class="col-md-4"><strong>Status:</strong> {{ selectedPostDetails.IsActive ? 'Active' : 'Inactive' }}</div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+</div>

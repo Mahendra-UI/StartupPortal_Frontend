@@ -1,0 +1,234 @@
+.footer_logo p {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 25px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #fff;
+}
+
+ul {
+    padding-left: 0;
+}
+
+/* .footer_social ul li:nth-child(1) a i {
+    color: blue;
+}
+.footer_social ul li:nth-child(2) a i {
+    color: #fff;
+}
+.footer_social ul li:nth-child(2) a {
+background:linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+} */
+.footer_social>ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+.footer_social h4, .footer_ul h4 {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 29px;
+    letter-spacing: 0em;
+    text-align: left;
+    }
+.footer_social>ul>li:not(:first-child) {
+    list-style: none;
+    margin-left: 15px;
+}
+ul li {
+    list-style: none;
+}
+.footer_social ul li a i {
+    position: relative;
+    color: #262626;
+    transition: .5s;
+    z-index: 3;
+    font-size: 16px;
+}
+
+.footer_social ul li a {
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    text-align: center;
+    line-height: 16px;
+    font-size: 30px;
+    display: block;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    border: 3px solid #fff;
+    z-index: 1;
+    /* border: 1px solid #fff;
+    border-radius: 50%;
+    line-height: 60px;
+    transition: .3s; */
+}
+/* .footer_ul>ul>li>i {
+    color: #fff;
+} */
+.footer_ul ul li {
+    padding-left: 28px;
+    position: relative;
+    margin-bottom: 8px;
+}
+
+.footer_ul ul i {
+    position: absolute;
+    left: 0;
+    top: 6px;
+    font-size: 13px;
+    color: #ffffff;
+    line-height: 1;
+}
+
+.footer_ul>ul>li>a {
+    color: #D9D9D9;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 25px;
+    letter-spacing: 0em;
+    text-align: left;
+    text-decoration: none;
+}
+.designed p {
+    text-align: right;
+    margin: 0;
+}
+h4 {
+    /* position:relative;
+    padding-bottom:5px;
+    display:inline-block;
+    color: #fff;
+    border-bottom: 1px solid #fff; */
+}
+h4::before{
+    /* position: absolute;
+    bottom:-7px;
+    height:10px;
+    width:10px;
+    left:0;
+    content:"";
+   background: #fff;
+   border-radius:50%; */
+ }     
+ ul {
+    margin-top: 20px;
+ }
+ .social {
+    margin-top: 20px;
+ }
+ h4::after{
+    /* position: absolute;
+    bottom:-4px;
+    height:6px;
+    width:6px;
+    right:0;
+    content:"";
+    background: #fff;
+   border-radius: 0;
+   transform: rotate(44deg); */
+   /* border-radius:50%; */
+ }  
+ 
+.footer_social h4 {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 25px;
+    letter-spacing: 0em;
+    text-align: left;
+    background: linear-gradient(2.85deg, #F87900 22.83%, #FE4F45 110.35%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+.footer_ul h4 {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 25px;
+    letter-spacing: 0em;
+    text-align: left;
+    background: linear-gradient(2.85deg, #F87900 22.83%, #FE4F45 110.35%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+.map_data p {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+p {
+color: #fff;
+font-size: 14px;
+font-weight: 300;
+line-height: 17px;
+letter-spacing: 0em;
+text-align: left;
+}
+.copy_right p {
+    text-align: left;
+    font-size: 13px;
+    margin-bottom: 0;
+}
+
+
+
+.gototop {
+    position: fixed;
+    bottom: 40px;
+    right: 5px;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 5px;
+    outline: none;
+    z-index: 99;
+    padding: 4px 10px;
+    cursor: pointer;
+}
+.double-line-bottom-theme-colored-2 {
+    margin-bottom: 20px;
+    margin-top: 8px;
+    padding-bottom: 5px;
+    position: relative;
+}
+
+.double-line-bottom-theme-colored-2:before {
+    /* background: #fff; */
+    background: linear-gradient(2.85deg, #F87900 22.83%, #FE4F45 110.35%);
+    -webkit-background-clip: content-box;
+    -webkit-text-fill-color: transparent;
+    background-clip: content-box;
+    text-fill-color: transparent;
+    /* border-radius: 8px; */
+    bottom: 1px;
+    content: "";
+    height: 1.8px;
+    z-index: 99;
+    left: 0;
+    position: absolute;
+    width: 50px;
+}
+
+.double-line-bottom-theme-colored-2:after {
+    background: #fff;
+    border-radius: 8px;
+    bottom: 1px;
+    content: "";
+    height: 1.8px;
+    left: 0;
+    position: absolute;
+    /* width: 64px; */
+    width: 70%;
+}
+.terms a {
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+}

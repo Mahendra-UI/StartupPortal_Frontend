@@ -1,0 +1,65 @@
+<style>
+    .bodyBreadcrumbs {
+    background-image: url('assets/images/whoweare/whowearebg.png');
+}
+</style>
+<section class="bodyBreadcrumbs">
+
+    <div class="container">
+
+        <div class="row breadcrumbsrow align-items-center">
+            <div class="col-md-12">
+                <div class="bodyHeading text-white">
+                    <h1>Mission & Vision
+                    </h1>
+                    <ol class="breadcrumb mb-0">
+                        <li><a routerLink="/home">Home</a></li>
+                        <!-- <li><a style="color: #14e18c;">About AP</a></li> -->
+                        <li><a>Who We Are</a></li>
+
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="inner_content">
+                    <div class="innerpage_heading">
+                        
+                        <h2 [className]="isTranslationTelugu ? 'sectionheadingtelugu' : ''">
+                            {{ 'Vision.visionheading' | translate }}
+                        </h2>
+                        <p [className]="isTranslationTelugu ? 'aboutupara' : ''">
+                            {{ 'Vision.visioncontent' | translate }} 
+                        </p>
+                        <!-- <p>
+                            To create a world class technology start-up ecosystem by fostering entrepreneurship and a
+                            culture of innovation that could contribute to increased
+                            knowledge, wealth and employment in the state and society.
+                        </p> -->
+                    </div>
+                </div>
+                <div class="inner_content">
+                    <div class="innerpage_heading">
+                        <h2 [className]="isTranslationTelugu ? 'sectionheadingtelugu' : ''">
+                            {{ 'Mission.missionheading' | translate }}
+                        </h2>
+                        <p [className]="isTranslationTelugu ? 'aboutupara' : ''">
+                            {{ 'Mission.missioncontent' | translate }} 
+                        </p>
+                        <!-- <p>
+                            To provide avenues for the first-generation entrepreneurs, researchers, students, citizens,
+                            and the government to learn, collaborate, disrupt and
+                            transform their innovative ideas into prototypes of viable products and services of social
+                            relevance.
+                        </p> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

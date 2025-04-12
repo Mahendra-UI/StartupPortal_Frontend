@@ -1,0 +1,46 @@
+<header class="header bg_custom">
+    
+    <div class="container">
+        <nav class="bg_custom">
+            <div class="d-flex align-items-center flex-nowrap justify-content-between">
+            
+            <a class="navbar-brand d-flex align-items-center">
+                <div class="hamburger sidebar-toggle" (click)="menuToggle()">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </div>
+                <!-- <img src="assets/images/website_logo.png" class="align-text-top desktopSaapLogo img-fluid ms-3"> -->
+                <!-- <img src="assets/saapLogo.png" class="align-text-top mobileSaapLogo"> -->
+            </a>
+                <nav class="navbar navbar-expand-lg justify-content-end header-menu">
+               
+                    <button *ngIf="registerInfo" type="button" class="bordered-transparent-btn border-0 me-2"><img src="assets/Pay&PlayLogo.png"/></button>
+                    <button *ngIf="registerInfo" class="btn btn-secondary me-2" type="button" [routerLink]="['/login']">Login</button>
+                    <button *ngIf="registerInfo" class="btn saapgreen w-auto text-white" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Registration</button>
+                    
+                </nav>
+
+                <nav class="navbar navbar-expand-lg justify-content-end header-menu profile-menu">
+                    <ul class="navbar-nav flex-row align-items-center">
+                         <li class="nav-item me-3"><label class="lastlogin"> <i class="bi bi-clock"></i> Last Login: <span>{{lastLoginTime | date: 'MMM d, y, h:mm:ss a'}}</span></label></li>
+                         <!--   <li class="nav-item me-3 notify"><button class="border-0 bg-transparent p-0"><i class="bi bi-bell-fill"></i></button></li> -->
+                            <li class="nav-item"><label class="lastlogin">Website Admin</label></li>
+                        <li class="nav-item profileDD">
+                            <div class="dropdown">
+                                <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton1">
+                                    <!-- <button class="dropdown-item" type="button" routerLink="/myprofile"><i class="bi bi-person pe-2"></i>My Account</button> -->
+                                    <!-- <button class="dropdown-item" type="button"><i class="bi bi-wallet2 pe-2"></i>Payments</button> -->
+                                    <button class="dropdown-item" type="button" (click)="signOut()"><i class="bi bi-box-arrow-right pe-2" ></i>Logout</button>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </nav>
+    </div>
+</header>
+

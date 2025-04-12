@@ -1,0 +1,214 @@
+<section class="">
+  <div class="vh-80 py-5 d-flex justify-content-center align-items-center Homebanner-overlay">
+    <ul class="circles d-none">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+    <div class="container h-100">
+      <div class="row d-flex justify-content-center">
+        <div class="col-12 col-md-9 col-lg-9">
+          <div class="border border-3 border-primary"></div>
+          <div class="card bg-white shadow-lg my_card">
+            <div class="card-body p-4">
+              <form [formGroup]="regForm">
+                <div class="text-center pb-4">
+                  <img src="assets/images/website_logo.png" alt="image" class="img-fluid text-center">
+                </div>
+                <div class="row jumbotron">
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <label for="user Type">User Type</label>
+                      <select autocomplete="off" class="form-control form-select custom-select browser-default" formControlName="userType">
+                        <option value="">--Select--</option>
+                        <option value="1">Startup</option>
+                        <option value="2">Mentor</option>
+                        <option value="3">Incubator</option>
+                      </select>
+
+                      <div *ngIf="(regFormControls.userType.touched || submitted) && regFormControls.userType.invalid">
+                        <span class="text-danger" *ngIf="regFormControls.userType.errors.required">
+                          User Type is required
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <label for="name-f">Full Name</label>
+                      <input type="text" autocomplete="off" formControlName="fullName" class="form-control" name="fname" id="name-f"
+                        placeholder="Enter your first name." required>
+                      <div *ngIf="(regFormControls.fullName.touched || submitted) && regFormControls.fullName.invalid">
+                        <span class="text-danger" *ngIf="regFormControls.fullName.errors.required">
+                          Full Name is required
+                        </span>
+                        <span class="text-danger" *ngIf="regFormControls.fullName.errors.pattern">
+                          Please enter alphabets only
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <label for="mobilenumber">Mobile Number</label>
+                      <input type="text" autocomplete="off" formControlName="mobileNo" name="phone" class="form-control" id="mobilenumber"
+                        placeholder="Enter Mobile Number" (keypress)="numberOnly($event)" maxlength="10" minlength="10"
+                        required>
+                      <div *ngIf="(regFormControls.mobileNo.touched || submitted) && regFormControls.mobileNo.invalid">
+                        <span class="text-danger" *ngIf="regFormControls.mobileNo.errors.required">
+                          Mobile Number is required
+                        </span>
+                        <span class="text-danger" *ngIf="regFormControls.mobileNo.errors.minlength">
+                          Mobile Number must be at least 10 characters long.
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <label for="email">Email</label>
+                      <input type="email" autocomplete="off" formControlName="email" class="form-control" name="email" id="email"
+                        placeholder="Enter your email." required>
+                      <div *ngIf="(regFormControls.email.touched || submitted) && regFormControls.email.invalid">
+                        <span class="text-danger" *ngIf="regFormControls.email.errors.required">
+                          Email is required
+                        </span>
+                        <span class="text-danger"
+                          *ngIf="(regFormControls.email.touched || submitted) && regFormControls.email.errors?.pattern">
+                          Enter Valid Email
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <label for="pass">Password</label>
+                      <input type="Password" autocomplete="off" formControlName="password" name="password" class="form-control" id="pass"
+                        placeholder="Enter your password." required>
+                      <div *ngIf="(regFormControls.password.touched || submitted) && regFormControls.password.invalid">
+                        <span class="text-danger" *ngIf="regFormControls.password.errors.required">
+                          Password is required
+                        </span>
+                      </div>
+                      <span class="text-danger" *ngIf="(regFormControls.password.touched || submitted) && regFormControls.password.errors?.pattern">
+                        Password format:
+                        <div class="text-warning">
+                            At least 8 characters in length
+                        </div>
+                        <div class="text-warning">
+                            At least one lowercase Character
+                        </div>
+                        <div class="text-warning">
+                            At least one uppercase Character
+                        </div>
+                        <div class="text-warning">
+                            At least one number
+                        </div>
+                        <div class="text-warning">
+                            At least one special characters
+                        </div>
+                    </span>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <label for="pass2">Confirm Password</label>
+                      <input type="Password" autocomplete="off" formControlName="confirmPassword" name="cnf-password" class="form-control"
+                        id="pass2" placeholder="Re-enter your password." required>
+                      <div
+                        *ngIf="(regFormControls.confirmPassword.touched || submitted) && regFormControls.confirmPassword.invalid">
+                        <span class="text-danger" *ngIf="regFormControls.confirmPassword.errors.required">
+                          Confirm Password is required
+                        </span>
+                      </div>
+                      <span class="text-danger" *ngIf="(regFormControls.confirmPassword.touched || submitted) && regFormControls.confirmPassword.errors?.matchValues">
+                        Password and Confirm Password must match
+                    </span>
+                    <span class="text-danger" *ngIf="regFormControls.confirmPassword.errors?.mustMatch">Password and Confirm Password must be match.</span>
+                    </div>
+                  </div>
+                
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <label for="chb" class="form-check-label d-flex align-items-center">
+                        <input type="checkbox" class="form-check d-inline" formControlName="isAccepted" id="chb"
+                          required> &nbsp;I accept all terms and
+                        conditions.
+                      </label>
+                      <div
+                        *ngIf="(regFormControls.isAccepted.touched || submitted) && regFormControls.isAccepted.invalid">
+                        <span class="text-danger" *ngIf="regFormControls.isAccepted.errors.required">
+                          Please accept all terms and conditions
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="form-group hstack gap-2">
+                      <p class="mb-0  text-center">Already have an account? </p>
+                      <a (click)="goToLogin()" class="text-primary fw-bold">Login</a>
+                    </div>
+                  </div>
+
+                  <div class="form-group form-row">
+                    <div class="hstack gap-2">
+                        <div>
+                            <img [src]="'data:image/jpg;base64,'+imageBase64" width="100" height="50" alt="" srcset="" />
+                        </div>
+                        <div>
+                            <button type="button" (click)="loadcaptcha();" class="btn btn-primary btn-block btn-sm"> <i class="fa fa-undo" aria-hidden="true"></i> <small> Refresh</small></button>
+                        </div>
+                        <div>
+                            <input type="text" class="form-control mt-1" formControlName="captchacode"  maxlength="6" autocomplete="off" placeholder="Enter Captcha" required="required">
+                            <div
+                                *ngIf="(regFormControls.captchacode.touched || submitted) && regFormControls.captchacode.invalid">
+                                <span class="text-danger" *ngIf="regFormControls.captchacode.errors.required">
+                                    Captcha is required
+                                </span>
+                            </div>
+                        </div>
+                </div>
+               
+            </div>
+
+                  <div class="col-md-12">
+                    <button type="submit" (click)="submitRegisterForm()"
+                      class="btn btn-primary float-end">Register</button>
+                  </div>
+
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="scene">
+        <img class="img-fluid hero-bg-1 up-down-animation"
+          src="assets/images/login/feature-bg-2.png" alt="">
+        <img class="img-fluid hero-bg-2 left-right-animation"
+          src="assets/images/login/seo-ball-1.png" alt="">
+        <img class="img-fluid hero-bg-3 left-right-animation"
+          src="assets/images/login/seo-half-cycle.png" alt="">
+        <img class="img-fluid hero-bg-4 up-down-animation"
+          src="assets/images/login/green-dot.png" alt="">
+        <img class="img-fluid hero-bg-5 left-right-animation"
+          src="assets/images/login/blue-half-cycle.png" alt="">
+        <img class="img-fluid hero-bg-6 up-down-animation"
+          src="assets/images/login/seo-ball-1.png" alt="">
+        <img class="img-fluid hero-bg-7 left-right-animation"
+          src="assets/images/login/yellow-triangle.png" alt="">
+        <img class="img-fluid hero-bg-8 up-down-animation"
+          src="assets/images/login/service-half-cycle.png" alt="">
+        <img class="img-fluid hero-bg-9 up-down-animation"
+          src="assets/images/login/team-bg-triangle.png" alt="">
+      </div>
+    </div>
+  </div>
+</section>

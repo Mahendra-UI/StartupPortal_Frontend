@@ -1,0 +1,372 @@
+<style>
+    .bodyBreadcrumbs {
+    background-image: url('assets/images/enablers/enablersbg.png');
+}
+</style>
+<section class="bodyBreadcrumbs">
+
+    <div class="container">
+
+        <div class="row breadcrumbsrow align-items-center">
+            <div class="col-md-12">
+                <div class="bodyHeading text-white">
+                    <h1>Higher Educational Institutions (HEIs)
+                    </h1>
+                    <ol class="breadcrumb mb-0">
+                        <li><a routerLink="/home">Home</a></li>
+                        <!-- <li><a style="color: #14e18c;">About AP</a></li> -->
+                        <li><a>Enablers</a></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<div class="col-md-12 d-none">
+    <div class="table-responsive">
+      <table class="table table-bordered">
+        <thead class="thead-dark">
+          <tr>
+            <th>#</th>
+            <th>Institute Details</th>
+            <th>Type of College</th>
+            <th>District</th>
+            <th>Name of the Coordinator</th>
+            <th>Mobile No.</th>
+            <th>Email</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let institution of institutions; let i = index">
+                <td>{{ i + 1 }}</td>
+                <td>
+                  <p>{{ institution?.Institute_Details[0]?.name }}</p>
+                  <p>{{ institution?.Institute_Details[0]?.place }}</p>
+                  <p>{{ institution?.Institute_Email }}</p>
+                </td>
+                <td>{{ institution?.Type_of_College }}</td>
+                <td>{{ institution?.District }}</td>
+                <td>{{ institution?.Coordinator_Name }}</td>
+                <td>
+                  <ul>
+                    <li *ngFor="let mobile of institution?.General_Mobile_Nos || []">
+                      {{ mobile }}
+                    </li>
+                  </ul>
+                </td>
+                <td>
+                  <ul>
+                    <li *ngFor="let email of institution?.Institute || []">{{ email }}</li>
+                  </ul>
+                </td>
+              </tr>              
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
+
+
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="table_heading">
+                    <h3>
+                        <!-- Are you a Startup looking for -->
+                        Details of the Entrepreneurship Innovation Start-Ups Centres (EISCs)
+                        at Universities and Colleges in the State of Andhra Pradeshr Mentorship Support
+                    </h3>
+                </div>
+            </div>
+
+            <div class="col-md-12 d-none">
+                <div style="margin: 20px;">
+                    <!-- Display Table -->
+                    <div *ngIf="tableData.length" style="margin-top: 20px; overflow-x: auto;">
+                      <table border="1" style="width: 100%; border-collapse: collapse;">
+                        <thead>
+                          <tr>
+                            <th *ngFor="let header of headers" style="padding: 10px; background-color: #f4f4f4;">
+                              {{ header }}
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr *ngFor="let row of tableData">
+                            <td *ngFor="let cell of row" style="padding: 10px;">
+                              {{ cell }}
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>                                   
+            </div>
+
+            <div class="col-md-12">
+                <div class="table-responsive">
+                    <div class="hstack gap-2 justify-content-end pb-2">
+                        <h4 class="heading mb-0">No.of Records: <span class="badge text-bg-success fs-6">554</span></h4>
+                        <a class="btn btn-info"
+                            href="assets/images/enablers/highereducationalinstitutes/List of Higher Educational Instituions with ESICs.xlsx"
+                            target="_blank">
+                            Download Total List
+                        </a>
+                    </div>
+                    <table class="table table-bordered w-100">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Institute Details</th>
+                                <th>Type of College</th>
+                                <th>District</th>
+                                <th>Name of the Coordinator</th>
+                                <th>Mobile No.</th>
+                                <th>Email</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>
+                                    <div class="instName">
+                                        Anantha Lakshmi Institute of Technology and Science, Anantapur
+                                    </div>
+                                    <div class="emailId">
+                                        <strong>Email</strong>: alts[dot]atp[at]gmail[dot]com
+                                    </div>
+                                    <div class="phNumber">
+                                        <strong>Phone No.</strong>: 08554-255233, 9533513999, 9676023906, 9492288869
+                                    </div>
+                                    <div class="accStatus">
+                                        <strong>Accreditation Status</strong>: No
+                                    </div>
+                                </td>
+                                <td>Engineering</td>
+                                <td>Anantapur</td>
+                                <td>Dr. Y. L. Ajay Kumar</td>
+                                <td>9000092589</td>
+                                <td>alits[dot]randd[at]gmail[dot]com </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>
+                                    <div class="instName">
+                                        Balaji College of Pharmacy, Rudrampeta, Alamur
+                                    </div>
+                                    <div class="emailId">
+                                        <strong>Email</strong>: balajicollegeofpharmacy[dot]atp[at]gmail[dot]com
+                                    </div>
+                                    <div class="phNumber">
+                                        <strong>Phone No.</strong>: 08554-232268, 8886630042
+                                    </div>
+                                    <div class="accStatus">
+                                        <strong>Accreditation Status</strong>: No
+                                    </div>
+                                </td>
+                                <td>Pharmacy</td>
+                                <td>Anantapur</td>
+                                <td>Dr. P. Rama Krishna Reddy</td>
+                                <td>7416662229</td>
+                                <td>dr[dot]reddyrk[at]gmail[dot]com</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>
+                                    <div class="instName">
+                                        BIT Institute of Technology
+                                    </div>
+                                    <div class="emailId">
+                                        <strong>Email</strong>: principalbitit[at]gmail[dot]com
+                                    </div>
+                                    <div class="phNumber">
+                                        <strong>Phone No.</strong>: 9000486465, 9440949156
+                                    </div>
+                                    <div class="accStatus">
+                                        <strong>Accreditation Status</strong>: No
+                                    </div>
+                                </td>
+                                <td>Engineering</td>
+                                <td>Anantapur</td>
+                                <td>E. J. Pushpanjali Goud</td>
+                                <td>8500463448</td>
+                                <td>pushpanjali[dot]mba[at]bitit[dot]org</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>
+                                    <div class="instName">
+                                        GATES Institute of Technology,
+                                        NH 44, Gootyanantapuram Village, Gooty, Anantapuramu Dist Andhra Pradesh, 515401
+                                    </div>
+                                    <div class="emailId">
+                                        <strong>Email</strong>: info[at]gatesit[dot]ac[dot]in, principal[at]gatesit[dot]ac[dot]in
+                                    </div>
+                                    <div class="phNumber">
+                                        <strong>Phone No.</strong>: 9490082001, 08552-2200445, 9032894787
+                                    </div>
+                                    <div class="accStatus">
+                                        <strong>Accreditation Status</strong>: Yes
+                                    </div>
+                                    <div class="accStatusContent">
+                                        <strong>CGPA</strong>: 2.81
+                                        <strong>Grade</strong>: B++
+                                        <strong>Valid upto</strong>: 30.04.2024
+                                    </div>
+                                </td>
+                                <td>Engineering</td>
+                                <td>Anantapur</td>
+                                <td>Dr V Ramesh Naik</td>
+                                <td>7396715596</td>
+                                <td>drvrnaik[at]gatesit[dot]ac[dot]in,
+                                    drvrnaik[at]gmail[dot]com</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>
+                                    <div class="instName">
+                                        J.C.N.R.M.Degree College, Tadpatri, Anantapur-515411,
+                                    </div>
+                                    <div class="emailId">
+                                        <strong>Email</strong>: jcnrm123[at]gmail[dot]com
+                                    </div>
+                                    <div class="phNumber">
+                                        <strong>Phone No.</strong>: 9440844276
+                                    </div>
+                                    <div class="accStatus">
+                                        <strong>Accreditation Status</strong>: No
+                                    </div>
+                                </td>
+                                <td>Degree</td>
+                                <td>Anantapur</td>
+                                <td>Syed Noor</td>
+                                <td>9505320650</td>
+                                <td>syednoor[dot]s[at]gmail[dot]com</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>
+                                    <div class="instName">
+                                        JNTUA College of Engineering Anantapuramu
+                                    </div>
+                                    <div class="emailId">
+                                        <strong>Email</strong>: principaljntuacfa[at]gmail[dot]com
+                                    </div>
+                                    <div class="phNumber">
+                                        <strong>Phone No.</strong>: 08554-272098, 9000551425
+                                    </div>
+                                    <div class="accStatus">
+                                        <strong>Accreditation Status</strong>: No
+                                    </div>
+                                </td>
+                                <td>Engineering</td>
+                                <td>Anantapur</td>
+                                <td>Dr. B. Omprakash</td>
+                                <td>9966562990</td>
+                                <td>omprakash1715[dot]mech[at]jntua[dot]ac[dot]in</td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>
+                                    <div class="instName">
+                                        P.V.K.K. Institute of Technology, Anantapuramu
+                                    </div>
+                                    <div class="emailId">
+                                        <strong>Email</strong>: pvkk[dot]aicte[at]gmail[dot]com, principalpvkkit[at]gmail[dot]com
+                                    </div>
+                                    <div class="phNumber">
+                                        <strong>Phone No.</strong>: 8886630027, 9908525396, 9948676999, 8886630032,
+                                        9550616861, 8554248096
+                                    </div>
+                                    <div class="accStatus">
+                                        <strong>Accreditation Status</strong>: No
+                                    </div>
+                                </td>
+                                <td>Engineering</td>
+                                <td>Anantapur</td>
+                                <td>Dr. D.Harshn Vardh&nn</td>
+                                <td>8099998993</td>
+                                <td>research[at]pvkkit[dot]ac[dot]in</td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>
+                                    <div class="instName">
+                                        Raghavendra Institute of Pharmaceutical Education and Research (RIPER),
+                                        Gooty, Anantapur (Dt.)
+                                    </div>
+                                    <div class="emailId">
+                                        <strong>Email</strong>: riperatp[at]rediffmail[dot]com
+                                    </div>
+                                    <div class="phNumber">
+                                        <strong>Phone No.</strong>: 9866098322
+                                    </div>
+                                    <div class="accStatus">
+                                        <strong>Accreditation Status</strong>: Yes
+                                    </div>
+                                    <div class="accStatusContent">
+                                        <strong>CGPA</strong>: 2.77
+                                        <strong>Grade</strong>: B++
+                                        <strong>Valid upto</strong>: 24.05.2021
+                                    </div>
+                                </td>
+                                <td>Pharmacy</td>
+                                <td>Anantapur</td>
+                                <td>Dr. M Vijaya Jyothi</td>
+                                <td>9440158304</td>
+                                <td>drmvjyothiriper[at]gmail[dot]com</td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td>
+                                    <div class="instName">
+                                        S.S.B.N.Degree College (Autonomous), Anantapur (Urban)
+                                    </div>
+                                    <div class="emailId">
+                                        <strong>Email</strong>: bsrkssbnbotany[at]gmail[dot]com
+                                    </div>
+                                    <div class="phNumber">
+                                        <strong>Phone No.</strong>: 9493193488
+                                    </div>
+                                    <div class="accStatus">
+                                        <strong>Accreditation Status</strong>: No
+                                    </div>
+                                </td>
+                                <td>Degree</td>
+                                <td>Anantapur</td>
+                                <td>Dr. D. Sailaja</td>
+                                <td>9908656739</td>
+                                <td>sailajabhushan[at]gmail[dot]com</td>
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td>
+                                    <div class="instName">
+                                        S.V. Degree and PG College, Jesus Nagar, Ananthapuramu
+                                    </div>
+                                    <div class="emailId">
+                                        <strong>Email</strong>: principalsvdcatp[at]gmail[dot]com
+                                    </div>
+                                    <div class="phNumber">
+                                        <strong>Phone No.</strong>: 7981301818
+                                    </div>
+                                    <div class="accStatus">
+                                        <strong>Accreditation Status</strong>: No
+                                    </div>
+                                </td>
+                                <td>Degree</td>
+                                <td>Anantapur</td>
+                                <td>Dr. T.Lakshmi Narasappa</td>
+                                <td>9963916396</td>
+                                <td>edc[at]svdegreecollege[dot]ac[dot]in</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

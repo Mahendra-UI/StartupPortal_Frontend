@@ -1,0 +1,97 @@
+<style>
+    .bodyBreadcrumbs {
+    background-image: url('assets/images/ecosystem/ecosystembg.png');
+}
+</style>
+<section class="bodyBreadcrumbs">
+
+    <div class="container">
+
+        <div class="row breadcrumbsrow align-items-center">
+            <div class="col-md-12">
+                <div class="bodyHeading text-white">
+                    <h1>List of Startups</h1>
+                    <ol class="breadcrumb mb-0">
+                        <li><a routerLink="/home">Home</a></li>
+                        <!-- <li><a style="color: #14e18c;">About AP</a></li> -->
+                        <li><a>Ecosystem</a></li>
+                        <li><a>Startups</a></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="pt-3 pb-4" style="background: aliceblue;">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-8"></div>
+            <div class="col-md-4">
+                <div class="hstack justify-content-between align-items-end pb-2">
+                    <h6 class="mb-0">Total Startups: <span class="badge bg-success">{{ filteredStartups.length }}</span></h6>
+                    <a class="btn btn-info" href="assets/images/ecosystem/startups/list/Startups Incubated.xlsx" target="_blank">
+                        Download Total List
+                    </a>
+                </div>
+                <input type="text" class="form-control" placeholder="Search by name, sector, or location" [(ngModel)]="searchText">
+            </div>
+            <div class="col-md-12">
+                <div class="table-responsive p-3 bg-white">
+                    <table class="table table-bordered w-100 mb-0">
+                        <thead>
+                          <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Startup Name</th>
+                            <th scope="col">Sector</th>
+                            <th scope="col">Focus Industry</th>
+                            <th scope="col">Location</th>
+                            <th scope="col">Contact Person</th>
+                            <th scope="col">Mobile Number</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Logo</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                            <tr
+                            *ngFor="let startup of filteredStartups | paginate: { itemsPerPage: itemsPerPage, currentPage: currentPage }; let i = index"
+                          >
+                            <td>{{ i + 1 + (currentPage - 1) * itemsPerPage }}</td>
+                            <td>{{ startup.startup_name }}</td>
+                            <td>{{ startup.sector }}</td>
+                            <td>{{ startup.focus_industry }}</td>
+                            <td>{{ startup.location_name }}</td>
+                            <td>{{ startup.person_name }}</td>
+
+                            <td>{{ startup.moblie_number }}</td>
+                            <td>{{ startup.email_id }}</td>
+                            <td>
+                              <img *ngIf="startup.company_logo"
+                                [src]="startup.company_logo"
+                                alt="Logo"
+                                class="img-thumbnail"
+                                width="50"
+                                height="50"
+                              />
+                              <ng-container *ngIf="!startup.company_logo">---</ng-container>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <pagination-controls
+      (pageChange)="onPageChange($event)"
+      [maxSize]="5"
+      [autoHide]="true"
+      class="pagination"
+    ></pagination-controls>
+                      <!-- <pagination-controls
+      (pageChange)="currentPage = $event"
+      [maxSize]="5"
+      [autoHide]="true"
+      class="pagination"
+    ></pagination-controls> -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

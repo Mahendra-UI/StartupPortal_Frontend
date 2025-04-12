@@ -1,0 +1,201 @@
+<section class="">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="page_heading">
+            <h4>Grievance | Feedback</h4>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="bread_crumbs float-end">
+            <h6>Dashboard | <span>Grievance | Feedback</span></h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="">
+    <form (ngSubmit)="onSubmit()" class="card form_section" [formGroup]="GrievanceForm">
+  
+      <div class="container">
+        <div class="row form_row">
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="">Type <span class="mandatory">*</span></label> <br>
+              <input type="radio" value="G" name="submissiontype" formControlName="submissiontype" (change)="resettype('G')">&nbsp; Grievance &nbsp;
+              <input type="radio" value="S" name="submissiontype" formControlName="submissiontype" (change)="resettype('S')">&nbsp;
+              Suggestions/Feedback &nbsp;
+            </div>
+          </div>
+          <div class="col-md-8" style="text-align:right;">
+              <button class="btn btn-primary" 
+              (click)="gotogrievancelist()"> Back</button> &nbsp;
+          </div>
+          <div class="col-md-12">
+            <div class="section_heading">
+              <h3>Personal Details</h3>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="">Name <span class="mandatory">*</span></label>
+              <input type="text" class="form-control" formControlName="name">
+              <span class="text-danger"
+                *ngIf="(GrievanceFormControls.name.touched || submitted) && GrievanceFormControls.name.errors?.required">
+                Field is required
+              </span>
+              <span class="text-danger" *ngIf="GrievanceFormControls.name.errors?.pattern">
+                Please enter alphabets only
+            </span>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="">Mobile No <span class="mandatory">*</span></label>
+              <input type="text" class="form-control" formControlName="mobileno" maxlength="10"  (keypress)="numberOnly($event)" >
+              <span class="text-danger"
+              *ngIf="(GrievanceFormControls.mobileno.touched || submitted) && GrievanceFormControls.mobileno.errors?.required">
+              Field is required
+            </span>
+            <span class="text-danger" *ngIf="GrievanceFormControls.mobileno.errors?.minlength">
+              Invalid Mobile Number
+          </span>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="">Email ID <span class="mandatory">*</span></label>
+              <input type="email" class="form-control" formControlName="emailid">
+              <span class="text-danger"
+              *ngIf="(GrievanceFormControls.emailid.touched || submitted) && GrievanceFormControls.emailid.errors?.required">
+              Field is required
+            </span>
+            <span class="text-danger" *ngIf="GrievanceFormControls.emailid.errors?.pattern">
+              Invalid email
+          </span>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="">Pincode <span class="mandatory">*</span></label>
+              <input type="text" class="form-control" formControlName="pincode" maxlength="6"  (keypress)="numberOnly($event)">
+              <span class="text-danger"
+              *ngIf="(GrievanceFormControls.pincode.touched || submitted) && GrievanceFormControls.pincode.errors?.required">
+              Field is required
+            </span>
+            <span class="text-danger" *ngIf="GrievanceFormControls.pincode.errors?.minlength">
+              Invalid Pincode
+          </span>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="">Address <span class="mandatory">*</span></label>
+              <textarea name="" id="" class="form-control" formControlName="address"></textarea>
+              <span class="text-danger"
+              *ngIf="(GrievanceFormControls.address.touched || submitted) && GrievanceFormControls.address.errors?.required">
+              Field is required
+            </span>
+            </div>
+          </div>
+          <div class="col-md-4" *ngIf="GrievanceFormControls.submissiontype.value=='S'">
+            <div class="form-group">
+              <label for="">Suggestions Description <span class="mandatory">*</span></label>
+              <textarea name="" id="" class="form-control" formControlName="suggetiondescription"></textarea>
+              <span class="text-danger"
+              *ngIf="(GrievanceFormControls.suggetiondescription.touched || submitted) && GrievanceFormControls.suggetiondescription.errors?.required">
+              Field is required
+            </span>
+            </div>
+          </div>
+          <div *ngIf="GrievanceFormControls.submissiontype.value=='G'" class="row">
+  
+            <div class="col-md-12">
+              <div class="section_heading">
+                <h3>Grievance Details</h3>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group">
+                <label for="">Grievance Type <span class="mandatory">*</span></label>
+                <select name="" id="" class="form-control" formControlName="grievancetype">
+                  <option value="">--select--</option>
+                  <option *ngFor="let li of grievancelist" value={{li?.id}}> {{li?.grievance_type}}</option>
+                </select>
+                <span class="text-danger"
+                *ngIf="(GrievanceFormControls.grievancetype.touched || submitted) && GrievanceFormControls.grievancetype.errors?.required">
+                Field is required
+              </span>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group">
+                <label for="">Grievance Description <span class="mandatory">*</span></label>
+                <textarea name="" id="" class="form-control" formControlName="grievancedesc"></textarea>
+                <span class="text-danger"
+                *ngIf="(GrievanceFormControls.grievancedesc.touched || submitted) && GrievanceFormControls.grievancedesc.errors?.required">
+                Field is required
+              </span>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group">
+                <label for="">File Upload <span class="mandatory">*</span></label>
+                <input type="file"  accept=".jpg, .jpeg, .png, .pdf" class="form-control" (change)="handleFileInput($event)">
+                <span class="text-danger"
+                *ngIf="(GrievanceFormControls.fileupload.touched || submitted) && GrievanceFormControls.fileupload.errors?.required">
+                Field is required
+              </span>
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="notes">
+  
+                <ul style="list-style-type: number;">
+                  <h5>
+                    Note
+                  </h5>
+                  <li>Only Image and PDF file type is allowed.</li>
+                    <!-- <li>Image size should less than 200kb</li> -->
+                    <li>Upload size should less than 2 MB</li>
+                  <li> Image format/extension should be .png, .jpg, .jpeg, .pdf</li>
+                </ul>
+              </div>
+            </div>
+
+            
+  
+  
+          </div>
+          <div class="form-group form-row">
+            <div class="hstack gap-2">
+                <div>
+                    <img [src]="'data:image/jpg;base64,'+imageBase64" width="100" height="50" alt="" srcset="" />
+                </div>
+                <div>
+                    <button type="button" (click)="loadcaptcha();" class="btn btn-primary btn-block btn-sm"> <i class="fa fa-undo" aria-hidden="true"></i> <small> Refresh</small></button>
+                </div>
+                <div>
+                    <input type="text" class="form-control mt-1" formControlName="captchacode"  maxlength="6" autocomplete="off" placeholder="Enter Captcha" required="required">
+                    <div
+                        *ngIf="(GrievanceFormControls.captchacode.touched || submitted) && GrievanceFormControls.captchacode.invalid">
+                        <span class="text-danger" *ngIf="GrievanceFormControls.captchacode.errors.required">
+                            Captcha is required
+                        </span>
+                    </div>
+                </div>
+        </div>
+       
+    </div>
+          <div class="col-md-12">
+            <div class="action_buttons float-end">
+              <button class="btn btn_submit" type="submit">Submit</button>
+              <!-- <button class="btn btn_reset ms-3" type="button">Reset</button> -->
+            </div>
+          </div>
+        </div>
+      </div>
+  
+    </form>
+  </section>

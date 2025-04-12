@@ -1,0 +1,734 @@
+<section class="py-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="page_heading">
+                    <h4>Incubators Dashboard</h4>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="bread_crumbs float-end">
+                    <h6>Home | <span>Dashboard</span></h6>
+                </div>
+            </div>
+            <hr>
+        </div>
+    </div>
+</section>
+<section class="">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="hstack">
+                    <!-- <h4>Total : <span>1200</span></h4> -->
+                </div>
+            </div>
+            <div class="col-md-12">
+                <ul class="nav nav-tabs" role="tablist">
+                    <li class="nav-item" (click)="getRecordsByStatus(4,1)">
+                        <a class="nav-link active" data-bs-toggle="tab" href="#pending">ALL ({{pendingCnt?.count ? pendingCnt?.count  : '0' }}) </a>
+                    </li>
+                    <!-- <li class="nav-item" (click)="getRecordsByStatus(4,2)">
+                        <a class="nav-link" data-bs-toggle="tab" href="#pending">Reviewed ({{reviewCnt?.count ? reviewCnt?.count  : '0' }})</a>
+                    </li> -->
+                    <!-- <li class="nav-item" (click)="getRecordsByStatus(4,3)">
+                        <a class="nav-link" data-bs-toggle="tab" href="#pending">Approved ({{approveCnt?.count ? approveCnt?.count  : '0' }})</a>
+                    </li>
+                    <li class="nav-item" (click)="getRecordsByStatus(4,4)">
+                        <a class="nav-link" data-bs-toggle="tab" href="#pending">Rejected ({{rejectdCnt?.count ? rejectdCnt?.count  : '0' }})</a>
+                    </li> -->
+                </ul>
+
+                <!-- Tab panes -->
+                <div class="tab-content">
+
+                    <div id="pending" class="container tab-pane active"><br>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered w-100">
+                                        <thead>
+                                            <tr>
+                                                <th>S.No</th>
+                                                <th>Incubator Name</th>
+                                                <th>State</th>
+                                                <th>Submitted Date</th>
+                                                <th>Email</th>
+                                                <th>Mobile Number</th>
+                                                <th>Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr *ngFor="let li of adminIncubatorList | paginate
+                                            : {
+                                                itemsPerPage: tableSize,
+                                                currentPage: page,
+                                                totalItems: count
+                                              };let i=index">
+                                                <td>{{li?.sNo}}</td>
+                                                <td>{{li?.incubator_name}}</td>
+                                                <td>{{li?.state_name}}</td>
+                                                <td>{{li?.inserted_on | date: 'dd/MM/yyyy'}}</td>
+                                                <td>{{li?.contact_email}}</td>
+                                                <td>{{li?.contact_mobile}}</td>
+                                                <td>
+                                                    <button (click)="onClikBindRowData(li)" class="btn btn-primary viewbutton" data-bs-target="#incubatorModal"
+                                                    data-bs-toggle="modal"><i class="fa fa-eye" aria-hidden="true"></i> View</button> &nbsp;
+                                                </td>
+                                            </tr>
+                                            <tr *ngIf="adminIncubatorList.length == 0" class="text-center">
+                                                <td colspan="8" class="text-center">No Records Found</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <div class="d-flex justify-content-end">
+                                        <pagination-controls
+                                          previousLabel="Prev"
+                                          nextLabel="Next"
+                                          (pageChange)="onTableDataChange($event)"
+                                        >
+                                        </pagination-controls>
+                                      </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="reviewed" class="container tab-pane fade"><br>
+                        <h3>reviewed</h3>
+                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+                            laudantium, totam rem aperiam.</p>
+                    </div>
+                    <div id="approved" class="container tab-pane fade"><br>
+                        <h3>Approved</h3>
+                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+                            laudantium, totam rem aperiam.</p>
+                    </div>
+                    <div id="rejected" class="container tab-pane fade"><br>
+                        <h3>Rejected</h3>
+                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+                            laudantium, totam rem aperiam.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--USER PREVIEW Modal -->
+<div data-backdrop="static" class="modal common-modal fade" id="incubatorModal">
+    
+    <div class="modal-dialog modal-xl" [formGroup]="adminForm" >
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header" style="background: none;padding: 0px;border: none;">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                    <i class="fa fa-times"
+                    aria-hidden="true"></i>
+                </button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+
+                <div id="" class="mr-auto ml-auto border px-2">
+                    <div id="firstPDFPrint">                       
+                        <div class="user-preview">
+
+                            <div class="row mt-3 user-preview">
+
+                                <div class="col-md-12 ml-auto mr-auto">
+
+                                    <div class="row">
+
+                                        <div class="col-md-6">
+                                            <div class="form-group d-flex flex-md-row flex-sm-row">
+                                                <div class="col-md-5 col-sm-4 col-12 col-sm-4">
+                                                    <div class="previewLabelName">
+                                                        Incubator Name
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-1">:</div>
+                                                <div class="col-md-6 col-12 col-sm-7">
+                                                    <div class="previewLabelValue">
+                                                        {{bindRowData?.incubator_name}}
+                                                  </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group d-flex flex-md-row flex-sm-row">
+                                                <div class="col-md-5 col-12 col-sm-4">
+                                                    <div class="previewLabelName">
+                                                        Date of Establishment
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-1">:</div>
+                                                <div class="col-md-6 col-12 col-sm-7">
+                                                    <div class="previewLabelValue">
+                                                        {{bindRowData?.establishment_date | date: 'dd/MM/yyyy'}}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group d-flex flex-md-row flex-sm-row">
+                                                <div class="col-md-5 col-12 col-sm-4">
+                                                    <div class="previewLabelName">
+                                                        Current Incubatees
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-1">:</div>
+                                                <div class="col-md-6 col-12 col-sm-7">
+                                                    <div class="previewLabelValue">
+                                                        {{bindRowData?.current_incubates}}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group d-flex flex-md-row flex-sm-row">
+                                                <div class="col-md-5 col-12 col-sm-4">
+                                                    <div class="previewLabelName">
+                                                        Stages
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-1">:</div>
+                                                <div class="col-md-6 col-12 col-sm-7">
+                                                    <div class="previewLabelValue">
+                                                        {{bindRowData?.stage_name}}
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                                <div class="form-group d-flex flex-md-row flex-sm-row">
+                                                    <div class="col-md-5 col-12 col-sm-4">
+                                                        <div class="previewLabelName">
+                                                            Brief
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-1">:</div>
+                                                    <div class="col-md-6 col-12 col-sm-7">
+                                                        <div class="previewLabelValue">
+                                                            {{bindRowData?.brief}}
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group d-flex flex-md-row flex-sm-row">
+                                                <div class="col-md-5 col-12 col-sm-4">
+                                                    <div class="previewLabelName">
+                                                        Programme Duration
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-1">:</div>
+                                                <div class="col-md-6 col-12 col-sm-7">
+                                                    <div class="previewLabelValue">
+                                                        {{bindRowData?.program_duration}}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group d-flex flex-md-row flex-sm-row">
+                                                <div class="col-md-5 col-12 col-sm-4">
+                                                    <div class="previewLabelName">
+                                                        Graduated Incubatees
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-1">:</div>
+                                                <div class="col-md-6 col-12 col-sm-7">
+                                                    <div class="previewLabelValue">
+                                                        {{bindRowData?.graduated_incubates == '1'? 'Yes':'No'}}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group d-flex flex-md-row flex-sm-row" *ngIf="bindRowData?.graduated_incubates == '1'">
+                                                <div class="col-md-5 col-12 col-sm-4 nowrap">
+                                                    <div class="previewLabelName">
+                                                        Graduated Incubatees Count
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-1">:</div>
+                                                <div class="col-md-6 col-12 col-sm-7">
+                                                    <div class="previewLabelValue">
+                                                        {{bindRowData?.graduated_incubatees_count}}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                    <hr />
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group d-flex flex-md-row flex-sm-row">
+                                                <div class="col-md-5 col-12 col-sm-4">
+                                                    <div class="previewLabelName">
+                                                        Industry
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-1">:</div>
+                                                <div class="col-md-6 col-12 col-sm-7">
+                                                    <div class="previewLabelValue">
+                                                        {{bindRowData?.industry_name}}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group d-flex flex-md-row flex-sm-row" *ngIf="bindRowData?.industry_others">
+                                                <div class="col-md-5 col-12 col-sm-4">
+                                                    <div class="previewLabelName">
+                                                        Industry Others
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-1">:</div>
+                                                <div class="col-md-6 col-12 col-sm-7">
+                                                    <div class="previewLabelValue">
+                                                        {{bindRowData?.industry_others}}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="form-group d-flex flex-md-row flex-sm-row">
+                                                <div class="col-md-5 col-12 col-sm-4">
+                                                    <div class="previewLabelName">
+                                                        Interests
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-1">:</div>
+                                                <div class="col-md-6 col-12 col-sm-7">
+                                                    <div class="previewLabelValue">
+                                                        {{bindRowData?.interest_name}}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group d-flex flex-md-row flex-sm-row">
+                                                <div class="col-md-5 col-12 col-sm-4">
+                                                    <div class="previewLabelName">
+                                                        DIPP Empanelment Number
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-1">:</div>
+                                                <div class="col-md-6 col-12 col-sm-7">
+                                                    <div class="previewLabelValue">
+                                                        {{bindRowData?.dipp_implement_number}}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group d-flex flex-md-row flex-sm-row">
+                                                <div class="col-md-5 col-12 col-sm-4">
+                                                    <div class="previewLabelName">
+                                                        Industry Subtype
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-1">:</div>
+                                                <div class="col-md-6 col-12 col-sm-7">
+                                                    <div class="previewLabelValue">
+                                                        {{bindRowData?.sector_name}}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group d-flex flex-md-row flex-sm-row" *ngIf="bindRowData?.sector_subtype_others">
+                                                <div class="col-md-5 col-12 col-sm-4">
+                                                    <div class="previewLabelName">
+                                                        Industry Subtype Others
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-1">:</div>
+                                                <div class="col-md-6 col-12 col-sm-7">
+                                                    <div class="previewLabelValue">
+                                                        {{bindRowData?.sector_subtype_others}}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr />
+                            <div class="row">
+                                <div class="col-md-12 ml-auto mr-auto">
+                                    <h4 class="print form-heading">Contact Info</h4>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group d-flex flex-md-row flex-sm-row">
+                                        <div class="col-md-5 col-12 col-sm-4">
+                                            <div class="previewLabelName">
+                                                Mobile Number
+                                            </div>
+                                        </div>
+                                        <div class="col-md-1">:</div>
+                                        <div class="col-md-6 col-12 col-sm-7">
+                                            <div class="previewLabelValue">
+                                                {{bindRowData?.contact_mobile}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group d-flex flex-md-row flex-sm-row">
+                                        <div class="col-md-5 col-12 col-sm-4">
+                                            <div class="previewLabelName">
+                                                Email
+                                            </div>
+                                        </div>
+                                        <div class="col-md-1">:</div>
+                                        <div class="col-md-6 col-12 col-sm-7">
+                                            <div class="previewLabelValue">
+                                                {{bindRowData?.contact_email}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group d-flex flex-md-row flex-sm-row">
+                                        <div class="col-md-5 col-12 col-sm-4">
+                                            <div class="previewLabelName">
+                                                State
+                                            </div>
+                                        </div>
+                                        <div class="col-md-1">:</div>
+                                        <div class="col-md-6 col-12 col-sm-7">
+                                            <div class="previewLabelValue">
+                                                {{bindRowData?.state_name}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group d-flex flex-md-row flex-sm-row">
+                                        <div class="col-md-5 col-12 col-sm-4">
+                                            <div class="previewLabelName">
+                                                City
+                                            </div>
+                                        </div>
+                                        <div class="col-md-1">:</div>
+                                        <div class="col-md-6 col-12 col-sm-7">
+                                            <div class="previewLabelValue">
+                                                {{bindRowData?.incubator_name}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group d-flex flex-md-row flex-sm-row">
+                                        <div class="col-md-5 col-12 col-sm-4">
+                                            <div class="previewLabelName">
+                                                Application Link
+                                            </div>
+                                        </div>
+                                        <div class="col-md-1">:</div>
+                                        <div class="col-md-6 col-12 col-sm-7">
+                                            <div class="previewLabelValue">
+                                                {{bindRowData?.application_link}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group d-flex flex-md-row flex-sm-row">
+                                        <div class="col-md-5 col-12 col-sm-4">
+                                            <div class="previewLabelName">
+                                                Incuation Location Map
+                                            </div>
+                                        </div>
+                                        <div class="col-md-1">:</div>
+                                        <div class="col-md-6 col-12 col-sm-7">
+                                            <div class="previewLabelValue">
+                                                {{bindRowData?.location}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group d-flex flex-md-row flex-sm-row">
+                                        <div class="col-md-5 col-12 col-sm-4">
+                                            <div class="previewLabelName">
+                                                Incuation Location Address
+                                            </div>
+                                        </div>
+                                        <div class="col-md-1">:</div>
+                                        <div class="col-md-6 col-12 col-sm-7">
+                                            <div class="previewLabelValue">
+                                                {{bindRowData?.location_address}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr />
+                            <div class="row">
+                                <div class="col-md-12 ml-auto mr-auto">
+                                    <h4 class="print form-heading">Point of Contact Info</h4>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group d-flex flex-md-row flex-sm-row">
+                                        <div class="col-md-5 col-12 col-sm-4">
+                                            <div class="previewLabelName">
+                                                Name
+                                            </div>
+                                        </div>
+                                        <div class="col-md-1">:</div>
+                                        <div class="col-md-6 col-12 col-sm-7">
+                                            <div class="previewLabelValue">
+                                                {{bindRowData?.pointofcontact_name}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group d-flex flex-md-row flex-sm-row">
+                                        <div class="col-md-5 col-12 col-sm-4">
+                                            <div class="previewLabelName">
+                                                Mobile Number
+                                            </div>
+                                        </div>
+                                        <div class="col-md-1">:</div>
+                                        <div class="col-md-6 col-12 col-sm-7">
+                                            <div class="previewLabelValue">
+                                                {{bindRowData?.pointofcontact_mobile_number}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group d-flex flex-md-row flex-sm-row">
+                                        <div class="col-md-5 col-12 col-sm-4">
+                                            <div class="previewLabelName">
+                                                Email
+                                            </div>
+                                        </div>
+                                        <div class="col-md-1">:</div>
+                                        <div class="col-md-6 col-12 col-sm-7">
+                                            <div class="previewLabelValue">
+                                                {{bindRowData?.pointofcontact_email}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group d-flex flex-md-row flex-sm-row">
+                                        <div class="col-md-5 col-12 col-sm-4">
+                                            <div class="previewLabelName">
+                                                Role
+                                            </div>
+                                        </div>
+                                        <div class="col-md-1">:</div>
+                                        <div class="col-md-6 col-12 col-sm-7">
+                                            <div class="previewLabelValue">
+                                                {{bindRowData?.pointofcontact_userrole}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group d-flex flex-md-row flex-sm-row">
+                                        <div class="col-md-5 col-12 col-sm-4">
+                                            <div class="previewLabelName">
+                                                Land Line Number
+                                            </div>
+                                        </div>
+                                        <div class="col-md-1">:</div>
+                                        <div class="col-md-6 col-12 col-sm-7">
+                                            <div class="previewLabelValue">
+                                                {{bindRowData?.pointofcontact_landline_number}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group d-flex flex-md-row flex-sm-row">
+                                        <div class="col-md-5 col-12 col-sm-4">
+                                            <div class="previewLabelName">
+                                                Success Stories
+                                            </div>
+                                        </div>
+                                        <div class="col-md-1">:</div>
+                                        <div class="col-md-6 col-12 col-sm-7">
+                                            <div class="previewLabelValue">
+                                                {{bindRowData?.pointofcontact_success_stories}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <ng-container *ngIf="bindRowData?.pointofcontact_success_stories != 'no'"> 
+                                    
+                                    <div class="form-group d-flex flex-md-row flex-sm-row">
+                                        <div class="col-md-5 col-12 col-sm-4">
+                                            <div class="previewLabelName">
+                                                Startup Name
+                                            </div>
+                                        </div>
+                                        <div class="col-md-1">:</div>
+                                        <div class="col-md-6 col-12 col-sm-7">
+                                            <div class="previewLabelValue">
+                                                {{bindRowData?.startup_name}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group d-flex flex-md-row flex-sm-row">
+                                        <div class="col-md-5 col-12 col-sm-4">
+                                            <div class="previewLabelName">
+                                                Website/Mobile App Link
+                                            </div>
+                                        </div>
+                                        <div class="col-md-1">:</div>
+                                        <div class="col-md-6 col-12 col-sm-7">
+                                            <div class="previewLabelValue">
+                                                {{bindRowData?.website}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group d-flex flex-md-row flex-sm-row">
+                                        <div class="col-md-5 col-12 col-sm-4">
+                                            <div class="previewLabelName">
+                                                Entered the incubator in
+                                            </div>
+                                        </div>
+                                        <div class="col-md-1">:</div>
+                                        <div class="col-md-6 col-12 col-sm-7">
+                                            <div class="previewLabelValue">
+                                                {{bindRowData?.entered_the_incubator_in}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group d-flex flex-md-row flex-sm-row">
+                                        <div class="col-md-5 col-12 col-sm-4">
+                                            <div class="previewLabelName">
+                                                Startup India Hub Profile Link
+                                            </div>
+                                        </div>
+                                        <div class="col-md-1">:</div>
+                                        <div class="col-md-6 col-12 col-sm-7">
+                                            <div class="previewLabelValue">
+                                                {{bindRowData?.startup_india_profile_link}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group d-flex flex-md-row flex-sm-row">
+                                        <div class="col-md-5 col-12 col-sm-4">
+                                            <div class="previewLabelName">
+                                                Brief/tagline
+                                            </div>
+                                        </div>
+                                        <div class="col-md-1">:</div>
+                                        <div class="col-md-6 col-12 col-sm-7">
+                                            <div class="previewLabelValue">
+                                                {{bindRowData?.startup_brief}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </ng-container>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 ml-auto mr-auto">
+                                    <h4 class="print form-heading">Uploaded Documents</h4>
+                                </div>
+
+                                <div class="col-md-12 ml-auto mr-auto">
+                                    <div>
+                                        <div class="form-group d-flex flex-md-row flex-sm-row mt-2">
+                                            <div class="col-md-4">Entity/Company Logo</div>
+                                            <div class="col-md-1">:</div>
+                                            <div class="document col-md-7">
+                                                <!-- <button class="btn btn-outline-primary btn-sm">
+                                                    <a class="text-white btn-outline-primary btn btn-primary"
+                                                     (click)="View(bindRowData?.company_logo)" target="_blank" style="cursor: pointer;">
+                                                        <i class="fa fa-eye"></i> View
+                                                    </a>
+                                                </button> &nbsp; -->
+                                                <button class="btn btn-outline-primary btn-sm">
+                                                    <a class="text-white btn-outline-primary btn btn-primary"
+                                                    (click)="downloadFile(bindRowData?.company_logo)" download="company logo" style="cursor: pointer;">
+                                                       <i class="fa fa-download"></i> Download
+                                                   </a>  </button>
+                                            </div>
+                                        </div>
+                                        <ng-container *ngIf="bindRowData?.pointofcontact_success_stories != 'no'"> 
+                                        <div class="form-group d-flex flex-md-row flex-sm-row mt-2">
+                                            <div class="col-md-4">Startup Logo</div>
+                                            <div class="col-md-1">:</div>
+                                            <div class="document col-md-7">
+                                                <!-- <button class="btn btn-outline-primary btn-sm">
+                                                    <a class="text-white btn-outline-primary btn btn-primary"
+                                                     (click)="View(bindRowData?.startup_logo)" target="_blank" style="cursor: pointer;">
+                                                        <i class="fa fa-eye"></i> View
+                                                    </a>
+                                                </button> &nbsp; -->
+                                                <button class="btn btn-outline-primary btn-sm">
+                                                    <a class="text-white btn-outline-primary btn btn-primary"
+                                                    (click)="downloadFile(bindRowData?.startup_logo)" download="startuplogo" style="cursor: pointer;">
+                                                       <i class="fa fa-download"></i> Download
+                                                   </a></button>
+                                            </div>
+                                        </div>
+                                        </ng-container>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+
+
+
+
+
+
+                    </div>
+                    <hr />
+                    <!-- <div class="text-center" style="margin-bottom: 10px;">
+                        <button class="btn btn-info">Download as PDF</button>
+
+                    </div>
+                    <hr /> -->
+
+
+                    <div class="row mb-3"  *ngIf="bindRowData?.application_status == 'Pending'">
+                        <div class="hstack gap-2 justify-content-center">
+                            <!-- <button type="button" (click)="onClickAdminAction('3')" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#innerModal">
+                                Approve
+                            </button> -->
+                            <!-- <button type="button" (click)="onClickAdminAction('2')"  class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#innerModal">
+                                Review
+                            </button> -->
+                            <!-- <button type="button" (click)="onClickAdminAction('4')" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#innerModal">
+                                Reject
+                            </button> -->
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer p-0">
+                <!-- <button type="button" class="btn btn-danger" data-dismiss="modal" (click) = "hide()">Close</button> -->
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<!-- inner modal starts -->
+
+
+<div class="modal fade" id="innerModal" data-backdrop="static" data-keyboard="false" tabindex="-1"
+    aria-labelledby="innerModalLabel" aria-hidden="true">
+    <form>
+    <div class="modal-dialog modal-dialog-centered"  [formGroup]="adminForm" >
+        <div class="modal-content">
+            <div class="modal-header" style="background: none;padding: 0px;border: none;">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                    <i class="fa fa-times"
+                    aria-hidden="true"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="">Comments <span class="mandatory">*</span></label>
+                                <textarea formControlName="comments" class="form-control"></textarea>
+                            </div>
+                            <span class="text-danger"
+                            *ngIf="(adminFormControls.comments.touched || submitted) && adminFormControls.comments.errors?.required">
+                            Comments is required
+                        </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" [disabled]="adminFormControls.comments.errors?.required"  class="btn btn-secondary" (click)="onClkAdminSubmit()"   data-bs-dismiss="modal">Submit</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+</form>
+</div>
+
+
+
+
+
+<!-- inner modal ends -->

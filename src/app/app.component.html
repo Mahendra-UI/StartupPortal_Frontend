@@ -1,0 +1,11 @@
+
+<!-- <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status" *ngIf="loader">
+    <span class="visually-hidden">Loading...</span>
+  </div> -->
+  <!-- *ngIf="!loader" -->
+  <!-- <div class="position-relative left-panel"  *ngIf="show" [class.active]="!menuVisible" >
+    <app-left-panel></app-left-panel>
+</div> -->
+
+<router-outlet></router-outlet>
+<ngx-spinner bdColor = "rgba(0, 0, 0, 0.8)" size = "medium" color = "#fff" type = "square-jelly-box" [fullScreen] = "true"><p style="color: white" > Loading... </p></ngx-spinner>

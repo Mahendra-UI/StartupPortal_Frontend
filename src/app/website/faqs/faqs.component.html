@@ -1,0 +1,359 @@
+<style>
+    .bodyBreadcrumbs {
+        background-image: url('assets/images/gallery/contactusbg.png');
+    }
+</style>
+<section class="bodyBreadcrumbs">
+
+    <div class="container">
+
+        <div class="row breadcrumbsrow align-items-center">
+            <div class="col-md-12">
+                <div class="bodyHeading text-white">
+                    <h1>FAQs
+                    </h1>
+                    <ol class="breadcrumb mb-0">
+                        <li><a routerLink="/home">Home</a></li>
+                        <li><a>Support</a></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5" style="background-color: #F9FBFF;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                <!-- 1. What is Startup Andhra Pradesh Portal? -->
+                                <span [className]="isTranslationTelugu ? 'quesheading' : ''">
+                                    1. {{ 'Faqs.question1' | translate }}
+                                </span>
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <p [className]="isTranslationTelugu ? 'aboutupara' : ''">
+                                    {{ 'Faqs.answer1' | translate }}
+                                    <!-- Startup Andhra Pradesh Portal maintained and operated by AP Innovation Society which
+                                    is the State Nodal Agency for spurring the Startup Ecosystem in the state. The
+                                    Startup Andhra Pradesh Portal (SAAP) is a one-stop platform for all stakeholders
+                                    like Startups, Incubators, Mentors, Investors and aspiring entrepreneurs in the
+                                    Startup ecosystem to interact amongst each other, exchange knowledge and form
+                                    successful partnerships in a highly dynamic environment. -->
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                <span [className]="isTranslationTelugu ? 'quesheading' : ''">
+                                    2. {{ 'Faqs.question2' | translate }}
+                                </span>
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <p [className]="isTranslationTelugu ? 'aboutupara' : ''">
+                                    {{ 'Faqs.answer2' | translate }}
+                                    <!-- An entity shall be considered as a Startup on fulfilling the conditions defined by
+                                    Government of India, vide notification No. G.S.R. 364(E) dated April 11, 2018 as
+                                    modified vide Gazette Notification No. G.S.R. 34(E) dated January 16, 2019 (and as
+                                    may be amended from time to time). In this notification, an entity shall be
+                                    considered as a Startup: -->
+                                </p>
+                                <ul>
+                                    <li [className]="isTranslationTelugu ? 'aboutupara' : ''">
+                                        {{ 'Faqs.point1' | translate }}
+                                        <!-- Upto a period of ten years from the date of incorporation/ registration, if it
+                                        is incorporated as a private limited company (as defined in the Companies Act,
+                                        2013) or registered as a partnership firm (registered under section 59 of the
+                                        Partnership Act, 1932) or a limited liability partnership (under the Limited
+                                        Liability Partnership Act, 2008) in India. -->
+                                    </li>
+                                    <li [className]="isTranslationTelugu ? 'aboutupara' : ''">
+                                        {{ 'Faqs.point2' | translate }}
+                                        <!-- Turnover of the entity for any of the financial years since incorporation/
+                                        registration has not exceeded one hundred crore rupees. -->
+                                    </li>
+                                    <li [className]="isTranslationTelugu ? 'aboutupara' : ''">
+                                        {{ 'Faqs.point3' | translate }}
+                                        <!-- Entity is working towards innovation, development or improvement of products or
+                                        processes or services, or if it is a scalable business model with a high
+                                        potential of employment generation or wealth creation. -->
+                                    </li>
+                                    <li [className]="isTranslationTelugu ? 'aboutupara' : ''">
+                                        {{ 'Faqs.point4' | translate }}
+                                        <!-- Provided that an entity formed by splitting up or reconstruction of an existing
+                                        business shall not be considered a ‘Startup’. -->
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                <span [className]="isTranslationTelugu ? 'quesheading' : ''">
+                                    3. {{ 'Faqs.question3' | translate }}
+                                </span>
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <p [className]="isTranslationTelugu ? 'aboutupara' : ''">
+                                    {{ 'Faqs.answer3' | translate }}
+                                    <!-- There is no need for the Startups registered and recognised under DPIIT to again register in the Startup Andhra Pradesh Portal. Startup Andhra Pradesh Portal has done the API Integration with Startup India therefore the Startups registered with Startup India with a valid DPIIT Registration can login with their existing user id and password. -->
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFour">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                <span [className]="isTranslationTelugu ? 'quesheading' : ''">
+                                    4. {{ 'Faqs.question4' | translate }}
+                                </span>
+                            </button>
+                        </h2>
+                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <p [className]="isTranslationTelugu ? 'aboutupara' : ''">
+                                    {{ 'Faqs.answer4' | translate }}
+                                    <!-- An entity is considered for DPIIT recognition on the following criteria: -->
+                                </p>
+                                <ul>
+                                    <li [className]="isTranslationTelugu ? 'aboutupara' : ''">
+                                        {{ 'Faqs.listpoint1' | translate }}
+                                        <!-- Age of Entity -->
+                                    </li>
+                                    <li [className]="isTranslationTelugu ? 'aboutupara' : ''">
+                                        {{ 'Faqs.listpoint2' | translate }}
+                                        <!-- Entity Type -->
+                                    </li>
+                                    <li [className]="isTranslationTelugu ? 'aboutupara' : ''">
+                                        {{ 'Faqs.listpoint3' | translate }}
+                                        <!-- Annual Turnover -->
+                                    </li>
+                                    <li [className]="isTranslationTelugu ? 'aboutupara' : ''">
+                                        {{ 'Faqs.listpoint4' | translate }}
+                                        <!-- Original Entity -->
+                                    </li>
+                                    <li [className]="isTranslationTelugu ? 'aboutupara' : ''">
+                                        {{ 'Faqs.listpoint5' | translate }}
+                                        <!-- Innovative & Scalable -->
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFive">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                <span [className]="isTranslationTelugu ? 'quesheading' : ''">
+                                    5. {{ 'Faqs.question5' | translate }}
+                                </span>
+                            </button>
+                        </h2>
+                        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <div class="special">
+                                    <ul>
+                                        <li [className]="isTranslationTelugu ? 'aboutupara' : ''">
+                                            {{ 'Faqs.answer5A' | translate }}
+                                            <!-- Certificate of Incorporation or Registration of entity -->
+                                        </li>
+                                        <li [className]="isTranslationTelugu ? 'aboutupara' : ''">
+                                            {{ 'Faqs.answer5B' | translate }}
+                                            <!-- If the startup received any funding, the Proof of Funding need to furnish for DPIIT Certificate of Recognition for Startups -->
+                                        </li>
+                                        <li [className]="isTranslationTelugu ? 'aboutupara' : ''">
+                                            {{ 'Faqs.answer5C' | translate }}
+                                            <!-- Document of awards or recognition received by the entity -->
+                                        </li>
+                                        <li [className]="isTranslationTelugu ? 'aboutupara' : ''">
+                                            {{ 'Faqs.answer5D' | translate }}
+                                            <!-- Document of the patent published by the entity (The patent should be published in the patent journals) -->
+                                        </li>
+                                        <li [className]="isTranslationTelugu ? 'aboutupara' : ''">
+                                            {{ 'Faqs.answer5E' | translate }}
+                                            <!-- A brief description of the nature of the business. The write-up should contain the following details: -->
+                                        </li>
+                                        <ul class="innerUl">
+                                            <li [className]="isTranslationTelugu ? 'aboutupara' : ''">
+                                                {{ 'Faqs.innerlist1' | translate }}
+                                                <!-- Details of how the startup is working towards innovation -->
+                                            </li>
+                                            <li [className]="isTranslationTelugu ? 'aboutupara' : ''">
+                                                {{ 'Faqs.innerlist2' | translate }}
+                                                <!-- Development of products or processes or services -->
+                                            </li>
+                                            <li [className]="isTranslationTelugu ? 'aboutupara' : ''">
+                                                {{ 'Faqs.innerlist3' | translate }}
+                                                <!-- The scalability in terms of employment generation or wealth creation -->
+                                            </li>
+                                        </ul>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingSix">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                <span [className]="isTranslationTelugu ? 'quesheading' : ''">
+                                    6. {{ 'Faqs.question6' | translate }}
+                                </span>
+                            </button>
+                        </h2>
+                        <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <p [className]="isTranslationTelugu ? 'aboutupara' : ''">
+                                    {{ 'Faqs.answer6' | translate }}
+                                    <!-- There is no need to seek any guidance/assistance from any outsider/agency for submitting the Startup Application for DPIIT Registration/Recognition. If your startup is yet to be registered please follow the link for registering:  -->
+                                    <a href="https://services.dpiit.gov.in/lms/memberRegistration" target="_blank"
+                                        [className]="isTranslationTelugu ? 'urllink' : ''">
+                                        https://services.dpiit.gov.in/lms/memberRegistration
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingSeven">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                                <span [className]="isTranslationTelugu ? 'quesheading' : ''">
+                                    7. {{ 'Faqs.question7' | translate }}
+                                </span>
+                            </button>
+                        </h2>
+                        <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <p [className]="isTranslationTelugu ? 'aboutupara' : ''">
+                                    {{ 'Faqs.answer7' | translate }}
+                                    <!-- Through the Startup Andhra Pradesh Portal Mentors, Incubators/Accelerators of both State Funded/ Private funded, Investors can register in the Portal. The system is build to connect you to your relevant stakeholders based on your industry and preferred stage. Under the profile of every enabler there will be an option to “connect/apply”. Upon clicking, a request will be sent to the respective profile for acceptance. Once accepted, you will able to see the enabler as a new connection. -->
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingEight">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                                <span [className]="isTranslationTelugu ? 'quesheading' : ''">
+                                    8. {{ 'Faqs.question8' | translate }}
+                                </span>
+                            </button>
+                        </h2>
+                        <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <p [className]="isTranslationTelugu ? 'aboutupara' : ''">
+                                    {{ 'Faqs.answer8' | translate }}
+                                    <!-- In case if you have any questions or concerns you may call us to our helpline number +91 7396603335 on all working days from 10:00 AM - 05:00 PM -->
+                                </p>
+                                <p [className]="isTranslationTelugu ? 'aboutupara' : ''">
+                                    {{ 'Faqs.answer8part1' | translate }}
+                                    <!-- For further simplifying the process you may please submit your grievance via online
+                                    in our website -->
+                                     <a href="https://apis.ap.gov.in/#/submitgrievance" style="font-size: 14px;text-decoration: none;"
+                                        target="_blank">https://apis.ap.gov.in/#/submitgrievance</a>
+                                </p>
+                                <p [className]="isTranslationTelugu ? 'aboutupara' : ''">
+                                    {{ 'Faqs.answer8part2' | translate }}
+                                     <a href="https://apis.ap.gov.in/#/grievancestatus" style="font-size: 14px;text-decoration: none;"
+                                        target="_blank">https://apis.ap.gov.in/#/grievancestatus</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingNine">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                                <span [className]="isTranslationTelugu ? 'quesheading' : ''">
+                                    9. {{ 'Faqs.question9' | translate }}
+                                </span>
+                            </button>
+                        </h2>
+                        <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <p [className]="isTranslationTelugu ? 'aboutupara' : ''">
+                                    {{ 'Faqs.answer9' | translate }}
+                                    <!-- Upon the submission of your grievance successfully there will be pop up alert stating that the confirmation of grievance application submission with a Tracking Application Number. The same will also be sent to the email id submitted while filling the contact details. With this Tracking Application Number (TAN) the users may check their grievance status. -->
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTen">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+                                <span [className]="isTranslationTelugu ? 'quesheading' : ''">
+                                    10. {{ 'Faqs.question10' | translate }}
+                                </span>
+                            </button>
+                        </h2>
+                        <div id="collapseTen" class="accordion-collapse collapse" aria-labelledby="headingTen"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <p [className]="isTranslationTelugu ? 'aboutupara' : ''">
+                                    {{ 'Faqs.answer10' | translate }}
+                                    <!-- It is our commitment all the grievances received via online addressed within a week. However if the Grievance pertains to the Policy related/ Scheme Related aspects then those grievances shall be resolved within 03-04 Weeks. -->
+                                </p>
+                                <p [className]="isTranslationTelugu ? 'aboutupara' : ''">
+                                    {{ 'Faqs.answer10part1' | translate }}
+                                    <!-- In any given case all the grievances submitted via online in Startup Andhra Pradesh Portal shall be  -->
+                                    <strong [className]="isTranslationTelugu ? 'aboutupara' : ''">
+                                        {{ 'Faqs.answer10part2' | translate }}
+                                        <!-- addressed and resolved within 30 Working Days of duration -->
+                                    </strong>.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingEleven">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">
+                                <span [className]="isTranslationTelugu ? 'quesheading' : ''">
+                                    11. {{ 'Faqs.question11' | translate }}
+                                </span>
+                            </button>
+                        </h2>
+                        <div id="collapseEleven" class="accordion-collapse collapse" aria-labelledby="headingEleven"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <p [className]="isTranslationTelugu ? 'aboutupara' : ''">
+                                    {{ 'Faqs.answer11' | translate }}
+                                    <!-- You may reach the nodal officer assigned for answering the queries for the startups is The Chief Executive Officer of AP Innovation Society (APIS), Government of Andhra Pradesh. -->
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

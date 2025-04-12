@@ -1,0 +1,31 @@
+.swiper-slide .first_banner {
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    color: #fff;
+    max-width: 40%;
+}
+
+.first_banner h2 {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 55px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.first_banner h2:nth-child(3) {
+    background: #008E46;
+    padding: 4px 10px;
+}
+
+.btn_bannerone_register {
+    background-color: #F87900;
+    border: #F87900;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 30px;
+    letter-spacing: 2px;
+    padding: 10px 16px;
+    color: #fff;
+}

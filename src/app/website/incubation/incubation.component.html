@@ -1,0 +1,81 @@
+<style>
+    .bodyBreadcrumbs {
+    background-image: url('assets/images/ecosystem/ecosystembg.png');
+}
+</style>
+<section class="bodyBreadcrumbs">
+
+    <div class="container">
+
+        <div class="row breadcrumbsrow align-items-center">
+            <div class="col-md-12">
+                <div class="bodyHeading text-white">
+                    <h1>Incubation
+                    </h1>
+                    <ol class="breadcrumb mb-0">
+                        <li><a routerLink="/home">Home</a></li>
+                        <li><a>Ecosystem</a></li>
+                        <li><a>Institutional Support</a></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7">
+                <div class="inner_content">
+                    <div class="innerpage_heading">
+                        <p [className]="isTranslationTelugu ? 'aboutupara' : ''">
+                            {{ 'Incubation.incubationparaone' | translate }}
+                        </p>
+                        <p [className]="isTranslationTelugu ? 'aboutupara' : ''">
+                            {{ 'Incubation.incubationparatwo' | translate }}
+                        </p>
+                        <p [className]="isTranslationTelugu ? 'aboutupara' : ''">
+                            {{ 'Incubation.incubationparathree' | translate }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="inner_content">
+                    <div class="innerpage_heading">
+                        <p [className]="isTranslationTelugu ? 'aboutupara' : ''">
+                            {{ 'Incubation.incubationparafour' | translate }}
+                        </p>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <img src="assets/images/ecosystem/institutionalsupport/incubation/incubation_img.png" alt="image"
+                        class="img-fluid">
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="inner_content">
+                    <div class="innerpage_heading">
+                        <h2 [className]="isTranslationTelugu ? 'sectionheadingtelugu' : ''">
+                            {{ 'Incubation.exemptionsheading' | translate }}
+                        </h2>
+                        <p [className]="isTranslationTelugu ? 'aboutupara' : ''">
+                            {{ 'Incubation.exemption1' | translate }}
+                        </p>
+                        <ul>
+                            <li [className]="isTranslationTelugu ? 'aboutupara' : ''">
+                                {{ 'Incubation.exemption2' | translate }}                                
+                            </li>
+                            <li [className]="isTranslationTelugu ? 'aboutupara' : ''">
+                                {{ 'Incubation.exemption3' | translate }}                                
+                            </li>
+                            <li [className]="isTranslationTelugu ? 'aboutupara' : ''">
+                                {{ 'Incubation.exemption4' | translate }}                                
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

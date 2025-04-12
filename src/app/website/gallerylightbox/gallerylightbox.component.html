@@ -1,0 +1,51 @@
+
+<style>
+    .bodyBreadcrumbs {
+    background-image: url('assets/images/gallery/contactusbg.png');
+}
+</style>
+<section class="bodyBreadcrumbs">
+
+    <div class="container">
+
+        <div class="row breadcrumbsrow align-items-center">
+            <div class="col-md-12">
+                <div class="bodyHeading text-white">
+                    <h1>Photo Gallery
+                    </h1>
+                    <ol class="breadcrumb mb-0">
+                        <li><a routerLink="/home">Home</a></li>
+                        <!-- <li><a style="color: #14e18c;">About AP</a></li> -->
+                        <li><a>Media</a></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="py-2">
+    <div class="container-fluid">
+        <div class="card" style="margin: 40px;padding:30px;">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="text-end pb-2">
+                        <a routerLink="/gallery" class="btn btn-success btn-sm">Back to Gallery</a>
+                    </div>
+                    <div *ngIf="itemTitle" class="title">
+                        <h2>Title : <span>{{ itemTitle }}</span></h2>
+                      </div>
+                    <div *ngIf="galleryImages.length > 0">
+                        <ng-image-slider [images]="galleryImages"></ng-image-slider>
+                      </div>
+                      <div *ngIf="galleryImages.length === 0">
+                        No images available for this item.
+                      </div>
+                </div>
+                <div class="col-md-12 d-none">
+                    <!-- <ng-image-slider [images]="imageObject" [interval]="1" [infinite]="true" [autoSlide]="3" [lazyLoading]="true" #nav [imageSize]="{width: 280, height: 220, space: 10}"></ng-image-slider> -->
+                </div>
+    
+            </div>
+        </div>
+    </div>
+</section>

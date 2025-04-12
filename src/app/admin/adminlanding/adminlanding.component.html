@@ -1,0 +1,10 @@
+
+
+<div  [class.active]="menuVisible" [ngClass]="{'content-panel': show}">
+    <app-admin-header (toggle)="toggleMenu()"></app-admin-header>
+    <div class="position-relative left-panel"  *ngIf="show" [class.active]="!menuVisible" >
+        <app-admin-left-panel></app-admin-left-panel>
+    </div>
+    <router-outlet (activate)="onActivate($event)"></router-outlet>
+    <app-user-footer *ngIf="show"></app-user-footer>
+</div>

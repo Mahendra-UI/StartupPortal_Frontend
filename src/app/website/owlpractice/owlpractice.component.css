@@ -1,0 +1,123 @@
+.inner {
+    /* background: navy; */
+    text-align: center;
+    padding: 44px 10px;
+    position: relative;
+    /* cursor: pointer; */
+    margin: 0 0 0 48px;
+    /* height: 67px; */
+    display: flex;
+    align-items: center;
+    /* flex-direction: row-reverse; */
+    border-radius: 6px;
+    white-space: break-spaces;
+    /* justify-content: center; */
+    /* justify-content: space-between; */
+}
+
+.statsDiv .card-count {
+    font-size: 25px;
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 31px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #fff;
+    /* color: #F73100;
+
+
+    background: -webkit-linear-gradient(2.85deg, #F87900 22.83%, #FE4F45 110.35%); */
+    /* -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+}
+.statsDiv {
+    margin-left: 10px;
+}
+
+.statsDiv .card-title {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+
+
+    /* font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: #fff; */
+}
+
+.countsIcon img {
+    /* width: 90%; */
+}
+.countsIcon {
+    /* border-radius: 50%;
+    background-color: #eee;
+    padding: 20px; */
+}
+
+
+
+
+
+
+
+
+
+
+
+/* testimonial section starts */
+
+
+.client {
+    width: 100%;
+    /* height: 100%; */
+    background: #7F00FF;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #E100FF, #7F00FF);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #E100FF, #7F00FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.carousel-icon i {
+  font-size: 5rem;
+  color: rgba(255, 255, 255, 0.3);
+}
+.controls a {
+    /* font-size: 5rem; */
+    color: #fff;
+  }
+.controls a:hover {
+    /* font-size: 5rem; */
+    color: #000;
+  }
+
+.carousel-item i {
+  font-size: 1.6rem;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.t-card {
+  padding: 1.8125rem 1.125rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 1.25rem;
+  color: #fff;
+  height: auto;
+}
+
+.arrow-down {
+  width: 0;
+  height: 0;
+  border-left: 1.5625rem solid transparent;
+  border-right: 1.5625rem solid transparent;
+  border-top: 1.25rem solid rgba(0, 0, 0, 0.5);
+}
+.fa-angle-left:before {
+    font-family: 'FontAwesome';
+}
+.fa-angle-right:before {
+    font-family: 'FontAwesome';
+}
+/* testimonial section ends */

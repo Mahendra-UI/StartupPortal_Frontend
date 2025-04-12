@@ -1,0 +1,349 @@
+<div class="modal-body">
+
+    <div id="" class="mr-auto ml-auto border px-2">
+        <div id="firstPDFPrint">
+            <div class="user-preview">
+                <div class="row mt-3 user-preview">
+                    <div class="col-md-12 ml-auto mr-auto">
+
+                        <div class="row">
+
+                            <div class="col-md-6">
+                                <div class="form-group d-flex flex-md-row flex-sm-row">
+                                    <div class="col-md-5 col-sm-4 col-12 col-sm-4">
+                                        <div class="previewLabelName">
+                                            Full Name
+                                        </div>
+                                    </div>
+                                    <div class="col-md-1">:</div>
+                                    <div class="col-md-6 col-12 col-sm-7">
+                                        <div class="previewLabelValue">
+                                            {{bindRowData?.username}}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group d-flex flex-md-row flex-sm-row">
+                                    <div class="col-md-5 col-12 col-sm-4">
+                                        <div class="previewLabelName">
+                                            Gender
+                                        </div>
+                                    </div>
+                                    <div class="col-md-1">:</div>
+                                    <div class="col-md-6 col-12 col-sm-7">
+                                        <div class="previewLabelValue">
+                                            {{bindRowData?.gender}}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group d-flex flex-md-row flex-sm-row">
+                                    <div class="col-md-5 col-12 col-sm-4">
+                                        <div class="previewLabelName">
+                                            Mobile Number
+                                        </div>
+                                    </div>
+                                    <div class="col-md-1">:</div>
+                                    <div class="col-md-6 col-12 col-sm-7">
+                                        <div class="previewLabelValue">
+                                            {{bindRowData?.phone_number}}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group d-flex flex-md-row flex-sm-row">
+                                    <div class="col-md-5 col-12 col-sm-4">
+                                        <div class="previewLabelName">
+                                            Email
+                                        </div>
+                                    </div>
+                                    <div class="col-md-1">:</div>
+                                    <div class="col-md-6 col-12 col-sm-7">
+                                        <div class="previewLabelValue">
+                                            {{bindRowData?.email}}
+                                        </div>
+                                    </div>
+                                </div>
+
+                                    <div class="form-group d-flex flex-md-row flex-sm-row">
+                                        <div class="col-md-5 col-12 col-sm-4">
+                                            <div class="previewLabelName">
+                                                State
+                                            </div>
+                                        </div>
+                                        <div class="col-md-1">:</div>
+                                        <div class="col-md-6 col-12 col-sm-7">
+                                            <div class="previewLabelValue">
+                                                {{bindRowData?.state_name}}
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group d-flex flex-md-row flex-sm-row">
+                                    <div class="col-md-5 col-12 col-sm-4">
+                                        <div class="previewLabelName">
+                                            City
+                                        </div>
+                                    </div>
+                                    <div class="col-md-1">:</div>
+                                    <div class="col-md-6 col-12 col-sm-7">
+                                        <div class="previewLabelValue">
+                                            {{bindRowData?.city}}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group d-flex flex-md-row flex-sm-row">
+                                    <div class="col-md-5 col-12 col-sm-4">
+                                        <div class="previewLabelName">
+                                            Organization Name
+                                        </div>
+                                    </div>
+                                    <div class="col-md-1">:</div>
+                                    <div class="col-md-6 col-12 col-sm-7">
+                                        <div class="previewLabelValue">
+                                            {{bindRowData?.current_organization_name}}
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group d-flex flex-md-row flex-sm-row">
+                                    <div class="col-md-5 col-12 col-sm-4 nowrap">
+                                        <div class="previewLabelName">
+                                            Designation
+                                        </div>
+                                    </div>
+                                    <div class="col-md-1">:</div>
+                                    <div class="col-md-6 col-12 col-sm-7">
+                                        <div class="previewLabelValue">
+                                            {{bindRowData?.current_designation}}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group d-flex flex-md-row flex-sm-row">
+                                    <div class="col-md-5 col-12 col-sm-4">
+                                        <div class="previewLabelName">
+                                            Stages
+                                        </div>
+                                    </div>
+                                    <div class="col-md-1">:</div>
+                                    <div class="col-md-6 col-12 col-sm-7">
+                                        <div class="previewLabelValue">
+                                            {{bindRowData?.stage_name}}
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group d-flex flex-md-row flex-sm-row">
+                                    <div class="col-md-5 col-12 col-sm-4">
+                                        <div class="previewLabelName">
+                                            Industry/Sector
+                                        </div>
+                                    </div>
+                                    <div class="col-md-1">:</div>
+                                    <div class="col-md-6 col-12 col-sm-7">
+                                        <div class="previewLabelValue">
+                                            {{bindRowData?.industry_name}}
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <hr />
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group d-flex flex-md-row flex-sm-row">
+                                    <div class="col-md-5 col-12 col-sm-4">
+                                        <div class="previewLabelName">
+                                            Specialization/Function (Max. upto 3)
+                                        </div>
+                                    </div>
+                                    <div class="col-md-1">:</div>
+                                    <div class="col-md-6 col-12 col-sm-7">
+                                        <div class="previewLabelValue">
+                                            {{bindRowData?.specialization_name}}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group d-flex flex-md-row flex-sm-row">
+                                    <div class="col-md-5 col-12 col-sm-4">
+                                        <div class="previewLabelName">
+                                            Specialization/Function (Industry/Function max 10)
+                                        </div>
+                                    </div>
+                                    <div class="col-md-1">:</div>
+                                    <div class="col-md-6 col-12 col-sm-7">
+                                        <div class="previewLabelValue">
+                                            {{bindRowData?.function_name}}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group d-flex flex-md-row flex-sm-row">
+                                    <div class="col-md-5 col-12 col-sm-4">
+                                        <div class="previewLabelName">
+                                            How many hours per week
+                                        </div>
+                                    </div>
+                                    <div class="col-md-1">:</div>
+                                    <div class="col-md-6 col-12 col-sm-7">
+                                        <div class="previewLabelValue">
+                                            {{bindRowData?.mentorship_hours_perweek}}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group d-flex flex-md-row flex-sm-row">
+                                    <div class="col-md-5 col-12 col-sm-4">
+                                        <div class="previewLabelName">
+                                            Linkedin URL
+                                        </div>
+                                    </div>
+                                    <div class="col-md-1">:</div>
+                                    <div class="col-md-6 col-12 col-sm-7">
+                                        <div class="previewLabelValue">
+                                            {{bindRowData?.linkedin_profile_url}}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group d-flex flex-md-row flex-sm-row">
+                                    <div class="col-md-5 col-12 col-sm-4">
+                                        <div class="previewLabelName">
+                                            Website URL
+                                        </div>
+                                    </div>
+                                    <div class="col-md-1">:</div>
+                                    <div class="col-md-6 col-12 col-sm-7">
+                                        <div class="previewLabelValue">
+                                            {{bindRowData?.personal_blog_url}}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group d-flex flex-md-row flex-sm-row">
+                                    <div class="col-md-5 col-12 col-sm-4">
+                                        <div class="previewLabelName">
+                                            Short Description
+                                        </div>
+                                    </div>
+                                    <div class="col-md-1">:</div>
+                                    <div class="col-md-6 col-12 col-sm-7">
+                                        <div class="previewLabelValue">
+                                            {{bindRowData?.description}}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr />
+                <div class="row">
+                    <div class="col-md-12 ml-auto mr-auto">
+                        <h4 class="print form-heading">Uploaded Documents</h4>
+                    </div>
+
+                    <div class="col-md-12 ml-auto mr-auto">
+                        <div>
+                            <div class="form-group d-flex flex-md-row flex-sm-row mt-2">
+                                <div class="col-md-4">Profile Picture</div>
+                                <div class="col-md-1">:</div>
+                                <div class="document col-md-7">
+                                    <!-- <button class="btn btn-outline-primary btn-sm">
+                                        <a class="text-white btn-outline-primary btn btn-primary"
+                                         (click)="View(bindRowData?.profile_picture)" target="_blank" style="cursor: pointer;">
+                                            <i class="fa fa-eye"></i> View
+                                        </a>
+                                    </button> &nbsp; -->
+                                    <button class="btn btn-outline-primary btn-sm">
+                                        <a class="text-white btn-outline-primary btn btn-primary"
+                                        (click)="downloadFile(bindRowData?.profile_picture)" download target="_blank" style="cursor: pointer;">
+                                           <i class="fa fa-download"></i> Download
+                                       </a>  </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-12 ml-auto mr-auto">
+                        <div>
+                            <div class="form-group d-flex flex-md-row flex-sm-row mt-2">
+                                <div class="col-md-4">Resume/CV</div>
+                                <div class="col-md-1">:</div>
+                                <div class="document col-md-7">
+                                    <!-- <button class="btn btn-outline-primary btn-sm">
+                                        <a class="text-white btn-outline-primary btn btn-primary"
+                                         (click)="View(bindRowData?.resume_path)" target="_blank" style="cursor: pointer;">
+                                            <i class="fa fa-eye"></i> View
+                                        </a>
+                                    </button> &nbsp; -->
+                                    <button class="btn btn-outline-primary btn-sm">
+                                        <a class="text-white btn-outline-primary btn btn-primary"
+                                        (click)="downloadFile(bindRowData?.resume_path)" download target="_blank" style="cursor: pointer;">
+                                           <i class="fa fa-download"></i> Download
+                                       </a>  </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+
+
+
+
+
+        </div>
+        <hr />
+        <!-- <div class="text-center" style="margin-bottom: 10px;">
+            <button class="btn btn-info">Download as PDF</button>
+
+        </div>
+        <hr /> -->
+
+
+        <div class="row mb-3">
+            <!--  -->
+
+            <div class="col-md-12 text-center">
+                <!-- <button class="btn approve mr-1" data-target="#approved" (click)="modalDisplayApprove = true" data-toggle="modal">Approve</button>
+    <button class="btn review mr-1" data-target="#reviewModal" (click)="modalDisplayReview = true; rejectComments=''" data-toggle="modal">Review</button>
+    <button class="btn reject" data-target="#rejectModal" (click)="modalDisplayReject = true; rejectComments=''" data-toggle="modal">Reject</button> -->
+                <!-- <label for="modal-approve-open" class="btn btn-big approve mr-1">Approve</label>
+                <label for="modal-review-open" class="btn btn-big review mr-1">Under Observation</label>
+                <label for="modal-reject-open" class="btn btn-big reject">Reject</label> -->
+
+                <!-- approve radio button starts -->
+
+                <input type="radio" id="modal-approve-close" name="modal-approve-radio" aria-hidden="true"
+                    hidden />
+                <input type="radio" id="modal-approve-open" name="modal-approve-radio" aria-hidden="true"
+                    hidden />
+
+                <!-- approve radio button ends -->
+
+                <!-- review radio button starts -->
+                <input type="radio" id="modal-review-close" name="modal-review-radio" aria-hidden="true"
+                    hidden />
+                <input type="radio" id="modal-review-open" name="modal-review-radio" aria-hidden="true"
+                    hidden />
+
+                <!-- review radio button ends -->
+
+                <!-- reject radion button starts -->
+
+                <input type="radio" id="modal-reject-close" name="modal-reject-radio" aria-hidden="true"
+                    hidden />
+                <input type="radio" id="modal-reject-open" name="modal-reject-radio" aria-hidden="true"
+                    hidden />
+
+                <!-- reject radio button ends -->
+
+            </div>
+        </div>
+
+
+    </div>
+</div>

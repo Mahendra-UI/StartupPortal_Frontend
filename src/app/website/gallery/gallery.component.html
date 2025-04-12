@@ -1,0 +1,124 @@
+
+<style>
+    .bodyBreadcrumbs {
+    background-image: url('assets/images/gallery/contactusbg.png');
+}
+</style>
+<section class="bodyBreadcrumbs">
+
+    <div class="container">
+
+        <div class="row breadcrumbsrow align-items-center">
+            <div class="col-md-12">
+                <div class="bodyHeading text-white">
+                    <h1>Photo Gallery
+                    </h1>
+                    <ol class="breadcrumb mb-0">
+                        <li><a routerLink="/home">Home</a></li>
+                        <!-- <li><a style="color: #14e18c;">About AP</a></li> -->
+                        <li><a>Media</a></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="">
+    <div class="container">
+        <div class="card" style="margin: 40px 0;padding: 20px;">
+        <div class="row">
+            <div class="col-md-8"></div>
+            <div class="col-md-4">
+                <div class="hstack justify-content-end align-items-end pb-2">
+                    <div>
+                        <h6>Total List: <span class="badge bg-success">{{ filteredData.length }}</span></h6>
+                        <input 
+                        type="text" 
+                        class="form-control" 
+                        placeholder="Search..." 
+                        [(ngModel)]="searchText" (ngModelChange)="onSearch()"
+                      >
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="table-responsive">
+    <!-- <p>Showing {{ (currentPage - 1) * itemsPerPage + 1 }} to 
+        {{ (currentPage * itemsPerPage) > filteredData.length ? filteredData.length : (currentPage * itemsPerPage) }} 
+        of {{ filteredData.length }} items</p> -->
+    <table class="table table-bordered mt-2 w-100">
+
+                        <thead>
+                            <tr>
+                                <th>S.No</th>
+                                <th>Title</th>
+                                <th style="width: 150px;">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let item of filteredData | paginate: { itemsPerPage: itemsPerPage, currentPage: currentPage }; let i = index">
+                                <td>{{ (currentPage - 1) * itemsPerPage + (i + 1) }}</td> <!-- Adjust row number based on pagination -->
+                                <td>{{ item.itemName }}</td>
+                                <td>
+                                    <a class="btn btn-success btn-sm" (click)="navigateToDetails(item.id)">
+                                        View Gallery
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+ <!-- Pagination Controls -->
+ <pagination-controls 
+ (pageChange)="onPageChange($event)" 
+ [maxSize]="5" 
+ [autoHide]="true" 
+ class="pagination">
+</pagination-controls>
+                </div>
+                <!-- <ul>
+                    <li *ngFor="let item of items" (click)="navigateToDetails(item.id)">
+                        {{ item.itemName }}
+                    </li>
+                </ul> -->
+            </div>
+            <div class="col-md-12 d-none">
+                <owl-carousel-o [options]="customOptions">
+                    <ng-template carouselSlide>
+                        <div class="img_box">
+                            <img src="assets/images/about/1.png" alt="" class="img-fluid">
+                        </div>
+                    </ng-template>
+                    <ng-template carouselSlide>
+                        <div class="img_box">
+                            <img src="assets/images/about/2.png" alt="" class="img-fluid">
+                        </div>
+                    </ng-template>
+                    <ng-template carouselSlide>
+                        <div class="img_box">
+                            <img src="assets/images/about/3.png" alt="" class="img-fluid">
+                        </div>
+                    </ng-template>
+                    <ng-template carouselSlide>
+                        <div class="img_box">
+                            <img src="assets/images/about/4.png" alt="" class="img-fluid">
+                        </div>
+                    </ng-template>
+                
+                    <ng-template carouselSlide>
+                        <div class="img_box">
+                            <img src="assets/images/about/3.png" alt="" class="img-fluid">
+                        </div>
+                    </ng-template>
+                
+                    <ng-template carouselSlide>
+                        <div class="img_box">
+                            <img src="assets/images/about/2.png" alt="" class="img-fluid">
+                        </div>
+                    </ng-template>
+                </owl-carousel-o>
+            </div>
+        </div>
+        </div>
+    </div>
+
+</section>

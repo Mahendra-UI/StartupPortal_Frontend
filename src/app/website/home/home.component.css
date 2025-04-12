@@ -1,0 +1,351 @@
+.innerpage_heading ul li {
+    /* font-size: 16px;
+    font-weight: 400;
+    line-height: 34px;
+    letter-spacing: 0em;
+    text-align: left; */
+    /* color: #4A4A4A; */
+    line-height: 30px;
+}
+.innerpage_heading ul li a {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: 0em;
+    text-align: left;
+    text-decoration: none;
+    /* color: #4A4A4A; */
+}
+.innerpage_heading ul li::marker {
+    color: #0da786;
+}
+
+
+.breakingNews {
+    width: 100%;
+    background: #FFF;
+    position: relative;
+    border: solid 2px #00b49d;
+    overflow: hidden;
+  }
+  .breakingNews > .bn-title {
+    width: auto;
+    height: 40px;
+    display: inline-block;
+    /* background: #2096cd; */
+    position: relative;
+    z-index: 9;
+  }
+  .bn-red > .bn-title {
+    background: #00b49d;
+  }
+  .breakingNews > .bn-title > h2 {
+    display: inline-block;
+    margin: 0;
+    padding: 0 20px;
+    line-height: 40px;
+    font-size: 20px;
+    color: #FFF;
+    height: 40px;
+    box-sizing: border-box;
+  }
+  .breakingNews > .bn-title > span {
+    width: 0;
+    position: absolute;
+    right: -10px;
+    top: 10px;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 0 10px 10px;
+    /* border-color: transparent transparent transparent #2096cd; */
+  }
+  .bn-red > .bn-title > span {
+    border-color: transparent transparent transparent #00b49d;
+  }
+  .breakingNews > ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: absolute;
+    left: 210px;
+    top: 0;
+    right: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+  .breakingNews > ul > li {
+    position: absolute;
+    height: 40px;
+    width: 100%;
+    line-height: 40px;
+  }
+  .breakingNews a {
+    text-decoration: none;
+    color: #0d6efd;
+  }
+
+
+
+
+
+
+
+
+
+.profiles_section {
+    position: absolute;
+    top: 15%;
+    left: 8%;
+}
+
+.profiles {
+    color: #fff;
+}
+
+/* stats starts */
+
+.statsDiv .card-count {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 37px;
+    letter-spacing: 0em;
+    text-align: left;
+    background: -webkit-linear-gradient(2.85deg, #F87900 22.83%, #FE4F45 110.35%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.statsDiv .card-title {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #fff;
+}
+
+
+.grid-box {
+    /* height: 67px; */
+    display: flex;
+    align-items: center;
+    /* flex-direction: row-reverse; */
+    border-radius: 6px;
+    justify-content: center;
+    /* justify-content: space-between; */
+}
+
+.statsRow .col-md-3 {
+    padding-top: 20px;
+}
+
+.grid-box .statsDiv {
+    padding-left: 10px;
+}
+
+/* stats ends */
+
+/* impact box css starts */
+
+.impact_box {
+    background: #F2F6FF;
+    display: block;
+    background-image: linear-gradient(to left,
+            transparent,
+            transparent 50%,
+            #009BC9 50%,
+            #009BC9);
+    background-position: 100% 0;
+    background-size: 200% 100%;
+    transition: all .25s ease-in;
+    padding: 15px;
+    border-bottom: 3px solid #009BC9;
+}
+
+.impact_box p {
+    margin-bottom: 0;
+}
+
+.impact_box:hover {
+    background-position: 0 0;
+    color: #fff;
+}
+
+.count_value img {
+    position: absolute;
+    right: 0;
+    top: 10%;
+}
+
+/* impact box css ends */
+
+
+
+
+
+/* about us starts */
+
+.about_us {
+    background: #F1F8FF;
+}
+
+.about_us .section_title h2 {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 44px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #193567;
+}
+
+.about_us .section_title h2::before {
+    content: "";
+    width: 50px;
+    height: 2px;
+    display: inline-block;
+    background: #DE354C;
+    margin: 4px;
+    top: -6px;
+    position: relative;
+}
+
+.about_gallery {
+    /* display: flex; */
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.about_gallery img {
+    margin-bottom: 20px;
+    border-radius: 6px;
+}
+
+.about_us .about_content p {
+    /* font-size: 18px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 0em;
+    text-align: left; */
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #444;
+}
+
+.read_more a {
+    background: linear-gradient(to right, #F87900 0%, #FE4F45 100%);
+    color: #fff;
+}
+
+/* about us ends */
+
+.latestNews {
+    margin-top: 10px;
+}
+
+.latestNews ul i {
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 14px;
+    /* color: #1acc8d; */
+    /* color: #283290; */
+    color: #fff;
+    line-height: 1.8;
+}
+
+.latestNews ul li {
+    padding-left: 28px;
+    position: relative;
+    font-size: 14px;
+    margin-bottom: 14px;
+    color: #fff;
+    align-items: center;
+}
+
+.latestNews ul li a {
+    color: #fff;
+    margin-left: 6px;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: left;
+    text-decoration: none;
+}
+
+.latestNews ul {
+    list-style: none;
+    padding: 0;
+}
+
+.latestnewsHeading {
+    /* background: #283290; */
+    color: #fff;
+    /* padding: 0px 12px; */
+    padding: 0;
+    border-bottom: 2px solid #fff;
+}
+
+.nav-tabs .nav-link.active {
+    color: #fff;
+}
+
+.nav-tabs .nav-link {
+    color: #fff;
+    background: #009BC9
+}
+
+.head h4 {
+    color: #fff;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 30px;
+    letter-spacing: 0em;
+    text-align: left;
+
+}
+
+.head h4 {
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 44px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #fff;
+}
+
+.head h4::before {
+    content: "";
+    width: 50px;
+    height: 2px;
+    display: inline-block;
+    background: #DE354C;
+    margin: 4px;
+    top: -6px;
+    position: relative;
+}
+
+.view_all {
+    border: 1px solid #fff;
+    color: #fff;
+}
+
+.notifications_list ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+.notifications_list ul li {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-bottom: 8px;
+}
+.notifications_list ul li::marker {
+    color: #fff;
+}

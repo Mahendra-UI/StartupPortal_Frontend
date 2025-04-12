@@ -1,0 +1,194 @@
+
+<style>
+    .bodyBreadcrumbs {
+    background-image: url('assets/images/ecosystem/ecosystembg.png');
+}
+</style>
+<section class="bodyBreadcrumbs">
+
+    <div class="container">
+
+        <div class="row breadcrumbsrow align-items-center">
+            <div class="col-md-12">
+                <div class="bodyHeading text-white">
+                    <h1>Startup Definition
+                    </h1>
+                    <ol class="breadcrumb mb-0">
+                        <li><a routerLink="/home">Home</a></li>
+                        <!-- <li><a style="color: #14e18c;">About AP</a></li> -->
+                        <li><a>Ecosystem</a></li>
+                        <li><a>Startups</a></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="inner_content">
+                    <p>
+                        To streamline the recognition process and reduce the administrative burden on startups operating within the state of Andhra Pradesh, it is hereby informed that the state has formally adopted the definition of a startup as issued by the Department for Promotion of Industry and Internal Trade (DPIIT).
+                    </p>
+                    <p>
+                        <strong>According to DPIIT, a startup is defined as :</strong>
+                    </p>
+                </div>
+                <div class="inner_content">
+                    <div class="innerpage_heading">
+                        <ul>
+                            <li>
+                                A company that is incorporated as a Private Limited Company, Partnership firm, or Limited Liability Partnership (llp).
+                            </li>
+                            <li>
+                                It must fulfill the following eligibility criteria:
+                                <ul>
+                                    <li>
+                                        <strong>Incorporation Age :</strong> The company must be incorporated within the last 10 years.                                        
+                                    </li>
+                                    <li>
+                                        <strong>Turnover :</strong> The company’s annual turnover must be less than ₹100 crore in any of the previous financial years.                                        
+                                    </li>
+                                    <li>
+                                        <strong>Innovation :</strong> The company must be working on improving or developing products, services, or processes.
+                                    </li>
+                                    <li>
+                                        <strong>Scalability :</strong> The company must have a scalable business model capable of creating wealth and jobs.
+                                    </li>
+                                    <li>
+                                        <strong>Independence :</strong> The company must not be formed as a result of splitting up or restructuring an existing business.
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="inner_content">
+                    <p><strong>Recognition Process :</strong> </p>
+                    <p>
+                        Startups registered in the state of Andhra Pradesh with a valid DPIIT Recognition Number are automatically deemed recognized as startups under the State Startup Policy. No additional registration or formalities are required for such startups to be recognized as Startups of Andhra Pradesh.
+                    </p>
+                    <p>
+                        <strong>
+                            Additional Support To further ease the burden on startups:
+                        </strong>
+                    </p>
+                    <div class="inner_content">
+                        <div class="innerpage_heading">
+                            <ul>
+                                <li>
+                                    Startups with DPIIT Login can directly login to AP Startup One Portal since the Single Sign On (SSO) API Integration with Startup India Portal completed by AP Innovation Society.
+                                </li>
+                                <li>
+                                    This step is aimed at reducing duplication and enabling startups to focus on their growth and innovation without administrative hurdles
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="py-5 d-none">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="inner_content">
+                    <p [className]="isTranslationTelugu ? 'aboutupara' : ''">
+                        {{ 'Startupdefinition.startupcontent1' | translate }}
+                        <!-- Any entity willing to get recognized as a startup in Andhra Pradesh shall fulfill all the
+                        below-mentioned eligibility criteria -->
+                    </p>
+                    <p [className]="isTranslationTelugu ? 'aboutupara' : ''">
+                        {{ 'Startupdefinition.startupcontent2' | translate }}
+                        <!-- The Startup should be an entity incorporated as -->
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="inner_content">
+                    <div class="innerpage_heading">
+                       
+                        <ul>
+                            <li [className]="isTranslationTelugu ? 'aboutupara' : ''">
+                                <!-- A private limited company (as per the Companies Act 2013) OR -->
+                                {{ 'Startupdefinition.startupli1' | translate }} 
+                            </li>
+                            <li [className]="isTranslationTelugu ? 'aboutupara' : ''">
+                                {{ 'Startupdefinition.startupli2' | translate }} 
+
+                                <!-- Registered as a partnership firm (under the Partnership Act, 1932) OR -->
+                            </li>
+                            <li [className]="isTranslationTelugu ? 'aboutupara' : ''">
+                                {{ 'Startupdefinition.startupli3' | translate }}
+                                <!-- A limited liability partnership (under the Limited Liability Partnership Act, 2008) OR -->
+                            </li>
+                            <li [className]="isTranslationTelugu ? 'aboutupara' : ''">
+                                {{ 'Startupdefinition.startupli4' | translate }}
+                                <!-- One Person Company (under Section 2 (62) of the Companies Act, 2013) OR -->
+                            </li>
+                            <li [className]="isTranslationTelugu ? 'aboutupara' : ''">
+                                {{ 'Startupdefinition.startupli5' | translate }}
+                                <!-- Sole Proprietorship with Udyog Aadhaar under the Ministry of MSME/ GST registration in
+                                Andhra Pradesh OR -->
+                            </li>
+                            <li [className]="isTranslationTelugu ? 'aboutupara' : ''">
+                                {{ 'Startupdefinition.startupli6' | translate }}
+                                <!-- The startup should have been incorporated/registered in Andhra Pradesh or should operate
+                                from Andhra Pradesh and employs at least 75 percent of its workforce from Andhra Pradesh
+                                with valid Labour License registered with Government of Andhra Pradesh AND -->
+                            </li>
+                            <li [className]="isTranslationTelugu ? 'aboutupara' : ''">
+                                {{ 'Startupdefinition.startupli7' | translate }}
+                                <!-- An entity shall be considered as a startup up to 10 years from the date of its
+                                incorporation AND -->
+                            </li>
+                            <li [className]="isTranslationTelugu ? 'aboutupara' : ''">
+                                {{ 'Startupdefinition.startupli8' | translate }}
+                                <!-- Turnover should be less than INR 100 Crores in any of the previous financial years AND -->
+                            </li>
+                            <li [className]="isTranslationTelugu ? 'aboutupara' : ''">
+                                {{ 'Startupdefinition.startupli9' | translate }}
+                                <!-- Such an entity should not be an extension of existing family business; or formed by
+                                splitting up or reconstruction of a business already in existence AND -->
+                            </li>
+                            <li [className]="isTranslationTelugu ? 'aboutupara' : ''">
+                                {{ 'Startupdefinition.startupli10' | translate }}
+                                <!-- The Startup should be working towards innovation / improvement of existing products,
+                                services and processes and should have the potential to generate employment / create
+                                wealth -->
+                            </li>
+                            <li [className]="isTranslationTelugu ? 'aboutupara' : ''">
+                                {{ 'Startupdefinition.startupli11' | translate }}
+                                <!-- An entity formed by splitting up or reconstruction of an existing business shall not be
+                                considered a Startup -->
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="inner_content">
+                    <p [className]="isTranslationTelugu ? 'aboutupara' : ''">
+                        {{ 'Startupdefinition.innercontent' | translate }}
+                        <!-- This is the broad definition for registering/recognizing the startups in Andhra Pradesh which is
+                        intended to support spur innovation and entrepreneurship ecosystem across the State. However we
+                        encourage startups from Andhra Pradesh to follow Government of India (GOI) norms that define a
+                        startup to leverage and access benefits and incentives offered by GOI. In case, if any entity
+                        has already registered/recognised as startup by Department for Promotion of Industry and
+                        Internal Trade (DPIIT) having its registration address from any of the districts in Andhra
+                        Pradesh then that particular startup is automatically deemed to be recognised as Andhra Pradesh
+                        Startup. -->
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

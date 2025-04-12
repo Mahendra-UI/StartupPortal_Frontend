@@ -1,0 +1,462 @@
+<section class="py-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="page_heading">
+                    <h4>Grievance | Feedback List</h4>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="bread_crumbs float-end">
+                    <h6>Home | <span>Dashboard</span></h6>
+                </div>
+            </div>
+            <hr>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="col-md-12" style="text-align:right">
+
+
+                    <button class="btn btn-primary" (click)="gotogrievance()"><i class="fa fa-plus"
+                            aria-hidden="true"></i> Add</button> &nbsp;
+                </div>
+                <ul class="nav nav-tabs" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" data-bs-toggle="tab" href="#grievance">Grievance</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="tab" href="#suggestions">Suggestions</a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+
+                    <div id="grievance" class="container tab-pane active"><br>
+                        <form (ngSubmit)="getgrievance_list()" class="form_section"
+                            [formGroup]="GrievanceForm">
+                            <div class="row mb-2">
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label for="">Grievance Type</label>
+                                        <select name="" id="" class="form-select" formControlName="grievancetype">
+                                            <option value="0" selected="selected">All</option>
+                                            <option *ngFor="let li of grievancelist" value={{li?.id}}>
+                                                {{li?.grievance_type}}</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label for="">Status</label>
+                                        <select name="" id="" class="form-select" formControlName="grievancestatus">
+                                            <option value="99" selected="selected">All</option>
+                                            <option value="0">Pending</option>
+                                            <option value="1">Completed</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="mt-4">
+                                        <button class="btn btn-primary">Submit</button> &nbsp;
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered w-100">
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+    
+                                                <th>Track No</th>
+                                                <th>Name</th>
+                                                <th>Mobile No.</th>
+                                                <th>Griencetype</th>
+                                                <th>Submitted Date</th>
+                                                <th>Status</th>
+                                                <th>Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr *ngFor="let li of grievancedatalist;let i=index;">
+                                                <td>{{i+1}}</td>
+                                                <td>{{li.tracking_id}}</td>
+                                                <td>{{li.name}}</td>
+                                                <td>{{li.mobile_no}}</td>
+                                                <td>{{li.grievance_type}}</td>
+                                                <td>{{li.inserted_on | date: 'dd/MM/yyyy'}}</td>
+                                                <td><span class="badge bg-primary">{{li.application_status}}</span></td>
+                                                <td>
+                                                    <button class="btn btn-primary viewbutton"
+                                                        (click)="onClikBindRowData(li)" data-bs-target="#grievanceViewModal"
+                                                        data-bs-toggle="modal"><i class="fa fa-eye" aria-hidden="true"></i>
+                                                        View</button> &nbsp;
+                                                </td>
+                                            </tr>
+                                            <tr *ngIf="grievancedatalist.length == 0" class="text-center">
+                                                <td colspan="8" class="text-center">No Records Found</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div id="suggestions" class="container tab-pane fade"><br>
+                        <table class="table table-bordered w-100">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Name</th>
+                                    <th>Mobile No.</th>
+                                    <th>Email</th>
+                                    <th>Submitted Date</th>
+
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let li of feedbackdatalist;let i=index;">
+                                    <td>{{i+1}}</td>
+                                    <td>{{li.name}}</td>
+                                    <td>{{li.mobile_no}}</td>
+                                    <td>{{li.email_id}}</td>
+                                    <td>{{li.inserted_on | date: 'dd/MM/yyyy'}}</td>
+                                    <td>
+                                        <button class="btn btn-primary viewbutton" (click)="onClikBindfeedbackData(li)"
+                                            data-bs-target="#suggetionsViewModal" data-bs-toggle="modal"><i
+                                                class="fa fa-eye" aria-hidden="true"></i> View</button> &nbsp;
+                                    </td>
+                                </tr>
+                                <tr *ngIf="feedbackdatalist.length == 0" class="text-center">
+                                    <td colspan="6" class="text-center">No Records Found</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Greivacne preview modal starts -->
+
+<div data-backdrop="static" class="modal common-modal fade" id="grievanceViewModal">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header" style="background: none;padding: 0px;border: none;">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                    <i class="fa fa-times"
+                    aria-hidden="true"></i>
+                </button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 ml-auto mr-auto">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h4 class="print form-heading">Grievance Details</h4>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group d-flex flex-md-row flex-sm-row">
+                                        <div class="col-md-5 col-12 col-sm-4">
+                                            <div class="previewLabelName">
+                                                Grievance Type
+                                            </div>
+                                        </div>
+                                        <div class="col-md-1">:</div>
+                                        <div class="col-md-6 col-12 col-sm-7">
+                                            <div class="previewLabelValue">
+                                                {{bindRowData?.grievance_type}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group d-flex flex-md-row flex-sm-row">
+                                        <div class="col-md-5 col-12 col-sm-4">
+                                            <div class="previewLabelName">
+                                                Grievance Description
+                                            </div>
+                                        </div>
+                                        <div class="col-md-1">:</div>
+                                        <div class="col-md-6 col-12 col-sm-7">
+                                            <div class="previewLabelValue">
+                                                {{bindRowData?.grievance_description}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr />
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h4 class="print form-heading">Personal Details</h4>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-group d-flex flex-md-row flex-sm-row">
+                                        <div class="col-md-5 col-12 col-sm-4">
+                                            <div class="previewLabelName">
+                                                Name
+                                            </div>
+                                        </div>
+                                        <div class="col-md-1">:</div>
+                                        <div class="col-md-6 col-12 col-sm-7">
+                                            <div class="previewLabelValue">
+                                                {{bindRowData?.name}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group d-flex flex-md-row flex-sm-row">
+                                        <div class="col-md-5 col-12 col-sm-4">
+                                            <div class="previewLabelName">
+                                                Mobile No.
+                                            </div>
+                                        </div>
+                                        <div class="col-md-1">:</div>
+                                        <div class="col-md-6 col-12 col-sm-7">
+                                            <div class="previewLabelValue">
+                                                {{bindRowData?.mobile_no}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group d-flex flex-md-row flex-sm-row">
+                                        <div class="col-md-5 col-12 col-sm-4">
+                                            <div class="previewLabelName">
+                                                Email
+                                            </div>
+                                        </div>
+                                        <div class="col-md-1">:</div>
+                                        <div class="col-md-6 col-12 col-sm-7">
+                                            <div class="previewLabelValue">
+                                                {{bindRowData?.email_id}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group d-flex flex-md-row flex-sm-row">
+                                        <div class="col-md-5 col-12 col-sm-4">
+                                            <div class="previewLabelName">
+                                                Pincode
+                                            </div>
+                                        </div>
+                                        <div class="col-md-1">:</div>
+                                        <div class="col-md-6 col-12 col-sm-7">
+                                            <div class="previewLabelValue">
+                                                {{bindRowData?.pin_code}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group d-flex flex-md-row flex-sm-row">
+                                        <div class="col-md-5 col-12 col-sm-4">
+                                            <div class="previewLabelName">
+                                                Address
+                                            </div>
+                                        </div>
+                                        <div class="col-md-1">:</div>
+                                        <div class="col-md-6 col-12 col-sm-7">
+                                            <div class="previewLabelValue">
+                                                {{bindRowData?.address}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group d-flex flex-md-row flex-sm-row">
+                                        <div class="col-md-2 col-12 col-sm-2">
+                                            <div class="previewLabelName">
+                                                Comments
+                                            </div>
+                                        </div>
+                                        <div class="col-md-1">:</div>
+                                        <div class="col-md-10 col-12 col-sm-10">
+                                            <div class="previewLabelValue">
+                                                {{bindRowData?.comment_by_admin}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h4 class="print form-heading">Attachments</h4>
+                                </div>
+                                <div class="form-group d-flex flex-md-row flex-sm-row">
+                                    <div class="col-md-5 col-12 col-sm-4">
+                                        <div class="previewLabelName">
+                                            Grievance Document
+                                        </div>
+                                    </div>
+                                    <div class="col-md-1">:</div>
+                                    <div class="col-md-6 col-12 col-sm-7">
+                                        <a class="text-white btn-outline-primary btn btn-primary" (click)="downloadFile(bindRowData?.file_path)" target="_blank" style="cursor: pointer;">
+                                            <i class="fa fa-download"></i> Download
+                                        </a>
+                                        <!-- <a target="_self" (click)="View(bindRowData?.file_path)">View</a> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer p-0">
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Grievance modal ends -->
+
+
+<!-- Suggetions preview modal starts -->
+
+<div data-backdrop="static" class="modal common-modal fade" id="suggetionsViewModal">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header" style="background: none;padding: 0px;border: none;">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                    <i class="fa fa-times"
+                    aria-hidden="true"></i>
+                </button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 ml-auto mr-auto">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h4 class="print form-heading">Suggestions Details</h4>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group d-flex flex-md-row flex-sm-row">
+                                        <div class="col-md-5 col-12 col-sm-4">
+                                            <div class="previewLabelName">
+                                                Suggestions Description
+                                            </div>
+                                        </div>
+                                        <div class="col-md-1">:</div>
+                                        <div class="col-md-6 col-12 col-sm-7">
+                                            <div class="previewLabelValue">
+                                                {{bindfeedbackData?.suggestions_description}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr />
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h4 class="print form-heading">Personal Details</h4>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-group d-flex flex-md-row flex-sm-row">
+                                        <div class="col-md-5 col-12 col-sm-4">
+                                            <div class="previewLabelName">
+                                                Name
+                                            </div>
+                                        </div>
+                                        <div class="col-md-1">:</div>
+                                        <div class="col-md-6 col-12 col-sm-7">
+                                            <div class="previewLabelValue">
+                                                {{bindfeedbackData?.name}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group d-flex flex-md-row flex-sm-row">
+                                        <div class="col-md-5 col-12 col-sm-4">
+                                            <div class="previewLabelName">
+                                                Mobile No.
+                                            </div>
+                                        </div>
+                                        <div class="col-md-1">:</div>
+                                        <div class="col-md-6 col-12 col-sm-7">
+                                            <div class="previewLabelValue">
+                                                {{bindfeedbackData?.mobile_no}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group d-flex flex-md-row flex-sm-row">
+                                        <div class="col-md-5 col-12 col-sm-4">
+                                            <div class="previewLabelName">
+                                                Email
+                                            </div>
+                                        </div>
+                                        <div class="col-md-1">:</div>
+                                        <div class="col-md-6 col-12 col-sm-7">
+                                            <div class="previewLabelValue">
+                                                {{bindfeedbackData?.email_id}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group d-flex flex-md-row flex-sm-row">
+                                        <div class="col-md-5 col-12 col-sm-4">
+                                            <div class="previewLabelName">
+                                                Pincode
+                                            </div>
+                                        </div>
+                                        <div class="col-md-1">:</div>
+                                        <div class="col-md-6 col-12 col-sm-7">
+                                            <div class="previewLabelValue">
+                                                {{bindfeedbackData?.pin_code}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group d-flex flex-md-row flex-sm-row">
+                                        <div class="col-md-5 col-12 col-sm-4">
+                                            <div class="previewLabelName">
+                                                Address
+                                            </div>
+                                        </div>
+                                        <div class="col-md-1">:</div>
+                                        <div class="col-md-6 col-12 col-sm-7">
+                                            <div class="previewLabelValue">
+                                                {{bindfeedbackData?.address}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer p-0">
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Suggetions modal ends -->
