@@ -77,4 +77,57 @@ careersList = [
     });
   }
 
+  hexToBase64(hex: string): string {
+    const cleanHex = hex.replace(/\\x/g, ''); // remove \x
+    const bytes = new Uint8Array(cleanHex.match(/.{1,2}/g)!.map(byte => parseInt(byte, 16)));
+    let binary = '';
+    bytes.forEach(b => binary += String.fromCharCode(b));
+    return btoa(binary); // encode to base64
+  }
+  
+  
+  downloadCvFile(applicantId: number) {
+    this.registerService.getApplicantDetailsById(applicantId).subscribe({
+      next: (res: any) => {
+        const hex = res.data[0].cvfile;
+        const base64 = this.hexToBase64(hex);
+        const fileName = `${res.data[0].applicantname}_Resume.pdf`;
+        this.downloadBase64File(base64, fileName);
+      },
+      error: () => {
+        Swal.fire('Error', 'Failed to fetch applicant details', 'error');
+      }
+    });
+  }
+  
+  downloadBase64File(base64: string, fileName: string) {
+    const byteCharacters = atob(base64);
+    const byteNumbers = Array.from(byteCharacters).map(c => c.charCodeAt(0));
+    const byteArray = new Uint8Array(byteNumbers);
+  
+    // 👉 Detect MIME type by inspecting first few bytes
+    let mimeType = 'application/octet-stream';
+    if (base64.startsWith('/9j')) mimeType = 'image/jpeg';
+    else if (base64.startsWith('iVBOR')) mimeType = 'image/png';
+    else if (base64.startsWith('JVBER')) mimeType = 'application/pdf';
+  
+    const extensionMap: any = {
+      'application/pdf': 'pdf',
+      'image/jpeg': 'jpg',
+      'image/png': 'png'
+    };
+  
+    const blob = new Blob([byteArray], { type: mimeType });
+  
+    const extension = extensionMap[mimeType] || 'file';
+    const finalFileName = fileName.endsWith(`.${extension}`) ? fileName : `${fileName}.${extension}`;
+  
+    const link = document.createElement('a');
+    link.href = URL.createObjectURL(blob);
+    link.download = finalFileName;
+    link.click();
+    URL.revokeObjectURL(link.href);
+  }
+    
+
 }

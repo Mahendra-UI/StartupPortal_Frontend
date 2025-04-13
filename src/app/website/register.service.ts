@@ -45,9 +45,41 @@ submitCareerApplication(formData: any) {
     this.BASE_API + "/Career/AddApplicantDetails",
     formData);
 }
+
+
+// getApplicantDetailsById(id: number) {
+//   const url = `${this.BASE_API}/GetApplicantDetailsById?Id=${id}`;
+//   const headers = new HttpHeaders({ 'accept': 'text/plain' });
+  
+//   return this.httpClient.post(url, {}, { headers });
+// }
   
   
-    
+  
+getApplicantDetailsById(id: number) {
+  const url = `https://apis.ap.gov.in/startupapapi/api/Career/GetApplicantDetailsById?Id=${id}`;
+  return this.httpClient.post(url, {}, { headers: { 'accept': 'text/plain' } });
+}
+
+// getApplicants() {
+//   return this.httpClient.post(`${this.BASE_API}/Career/GetApplicantDetails`, {}); // No payload required
+// }
+
+// getApplicantById(id: number) {
+//   return this.httpClient.post(`${this.BASE_API}/Careers/GetApplicantDetailsById`, { Id: id });
+// }
+
+
+getApplicants() {
+  return this.httpClient.post(`${this.BASE_API}/Career/GetApplicantDetails`, {}); // still POST with empty body
+}
+
+getApplicantById(id: number) {
+  return this.httpClient.post(`${this.BASE_API}/Career/GetApplicantDetailsById?Id=${id}`, ''); // POST with query param and empty body
+}
+
+
+
 
   Registration(ptype, Data) {
     return this.httpClient.post(

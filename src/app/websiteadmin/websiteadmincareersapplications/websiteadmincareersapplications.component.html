@@ -25,48 +25,50 @@
         </div>
         <div class="row">
             <div class="col-md-12">
-                <div class="table-responsive">
-                    <table class="table table-bordered w-100">
-                        <thead>
-                            <tr>
-                                <th>#</th>
-                                <th>Full Name</th>
-                                <th>Mobile Number</th>
-                                <th>Email ID</th>
-                                <th>Applying For</th>
-                                <th>Submitted on</th>
-                                <th>Status</th>
-                                <th>Action</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>Mahendra</td>
-                                <td>87656765456</td>
-                                <td>mahendra@gmail.com</td>
-                                <td>Software Engineer 1</td>
-                                <td>09-04-2025</td>
-                                <td>Pending</td>
-                                <td>
-                                    <div class="hstack gap-2">
-                                        <a class="btn btn-sm btn-success"><i class="bi bi-eye"></i></a>
-                                        <button class="btn btn-primary btn-sm"
-                                        data-bs-toggle="modal"
-                                        data-bs-target="#actionModal">
-                                        Take Action
-                                      </button>
-                                        <a class="btn btn-info btn-sm" data-bs-toggle="modal" data-bs-target="#historyModal">
-                                            <i class="bi bi-clock-history"></i>
-                                        </a>
-                                    </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+              <div class="table-responsive">
+                <table class="table table-bordered w-100">
+                  <thead>
+                    <tr>
+                      <th>#</th>
+                      <th>APP id</th>
+                      <th>Full Name</th>
+                      <th>Mobile Number</th>
+                      <th>Email ID</th>
+                      <th>Applying For</th>
+                      <th>Submitted on</th>
+                      <th>Status</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let applicant of applicantsList; let i = index">
+                      <td>{{ i + 1 }}</td>
+                      <td>{{ applicant.applicantid }}</td> <!-- for debug -->
+                      <td>{{ applicant.applicantname }}</td>
+                      <td>{{ applicant.mobilenumber }}</td>
+                      <td>{{ applicant.emailid }}</td>
+                      <td>{{ applicant.applypost }}</td>
+                      <td>{{ applicant.submittedon | date:'dd-MM-yyyy' }}</td>
+                      <td>{{ applicant.status }}</td>
+                      <td>
+                        <div class="hstack gap-2">
+                          <button class="btn btn-sm btn-success" (click)="viewApplicant(applicant.applicantid)" data-bs-toggle="modal" data-bs-target="#viewModal">
+                            <i class="bi bi-eye"></i>
+                          </button>
+                          <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#actionModal">
+                            Take Action
+                          </button>
+                          <button class="btn btn-info btn-sm" data-bs-toggle="modal" data-bs-target="#historyModal">
+                            <i class="bi bi-clock-history"></i>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
-        </div>
+          </div>
     </div>
 </section>
 
@@ -160,6 +162,52 @@
                 Submit
             </button>
           </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+
+  <!-- View Modal -->
+  <div class="modal fade" id="viewModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content p-3">
+        <div class="modal-header">
+          <h5 class="modal-title">Applicant Details</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body" *ngIf="selectedApplicant">
+          <p><strong>Name:</strong> {{ selectedApplicant.ApplicantName }}</p>
+          <p><strong>Father's Name:</strong> {{ selectedApplicant.FathertName }}</p>
+          <p><strong>Email:</strong> {{ selectedApplicant.EmailID }}</p>
+          <p><strong>Mobile:</strong> {{ selectedApplicant.MobileNumber }}</p>
+          <p><strong>Post Applied:</strong> {{ selectedApplicant.ApplyPost }}</p>
+          <p><strong>Remarks:</strong> {{ selectedApplicant.Remarks }}</p>
+          <p><strong>University Rank:</strong> {{ selectedApplicant.UniversityRanking }}</p>
+          <p><strong>Submitted On:</strong> {{ selectedApplicant.SubmittedOn | date:'dd-MM-yyyy HH:mm' }}</p>
+          <p><strong>Status:</strong> {{ selectedApplicant.Status }}</p>
+  
+          <h6>📘 Education Details</h6>
+          <ul>
+            <li *ngFor="let edu of selectedApplicant.EducationDetails">
+              {{ edu.Qualification }} from {{ edu.Institute }} ({{ edu.Board }}), Passed: {{ edu.YearOfPassing }} – {{ edu.TotalAggregate }}%
+            </li>
+          </ul>
+  
+          <h6>💼 Work Experience</h6>
+          <ul>
+            <li *ngFor="let work of selectedApplicant.WorkExperience">
+              {{ work.Designation }} at {{ work.CompanyName }} ({{ work.From | date:'yyyy-MM-dd' }} - {{ work.To | date:'yyyy-MM-dd' }})
+              <div><strong>Roles & Responsibilities:</strong> {{ work.RolesAndResponsibilities }}</div>
+            </li>
+          </ul>
+  
+          <h6>📎 CV File</h6>
+          <a *ngIf="selectedApplicant.CVFile" 
+             [href]="'data:application/pdf;base64,' + selectedApplicant.CVFile.replace('\\x', '')" 
+             download="CV.pdf" 
+             target="_blank">Download CV</a>
         </div>
       </div>
     </div>
