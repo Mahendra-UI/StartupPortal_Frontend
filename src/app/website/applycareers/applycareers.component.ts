@@ -744,7 +744,8 @@
 
 
 
-import { Component, OnInit } from '@angular/core';
+
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { RegisterService } from 'src/app/website/register.service';
 import { ToastrService } from 'ngx-toastr';
@@ -767,6 +768,14 @@ export class ApplycareersComponent implements OnInit {
   selectedCertificate: File | null = null;
   selectedExperienceCertificate: File | null = null;
 
+  resumeTouched = false;
+  certificateTouched = false;
+  experienceCertTouched = false;
+
+  @ViewChild('certificateInput') certificateInputRef!: any;
+  @ViewChild('experienceInput') experienceInputRef!: any;
+  @ViewChild('resumeInput') resumeInputRef!: any;
+
   constructor(
     private fb: FormBuilder,
     private registerService: RegisterService,
@@ -778,7 +787,7 @@ export class ApplycareersComponent implements OnInit {
     this.careersForm = this.fb.group({
       fullName: ['', Validators.required],
       fatherName: ['', Validators.required],
-      mobileNumber: ['', [Validators.required, Validators.pattern('^[6-9]\d{9}$')]],
+      mobileNumber: ['', [Validators.required, Validators.pattern('^[0-9]{10}$')]],
       emailId: ['', [Validators.required, Validators.email]],
       applyPost: ['', Validators.required],
       nirfranking: ['', [Validators.required, Validators.pattern('^[0-9]*$')]],
@@ -808,26 +817,29 @@ export class ApplycareersComponent implements OnInit {
   validateFile(file: File): boolean {
     const allowedTypes = ['application/pdf', 'image/jpeg', 'image/png', 'image/jpg'];
     const maxSizeMB = 2;
-    const isValidType = allowedTypes.includes(file.type);
-    const isValidSize = file.size <= maxSizeMB * 1024 * 1024;
-    return isValidType && isValidSize;
+    return allowedTypes.includes(file.type) && file.size <= maxSizeMB * 1024 * 1024;
   }
 
   onFileChangeResume(event: any) {
+    this.resumeTouched = true;
     const file = event.target.files[0];
     if (file && this.validateFile(file)) {
       this.selectedResume = file;
+      this.educationForm.get('resume')?.setValue(file); // ✅ Important line
     } else {
       this.toastr.warning('Invalid resume file. Only PDF, JPG, JPEG, PNG under 2MB allowed.');
       this.selectedResume = null;
       this.careersForm.get('resume')?.reset();
+      this.resumeInputRef.nativeElement.value = '';
     }
   }
 
   onFileChangeCertificate(event: any) {
+    this.certificateTouched = true;
     const file = event.target.files[0];
     if (file && this.validateFile(file)) {
       this.selectedCertificate = file;
+      this.educationForm.get('uploadcertificate')?.setValue(file);
     } else {
       this.toastr.warning('Invalid certificate file. Only PDF, JPG, JPEG, PNG under 2MB allowed.');
       this.selectedCertificate = null;
@@ -836,9 +848,11 @@ export class ApplycareersComponent implements OnInit {
   }
 
   onFileChangeExperienceCertificate(event: any) {
+    this.experienceCertTouched = true;
     const file = event.target.files[0];
     if (file && this.validateFile(file)) {
       this.selectedExperienceCertificate = file;
+      this.workExperienceForm.get('experienceCertificate')?.setValue(file);
     } else {
       this.toastr.warning('Invalid experience certificate file. Only PDF, JPG, JPEG, PNG under 2MB allowed.');
       this.selectedExperienceCertificate = null;
@@ -860,6 +874,10 @@ export class ApplycareersComponent implements OnInit {
       this.educationList.push(eduData);
       this.educationForm.reset();
       this.selectedCertificate = null;
+      this.certificateTouched = false;
+      this.certificateInputRef.nativeElement.value = '';
+      this.educationForm.markAsPristine();
+      this.educationForm.markAsUntouched();
     } else {
       this.toastr.warning('Please fill all education fields and attach a valid certificate.');
     }
@@ -879,6 +897,10 @@ export class ApplycareersComponent implements OnInit {
       this.workExperienceList.push(workData);
       this.workExperienceForm.reset();
       this.selectedExperienceCertificate = null;
+      this.experienceCertTouched = false;
+      this.experienceInputRef.nativeElement.value = '';
+      this.workExperienceForm.markAsPristine();
+      this.workExperienceForm.markAsUntouched();
     } else {
       this.toastr.warning('Please fill all work experience fields and attach a valid certificate.');
     }
@@ -942,7 +964,6 @@ export class ApplycareersComponent implements OnInit {
           this.spinner.hide();
           Swal.fire('Success', 'Submitted Successfully', 'success');
           this.toastr.success('Application submitted successfully');
-
           this.careersForm.reset();
           this.educationForm.reset();
           this.workExperienceForm.reset();
@@ -951,6 +972,7 @@ export class ApplycareersComponent implements OnInit {
           this.selectedResume = null;
           this.selectedCertificate = null;
           this.selectedExperienceCertificate = null;
+          this.resumeInputRef.nativeElement.value = '';
         },
         error: (err) => {
           this.spinner.hide();
