@@ -32,6 +32,12 @@
                 </div>
             </div>
             <!-- Full Name -->
+            <div class="col-md-12">
+                <h4 class="text_heading_color">
+                    Personal Details
+                </h4>
+            </div>
+
             <div class="col-md-3">
                 <div class="form-group">
                 <label class="form-label">Full Name (As per SSC) <span class="mandatory">*</span></label>
@@ -41,13 +47,14 @@
                 </div>
                 </div>
             </div>
-            <!-- Father Name -->
+            <!-- DoB Name -->
             <div class="col-md-3">
                 <div class="form-group">
-                <label class="form-label">Father Name (As per SSC) <span class="mandatory">*</span></label>
-                <input type="text" class="form-control" formControlName="fatherName" placeholder="Enter Father's Name">
-                <div class="error" *ngIf="careersForm.get('fatherName')?.touched && careersForm.get('fatherName')?.invalid">
-                    Father Name is required.
+                <label class="form-label">Date of Birth <span class="mandatory">*</span></label>
+                <input type="date" class="form-control" formControlName="dateOfBirth">
+                <!-- <input type="text" class="form-control" formControlName="fatherName" placeholder="Enter Father's Name"> -->
+                <div class="error" *ngIf="careersForm.get('dateOfBirth')?.touched && careersForm.get('dateOfBirth')?.invalid">
+                    DoB is required.
                 </div>
                 </div>
             </div>
@@ -71,6 +78,33 @@
                 </div>
                 </div>
             </div>
+            <!-- Communication Address -->
+            <div class="col-md-3">
+                <div class="form-group">
+                  <label class="form-label">Communication Address <span class="mandatory">*</span></label>
+                  <textarea
+                    class="form-control"
+                    formControlName="communicationAddress"
+                    placeholder="Enter full address"></textarea>
+                  <div class="error" *ngIf="careersForm.get('communicationAddress')?.touched && careersForm.get('communicationAddress')?.invalid">
+                    Communication address is required.
+                  </div>
+                </div>
+              </div>
+                <!-- Upload Photo -->
+                <div class="col-md-3">
+                    <div class="form-group">
+                    <label class="form-label">Upload Passportsize Photo <span class="mandatory">*</span></label>
+                    <!-- <input type="file" class="form-control" (change)="onFileChangeResume($event)"> -->
+                    <!-- <input type="file" class="form-control" #resumeInput (change)="onFileChangeResume($event)"> -->
+                    <input type="file" class="form-control" formControlName="passport" #passportInput (change)="onFileChangePassport($event)">
+                    <div class="error" *ngIf="passportTouched && !selectedPassport">
+                        Passport Size is required.
+                    </div>                
+                    </div>
+                </div>
+
+
             <!-- Applying for Role -->
       <div class="col-md-3">
         <div class="form-group">
@@ -132,6 +166,9 @@
                                 </div>
                             </td> -->
                         </tr>
+                        <tr *ngIf="educationList.length === 0">
+                            <td class="text-center" colspan="7">No Records Found</td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
@@ -157,7 +194,7 @@
                             <th>Designation</th>
                             <th>From</th>
                             <th>To</th>
-                            <th>Roles & Responsibilities</th>
+                            <!-- <th>Roles & Responsibilities</th> -->
                             <th>Experience Certiticate</th>
                             <!-- <th>Actions</th> -->
                         </tr>
@@ -169,11 +206,11 @@
                             <td>{{ work.designation }}</td>
                             <td>{{ work.from }}</td>
                             <td>{{ work.to }}</td>
-                            <td>
+                            <!-- <td>
                               <ul>
                                 <li>{{ work.rolesAndResponsibilities }}</li>
                               </ul>
-                            </td>                            
+                            </td>                             -->
                             <td>{{ work.experienceCertificate }}</td>
                             <!-- <td>
                                 <a class="btn btn-sm btn-success"><i class="bi bi-eye"></i></a>
@@ -184,6 +221,9 @@
                                     <a class="btn btn-sm btn-danger"><i class="bi bi-trash"></i></a>
                                 </div>
                             </td> -->
+                        </tr>
+                        <tr *ngIf="workExperienceList.length === 0">
+                            <td class="text-center" colspan="6">No Records Found</td>
                         </tr>
                     </tbody>
                 </table>
@@ -209,6 +249,8 @@
                 </div>                
                 </div>
             </div>
+
+
             <!-- NIRF Ranking -->
             <div class="col-md-3">
                 <div class="form-group">
@@ -219,12 +261,42 @@
                 </div>
                 </div>
             </div>
+  
+  <div class="col-md-12 py-3">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" id="declarationCheck"
+             formControlName="declarationConfirmed">
+      <label class="form-check-label" for="declarationCheck">
+        <strong>DECLARATION</strong><br>
+        <ul>
+            <li>
+                I hereby declare that all the information furnished by me in this application, along with the documents enclosed, is true and correct to the best of my knowledge and belief. I understand that any misrepresentation or suppression of facts may lead to disqualification at any stage of the selection process.
+            </li>
+            <li>
+                I undertake to produce the original documents for verification as and when required by the Andhra Pradesh Innovation Society (APIS). I am aware that failure to do so will result in the rejection of my application.
+            </li>
+            <li>
+                I also understand that initial screening shall be limited to candidates below 40 years of age. Applications from candidates above 40 years may be considered only if suitable candidates are not found within the prescribed age limit.
+            </li>
+        </ul>
+      </label>
+      <div class="error text-danger pt-2" *ngIf="careersForm.get('declarationConfirmed')?.touched && !careersForm.get('declarationConfirmed')?.value">
+        You must agree to the declaration before submitting.
+      </div>
+    </div>
+  </div>
+  
             <!-- Submit -->
             <div class="col-md-12 text-end pt-3">
-                <button class="btn btn-success" (click)="onSubmit()" 
+                <!-- <button class="btn btn-success" (click)="onSubmit()" 
                 [disabled]="careersForm.invalid || !selectedResume || educationList.length === 0 || workExperienceList.length === 0">
                 Submit Application
+                </button> -->
+                <button class="btn btn-success" (click)="onSubmit()"
+                    [disabled]="careersForm.invalid || !selectedResume || !selectedPassport || educationList.length === 0 || workExperienceList.length === 0">
+                    Submit Application
                 </button>
+
             </div>
         </div>
     </div>
@@ -256,7 +328,7 @@
               </div>
   
               <!-- School/College/Institute -->
-              <div class="col-md-3">
+              <!-- <div class="col-md-3">
                 <div class="form-group">
                   <label class="form-label">School/College/Institute <span class="mandatory">*</span></label>
                   <input type="text" class="form-control" formControlName="schoolcollegeinstitute" placeholder="e.g. NIT Warangal">
@@ -264,7 +336,21 @@
                     Institute name is required.
                   </div>
                 </div>
+              </div> -->
+
+              <div class="col-md-3">
+                <div class="form-group">
+                  <label class="form-label">School/College/Institute <span class="mandatory">*</span></label>
+                  <select class="form-select" formControlName="schoolcollegeinstitute">
+                    <option value="" disabled selected>--Select--</option>
+                    <option *ngFor="let q of qualificationOptions" [value]="q">{{ q }}</option>
+                  </select>
+                  <div class="text-danger mt-1" *ngIf="educationForm.get('schoolcollegeinstitute')?.touched && educationForm.get('schoolcollegeinstitute')?.invalid">
+                    Qualification is required.
+                  </div>
+                </div>
               </div>
+              
   
               <!-- Board/University -->
               <div class="col-md-3">
@@ -333,8 +419,6 @@
   
   <!-- Work modal -->
 
-
-  <!-- Education Modal -->
   <div class="modal fade" id="workModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="workModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
       <div class="modal-content">
@@ -391,7 +475,7 @@
               </div>
   
               <!-- Roles & Responsibilities -->
-              <div class="col-md-3">
+              <!-- <div class="col-md-3">
                 <div class="form-group">
                   <label class="form-label">Roles & Responsibilities <span class="mandatory">*</span></label>
                   <input type="text" class="form-control" formControlName="rolesresponsibilities" placeholder="e.g. Developed web apps...">
@@ -399,7 +483,7 @@
                     Roles & responsibilities are required.
                   </div>
                 </div>
-              </div>
+              </div> -->
   
               <!-- Experience Certificate -->
               <div class="col-md-3">

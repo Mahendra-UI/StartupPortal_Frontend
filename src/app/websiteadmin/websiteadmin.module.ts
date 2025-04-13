@@ -11,6 +11,7 @@ import { WebsiteadminleftpanelComponent } from './websiteadminleftpanel/websitea
 import { WebsiteadmincareersComponent } from './websiteadmincareers/websiteadmincareers.component';
 import { WebsiteadmincareersapplicationsComponent } from './websiteadmincareersapplications/websiteadmincareersapplications.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ToastrModule, ToastrService } from 'ngx-toastr';
 
 
 @NgModule({
@@ -28,8 +29,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     WebsiteadminRoutingModule,
     RouterModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    ToastrModule.forRoot()
+    
   ],
+    providers:[ToastrService],
     schemas: [
       CUSTOM_ELEMENTS_SCHEMA
     ]

@@ -29,19 +29,23 @@
                               <td>{{ post.Location }}</td>
                               <td>{{ post.Experience }}</td>
                               <td>
-                                <a class="btn btn-sm btn-success" title="{{ post.Notification }}"><i class="bi bi-eye"></i></a>
+                                <button class="btn btn-sm btn-success"
+                                title="Download Notification"
+                                (click)="downloadNotification(post.Notification, 'notification_' + post.PositionId)">
+                          <i class="bi bi-download"></i>
+                        </button>                      
                               </td>
                               <td>{{ post.LastDateOfSubmission | date: 'dd-MM-yyyy' }}</td>
                               <td>{{ post.IsActive ? 'Active' : 'Inactive' }}</td>
                               <td>
                                 <div class="hstack gap-2">
                                   <!-- <a class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#addPostModal"><i class="bi bi-pencil"></i></a> -->
-                                  <a class="btn btn-sm btn-success"
+                                  <!-- <a class="btn btn-sm btn-success"
                                   (click)="onViewPost(post.PositionId)"
                                   data-bs-toggle="modal"
                                   data-bs-target="#viewPostModal">
                                   <i class="bi bi-eye"></i>
-                               </a>                               
+                               </a>                                -->
                                   <a class="btn btn-sm btn-primary"
                                   (click)="onEditPost(post.PositionId)"
                                   data-bs-toggle="modal"
@@ -50,6 +54,9 @@
                                </a>                               
                                 </div>
                               </td>
+                            </tr>
+                            <tr *ngIf="postsList.length === 0">
+                              <td colspan="9" class="text-center">No records found</td>
                             </tr>
                           </tbody>                          
                     </table>
@@ -77,9 +84,10 @@
                       <label class="form-label">Position</label>
                       <select class="form-select" formControlName="positionName">
                         <option value="" disabled selected>--Select--</option>
-                        <option value="Software Engineer 1">Software Engineer 1</option>
-                        <option value="Software Engineer 2">Software Engineer 2</option>
-                        <option value="Software Engineer 3">Software Engineer 3</option>
+                        <option value="Manager - Admin Operations">Manager - Admin Operations</option>
+                        <option value="Manager - Grants & Proposals">Manager - Grants & Proposals</option>
+                        <option value="Manager – Women Entrepreneurship">Manager – Women Entrepreneurship</option>
+                        <option value="Manager – Corporate Partnerships & Investments">Manager – Corporate Partnerships & Investments</option>
                       </select>
                       <div class="text-danger mt-1" *ngIf="postForm.get('positionName')?.touched && postForm.get('positionName')?.invalid">
                         Position is required.
@@ -120,19 +128,18 @@
                       </div>
                     </div>
                   </div>
-              
+          
                   <!-- Notification -->
                   <div class="col-md-3">
                     <div class="form-group">
-                      <label class="form-label">Notification</label>
-                      <!-- <input type="file" class="form-control" (change)="onFileChange($event)" /> -->
-                      <input type="text" class="form-control" formControlName="notification" placeholder="Enter Notification File Name or URL" />
+                      <label class="form-label">Notification <span class="mandatory">*</span></label>
+                      <input type="file" class="form-control" (change)="onFileChange($event)" />
                       <div class="text-danger mt-1" *ngIf="postForm.get('notification')?.touched && postForm.get('notification')?.invalid">
                         Notification is required.
                       </div>
                     </div>
                   </div>
-              
+
                   <!-- Last Date -->
                   <div class="col-md-3">
                     <div class="form-group">
@@ -169,7 +176,11 @@
               
                   <!-- Submit Button -->
                   <div class="col-md-12 text-end mt-3">
-                    <button type="button" class="btn btn-primary" [disabled]="postForm.invalid" (click)="onSubmit()">Submit</button>
+                    <button type="button" class="btn btn-primary" [disabled]="postForm.invalid" (click)="onSubmit()">
+
+                      {{ selectedPostId ? 'Update' : 'Submit' }}
+
+                    </button>
                   </div>
               
                 </div>

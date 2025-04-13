@@ -57,7 +57,6 @@
                                 <th>Notitcation</th>
                                 <th>Last Date</th>
                                 <th>Status</th>
-                                <!-- <th>Action</th> -->
                             </tr>
                         </thead>
 
@@ -69,22 +68,17 @@
                               <td>{{ post.Location }}</td>
                               <td>{{ post.Experience }}</td>
                               <td>
-                                <a class="btn btn-sm btn-success" title="{{ post.Notification }}"><i class="bi bi-eye"></i></a>
+                                <button class="btn btn-sm btn-success"
+                                title="Download Notification"
+                                (click)="downloadNotification(post.Notification, 'notification_' + post.PositionId)">
+                          <i class="bi bi-download"></i>
+                        </button>                      
                               </td>
                               <td>{{ post.LastDateOfSubmission | date: 'dd-MM-yyyy' }}</td>
                               <td>{{ post.IsActive ? 'Active' : 'Inactive' }}</td>
-                              <!-- <td>
-                                <div class="hstack gap-2">
-                                  <a class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#addPostModal"><i class="bi bi-pencil"></i></a>
-                                  <a class="btn btn-sm btn-success"><i class="bi bi-eye"></i></a>
-                                  <a class="btn btn-sm btn-primary"
-                                  (click)="onEditPost(post.PositionId)"
-                                  data-bs-toggle="modal"
-                                  data-bs-target="#addPostModal">
-                                  <i class="bi bi-pencil"></i>
-                               </a>                               
-                                </div>
-                              </td> -->
+                            </tr>
+                            <tr *ngIf="postsList.length === 0">
+                              <td colspan="9" class="text-center">No records found</td>
                             </tr>
                           </tbody>                          
                     </table>

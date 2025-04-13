@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { RegisterService } from '../register.service';
 import Swal from 'sweetalert2';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: 'app-careers',
@@ -12,7 +13,7 @@ export class CareersComponent implements OnInit {
 
 postsList : any[] = [];
 
-  constructor(private router: Router, private registerService: RegisterService) { }
+  constructor(private router: Router, private registerService: RegisterService, private spinner: NgxSpinnerService) { }
 
 careersList = [
   {
@@ -62,72 +63,68 @@ careersList = [
 
 
   fetchAllPosts() {
+    this.spinner.show();
     this.registerService.getAllCareerPosts().subscribe({
       next: (res: any) => {
         if (res.status === 'Valid') {
           this.postsList = res.data;
-          // this.postsList = res.data.filter(( post: any ) => post.IsActive === true );
-          console.log(this.postsList, "postsList");
-          
         }
+        this.spinner.hide();
       },
       error: () => {
-        Swal.fire('Error', 'Failed to load posts', 'error');
+        this.spinner.hide();
+        // Swal.fire('Error', 'Failed to load posts', 'error');
       }
     });
   }
 
-  hexToBase64(hex: string): string {
-    const cleanHex = hex.replace(/\\x/g, ''); // remove \x
-    const bytes = new Uint8Array(cleanHex.match(/.{1,2}/g)!.map(byte => parseInt(byte, 16)));
-    let binary = '';
-    bytes.forEach(b => binary += String.fromCharCode(b));
-    return btoa(binary); // encode to base64
+  downloadNotification(base64: string, filename: string): void {
+    if (!base64 || base64.length < 30) {
+      Swal.fire('No File', 'No notification data found.', 'info');
+      return;
+    }
+  
+    // Detect MIME type from base64
+    let mimeType = this.detectMimeType(base64);
+  
+    // Fallback to PDF if filename ends with .pdf
+    if (filename.toLowerCase().endsWith('.pdf')) {
+      mimeType = 'application/pdf';
+    }
+  
+    const extension = this.getFileExtensionFromMime(mimeType);
+    const fullFileName = `${filename}.${extension}`;
+    const linkSource = `data:${mimeType};base64,${base64}`;
+  
+    const downloadLink = document.createElement('a');
+    downloadLink.href = linkSource;
+    downloadLink.download = fullFileName;
+    downloadLink.click();
   }
   
   
-  downloadCvFile(applicantId: number) {
-    this.registerService.getApplicantDetailsById(applicantId).subscribe({
-      next: (res: any) => {
-        const hex = res.data[0].cvfile;
-        const base64 = this.hexToBase64(hex);
-        const fileName = `${res.data[0].applicantname}_Resume.pdf`;
-        this.downloadBase64File(base64, fileName);
-      },
-      error: () => {
-        Swal.fire('Error', 'Failed to fetch applicant details', 'error');
-      }
-    });
+  detectMimeType(base64: string): string {
+    if (!base64) return 'application/octet-stream';
+  
+    const firstChars = base64.substring(0, 10);
+  
+    if (firstChars.startsWith('/9j/')) return 'image/jpeg';
+    if (firstChars.startsWith('iVBOR')) return 'image/png';
+    if (firstChars.startsWith('JVBER')) return 'application/pdf'; // PDF
+    if (firstChars.startsWith('R0lGOD')) return 'image/gif';
+  
+    return 'application/pdf'; // Fallback to PDF by default if uncertain
   }
   
-  downloadBase64File(base64: string, fileName: string) {
-    const byteCharacters = atob(base64);
-    const byteNumbers = Array.from(byteCharacters).map(c => c.charCodeAt(0));
-    const byteArray = new Uint8Array(byteNumbers);
   
-    // 👉 Detect MIME type by inspecting first few bytes
-    let mimeType = 'application/octet-stream';
-    if (base64.startsWith('/9j')) mimeType = 'image/jpeg';
-    else if (base64.startsWith('iVBOR')) mimeType = 'image/png';
-    else if (base64.startsWith('JVBER')) mimeType = 'application/pdf';
-  
-    const extensionMap: any = {
-      'application/pdf': 'pdf',
-      'image/jpeg': 'jpg',
-      'image/png': 'png'
-    };
-  
-    const blob = new Blob([byteArray], { type: mimeType });
-  
-    const extension = extensionMap[mimeType] || 'file';
-    const finalFileName = fileName.endsWith(`.${extension}`) ? fileName : `${fileName}.${extension}`;
-  
-    const link = document.createElement('a');
-    link.href = URL.createObjectURL(blob);
-    link.download = finalFileName;
-    link.click();
-    URL.revokeObjectURL(link.href);
+  getFileExtensionFromMime(mime: string): string {
+    switch (mime) {
+      case 'image/jpeg': return 'jpg';
+      case 'image/png': return 'png';
+      case 'application/pdf': return 'pdf';
+      default: return 'pdf'; // default fallback is now pdf
+    }
   }
-    
+  
 
 }

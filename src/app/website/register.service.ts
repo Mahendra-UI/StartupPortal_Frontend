@@ -16,6 +16,9 @@ export class RegisterService {
   addNewPost(data: any) {
     return this.httpClient.post(this.BASE_API + `/Career/AddNewPost`, data);
   }
+  updatePost(postData: any) {
+    return this.httpClient.post(`${this.BASE_API}/Career/UpdatePost`, postData);
+  }  
   
   getAllCareerPosts() {
     return this.httpClient.post(this.BASE_API + '/Career/GetPosts', {}); // empty body as per Swagger
@@ -77,6 +80,7 @@ getApplicants() {
 getApplicantById(id: number) {
   return this.httpClient.post(`${this.BASE_API}/Career/GetApplicantDetailsById?Id=${id}`, ''); // POST with query param and empty body
 }
+
 
 
 

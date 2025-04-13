@@ -302,3 +302,15 @@ td {
     letter-spacing: 0em;
     text-align: left;
 }
+.mandatory {
+    color: red;
+}
+
+.error {
+    color: red;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: left;
+}
