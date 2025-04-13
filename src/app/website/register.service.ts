@@ -26,13 +26,25 @@ export class RegisterService {
   
   // register.service.ts
 // Add this method in your register.service.ts file
-submitCareerApplication(formData: FormData) {
+// submitCareerApplication(formData: FormData) {
+//   return this.httpClient.post(
+//     this.BASE_API + "/Career/AddApplicantDetails",
+//     formData
+//   );
+// }
+  
+
+submitCareerApplication(formData: any) {
+  //     const headers: any = new HttpHeaders({'Content-Type': "application/json"});
+  // return this.httpClient.post(
+  //   this.BASE_API + "/Career/AddApplicantDetails",
+  //   formData, {headers : headers}
+  // );
+
   return this.httpClient.post(
     this.BASE_API + "/Career/AddApplicantDetails",
-    formData
-  );
+    formData);
 }
-  
   
   
     
