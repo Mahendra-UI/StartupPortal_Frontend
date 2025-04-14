@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -19,6 +20,18 @@ export class RegisterService {
   updatePost(postData: any) {
     return this.httpClient.post(`${this.BASE_API}/Career/UpdatePost`, postData);
   }  
+
+  // updateApplicantStatus(data: any) {
+  //   return this.httpClient.post(`${this.BASE_API}/Career/UpdateApplicantStatus`, data);
+
+  // }
+  
+
+  updateApplicantDetails(payload: any): Observable<any> {
+    return this.httpClient.post('https://apis.ap.gov.in/startupapapi/api/Career/UpdateApplicantDetails', payload);
+  }
+  
+
   
   getAllCareerPosts() {
     return this.httpClient.post(this.BASE_API + '/Career/GetPosts', {}); // empty body as per Swagger

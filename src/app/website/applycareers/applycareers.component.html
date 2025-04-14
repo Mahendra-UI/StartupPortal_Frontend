@@ -99,8 +99,9 @@
                     <!-- <input type="file" class="form-control" #resumeInput (change)="onFileChangeResume($event)"> -->
                     <input type="file" class="form-control" formControlName="passport" #passportInput (change)="onFileChangePassport($event)">
                     <div class="error" *ngIf="passportTouched && !selectedPassport">
-                        Passport Size is required.
-                    </div>                
+                      Passport Size is required.
+                    </div>
+                    
                     </div>
                 </div>
 
@@ -114,7 +115,7 @@
             <option value="Manager - Admin Operations">Manager - Admin Operations</option>
             <option value="Manager - Grants & Proposals">Manager - Grants & Proposals</option>
             <option value="Manager – Women Entrepreneurship">Manager – Women Entrepreneurship</option>
-            <option value="Manager – Corporate Partnerships & Investments">Manager – Corporate Partnerships & Investments</option>
+            <option value="Manager – Partnerships & Investments">Manager – Partnerships & Investments</option>
           </select>
           <div class="error" *ngIf="careersForm.get('applyPost')?.touched && careersForm.get('applyPost')?.invalid">
             Role is required.
@@ -317,7 +318,7 @@
             <div class="row">
   
               <!-- Qualification -->
-              <div class="col-md-3">
+              <!-- <div class="col-md-3">
                 <div class="form-group">
                   <label class="form-label">Qualification <span class="mandatory">*</span></label>
                   <input type="text" class="form-control" formControlName="qualification" placeholder="e.g. B.Tech">
@@ -325,28 +326,28 @@
                     Qualification is required.
                   </div>
                 </div>
+              </div> -->
+
+              <div class="col-md-3">
+                <div class="form-group">
+                  <label class="form-label">Qualification <span class="mandatory">*</span></label>
+                  <select class="form-select" formControlName="qualification">
+                    <option value="" disabled selected>--Select--</option>
+                    <option *ngFor="let q of qualificationOptions" [value]="q">{{ q }}</option>
+                  </select>
+                  <div class="text-danger mt-1" *ngIf="educationForm.get('qualification')?.touched && educationForm.get('qualification')?.invalid">
+                    Qualification is required.
+                  </div>
+                </div>
               </div>
   
               <!-- School/College/Institute -->
-              <!-- <div class="col-md-3">
+              <div class="col-md-3">
                 <div class="form-group">
                   <label class="form-label">School/College/Institute <span class="mandatory">*</span></label>
                   <input type="text" class="form-control" formControlName="schoolcollegeinstitute" placeholder="e.g. NIT Warangal">
                   <div class="error" *ngIf="educationForm.get('schoolcollegeinstitute')?.touched && educationForm.get('schoolcollegeinstitute')?.invalid">
                     Institute name is required.
-                  </div>
-                </div>
-              </div> -->
-
-              <div class="col-md-3">
-                <div class="form-group">
-                  <label class="form-label">School/College/Institute <span class="mandatory">*</span></label>
-                  <select class="form-select" formControlName="schoolcollegeinstitute">
-                    <option value="" disabled selected>--Select--</option>
-                    <option *ngFor="let q of qualificationOptions" [value]="q">{{ q }}</option>
-                  </select>
-                  <div class="text-danger mt-1" *ngIf="educationForm.get('schoolcollegeinstitute')?.touched && educationForm.get('schoolcollegeinstitute')?.invalid">
-                    Qualification is required.
                   </div>
                 </div>
               </div>
@@ -386,16 +387,35 @@
               </div>
   
               <!-- Upload Certificate -->
-              <div class="col-md-3">
+              <!-- <div class="col-md-3">
                 <div class="form-group">
                   <label class="form-label">Upload Certificate <span class="mandatory">*</span></label>
                   <input type="file" class="form-control" #certificateInput (change)="onFileChangeCertificate($event)">
-                  <!-- <input type="file" class="form-control" (change)="onFileChangeCertificate($event)"> -->
                   <div class="error" *ngIf="certificateTouched && !selectedCertificate">
                     Certificate upload is required.
                   </div>                  
                 </div>
+              </div> -->
+
+
+
+              <div class="col-md-3">
+                <div class="form-group">
+                  <label class="form-label">Upload Certificate <span class="mandatory">*</span></label>
+                  <input type="file" class="form-control" #certificateInput (change)="onFileChangeCertificate($event)">
+                  <div class="error" *ngIf="certificateTouched && !selectedCertificate">
+                    Certificate upload is required.
+                  </div>     
+                  <div class="mt-2" *ngIf="selectedCertificate">
+                    <button class="btn btn-outline-primary btn-sm" type="button"
+                            (click)="previewDownload(selectedCertificate, 'certificate_preview')">
+                      🔽 Preview Download
+                    </button>
+                  </div>             
+                </div>
               </div>
+              
+
   
               <!-- Submit Button -->
               <div class="col-md-3">
@@ -486,16 +506,33 @@
               </div> -->
   
               <!-- Experience Certificate -->
-              <div class="col-md-3">
+              <!-- <div class="col-md-3">
                 <div class="form-group">
                   <label class="form-label">Experience Certificate <span class="mandatory">*</span></label>
                   <input type="file" class="form-control" #experienceInput (change)="onFileChangeExperienceCertificate($event)">
-                  <!-- <input type="file" class="form-control" (change)="onFileChangeExperienceCertificate($event)"> -->
                   <div class="error" *ngIf="experienceCertTouched && !selectedExperienceCertificate">
                     Please upload the experience certificate.
                   </div>                  
                 </div>
+              </div> -->
+
+
+              <div class="col-md-3">
+                <div class="form-group">
+                  <label class="form-label">Experience Certificate <span class="mandatory">*</span></label>
+                  <input type="file" class="form-control" #experienceInput (change)="onFileChangeExperienceCertificate($event)">
+                  <div class="error" *ngIf="experienceCertTouched && !selectedExperienceCertificate">
+                    Please upload the experience certificate.
+                  </div>
+                  <div class="mt-2" *ngIf="selectedExperienceCertificate">
+                    <button class="btn btn-outline-primary btn-sm" type="button"
+                            (click)="previewDownload(selectedExperienceCertificate, 'experience_certificate_preview')">
+                      🔽 Preview Download
+                    </button>
+                  </div>                  
+                </div>
               </div>
+              
   
               <!-- Submit Button -->
               <div class="col-md-3">

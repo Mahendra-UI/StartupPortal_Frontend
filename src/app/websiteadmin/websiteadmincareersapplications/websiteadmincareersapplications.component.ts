@@ -23,8 +23,9 @@
 
 
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { NgxSpinnerService } from 'ngx-spinner';
+import { ToastrService } from 'ngx-toastr';
 import { RegisterService } from 'src/app/website/register.service';
 import Swal from 'sweetalert2';
 
@@ -41,15 +42,58 @@ export class WebsiteadmincareersapplicationsComponent implements OnInit {
   applicantsList: any[] = [];
   selectedApplicant: any = null;
 
-  constructor(private registerService: RegisterService, private fb: FormBuilder, private spinner: NgxSpinnerService) {}
+  selectedApplicantId: number | null = null;
+
+
+  constructor(private toastr: ToastrService,  private registerService: RegisterService, private fb: FormBuilder, private spinner: NgxSpinnerService) {}
 
   ngOnInit(): void {
     this.getAllApplicants();
+    this.actionForm = this.fb.group({
+      status: ['', Validators.required],
+      remarks: ['']
+    });    
   }
 
-    submitAction() {
-
+  onOpenActionModal(applicantId: number) {
+    this.selectedApplicantId = applicantId;
+    this.actionForm.reset(); // optional: reset previous form data
   }
+  
+
+  submitAction() {
+    if (this.actionForm.invalid || this.selectedApplicantId === null) {
+      return;
+    }
+  
+    const applicant = this.applicantsList.find(app => app.applicantid === this.selectedApplicantId);
+  
+    if (!applicant) {
+      this.toastr.error('Applicant not found.');
+      return;
+    }
+  
+    const updatedPayload = {
+      ...applicant,
+      status: this.actionForm.value.status,
+      remarks: this.actionForm.value.remarks || ''
+    };
+  
+    this.spinner.show();
+    this.registerService.updateApplicantDetails(updatedPayload).subscribe({
+      next: (res: any) => {
+        this.spinner.hide();
+        Swal.fire('Success', 'Status updated successfully.', 'success');
+        this.getAllApplicants();
+      },
+      error: () => {
+        this.spinner.hide();
+        Swal.fire('Error', 'Failed to update status.', 'error');
+      }
+    });
+  }
+  
+  
   getAllApplicants() {
     this.spinner.show();
     this.registerService.getApplicants().subscribe({
@@ -129,36 +173,97 @@ export class WebsiteadmincareersapplicationsComponent implements OnInit {
     }
   }
 
-  downloadBase64File(base64: string, filenameWithoutExt: string): void {
-    if (!base64 || base64.length < 30) {
+  downloadBase64File(hexString: string, filenameWithoutExt: string): void {
+    if (!hexString || hexString.length < 30) {
       Swal.fire('Error', 'No file data found.', 'error');
       return;
     }
   
-    // Clean up PostgreSQL style base64 (if \x present)
-    const cleanBase64 = base64.replace(/^\\x/, '').replace(/\\x/g, '').trim();
+    // Remove leading \\x if exists (PostgreSQL bytea format)
+    const cleanHex = hexString.replace(/^\\x/, '').replace(/\\x/g, '').trim();
   
-    // Force PDF MIME for certificates/resume, use .pdf extension
-    const mimeType = 'application/pdf';
-    const extension = 'pdf';
+    // Convert hex string to byte array
+    const byteArray = new Uint8Array(cleanHex.match(/.{1,2}/g)!.map(byte => parseInt(byte, 16)));
   
-    // Decode Base64 to binary
-    const byteCharacters = atob(cleanBase64);
-    const byteArrays = new Uint8Array(byteCharacters.length);
-    for (let i = 0; i < byteCharacters.length; i++) {
-      byteArrays[i] = byteCharacters.charCodeAt(i);
+    // Guess MIME type based on magic numbers
+    const mimeType = this.detectMimeFromBytes(byteArray);
+    const extension = this.getFileExtensionFromMime(mimeType);
+    const fullFileName = `${filenameWithoutExt}.${extension}`;
+  
+    // Create blob and trigger download
+    const blob = new Blob([byteArray], { type: mimeType });
+    const url = URL.createObjectURL(blob);
+  
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = fullFileName;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  }
+
+  detectMimeFromBytes(bytes: Uint8Array): string {
+    if (bytes[0] === 0x25 && bytes[1] === 0x50 && bytes[2] === 0x44 && bytes[3] === 0x46) return 'application/pdf'; // %PDF
+    if (bytes[0] === 0x89 && bytes[1] === 0x50 && bytes[2] === 0x4E && bytes[3] === 0x47) return 'image/png';        // PNG
+    if (bytes[0] === 0xFF && bytes[1] === 0xD8) return 'image/jpeg';                                                  // JPEG
+    return 'application/octet-stream';
+  }
+  
+  
+  downloadBase64Direct(base64Data: string, fileName: string, mimeType: string = 'application/pdf') {
+    if (!base64Data || base64Data.length < 50) {
+      Swal.fire('Error', 'Invalid or missing file data.', 'error');
+      return;
     }
   
-    const blob = new Blob([byteArrays], { type: mimeType });
+    const cleanBase64 = base64Data.replace(/^\\x/, '').replace(/\\x/g, '').trim();
+  
+    const byteCharacters = atob(cleanBase64);
+    const byteNumbers = new Array(byteCharacters.length);
+    for (let i = 0; i < byteCharacters.length; i++) {
+      byteNumbers[i] = byteCharacters.charCodeAt(i);
+    }
+  
+    const byteArray = new Uint8Array(byteNumbers);
+    const blob = new Blob([byteArray], { type: mimeType });
     const blobUrl = URL.createObjectURL(blob);
   
-    const downloadLink = document.createElement('a');
-    downloadLink.href = blobUrl;
-    downloadLink.download = `${filenameWithoutExt}.${extension}`;
-    downloadLink.click();
+    // Extension logic inline
+    const extensionMap: any = {
+      'application/pdf': 'pdf',
+      'image/jpeg': 'jpg',
+      'image/png': 'png',
+    };
+    const extension = extensionMap[mimeType] || 'bin';
   
+    const a = document.createElement('a');
+    a.href = blobUrl;
+    a.download = `${fileName}.${extension}`;
+    a.click();
     URL.revokeObjectURL(blobUrl);
   }
+  
+
+  // getExtensionFromMime(mime: string): string {
+  //   switch (mime) {
+  //     case 'application/pdf': return 'pdf';
+  //     case 'image/jpeg': return 'jpg';
+  //     case 'image/png': return 'png';
+  //     default: return 'bin';
+  //   }
+  // }
+  
+  getExtensionFromMime(mime: string): string {
+    switch (mime) {
+      case 'application/pdf': return 'pdf';
+      case 'image/jpeg': return 'jpg';
+      case 'image/png': return 'png';
+      default: return 'bin';
+    }
+  }
+  
+
   
   fileToBase64(file: File): Promise<string> {
     return new Promise((resolve, reject) => {
@@ -179,11 +284,12 @@ export class WebsiteadmincareersapplicationsComponent implements OnInit {
   
   
   detectMimeType(base64: string): string {
-    const first = base64.slice(0, 10);
-    if (first.startsWith('JVBER')) return 'application/pdf';
-    if (first.startsWith('/9j/')) return 'image/jpeg';
-    if (first.startsWith('iVBOR')) return 'image/png';
-    return 'application/octet-stream';
+    const signature = base64.slice(0, 10);
+    if (signature.startsWith('JVBER')) return 'application/pdf';
+    if (signature.startsWith('/9j/')) return 'image/jpeg';
+    if (signature.startsWith('iVBOR')) return 'image/png';
+    if (signature.startsWith('R0lG')) return 'image/gif';
+    return 'application/octet-stream'; // fallback
   }
   
   
@@ -200,14 +306,14 @@ export class WebsiteadmincareersapplicationsComponent implements OnInit {
 
   getFileExtensionFromMime(mime: string): string {
     switch (mime) {
-      case 'image/jpeg': return 'jpg'; // or return 'jpeg' if you prefer
+      case 'application/pdf': return 'pdf';
+      case 'image/jpeg': return 'jpg';
       case 'image/png': return 'png';
       case 'image/gif': return 'gif';
-      case 'application/pdf': return 'pdf';
-      case 'application/zip': return 'zip';
       default: return 'bin';
     }
   }
+  
   
 
   getFileExtensionFromMimeold(mime: string): string {

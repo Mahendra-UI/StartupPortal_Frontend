@@ -55,10 +55,15 @@
                           <button class="btn btn-sm btn-success" (click)="viewApplicant(applicant.applicantid)" data-bs-toggle="modal" data-bs-target="#viewModal">
                             <i class="bi bi-eye"></i>
                           </button>
-                          <!-- <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#actionModal">
-                            Take Action
-                          </button>
-                          <button class="btn btn-info btn-sm" data-bs-toggle="modal" data-bs-target="#historyModal">
+                          <button *ngIf="applicant.status === 'pending'"
+                          class="btn btn-primary btn-sm"
+                          (click)="onOpenActionModal(applicant.applicantid)"
+                          data-bs-toggle="modal"
+                          data-bs-target="#actionModal">
+                          Take Action
+                        </button>
+                        
+                          <!-- <button class="btn btn-info btn-sm" data-bs-toggle="modal" data-bs-target="#historyModal">
                             <i class="bi bi-clock-history"></i>
                           </button> -->
                         </div>
@@ -152,10 +157,10 @@
                 <option value="Rejected">Reject</option>
               </select>
             </div>
-            <div class="mb-3">
+            <!-- <div class="mb-3">
               <label class="form-label">Remarks</label>
               <textarea class="form-control" rows="3" formControlName="remarks" placeholder="Enter remarks"></textarea>
-            </div>
+            </div> -->
             <!-- <button type="submit" class="btn btn-primary w-100" [disabled]="isLoading || actionForm.invalid">
               <span *ngIf="!isLoading">Submit</span>
               <span *ngIf="isLoading">
@@ -209,10 +214,11 @@
              class="img-thumbnail"
              style="max-height: 150px;" />
       
-        <button class="btn btn-sm btn-primary mt-2"
-                (click)="downloadBase64File(selectedApplicant.PassportImage.replace('\\x', ''), 'passport')">
-          Download Passport
-        </button>
+             <button class="btn btn-sm btn-primary mt-2"
+             *ngIf="selectedApplicant?.PassportImage"
+             (click)="downloadBase64Direct(selectedApplicant.PassportImage, 'passport', 'image/jpeg')">
+       Download Passport
+     </button>
       </div>
       
     <div *ngIf="!selectedApplicant?.passportimage">
@@ -294,10 +300,10 @@ Download
 
   
           <h6>📎 CV File</h6>
-          <a *ngIf="selectedApplicant.CVFile"
-          (click)="downloadBase64File(selectedApplicant.CVFile.replace('\\x', ''), 'cv')"
-          class="btn btn-sm btn-dark">
-          Download CV
+          <a class="btn btn-sm btn-dark mt-2"
+          *ngIf="selectedApplicant?.CVFile"
+          (click)="downloadBase64Direct(selectedApplicant.CVFile, 'cv', 'application/pdf')">
+         Download CV
        </a>
        
          
