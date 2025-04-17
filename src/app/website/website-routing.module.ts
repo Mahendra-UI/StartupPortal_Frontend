@@ -50,6 +50,7 @@ import { SpaceinformationComponent } from './spaceinformation/spaceinformation.c
 import { CareersComponent } from './careers/careers.component';
 import { CareerdetailsComponent } from './careerdetails/careerdetails.component';
 import { ApplycareersComponent } from './applycareers/applycareers.component';
+import { ApplycareerstwoComponent } from './applycareerstwo/applycareerstwo.component';
 
 
 
@@ -265,7 +266,12 @@ const routes: Routes = [
             },
             {
                 path: "applycareers",
+                component: ApplycareerstwoComponent
+            },
+            {
+                path: "applycareersnew",
                 component: ApplycareersComponent
+
             },
         
         ]

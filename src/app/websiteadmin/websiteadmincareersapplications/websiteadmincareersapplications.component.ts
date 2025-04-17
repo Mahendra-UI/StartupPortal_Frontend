@@ -39,6 +39,12 @@ export class WebsiteadmincareersapplicationsComponent implements OnInit {
   actionForm! : FormGroup
   isLoading = false; // Loader flag
 
+  searchTerm = '';
+  // p: number = 1; 
+  filteredApplicants: any[] = [];
+  itemsPerPage = 5;
+  currentPage = 1;
+ 
   applicantsList: any[] = [];
   selectedApplicant: any = null;
 
@@ -55,6 +61,15 @@ export class WebsiteadmincareersapplicationsComponent implements OnInit {
     });    
   }
 
+  displayedRecordsCount(): number {
+    const startIndex = (this.currentPage - 1) * this.itemsPerPage;
+    const remaining = this.filteredApplicants.length - startIndex;
+    return Math.min(this.itemsPerPage, remaining);
+  }
+  
+  onPageChange(page: number): void {
+    this.currentPage = page;
+  }
   onOpenActionModal(applicantId: number) {
     this.selectedApplicantId = applicantId;
     this.actionForm.reset(); // optional: reset previous form data
@@ -100,7 +115,7 @@ export class WebsiteadmincareersapplicationsComponent implements OnInit {
       next: (res: any) => {
         if (res?.status === 'Valid') {
           this.applicantsList = res.data;
-          console.log(this.applicantsList, "applicantsList");
+          this.filterApplicants(); // Apply filter on load
         }
         this.spinner.hide();
       },
@@ -109,6 +124,19 @@ export class WebsiteadmincareersapplicationsComponent implements OnInit {
         this.spinner.hide();
       }
     });
+  }
+
+
+  filterApplicants(): void {
+    const term = this.searchTerm.trim().toLowerCase();
+  
+    this.filteredApplicants = this.applicantsList.filter(applicant =>
+      Object.values(applicant).some(val =>
+        val?.toString().toLowerCase().includes(term)
+      )
+    );
+  
+    this.currentPage = 1; // reset to first page after filtering
   }
   
   viewApplicant(applicantId: number) {

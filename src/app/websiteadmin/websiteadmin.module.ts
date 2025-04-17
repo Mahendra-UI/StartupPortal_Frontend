@@ -12,6 +12,7 @@ import { WebsiteadmincareersComponent } from './websiteadmincareers/websiteadmin
 import { WebsiteadmincareersapplicationsComponent } from './websiteadmincareersapplications/websiteadmincareersapplications.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ToastrModule, ToastrService } from 'ngx-toastr';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { ToastrModule, ToastrService } from 'ngx-toastr';
     RouterModule,
     ReactiveFormsModule,
     FormsModule,
-    ToastrModule.forRoot()
+    ToastrModule.forRoot(),
+    NgxPaginationModule
     
   ],
     providers:[ToastrService],

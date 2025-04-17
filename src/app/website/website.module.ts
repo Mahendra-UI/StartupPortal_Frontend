@@ -79,6 +79,7 @@ import { SpaceinformationComponent } from './spaceinformation/spaceinformation.c
 import { CareersComponent } from './careers/careers.component';
 import { CareerdetailsComponent } from './careerdetails/careerdetails.component';
 import { ApplycareersComponent } from './applycareers/applycareers.component';
+import { ApplycareerstwoComponent } from './applycareerstwo/applycareerstwo.component';
 
 
 export function httpTranslateLoaderFactory(http: HttpClient) {
@@ -147,6 +148,7 @@ export function httpTranslateLoaderFactory(http: HttpClient) {
     CareersComponent,
     CareerdetailsComponent,
     ApplycareersComponent,
+    ApplycareerstwoComponent,
   ],
   imports: [
     CommonModule,

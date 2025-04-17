@@ -1,0 +1,610 @@
+<style>
+    .bodyBreadcrumbs {
+      background-image: url('assets/images/contactus/contactusbg.png');
+    }
+  </style>
+  
+  <section class="bodyBreadcrumbs">
+    <div class="container">
+      <div class="row breadcrumbsrow align-items-center">
+        <div class="col-md-12">
+          <div class="bodyHeading text-white">
+            <h1>Apply Careers</h1>
+            <ol class="breadcrumb mb-0">
+              <li><a routerLink="/home">Home</a></li>
+              <li><a>Apply Careers</a></li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Stepper Buttons -->
+  <section class=" bg-light">
+    <div class="container text-center">
+
+    </div>
+  </section>
+  
+  <!-- Step Content -->
+  <section class="py-4 bg-light">
+    <div class="container" [formGroup]="careersForm">
+        <!-- <h2 class="text-center mb-4">Application Form</h2> -->
+        <div class="row">
+            <div class="col-md-12 py-2">
+                <div class="text-end">
+                    <a class="btn btn-sm btn-primary" routerLink="/careers">Back to Careers</a>
+                </div>
+            </div>
+        </div>
+      <!-- Step 1 -->
+      <div *ngIf="currentStep === 1">
+        <h4 class="mb-3 text_heading_color">Step 1: Personal Details</h4>
+        <div class="row">
+
+            <!-- Full Name -->
+            <!-- <div class="col-md-12">
+                <h4 class="text_heading_color">
+                    Personal Details
+                </h4>
+            </div> -->
+
+            <div class="col-md-3">
+                <div class="form-group">
+                <label class="form-label">Full Name (As per SSC) <span class="mandatory">*</span></label>
+                <input type="text" class="form-control" formControlName="fullName" placeholder="Enter Full Name">
+                <div class="error" *ngIf="careersForm.get('fullName')?.touched && careersForm.get('fullName')?.invalid">
+                    Full Name is required.
+                </div>
+                </div>
+            </div>
+            <!-- DoB Name -->
+            <div class="col-md-3">
+                <div class="form-group">
+                <label class="form-label">Date of Birth <span class="mandatory">*</span></label>
+                <input type="date" class="form-control" formControlName="dateOfBirth">
+                <!-- <input type="text" class="form-control" formControlName="fatherName" placeholder="Enter Father's Name"> -->
+                <div class="error" *ngIf="careersForm.get('dateOfBirth')?.touched && careersForm.get('dateOfBirth')?.invalid">
+                    DoB is required.
+                </div>
+                </div>
+            </div>
+            <!-- Mobile Number -->
+            <div class="col-md-3">
+                <div class="form-group">
+                <label class="form-label">Mobile Number <span class="mandatory">*</span></label>
+                <input type="text" class="form-control" formControlName="mobileNumber" maxlength="10" placeholder="Enter 10 digit number">
+                <div class="error" *ngIf="careersForm.get('mobileNumber')?.touched && careersForm.get('mobileNumber')?.invalid">
+                    Valid mobile number is required.
+                </div>
+                </div>
+            </div>
+            <!-- Email ID -->
+            <div class="col-md-3">
+                <div class="form-group">
+                <label class="form-label">Email ID <span class="mandatory">*</span></label>
+                <input type="email" class="form-control" formControlName="emailId" placeholder="Enter Email ID">
+                <div class="error" *ngIf="careersForm.get('emailId')?.touched && careersForm.get('emailId')?.invalid">
+                    Valid email is required.
+                </div>
+                </div>
+            </div>
+            <!-- Communication Address -->
+            <div class="col-md-3">
+                <div class="form-group">
+                  <label class="form-label">Communication Address <span class="mandatory">*</span></label>
+                  <textarea
+                    class="form-control"
+                    formControlName="communicationAddress"
+                    placeholder="Enter full address"></textarea>
+                  <div class="error" *ngIf="careersForm.get('communicationAddress')?.touched && careersForm.get('communicationAddress')?.invalid">
+                    Communication address is required.
+                  </div>
+                </div>
+              </div>
+                <!-- Upload Photo -->
+                <div class="col-md-3">
+                    <div class="form-group">
+                    <label class="form-label">Upload Passportsize Photo <span class="mandatory">*</span></label>
+                    <!-- <input type="file" class="form-control" (change)="onFileChangeResume($event)"> -->
+                    <!-- <input type="file" class="form-control" #resumeInput (change)="onFileChangeResume($event)"> -->
+                    <!-- <input type="file" class="form-control" formControlName="passport" #passportInput (change)="onFileChangePassport($event)"> -->
+                    <input type="file" class="form-control" #passportInput (change)="onFileChangePassport($event)">
+
+                    <div class="error" *ngIf="passportTouched && !selectedPassport">
+                      Passport Size is required.
+                    </div>
+                    
+                    </div>
+                </div>
+
+
+            <!-- Applying for Role -->
+      <div class="col-md-3">
+        <div class="form-group">
+          <label class="form-label">Applying for Role <span class="mandatory">*</span></label>
+          <select class="form-select" formControlName="applyPost">
+            <option value="" disabled>Select Role</option>
+            <option value="Manager - Admin Operations">Manager - Admin Operations</option>
+            <option value="Manager - Grants & Proposals">Manager - Grants & Proposals</option>
+            <option value="Manager – Women Entrepreneurship">Manager – Women Entrepreneurship</option>
+            <option value="Manager – Partnerships & Investments">Manager – Partnerships & Investments</option>
+          </select>
+          <div class="error" *ngIf="careersForm.get('applyPost')?.touched && careersForm.get('applyPost')?.invalid">
+            Role is required.
+          </div>
+        </div>
+      </div>
+                  <!-- Remarks -->
+                  <div class="col-md-3">
+                    <div class="form-group">
+                    <label class="form-label">Remarks</label>
+                    <textarea class="form-control" formControlName="remarks" placeholder="Any comments (optional)"></textarea>
+                    </div>
+                </div>
+                <!-- Upload Resume -->
+                <div class="col-md-3">
+                    <div class="form-group">
+                    <label class="form-label">Upload Resume <span class="mandatory">*</span></label>
+                    <!-- <input type="file" class="form-control" (change)="onFileChangeResume($event)"> -->
+                    <!-- <input type="file" class="form-control" #resumeInput (change)="onFileChangeResume($event)"> -->
+                    <!-- <input type="file" class="form-control" formControlName="resume" #resumeInput (change)="onFileChangeResume($event)"> -->
+                    <input type="file" class="form-control" #resumeInput (change)="onFileChangeResume($event)">
+
+                    <div class="error" *ngIf="resumeTouched && !selectedResume">
+                        Resume file is required.
+                    </div>                
+                    </div>
+                </div>
+    
+    
+                <!-- NIRF Ranking -->
+                <div class="col-md-3 d-none">
+                    <div class="form-group">
+                    <label class="form-label">NIRF Ranking of University <span class="mandatory">*</span></label>
+                    <input type="number" class="form-control" formControlName="nirfranking" placeholder="Enter NIRF Ranking">
+                    <div class="error" *ngIf="careersForm.get('nirfranking')?.touched && careersForm.get('nirfranking')?.invalid">
+                        Ranking is required.
+                    </div>
+                    </div>
+                </div>
+
+        </div>
+        <!-- Personal details section here -->
+        <!-- (Insert your complete personal details HTML block) -->
+      </div>
+  
+      <!-- Step 2 -->
+      <div *ngIf="currentStep === 2">
+        <h4 class="mb-3 text_heading_color">Step 2: Educational Qualifications</h4>
+        <!-- Educational qualification section here -->
+        <!-- (Insert your complete education block including modal) -->
+
+
+        <div class="row align-items-center py-3">
+            <!-- <div class="col-md-6">
+                <h4 class="text_heading_color">
+                    Educational Qualifications
+                </h4>
+            </div> -->
+            <div class="col-md-12">
+                <div class="text-end pb-3">
+                    <a class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#educationModal"> + Add New Qualification</a>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <table class="table table-responsive table-bordered w-100">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Qualification</th>
+                            <th>School/College/Institute</th>
+                            <th>Board/University</th>
+                            <th>Year of Pass</th>
+                            <th>Percentage/CGPA</th>
+                            <th>Uploaded Certiticate</th>
+                            <!-- <th>Actions</th> -->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let education of educationList; let i = index">
+                            <td>{{ i + 1 }}</td>
+                            <td>{{ education.qualification }}</td>
+                            <td>{{ education.institute }}</td>
+                            <td>{{ education.board }}</td>
+                            <td>{{ education.yearOfPassing }}</td>
+                            <td>{{ education.totalAggregate }}</td>                            
+                            <td>{{ education.certificateFile }}</td>
+                            <!-- <td>
+                                <a class="btn btn-sm btn-success"><i class="bi bi-eye"></i></a>
+                            </td> -->
+                            <!-- <td>
+                                <div class="hstack gap-2">
+                                    <a class="btn btn-sm btn-success"><i class="bi bi-pencil"></i></a>
+                                    <a class="btn btn-sm btn-danger"><i class="bi bi-trash"></i></a>
+                                </div>
+                            </td> -->
+                        </tr>
+                        <tr *ngIf="educationList.length === 0">
+                            <td class="text-center" colspan="7">No Records Found</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+      </div>
+  
+      <!-- Step 3 -->
+      <div *ngIf="currentStep === 3">
+        <h4 class="mb-3 text_heading_color">Step 3: Work Experience</h4>
+        <!-- Work experience section here -->
+        <!-- (Insert your complete work experience block including modal) -->
+
+        <div class="row align-items-center py-2">
+            <!-- <div class="col-md-6">
+                <h4 class="text_heading_color">
+                    Work Experience
+                </h4>
+            </div> -->
+            <div class="col-md-12">
+                <div class="text-end pb-3">
+                    <a class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#workModal"> + Add New Experience</a>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <table class="table table-responsive table-bordered w-100">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Organization</th>
+                            <th>Designation</th>
+                            <th>From</th>
+                            <th>To</th>
+                            <!-- <th>Roles & Responsibilities</th> -->
+                            <th>Experience Certiticate</th>
+                            <!-- <th>Actions</th> -->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let work of workExperienceList; let i = index">
+                            <td>{{ i + 1 }}</td>
+                            <td>{{ work.companyName }}</td>
+                            <td>{{ work.designation }}</td>
+                            <td>{{ work.from }}</td>
+                            <td>{{ work.to }}</td>
+                            <!-- <td>
+                              <ul>
+                                <li>{{ work.rolesAndResponsibilities }}</li>
+                              </ul>
+                            </td>                             -->
+                            <td>{{ work.experienceCertificate }}</td>
+                            <!-- <td>
+                                <a class="btn btn-sm btn-success"><i class="bi bi-eye"></i></a>
+                            </td> -->
+                            <!-- <td>
+                                <div class="hstack gap-2">
+                                    <a class="btn btn-sm btn-success"><i class="bi bi-pencil"></i></a>
+                                    <a class="btn btn-sm btn-danger"><i class="bi bi-trash"></i></a>
+                                </div>
+                            </td> -->
+                        </tr>
+                        <tr *ngIf="workExperienceList.length === 0">
+                            <td class="text-center" colspan="6">No Records Found</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+      </div>
+  
+      <!-- Step 4 -->
+      <div *ngIf="currentStep === 4">
+        <h4 class="mb-3 text_heading_color">Step 4: Declaration and Final Submission</h4>
+        <!-- Final section: resume upload, remarks, nirf, declaration -->
+        <!-- (Insert the final form fields and declaration block here) -->
+        <div class="col-md-12 py-3">
+            <div class="form-check d-flex align-items-start gap-2">
+              <input class="form-check-input mt-1" type="checkbox" id="declarationCheck" formControlName="declarationConfirmed">
+              <label class="form-check-label m-0" for="declarationCheck">
+                <strong>DECLARATION</strong>
+                </label>
+            </div>
+            <div>
+                  <ul class="mb-0">
+                    <li>I hereby declare that all the information furnished by me is true and correct...</li>
+                    <li>I undertake to produce the original documents...</li>
+                    <li>I understand that age limit may apply...</li>
+                  </ul>
+                <div class="error text-danger pt-2" *ngIf="careersForm.get('declarationConfirmed')?.touched && !careersForm.get('declarationConfirmed')?.value">
+                  You must agree to the declaration before submitting.
+                </div>
+              </div>
+          </div>
+          
+                    <!-- Submit -->
+                    <div class="col-md-12 text-end pt-3 d-none">
+                        <!-- <button class="btn btn-success" (click)="onSubmit()" 
+                        [disabled]="careersForm.invalid || !selectedResume || educationList.length === 0 || workExperienceList.length === 0">
+                        Submit Application
+                        </button> -->
+                        <button class="btn btn-success" (click)="onSubmit()"
+                            [disabled]="careersForm.invalid || !selectedResume || !selectedPassport || educationList.length === 0 || workExperienceList.length === 0">
+                            Submit Application
+                        </button>
+        
+                    </div>
+      </div>
+
+      <div class="hstack justify-content-between pt-3">
+        <button class="btn btn-outline-secondary me-2 backbtn" (click)="previousStep()" [disabled]="currentStep === 1">Back</button>
+        <button class="btn btn-primary me-2 nextbtn" *ngIf="currentStep < 4" (click)="nextStep()">Next</button>
+        <button class="btn btn-success" *ngIf="currentStep === 4" (click)="onSubmit()"
+          [disabled]="careersForm.invalid || !selectedResume || !selectedPassport || educationList.length === 0 || workExperienceList.length === 0 || !careersForm.get('declarationConfirmed')?.value">
+          Submit Application
+        </button>
+      </div>
+
+    </div>
+  </section>
+  
+  <!-- Education Modal -->
+  <!-- (Insert complete unchanged education modal HTML here) -->
+  
+  <!-- Work Modal -->
+  <!-- (Insert complete unchanged work modal HTML here) -->
+
+
+  <!-- Education Modal -->
+<div class="modal fade" id="educationModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="educationModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="educationModalLabel">Education Details</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="container" [formGroup]="educationForm">
+            <div class="row">
+  
+              <!-- Qualification -->
+              <!-- <div class="col-md-3">
+                <div class="form-group">
+                  <label class="form-label">Qualification <span class="mandatory">*</span></label>
+                  <input type="text" class="form-control" formControlName="qualification" placeholder="e.g. B.Tech">
+                  <div class="error" *ngIf="educationForm.get('qualification')?.touched && educationForm.get('qualification')?.invalid">
+                    Qualification is required.
+                  </div>
+                </div>
+              </div> -->
+
+              <div class="col-md-3">
+                <div class="form-group">
+                  <label class="form-label">Qualification <span class="mandatory">*</span></label>
+                  <select class="form-select" formControlName="qualification">
+                    <option value="" disabled selected>--Select--</option>
+                    <option *ngFor="let q of qualificationOptions" [value]="q">{{ q }}</option>
+                  </select>
+                  <div class="text-danger mt-1" *ngIf="educationForm.get('qualification')?.touched && educationForm.get('qualification')?.invalid">
+                    Qualification is required.
+                  </div>
+                </div>
+              </div>
+  
+              <!-- School/College/Institute -->
+              <div class="col-md-3">
+                <div class="form-group">
+                  <label class="form-label">School/College/Institute <span class="mandatory">*</span></label>
+                  <input type="text" class="form-control" formControlName="schoolcollegeinstitute" placeholder="Enter name of the institute">
+                  <div class="error" *ngIf="educationForm.get('schoolcollegeinstitute')?.touched && educationForm.get('schoolcollegeinstitute')?.invalid">
+                    Institute name is required.
+                  </div>
+                </div>
+              </div>
+              
+  
+              <!-- Board/University -->
+              <div class="col-md-3">
+                <div class="form-group">
+                  <label class="form-label">Board/University <span class="mandatory">*</span></label>
+                  <input type="text" class="form-control" formControlName="boarduniversity" placeholder="Enter name of the board/university">
+                  <div class="error" *ngIf="educationForm.get('boarduniversity')?.touched && educationForm.get('boarduniversity')?.invalid">
+                    University/Board is required.
+                  </div>
+                </div>
+              </div>
+  
+              <!-- Year of Passing -->
+              <div class="col-md-3">
+                <div class="form-group">
+                  <label class="form-label">Year of Pass <span class="mandatory">*</span></label>
+                  <input type="text" class="form-control" formControlName="yearofpass" placeholder="Enter year of passing">
+                  <div class="error" *ngIf="educationForm.get('yearofpass')?.touched && educationForm.get('yearofpass')?.invalid">
+                    Year of pass is required.
+                  </div>
+                </div>
+              </div>
+  
+              <!-- Percentage/CGPA -->
+              <div class="col-md-3">
+                <div class="form-group">
+                  <label class="form-label">Percentage/CGPA <span class="mandatory">*</span></label>
+                  <input type="text" class="form-control" formControlName="percentagecgpa" placeholder="Enter percentage or CGPA">
+                  <div class="error" *ngIf="educationForm.get('percentagecgpa')?.touched && educationForm.get('percentagecgpa')?.invalid">
+                    Percentage/CGPA is required.
+                  </div>
+                </div>
+              </div>
+  
+              <!-- Upload Certificate -->
+              <!-- <div class="col-md-3">
+                <div class="form-group">
+                  <label class="form-label">Upload Certificate <span class="mandatory">*</span></label>
+                  <input type="file" class="form-control" #certificateInput (change)="onFileChangeCertificate($event)">
+                  <div class="error" *ngIf="certificateTouched && !selectedCertificate">
+                    Certificate upload is required.
+                  </div>                  
+                </div>
+              </div> -->
+
+
+
+              <div class="col-md-3">
+                <div class="form-group">
+                  <label class="form-label">Upload Certificate <span class="mandatory">*</span></label>
+                  <input type="file" class="form-control" #certificateInput (change)="onFileChangeCertificate($event)">
+                  <div class="error" *ngIf="certificateTouched && !selectedCertificate">
+                    Certificate upload is required.
+                  </div>     
+                  <div class="mt-2 d-none" *ngIf="selectedCertificate">
+                    <button class="btn btn-outline-primary btn-sm" type="button"
+                            (click)="previewDownload(selectedCertificate, 'certificate_preview')">
+                      🔽 Preview Download
+                    </button>
+                  </div>             
+                </div>
+              </div>
+              
+
+  
+              <!-- Submit Button -->
+              <div class="col-md-3">
+                <div class="form-group pt-2">
+                  <button class="btn btn-success btn-sm mt-4" (click)="onEducationSubmit()"
+                    [disabled]="educationForm.invalid || !selectedCertificate">
+                    Submit
+                  </button>
+                </div>
+              </div>
+  
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Work modal -->
+
+  <div class="modal fade" id="workModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="workModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="workModalLabel">Work Experience Details</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="container" [formGroup]="workExperienceForm">
+            <div class="row">
+  
+              <!-- Organization Name -->
+              <div class="col-md-3">
+                <div class="form-group">
+                  <label class="form-label">Organization <span class="mandatory">*</span></label>
+                  <input type="text" class="form-control" formControlName="organizationName" placeholder="Enter organization name">
+                  <div class="error" *ngIf="workExperienceForm.get('organizationName')?.touched && workExperienceForm.get('organizationName')?.invalid">
+                    Organization name is required.
+                  </div>
+                </div>
+              </div>
+  
+              <!-- Designation -->
+              <div class="col-md-3">
+                <div class="form-group">
+                  <label class="form-label">Designation <span class="mandatory">*</span></label>
+                  <input type="text" class="form-control" formControlName="designationName" placeholder="Enter designation">
+                  <div class="error" *ngIf="workExperienceForm.get('designationName')?.touched && workExperienceForm.get('designationName')?.invalid">
+                    Designation is required.
+                  </div>
+                </div>
+              </div>
+  
+              <!-- From Date -->
+              <div class="col-md-3">
+                <div class="form-group">
+                  <label class="form-label">From <span class="mandatory">*</span></label>
+                  <input type="date" class="form-control" formControlName="from" placeholder="Enter from date">
+                  <div class="error" *ngIf="workExperienceForm.get('from')?.touched && workExperienceForm.get('from')?.invalid">
+                    From date is required.
+                  </div>
+                </div>
+              </div>
+  
+              <!-- To Date -->
+              <div class="col-md-3">
+                <div class="form-group">
+                  <label class="form-label">To <span class="mandatory">*</span></label>
+                  <input type="date" class="form-control" formControlName="to" placeholder="Enter to date">
+                  <div class="error" *ngIf="workExperienceForm.get('to')?.touched && workExperienceForm.get('to')?.invalid">
+                    To date is required.
+                  </div>
+                </div>
+              </div>
+  
+              <!-- Roles & Responsibilities -->
+              <!-- <div class="col-md-3">
+                <div class="form-group">
+                  <label class="form-label">Roles & Responsibilities <span class="mandatory">*</span></label>
+                  <input type="text" class="form-control" formControlName="rolesresponsibilities" placeholder="e.g. Developed web apps...">
+                  <div class="error" *ngIf="workExperienceForm.get('rolesresponsibilities')?.touched && workExperienceForm.get('rolesresponsibilities')?.invalid">
+                    Roles & responsibilities are required.
+                  </div>
+                </div>
+              </div> -->
+  
+              <!-- Experience Certificate -->
+              <!-- <div class="col-md-3">
+                <div class="form-group">
+                  <label class="form-label">Experience Certificate <span class="mandatory">*</span></label>
+                  <input type="file" class="form-control" #experienceInput (change)="onFileChangeExperienceCertificate($event)">
+                  <div class="error" *ngIf="experienceCertTouched && !selectedExperienceCertificate">
+                    Please upload the experience certificate.
+                  </div>                  
+                </div>
+              </div> -->
+
+
+              <div class="col-md-3">
+                <div class="form-group">
+                  <label class="form-label">Experience Certificate <span class="mandatory">*</span></label>
+                  <input type="file" class="form-control" #experienceInput (change)="onFileChangeExperienceCertificate($event)">
+                  <div class="error" *ngIf="experienceCertTouched && !selectedExperienceCertificate">
+                    Please upload the experience certificate.
+                  </div>
+                  <div class="mt-2 d-none" *ngIf="selectedExperienceCertificate">
+                    <button class="btn btn-outline-primary btn-sm" type="button"
+                            (click)="previewDownload(selectedExperienceCertificate, 'experience_certificate_preview')">
+                      🔽 Preview Download
+                    </button>
+                  </div>                  
+                </div>
+              </div>
+              
+  
+              <!-- Submit Button -->
+              <div class="col-md-3">
+                <div class="form-group pt-2">
+                  <button class="btn btn-sm btn-success mt-4"
+                          [disabled]="workExperienceForm.invalid || !selectedExperienceCertificate"
+                          (click)="onWorkExperienceSubmit()">
+                    Submit
+                  </button>
+                </div>
+              </div>
+  
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  

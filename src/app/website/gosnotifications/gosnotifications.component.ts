@@ -9,6 +9,12 @@ export class GosnotificationsComponent implements OnInit {
  // Complete JSON data for table
  tableData: any[] = [
   {
+    id: 25,
+    description:
+    "ITE&C Department – Andhra Pradesh - Guidelines for operationalizing Ratan Tata Innovation Hub and spokes-Reg",
+    link: 'assets/images/resources/gosnotifications/2025ITC_36265_MS6_E.pdf',
+  },
+  {
     id: 1,
     description:
       'IT,E&C Dept – Setting up of (3) Societies – Innovation Society – Sanction and release of Rs.23.50 crores to Chief Executive Officer, Innovation Society towards activities planned for the year 2015-16 – Administrative Orders – Issued – Reg.',
@@ -147,7 +153,7 @@ export class GosnotificationsComponent implements OnInit {
     link: 'assets/images/resources/gosnotifications/2024ITC_RT52.pdf',
   },
   {
-    id: 23,
+    id: 24,
     description:
     "IT,E&C Dept. – ADMIN - Sri T. Anil Kumar, Deputy Chief of University Employment Information and Guidance Bureau working in AP Innovation Society, IT,E&C Depart as Chief Executive Officer on deputation basis – Repatriation to parent Department – Orders – Issued.",
     link: 'assets/images/resources/gosnotifications/2024ITC_RT58.pdf',

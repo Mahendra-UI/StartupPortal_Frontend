@@ -23,6 +23,17 @@
                 </div>
             </div>
         </div>
+        <div class="row pb-3">
+          <div class="col-md-9">
+            <span class="text-muted">
+              Showing {{ displayedRecordsCount() }} of {{ filteredApplicants.length }} records
+            </span>            
+          </div>
+
+          <div class="col-md-3 text-end">
+            <input type="text" [(ngModel)]="searchTerm" (input)="filterApplicants()" class="form-control" placeholder="Search applicants" />            
+          </div>
+        </div>
         <div class="row">
             <div class="col-md-12">
               <div class="table-responsive">
@@ -41,8 +52,10 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <tr *ngFor="let applicant of applicantsList; let i = index">
-                      <td>{{ i + 1 }}</td>
+                    <!-- <tr *ngFor="let applicant of applicantsList; let i = index">
+                      <td>{{ i + 1 }}</td> -->
+                      <tr *ngFor="let applicant of filteredApplicants | paginate: { itemsPerPage: itemsPerPage, currentPage: currentPage, id: 'first' }; let i = index">
+                        <td>{{ (currentPage - 1) * itemsPerPage + i + 1 }}</td>
                       <!-- <td>{{ applicant.applicantid }}</td>  -->
                       <td>{{ applicant.applicantname }}</td>
                       <td>{{ applicant.mobilenumber }}</td>
@@ -76,6 +89,7 @@
                     </tr>
                   </tbody>
                 </table>
+                <pagination-controls id="first" (pageChange)="onPageChange($event)"></pagination-controls>
               </div>
             </div>
           </div>
@@ -221,9 +235,9 @@
      </button>
       </div>
       
-    <div *ngIf="!selectedApplicant?.passportimage">
+    <!-- <div *ngIf="!selectedApplicant?.passportimage">
       <p class="text-muted">No passport image uploaded.</p>
-    </div>
+    </div> -->
   </div>
   
 
