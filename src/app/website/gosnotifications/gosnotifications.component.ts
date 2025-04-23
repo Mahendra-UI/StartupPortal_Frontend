@@ -8,6 +8,14 @@ import { Component, OnInit } from '@angular/core';
 export class GosnotificationsComponent implements OnInit {
  // Complete JSON data for table
  tableData: any[] = [
+
+  {
+    id: 26,
+    description:
+    "RTIH Corrigendum- The last date for submission of proposals from potential promoters extended till 25.04.2025",
+    link: 'assets/images/resources/gosnotifications/RTIH-Corr22052025.pdf',
+  },
+
   {
     id: 25,
     description:

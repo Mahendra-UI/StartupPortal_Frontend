@@ -1,27 +1,3 @@
-// import { Component, OnInit } from '@angular/core';
-// import { FormBuilder, FormGroup } from '@angular/forms';
-
-// @Component({
-//   selector: 'app-websiteadmincareersapplications',
-//   templateUrl: './websiteadmincareersapplications.component.html',
-//   styleUrls: ['./websiteadmincareersapplications.component.css']
-// })
-// export class WebsiteadmincareersapplicationsComponent implements OnInit {
-
-//   actionForm! : FormGroup
-//   isLoading = false; // Loader flag
-
-//   constructor(private fb: FormBuilder) { }
-
-//   ngOnInit(): void {
-//   }
-//   submitAction() {
-
-//   }
-
-// }
-
-
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { NgxSpinnerService } from 'ngx-spinner';
@@ -70,13 +46,18 @@ export class WebsiteadmincareersapplicationsComponent implements OnInit {
   onPageChange(page: number): void {
     this.currentPage = page;
   }
-  onOpenActionModal(applicantId: number) {
+  onOpenActionModalold(applicantId: number) {
     this.selectedApplicantId = applicantId;
     this.actionForm.reset(); // optional: reset previous form data
   }
+
+  onOpenActionModal(applicantId: number) {
+    this.selectedApplicantId = applicantId;
+    this.actionForm.reset(); // optional: reset previous form data
+  }  
   
 
-  submitAction() {
+  submitActionold() {
     if (this.actionForm.invalid || this.selectedApplicantId === null) {
       return;
     }
@@ -107,6 +88,60 @@ export class WebsiteadmincareersapplicationsComponent implements OnInit {
       }
     });
   }
+
+  submitAction() {
+    if (this.actionForm.invalid || this.selectedApplicantId === null) {
+      this.toastr.error('Please select a valid applicant and fill the form.');
+      return;
+    }
+  
+    this.spinner.show();
+    this.registerService.getApplicantById(this.selectedApplicantId).subscribe({
+      next: async (res: any) => {
+        this.spinner.hide();
+        if (res?.status === 'Valid') {
+          const applicant = res.data;
+  
+          const updatedPayload = {
+            ...applicant,
+            status: this.actionForm.value.status,
+            adminComments: this.actionForm.value.remarks || '',
+            remarks: applicant.remarks || '', // Include required remarks
+          };
+  
+          this.submitFullPayload(updatedPayload);
+        } else {
+          this.toastr.error('Failed to load applicant details.');
+        }
+      },
+      error: (err) => {
+        this.spinner.hide();
+        this.toastr.error('Failed to fetch applicant details.');
+        console.error('Fetch Error:', err);
+      }
+    });
+  }
+  
+  submitFullPayload(payload: any) {
+    this.spinner.show();
+    this.registerService.updateApplicantDetails(payload).subscribe({
+      next: () => {
+        this.spinner.hide();
+        Swal.fire('Success', 'Status updated successfully.', 'success');
+        this.getAllApplicants();
+      },
+      error: (err) => {
+        this.spinner.hide();
+        Swal.fire('Error', 'Failed to update status.', 'error');
+        console.error('Update Error:', err);
+      }
+    });
+  }
+  
+  
+
+
+    
   
   
   getAllApplicants() {
@@ -139,7 +174,32 @@ export class WebsiteadmincareersapplicationsComponent implements OnInit {
     this.currentPage = 1; // reset to first page after filtering
   }
   
+
   viewApplicant(applicantId: number) {
+    console.log('Calling API with ID:', applicantId);
+    this.spinner.show();
+  
+    this.registerService.getApplicantById(applicantId).subscribe({
+      next: (res: any) => {
+        console.log('API Response:', res);
+        if (res?.status === 'Valid') {
+          this.selectedApplicant = res.data;
+          console.log('✅ selectedApplicant set:', this.selectedApplicant); // ADD THIS
+        } else {
+          console.warn('⚠️ API returned invalid status');
+        }
+        this.spinner.hide();
+      },
+      error: (err) => {
+        console.error('API Error:', err);
+        this.spinner.hide();
+      }
+    });
+  }
+  
+
+
+  viewApplicantold(applicantId: number) {
     console.log('Calling API with ID:', applicantId);
     this.spinner.show();
   

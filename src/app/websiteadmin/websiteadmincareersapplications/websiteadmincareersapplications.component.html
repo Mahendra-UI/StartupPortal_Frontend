@@ -62,7 +62,30 @@
                       <td>{{ applicant.emailid }}</td>
                       <td>{{ applicant.applypost }}</td>
                       <td>{{ applicant.submittedon | date:'dd-MM-yyyy' }}</td>
-                      <td>{{ applicant.status }}</td>
+                      <td>
+
+                        <span class="badge"
+                        [ngClass]="{
+                          'badge-light-success': applicant.status === 'Approved',
+                          'badge-light-warning': applicant.status === 'pending',
+                          'badge-light-danger': applicant.status === 'Rejected'
+                        }">
+                        {{ applicant.status }}
+                      </span>
+
+                        <!-- <span 
+                          class="badge" 
+                          [ngClass]="{
+                            'badge-soft-info': applicant.status === 'pending',
+                            'badge-soft-success': applicant.status === 'Approved',
+                            'badge-soft-danger': applicant.status === 'Rejected'
+                          }">
+                          {{ applicant.status }}
+                        </span> -->
+                      </td>
+                      
+                      <!-- <td><span class="badge badge-soft-{{ applicant.status === 'pending' ? 'info' : 'danger' }}">{{ applicant.status }}</span></td> -->
+                      <!-- <td>{{ applicant.status }}</td> -->
                       <td>
                         <div class="hstack gap-2">
                           <button class="btn btn-sm btn-success" (click)="viewApplicant(applicant.applicantid)" data-bs-toggle="modal" data-bs-target="#viewModal">
@@ -164,17 +187,17 @@
         <div class="modal-body">
           <form [formGroup]="actionForm" (ngSubmit)="submitAction()">
             <div class="mb-3">
-              <label class="form-label">Select Action</label>
+              <label class="form-label">Select Status <span class="mandatory">*</span></label>
               <select class="form-control" formControlName="status">
                 <option value="" selected disabled>-- Select Action --</option>
                 <option value="Approved">Approve</option>
                 <option value="Rejected">Reject</option>
               </select>
             </div>
-            <!-- <div class="mb-3">
-              <label class="form-label">Remarks</label>
+            <div class="mb-3">
+              <label class="form-label">Remarks <span class="mandatory">*</span></label>
               <textarea class="form-control" rows="3" formControlName="remarks" placeholder="Enter remarks"></textarea>
-            </div> -->
+            </div>
             <!-- <button type="submit" class="btn btn-primary w-100" [disabled]="isLoading || actionForm.invalid">
               <span *ngIf="!isLoading">Submit</span>
               <span *ngIf="isLoading">
@@ -182,7 +205,7 @@
               </span>
             </button> -->
 
-            <button type="submit" class="btn btn-primary w-100">
+            <button type="submit" class="btn btn-primary w-100" [disabled]="actionForm.invalid">
                 Submit
             </button>
           </form>

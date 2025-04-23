@@ -18,3 +18,75 @@ td {
     text-align: left;
     color: #000000;
 }
+.mandatory {
+    color: red;
+}
+
+
+.badge-soft-success {
+    background: #1ABE17;
+    color: #fff;
+}
+.badge-soft-info {
+    background: #0DCAF0;
+    color: #000;
+}
+.badge-soft-danger {
+    background: #DC3545;
+    color: #fff;
+}
+
+
+
+.badge {
+    display: inline-block;
+    padding: 0.35em 0.65em;
+    font-size: 0.75rem;
+    font-weight: 800;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 0.25rem;
+  }
+  
+  .badge-light-primary {
+    background-color: #e1eefe;
+    color: #0056b3;
+    border: 1px solid #0056b3;
+  }
+  
+  .badge-light-secondary {
+    background-color: #f0f0f5;
+    color: #6c757d;
+    border: 1px solid #6c757d;
+  }
+  
+  .badge-light-success {
+    background-color: #e6f9ea;
+    color: #28a745;
+    border: 1px solid #28a745;
+  }
+  
+  .badge-light-info {
+    background-color: #e8f6ff;
+    color: #17a2b8;
+    border: 1px solid #17a2b8;
+  
+  }
+  
+  .badge-light-warning {
+    background-color: #fff5e1;
+    color: #ffc107;
+    border: 1px solid #ffc107;
+  
+  }
+  
+  .badge-light-danger {
+    background-color: #fdecea;
+    color: #dc3545;
+    border: 1px solid #dc3545;
+  
+  }
+  

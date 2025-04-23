@@ -333,6 +333,7 @@ export class ApplycareerstwoComponent implements OnInit {
         applyPost: this.careersForm.value.applyPost,
         submittedOn: new Date().toISOString(),
         status: 'pending',
+        adminComments: 'Admin Comments Pending', // ✅ Include this field (even if blank)
         remarks: this.careersForm.value.remarks || '',
         universityRanking: Number(this.careersForm.value.nirfranking),
         cvFile: await this.fileToBase64(this.selectedResume!),
