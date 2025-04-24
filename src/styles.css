@@ -1,3 +1,6 @@
+@import "~ngx-spinner/animations/ball-circus.css";
+
+
 .nav-link {
   font-size: var(--fontSize16, 16px);
 }

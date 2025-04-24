@@ -4,6 +4,12 @@ import { NgxSpinnerService } from 'ngx-spinner';
 import { ToastrService } from 'ngx-toastr';
 import { RegisterService } from 'src/app/website/register.service';
 import Swal from 'sweetalert2';
+import * as XLSX from 'xlsx';
+import * as FileSaver from 'file-saver';
+
+
+
+
 
 @Component({
   selector: 'app-websiteadmincareersapplications',
@@ -18,7 +24,7 @@ export class WebsiteadmincareersapplicationsComponent implements OnInit {
   searchTerm = '';
   // p: number = 1; 
   filteredApplicants: any[] = [];
-  itemsPerPage = 5;
+  itemsPerPage = 10;
   currentPage = 1;
  
   applicantsList: any[] = [];
@@ -28,6 +34,13 @@ export class WebsiteadmincareersapplicationsComponent implements OnInit {
 
 
   constructor(private toastr: ToastrService,  private registerService: RegisterService, private fb: FormBuilder, private spinner: NgxSpinnerService) {}
+
+//   readonly EXCEL_TYPE = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;charset=UTF-8';
+// readonly EXCEL_EXTENSION = '.xlsx';
+
+EXCEL_TYPE = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;charset=UTF-8';
+EXCEL_EXTENSION = '.xlsx';
+
 
   ngOnInit(): void {
     this.getAllApplicants();
@@ -138,8 +151,135 @@ export class WebsiteadmincareersapplicationsComponent implements OnInit {
     });
   }
   
+
+  exportToExcelold(): void {
+    const dataToExport = this.filteredApplicants.length > 0 ? this.filteredApplicants : this.applicantsList;
+  
+    // Flatten Education and Work Experience into separate columns
+    const exportData = dataToExport.map(applicant => {
+      // Prepare dynamic columns for education
+      const educationEntries = applicant.educationdetails || [];
+      const educationCols: any = {};
+      educationEntries.forEach((edu: any, index: number) => {
+        educationCols[`Education ${index + 1} - Qualification`] = edu.qualification;
+        educationCols[`Education ${index + 1} - Institute`] = edu.institute;
+        educationCols[`Education ${index + 1} - Board`] = edu.board;
+        educationCols[`Education ${index + 1} - Year`] = edu.yearofpassing;
+        educationCols[`Education ${index + 1} - Aggregate`] = edu.totalaggregate;
+      });
+  
+      // Prepare dynamic columns for work experience
+      const workEntries = applicant.workexperience || [];
+      const workCols: any = {};
+      workEntries.forEach((work: any, index: number) => {
+        workCols[`Work ${index + 1} - Designation`] = work.designation;
+        workCols[`Work ${index + 1} - Company`] = work.companyname;
+        workCols[`Work ${index + 1} - From`] = new Date(work.fromdate).toLocaleDateString();
+        workCols[`Work ${index + 1} - To`] = new Date(work.todate).toLocaleDateString();
+      });
+  
+      return {
+        'Full Name': applicant.applicantname,
+        'Mobile Number': applicant.mobilenumber,
+        'Email ID': applicant.emailid,
+        'Applied For': applicant.applypost,
+        'Submitted On': new Date(applicant.submittedon).toLocaleDateString(),
+        'Status': applicant.status,
+        'Date of Birth': new Date(applicant.dateofbirth).toLocaleDateString(),
+        'Address': applicant.communicationaddress,
+        'Remarks': applicant.remarks,
+        ...educationCols,
+        ...workCols
+      };
+    });
+  
+    const worksheet: XLSX.WorkSheet = XLSX.utils.json_to_sheet(exportData);
+    const workbook: XLSX.WorkBook = { Sheets: { 'Applicants': worksheet }, SheetNames: ['Applicants'] };
+    const excelBuffer: any = XLSX.write(workbook, { bookType: 'xlsx', type: 'array' });
+    const data: Blob = new Blob([excelBuffer], { type: this.EXCEL_TYPE });
+    FileSaver.saveAs(data, 'ApplicantsData_' + new Date().getTime() + this.EXCEL_EXTENSION);
+  }
   
 
+
+  exportToExcelnew(): void {
+    const dataToExport = this.filteredApplicants.length > 0 ? this.filteredApplicants : this.applicantsList;
+  
+    const exportData = dataToExport.map(applicant => ({
+      'Full Name': applicant.applicantname,
+      'Mobile Number': applicant.mobilenumber,
+      'Email ID': applicant.emailid,
+      'Applied For': applicant.applypost,
+      'Submitted On': new Date(applicant.submittedon).toLocaleDateString(),
+      'Status': applicant.status,
+      'Date of Birth': new Date(applicant.dateofbirth).toLocaleDateString(),
+      'Address': applicant.communicationaddress,
+      'Remarks': applicant.remarks,
+      'Education': applicant.educationdetails.map(edu =>
+        `${edu.qualification} - ${edu.institute} (${edu.board}), Year: ${edu.yearofpassing}, Aggregate: ${edu.totalaggregate}`
+      ).join('; '),
+      'Work Experience': applicant.workexperience.map(work =>
+        `${work.designation} at ${work.companyname} (${new Date(work.fromdate).toLocaleDateString()} - ${new Date(work.todate).toLocaleDateString()})`
+      ).join('; ')
+    }));
+  
+    const worksheet: XLSX.WorkSheet = XLSX.utils.json_to_sheet(exportData);
+    const workbook: XLSX.WorkBook = { Sheets: { 'Applicants': worksheet }, SheetNames: ['Applicants'] };
+    const excelBuffer: any = XLSX.write(workbook, { bookType: 'xlsx', type: 'array' });
+    const data: Blob = new Blob([excelBuffer], { type: this.EXCEL_TYPE });
+    FileSaver.saveAs(data, 'ApplicantsData_' + new Date().getTime() + this.EXCEL_EXTENSION);
+  }
+
+  exportToExcel(): void {
+    const dataToExport = this.filteredApplicants.length > 0 ? this.filteredApplicants : this.applicantsList;
+  
+    const exportData = dataToExport.map(applicant => {
+      // Extract education details based on qualification type
+      const educationMap: any = {
+        Graduation: '',
+        Intermediate: '',
+        'Class X': ''
+      };
+  
+      (applicant.educationdetails || []).forEach((edu: any) => {
+        const qualification = edu.qualification.toLowerCase();
+  
+        if (qualification.includes('graduation')) {
+          educationMap.Graduation = `${edu.institute} (${edu.board}), Year: ${edu.yearofpassing}, Aggregate: ${edu.totalaggregate}`;
+        } else if (qualification.includes('intermediate') || qualification.includes('xii') || qualification.includes('12')) {
+          educationMap.Intermediate = `${edu.institute} (${edu.board}), Year: ${edu.yearofpassing}, Aggregate: ${edu.totalaggregate}`;
+        } else if (qualification.includes('x') || qualification.includes('10')) {
+          educationMap['Class X'] = `${edu.institute} (${edu.board}), Year: ${edu.yearofpassing}, Aggregate: ${edu.totalaggregate}`;
+        }
+      });
+  
+      return {
+        'Full Name': applicant.applicantname,
+        'Mobile Number': applicant.mobilenumber,
+        'Email ID': applicant.emailid,
+        'Applied For': applicant.applypost,
+        'Submitted On': new Date(applicant.submittedon).toLocaleDateString(),
+        'Status': applicant.status,
+        'Date of Birth': new Date(applicant.dateofbirth).toLocaleDateString(),
+        'Address': applicant.communicationaddress,
+        'Remarks': applicant.remarks,
+        'Graduation': educationMap.Graduation,
+        'Intermediate': educationMap.Intermediate,
+        'Class X': educationMap['Class X'],
+        'Work Experience': (applicant.workexperience || []).map(work =>
+          `${work.designation} at ${work.companyname} (${new Date(work.fromdate).toLocaleDateString()} - ${new Date(work.todate).toLocaleDateString()})`
+        ).join('; ')
+      };
+    });
+  
+    const worksheet: XLSX.WorkSheet = XLSX.utils.json_to_sheet(exportData);
+    const workbook: XLSX.WorkBook = { Sheets: { 'Applicants': worksheet }, SheetNames: ['Applicants'] };
+    const excelBuffer: any = XLSX.write(workbook, { bookType: 'xlsx', type: 'array' });
+    const data: Blob = new Blob([excelBuffer], { type: this.EXCEL_TYPE });
+    FileSaver.saveAs(data, 'ApplicantsData_' + new Date().getTime() + this.EXCEL_EXTENSION);
+  }
+  
+  
 
     
   

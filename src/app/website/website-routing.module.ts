@@ -264,10 +264,10 @@ const routes: Routes = [
                 path: "careerdetails",
                 component: CareerdetailsComponent
             },
-            {
-                path: "applycareers",
-                component: ApplycareerstwoComponent
-            },
+            // {
+            //     path: "applycareers",
+            //     component: ApplycareerstwoComponent
+            // },
             {
                 path: "applycareersnew",
                 component: ApplycareersComponent
