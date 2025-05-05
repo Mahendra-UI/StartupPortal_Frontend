@@ -9,19 +9,19 @@ export class GosnotificationsComponent implements OnInit {
  // Complete JSON data for table
  tableData: any[] = [
 
-  {
-    id: 26,
-    description:
-    "RTIH Corrigendum- The last date for submission of proposals from potential promoters extended till 25.04.2025",
-    link: 'assets/images/resources/gosnotifications/RTIH-Corr22052025.pdf',
-  },
+  // {
+  //   id: 26,
+  //   description:
+  //   "RTIH Corrigendum- The last date for submission of proposals from potential promoters extended till 25.04.2025",
+  //   link: 'assets/images/resources/gosnotifications/RTIH-Corr22052025.pdf',
+  // },
 
-  {
-    id: 25,
-    description:
-    "ITE&C Department – Andhra Pradesh - Guidelines for operationalizing Ratan Tata Innovation Hub and spokes-Reg",
-    link: 'assets/images/resources/gosnotifications/2025ITC_36265_MS6_E.pdf',
-  },
+  // {
+  //   id: 25,
+  //   description:
+  //   "ITE&C Department – Andhra Pradesh - Guidelines for operationalizing Ratan Tata Innovation Hub and spokes-Reg",
+  //   link: 'assets/images/resources/gosnotifications/2025ITC_36265_MS6_E.pdf',
+  // },
   {
     id: 1,
     description:
