@@ -351,11 +351,18 @@ Download
 
   
           <h6>📎 CV File</h6>
-          <a class="btn btn-sm btn-dark mt-2"
+          <!-- <a class="btn btn-sm btn-dark mt-2"
           *ngIf="selectedApplicant?.CVFile"
           (click)="downloadBase64Direct(selectedApplicant.CVFile, 'cv', 'application/pdf')">
          Download CV
-       </a>
+       </a> -->
+
+       <a class="btn btn-sm btn-dark mt-2"
+   *ngIf="selectedApplicant?.CVFile"
+   (click)="openBase64InNewTab(selectedApplicant.CVFile, 'application/pdf')">
+   Download CV
+</a>
+
        
          
         </div>

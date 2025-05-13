@@ -32,6 +32,7 @@
     <div class="container h-100">
         <div class="row d-flex justify-content-center">
             <div class="col-12 col-md-8 col-lg-6">
+            <!-- <div class="col-12 col-md-9 col-lg-9"> -->
                 <div class="border border-3 border-primary"></div>
                 <div class="card bg-white shadow-lg my_card">
                     <div class="card-body p-4">
@@ -44,6 +45,17 @@
                             </div>
                             <!-- <h2 class="fw-bold mb-2 text-uppercase ">Brand</h2> -->
                             <!-- <p class="mb-5">Please enter your login and password!</p> -->
+                             <div class="col-md-12 d-none">
+                                <div class="imp_text">
+                                    <h4>
+                                        AP Startup One Portal is currently under maintenance. Users attempting to log in or apply for startup incentives may experience temporary unavailability.
+    
+    We are working to restore full functionality at the earliest. Please check back shortly.
+                                    </h4>
+                                </div>
+                             </div>
+                             <!-- <div class="d-none"> -->
+
                             <div class="form-group">
                                 <label for="email" class="form-label ">Email address</label>
                                 <input type="email" formControlName="email" autocomplete="off" class="form-control" id="email"
@@ -95,10 +107,11 @@
                                     (click)="submitLoginForm()">Login</button>
                             </div>
                         <!-- <button class="oauth-login">Sign In with Startup India</button> -->
-
+                            <!-- </div> -->
                         </form>
                         <!-- <button class="oauth-login">Sign In with Startup India</button> -->
 
+                        <!-- <div class="d-none"> -->
                         <div class="hstack gap-2 justify-content-center">
                             <p class="mb-0  text-center">Don't have an account?</p>
                             <a (click)="goToRegister()" class="text-primary fw-bold">Sign
@@ -107,11 +120,12 @@
                         <div class="text-center pt-2">
                             <button class="oauth-login btn" (click)="ssoLogin()">Sign In with Startup India</button>
                         </div>
+                        <!-- </div> -->
                     </div>
                 </div>
             </div>
         </div>
-        <div id="scene">
+        <div id="scene" class="d-none">
             <img class="img-fluid hero-bg-1 up-down-animation"
               src="assets/images/login/feature-bg-2.png" alt="">
             <img class="img-fluid hero-bg-2 left-right-animation"

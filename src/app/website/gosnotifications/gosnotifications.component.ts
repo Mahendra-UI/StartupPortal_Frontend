@@ -22,6 +22,13 @@ export class GosnotificationsComponent implements OnInit {
   //   "ITE&C Department – Andhra Pradesh - Guidelines for operationalizing Ratan Tata Innovation Hub and spokes-Reg",
   //   link: 'assets/images/resources/gosnotifications/2025ITC_36265_MS6_E.pdf',
   // },
+
+  {
+    id: 25,
+    description: "ITE&C Department – Andhra Pradesh - Guidelines for operationalizing Ratan Tata Innovation Hub and spokes-Reg",
+    link: "assets/images/resources/policies/2025/Ratan Tata Innovation Hub and spokes.pdf"
+  },
+
   {
     id: 1,
     description:

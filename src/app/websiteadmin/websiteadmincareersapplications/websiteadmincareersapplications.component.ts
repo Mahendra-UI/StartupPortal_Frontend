@@ -438,6 +438,27 @@ EXCEL_EXTENSION = '.xlsx';
     return 'application/octet-stream';
   }
   
+
+
+  openBase64InNewTab(base64Data: string, mimeType: string = 'application/pdf') {
+    if (!base64Data || base64Data.length < 50) {
+      Swal.fire('Error', 'Invalid or missing file data.', 'error');
+      return;
+    }
+  
+    const cleanBase64 = base64Data.replace(/^\\x/, '').replace(/\\x/g, '').trim();
+    const dataUrl = `data:${mimeType};base64,${cleanBase64}`;
+    const newWindow = window.open();
+  
+    if (newWindow) {
+      newWindow.document.write(`
+        <iframe width="100%" height="100%" src="${dataUrl}" frameborder="0" allowfullscreen></iframe>
+      `);
+    } else {
+      Swal.fire('Error', 'Popup blocked. Please allow popups for this site.', 'error');
+    }
+  }
+  
   
   downloadBase64Direct(base64Data: string, fileName: string, mimeType: string = 'application/pdf') {
     if (!base64Data || base64Data.length < 50) {

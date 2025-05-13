@@ -68,7 +68,7 @@ scrollToTop() {
       { name: 'Chandu', title: 'CII', image: 'assets/images/ecosystem/mentors/list/29.png' },
       { name: 'Manoj Ponnada', title: 'Joint Director Startup Eco System', image: 'assets/images/ecosystem/mentors/list/30.png', phone: '9494566363', linkedin: 'https://in.linkedin.com/in/manoj-ponnada-837673218?trk=people-guest_people_search-card' },
       { name: 'Singamala Sreedhar', title: 'Joint Director-Hackathons & Challenges at AP Innovation', image: 'assets/images/ecosystem/mentors/list/32.png', phone: '9052108526', linkedin: 'https://in.linkedin.com/in/singamala-sreedhar-b99bba10' },
-      { name: 'Sri M. Ramana Reddy, IRS', title: 'CEO, APIS', image: 'assets/images/ecosystem/mentors/list/apisceo.png' },
+      { name: 'Sri Mallavarapu Surya Teja, IAS', title: 'CEO, APIS', image: 'assets/images/ecosystem/mentors/list/apisnewceo.jpg' },
       {
         "name": "Abdul  M Raqshan",
         "title": "Head Marketing, Retail Ventures",

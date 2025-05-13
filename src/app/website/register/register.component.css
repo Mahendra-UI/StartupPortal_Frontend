@@ -10,6 +10,13 @@ section {
   position: relative;
   background-attachment: fixed;
 }
+.imp_text h4 {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 27px;
+  letter-spacing: 0em;
+  text-align: center;
+}
 .Homebanner-overlay {
 background-blend-mode: overlay;
 /* background: rgba(6, 32, 75, 0.8); */

@@ -302,10 +302,10 @@
                             <button type="button" class="btn btn-default btn-sm btnHead"
                                 style="font-size: 18px;border-radius:0px!important;border:0px!important;color: #fff;line-height: 4px;"
                                 #tel (click)="langChange(tel.value)" value="Telugu">తె</button>
-                            <a class="nav-link btn btn_login" role="button" [routerLink]="['/home/login']"
+                            <!-- <a class="nav-link btn btn_login" role="button" [routerLink]="['/home/login']"
                                 aria-expanded="false">
                                 Register/Login
-                            </a>
+                            </a> -->
                         </div>
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav mb-2 mb-lg-0">
@@ -464,9 +464,14 @@
                                                     </a>
                                                 </li>
                                                 <li class="nav-item" routerLinkActive="active">
-                                                    <a class="nav-link dropdown-item" target="_blank" href="assets/images/ecosystem/startups/Startup Policy.pdf">
+                                                    <!-- <a class="nav-link dropdown-item" target="_blank" href="assets/images/ecosystem/startups/Startup Policy.pdf">
+                                                        {{ 'Header.startuppolicy' | translate }}
+                                                    </a> -->
+
+                                                    <a class="nav-link dropdown-item" target="_blank" href="assets/images/resources/policies/2025/Innovation and Startup Policy.pdf">
                                                         {{ 'Header.startuppolicy' | translate }}
                                                     </a>
+
                                                 </li>
                                                 <li class="nav-item" routerLinkActive="active">
                                                     <a class="nav-link dropdown-item" routerLink="/focussectors">
@@ -801,12 +806,12 @@
                                         </li>
                                     </ul>
                                 </li>
-                                <li class="nav-item d-none d-lg-block">
+                                <!-- <li class="nav-item d-none d-lg-block">
                                     <a class="nav-link btn btn_login" role="button" [routerLink]="['/home/login']"
                                         aria-expanded="false">
                                         Register/Login
                                     </a>
-                                </li>
+                                </li> -->
                                 <!-- <li class="nav-item">
                                 <a class="nav-link" href="#">Contact Us</a>
                             </li> -->
