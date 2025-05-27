@@ -25,6 +25,10 @@ export class SwipertwoComponent implements OnInit {
     const url = 'https://msh.meity.gov.in/schemes/samridh';
     window.open(url, '_blank');
   }
+  povertyClick() {
+    const url = 'https://zeropovertyp4.ap.gov.in/';
+    window.open(url, '_blank');
+  }
   amaravathiDoneSummit(){
     // your logic here.... like set the url
     const url = 'https://amaravatidronesummit.com/hackathon.html';
